@@ -66,10 +66,11 @@ class Mesh2D:
     u1 : (ny, nx) ndarray  —  displacement at time n-1
     """
 
-    def __init__(self, nx, ny, fs, h, c, sigma, boundary="fixed"):
+    def __init__(self, nx, ny, fs, h, c, sigma, boundary="fixed",
+                 check_cfl=True):
         k = 1.0 / fs
         gamma2 = (c * k / h) ** 2
-        if gamma2 > 0.5:
+        if check_cfl and gamma2 > 0.5:
             raise ValueError(
                 f"CFL violated: gamma^2={gamma2:.4f} > 0.5 "
                 f"(c={c} m/s, h={h} m, fs={fs} Hz). Reduce c or increase h."
