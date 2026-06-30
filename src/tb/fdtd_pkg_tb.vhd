@@ -92,6 +92,49 @@ begin
     check("clamp(-0.9->-0.5)", clamp(to_q123(-0.9), to_q123(-0.5), to_q123(0.5)), -4194304);
     check("clamp(0.1 in)",     clamp(to_q123(0.1),  to_q123(-0.5), to_q123(0.5)),   838861);
 
+    --------------------------------------------------------------------------
+    -- 7. node_update : full linear explicit update, bit-exact vs QMesh2D
+    --    (golden values validated against a real model interior step)
+    --------------------------------------------------------------------------
+    -- default coeffs: gamma^2=0.09, a0=sigk1=1-sigma*k at sigma=1.5
+    check("node_update V1",
+      node_update(to_q123(0.5), to_q123(0.4),
+        (n => to_q123(0.3), s => to_q123(0.2), e => to_q123(0.1), w => to_q123(0.0)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      3976181);
+
+    check("node_update V2 (sat low)",
+      node_update(to_q123(-0.5), to_q123(0.6),
+        (n => to_q123(-0.3), s => to_q123(0.2), e => to_q123(-0.1), w => to_q123(0.25)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      -8388608);
+
+    -- large gamma^2 (0.4) + loud symmetric neighbours -> accumulator saturates high
+    check("node_update V3 (sat high)",
+      node_update(to_q123(0.9), to_q123(-0.9),
+        (n => to_q123(0.9), s => to_q123(0.9), e => to_q123(0.9), w => to_q123(0.9)),
+        (gamma2 => to_q123(0.4), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      8388607);
+
+    check("node_update V4 (rest)",
+      node_update(Q123_ZERO, Q123_ZERO,
+        (n => Q123_ZERO, s => Q123_ZERO, e => Q123_ZERO, w => Q123_ZERO),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      0);
+
+    check("node_update V5",
+      node_update(to_q123(0.123), to_q123(-0.234),
+        (n => to_q123(0.05), s => to_q123(-0.06), e => to_q123(0.07), w => to_q123(-0.08)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      3639810);
+
+    -- uniform field (Laplacian = 0) exercises the damping path alone
+    check("node_update V6 (lap=0)",
+      node_update(to_q123(0.5), to_q123(0.5),
+        (n => to_q123(0.5), s => to_q123(0.5), e => to_q123(0.5), w => to_q123(0.5)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+      4194304);
+
     report "fdtd_pkg_tb: all checks passed" severity note;
     finish;
   end process;

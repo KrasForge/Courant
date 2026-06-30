@@ -72,6 +72,35 @@ package fdtd_pkg is
   -- Clamp to [lo, hi].
   function clamp   (x, lo, hi : q123_t) return q123_t;
 
+  -----------------------------------------------------------------------------
+  -- Node update (linear explicit scheme, README §1)
+  -----------------------------------------------------------------------------
+  -- Four nearest neighbours of a node (N/S/E/W). The Laplacian sums all four,
+  -- so the field assignment is symmetric.
+  type neighbours_t is record
+    n, s, e, w : q123_t;
+  end record;
+
+  -- Precomputed per-step coefficients (README §4; no per-node division).
+  --   gamma2 = (c*k/h)^2      Courant number squared
+  --   a0     = 1/(1+sigma*k)  forward damping scale
+  --   sigk1  = 1 - sigma*k    backward damping coefficient
+  type coeffs_t is record
+    gamma2 : q123_t;
+    a0     : q123_t;
+    sigk1  : q123_t;
+  end record;
+
+  -- One explicit update for a single node:
+  --   u^{n+1} = a0 * ( 2*u^n - sigk1*u^{n-1}
+  --                    + gamma2*(uN+uS+uE+uW - 4*u^n) )
+  -- Bit-exact with the Q1.23 reference model (model/QMesh2D.m): every multiply
+  -- rounds and the wide accumulator saturates only on store. The non-linear
+  -- alpha*u^2 term is intentionally omitted here (added in M3).
+  function node_update (u_n, u_nm1 : q123_t;
+                        nb : neighbours_t;
+                        c  : coeffs_t) return q123_t;
+
 end package fdtd_pkg;
 
 -------------------------------------------------------------------------------
@@ -145,6 +174,30 @@ package body fdtd_pkg is
     elsif x > hi then return hi;
     else  return x;
     end if;
+  end function;
+
+  function node_update (u_n, u_nm1 : q123_t;
+                        nb : neighbours_t;
+                        c  : coeffs_t) return q123_t is
+    variable lap     : acc_t;   -- (uN+uS+uE+uW - 4*u^n)  at Q.23, exact
+    variable gl      : acc_t;   -- gamma2 * lap
+    variable su1     : acc_t;   -- sigk1  * u^{n-1}
+    variable two_u   : acc_t;   -- 2 * u^n
+    variable acc     : acc_t;   -- guard accumulator
+    variable out_acc : acc_t;   -- a0 * (...)
+  begin
+    -- Laplacian stencil, accumulated exactly in the 48-bit guard.
+    lap := to_acc(nb.n) + to_acc(nb.s) + to_acc(nb.e) + to_acc(nb.w)
+           - shift_left(to_acc(u_n), 2);          -- -4*u^n
+
+    gl    := mul_coeff(c.gamma2, lap);            -- round >>23
+    su1   := mul_coeff(c.sigk1,  to_acc(u_nm1));  -- round >>23
+    two_u := shift_left(to_acc(u_n), 1);          -- 2*u^n
+
+    acc     := two_u - su1 + gl;                  -- 2u - sigk1*u1 + gamma2*lap
+    out_acc := mul_coeff(c.a0, acc);              -- a0 scale, round >>23
+
+    return sat_store(out_acc);                    -- saturate to Q1.23 on store
   end function;
 
 end package body fdtd_pkg;
