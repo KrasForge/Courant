@@ -34,6 +34,7 @@ report() {            # $1 = top entity, $2... = source files
 report node_element  $RTL/fdtd_pkg.vhd $RTL/node_element.vhd
 report grid_mesh     $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd
 report top_resonator $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
+                     $RTL/grid_mesh_tdm.vhd $RTL/mesh.vhd \
                      $RTL/cdc_word.vhd $RTL/i2s_transceiver.vhd \
                      $RTL/mesh_resonator.vhd $RTL/control_bus.vhd \
                      $RTL/top_resonator.vhd
