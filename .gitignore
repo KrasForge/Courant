@@ -9,4 +9,7 @@ model/outputs/*.png
 
 # GHDL build artefacts
 sim/*.ghw
-sim/work-obj08.cf
+sim/work-obj*.cf
+
+# Captured simulation outputs (e.g. mesh_impulse_response.txt from the testbenches)
+sim/*.txt
