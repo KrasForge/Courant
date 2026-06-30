@@ -73,9 +73,11 @@ begin
     constant IMP   : q123_t := to_q123(0.5);
     variable moved : boolean := false;
   begin
-    coeffs <= (gamma2 => to_q123(0.09),
-               a0     => to_q123(0.99996875),
-               sigk1  => to_q123(0.99996875));
+    coeffs <= (gamma2     => to_q123(0.09),
+               a0         => to_q123(0.99996875),
+               sigk1      => to_q123(0.99996875),
+               alpha      => Q123_ZERO,           -- linear (no chaos injection)
+               gamma2_max => to_q123(0.5));
 
     -- Reset to rest
     rst <= '1';

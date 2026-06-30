@@ -81,22 +81,30 @@ package fdtd_pkg is
     n, s, e, w : q123_t;
   end record;
 
-  -- Precomputed per-step coefficients (README §4; no per-node division).
-  --   gamma2 = (c*k/h)^2      Courant number squared
-  --   a0     = 1/(1+sigma*k)  forward damping scale
-  --   sigk1  = 1 - sigma*k    backward damping coefficient
+  -- Precomputed per-step coefficients (README §3 control bus, §4; no per-node
+  -- division).
+  --   gamma2     = gamma0^2 = (c*k/h)^2   base Courant number squared
+  --   a0         = 1/(1+sigma*k)          forward damping scale
+  --   sigk1      = 1 - sigma*k            backward damping coefficient
+  --   alpha      = chaos coupling         amplitude-dependent stiffening (README §2)
+  --   gamma2_max = CFL-safe clamp ceiling (< 1/2; see issue #3, ~0.451)
+  -- The linear scheme is recovered with alpha = 0 and gamma2_max >= gamma2.
   type coeffs_t is record
-    gamma2 : q123_t;
-    a0     : q123_t;
-    sigk1  : q123_t;
+    gamma2     : q123_t;
+    a0         : q123_t;
+    sigk1      : q123_t;
+    alpha      : q123_t;
+    gamma2_max : q123_t;
   end record;
 
-  -- One explicit update for a single node:
-  --   u^{n+1} = a0 * ( 2*u^n - sigk1*u^{n-1}
-  --                    + gamma2*(uN+uS+uE+uW - 4*u^n) )
-  -- Bit-exact with the Q1.23 reference model (model/QMesh2D.m): every multiply
-  -- rounds and the wide accumulator saturates only on store. The non-linear
-  -- alpha*u^2 term is intentionally omitted here (added in M3).
+  -- One explicit update for a single node, with the amplitude-dependent
+  -- non-linearity (README §2):
+  --   g2l       = clamp(gamma2 + alpha*u^2, 0, gamma2_max)   (per node, per step)
+  --   u^{n+1}   = a0 * ( 2*u^n - sigk1*u^{n-1}
+  --                      + g2l*(uN+uS+uE+uW - 4*u^n) )
+  -- Bit-exact with the Q1.23 reference: every multiply rounds and the wide
+  -- accumulator saturates only on store. With alpha = 0 and gamma2_max >=
+  -- gamma2 this reduces exactly to the linear scheme.
   function node_update (u_n, u_nm1 : q123_t;
                         nb : neighbours_t;
                         c  : coeffs_t) return q123_t;
@@ -179,22 +187,30 @@ package body fdtd_pkg is
   function node_update (u_n, u_nm1 : q123_t;
                         nb : neighbours_t;
                         c  : coeffs_t) return q123_t is
+    variable u2      : q123_t;  -- u^2  (saturating Q1.23)
+    variable au2     : q123_t;  -- alpha * u^2
+    variable g2l     : q123_t;  -- gamma2_local = clamp(gamma2+alpha*u^2, 0, max)
     variable lap     : acc_t;   -- (uN+uS+uE+uW - 4*u^n)  at Q.23, exact
-    variable gl      : acc_t;   -- gamma2 * lap
+    variable gl      : acc_t;   -- g2l * lap
     variable su1     : acc_t;   -- sigk1  * u^{n-1}
     variable two_u   : acc_t;   -- 2 * u^n
     variable acc     : acc_t;   -- guard accumulator
     variable out_acc : acc_t;   -- a0 * (...)
   begin
+    -- Amplitude-dependent local stiffness (README §2), CFL-safe clamped.
+    u2  := q_mul(u_n, u_n);                       -- u^2, saturating
+    au2 := q_mul(c.alpha, u2);                    -- alpha * u^2
+    g2l := clamp(sat_add(c.gamma2, au2), Q123_ZERO, c.gamma2_max);
+
     -- Laplacian stencil, accumulated exactly in the 48-bit guard.
     lap := to_acc(nb.n) + to_acc(nb.s) + to_acc(nb.e) + to_acc(nb.w)
            - shift_left(to_acc(u_n), 2);          -- -4*u^n
 
-    gl    := mul_coeff(c.gamma2, lap);            -- round >>23
+    gl    := mul_coeff(g2l, lap);                 -- round >>23
     su1   := mul_coeff(c.sigk1,  to_acc(u_nm1));  -- round >>23
     two_u := shift_left(to_acc(u_n), 1);          -- 2*u^n
 
-    acc     := two_u - su1 + gl;                  -- 2u - sigk1*u1 + gamma2*lap
+    acc     := two_u - su1 + gl;                  -- 2u - sigk1*u1 + g2l*lap
     out_acc := mul_coeff(c.a0, acc);              -- a0 scale, round >>23
 
     return sat_store(out_acc);                    -- saturate to Q1.23 on store

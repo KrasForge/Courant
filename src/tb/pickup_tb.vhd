@@ -96,9 +96,11 @@ begin
     variable gAL, gAR, gBL, gBR : integer;
     variable saw_distinct : boolean := false;
   begin
-    coeffs <= (gamma2 => to_q123(0.09),
-               a0     => to_q123(0.99996875),
-               sigk1  => to_q123(0.99996875));
+    coeffs <= (gamma2     => to_q123(0.09),
+               a0         => to_q123(0.99996875),
+               sigk1      => to_q123(0.99996875),
+               alpha      => Q123_ZERO,           -- linear (no chaos injection)
+               gamma2_max => to_q123(0.5));
 
     rst <= '1';
     wait until rising_edge(clk);

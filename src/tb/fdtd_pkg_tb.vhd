@@ -100,40 +100,80 @@ begin
     check("node_update V1",
       node_update(to_q123(0.5), to_q123(0.4),
         (n => to_q123(0.3), s => to_q123(0.2), e => to_q123(0.1), w => to_q123(0.0)),
-        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       3976181);
 
     check("node_update V2 (sat low)",
       node_update(to_q123(-0.5), to_q123(0.6),
         (n => to_q123(-0.3), s => to_q123(0.2), e => to_q123(-0.1), w => to_q123(0.25)),
-        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       -8388608);
 
     -- large gamma^2 (0.4) + loud symmetric neighbours -> accumulator saturates high
     check("node_update V3 (sat high)",
       node_update(to_q123(0.9), to_q123(-0.9),
         (n => to_q123(0.9), s => to_q123(0.9), e => to_q123(0.9), w => to_q123(0.9)),
-        (gamma2 => to_q123(0.4), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.4), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       8388607);
 
     check("node_update V4 (rest)",
       node_update(Q123_ZERO, Q123_ZERO,
         (n => Q123_ZERO, s => Q123_ZERO, e => Q123_ZERO, w => Q123_ZERO),
-        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       0);
 
     check("node_update V5",
       node_update(to_q123(0.123), to_q123(-0.234),
         (n => to_q123(0.05), s => to_q123(-0.06), e => to_q123(0.07), w => to_q123(-0.08)),
-        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       3639810);
 
     -- uniform field (Laplacian = 0) exercises the damping path alone
     check("node_update V6 (lap=0)",
       node_update(to_q123(0.5), to_q123(0.5),
         (n => to_q123(0.5), s => to_q123(0.5), e => to_q123(0.5), w => to_q123(0.5)),
-        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875))),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => Q123_ZERO, gamma2_max => to_q123(0.5))),
       4194304);
+
+    --------------------------------------------------------------------------
+    -- 8. node_update with the non-linearity on (alpha=0.6, gamma2_max=0.451),
+    --    golden from the non-linear reference (model nl_gen). Covers small
+    --    amplitude (~linear), high amplitude, clamp-binds, and saturation.
+    --------------------------------------------------------------------------
+    check("node_update NL small-amp",
+      node_update(to_q123(0.2), to_q123(0.1),
+        (n => to_q123(0.1), s => to_q123(0.05), e => to_q123(0.0), w => to_q123(-0.05)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => to_q123(0.6), gamma2_max => to_q123(0.451))),
+      1847140);
+
+    check("node_update NL high-amp",
+      node_update(to_q123(0.7), to_q123(0.5),
+        (n => to_q123(0.6), s => to_q123(0.4), e => to_q123(0.3), w => to_q123(0.5)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => to_q123(0.6), gamma2_max => to_q123(0.451))),
+      4328517);
+
+    -- hard input: gamma2+alpha*u^2 exceeds gamma2_max -> clamp binds; saturates
+    check("node_update NL clamp+sat",
+      node_update(to_q123(0.9), to_q123(-0.9),
+        (n => to_q123(0.9), s => to_q123(0.9), e => to_q123(0.9), w => to_q123(0.9)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => to_q123(0.6), gamma2_max => to_q123(0.451))),
+      8388607);
+
+    check("node_update NL sat-low",
+      node_update(to_q123(-0.6), to_q123(0.3),
+        (n => to_q123(-0.5), s => to_q123(-0.4), e => to_q123(0.2), w => to_q123(-0.55)),
+        (gamma2 => to_q123(0.09), a0 => to_q123(0.99996875), sigk1 => to_q123(0.99996875),
+         alpha => to_q123(0.6), gamma2_max => to_q123(0.451))),
+      -8388608);
 
     report "fdtd_pkg_tb: all checks passed" severity note;
     finish;
