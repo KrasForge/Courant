@@ -215,7 +215,7 @@ scale), not a single combinational clock edge. What *is* true:
 │   └── tb/
 │       ├── node_element_tb.vhd   # unit test for the node datapath / node_update
 │       └── top_resonator_tb.vhd  # system impulse-response & stability tests
-├── model/                        # Python/MATLAB reference model + stability study
+├── model/                        # MATLAB/Octave reference model + stability study
 ├── sim/                          # GHDL scripts, Makefile, captured impulse responses
 ├── docs/                         # derivation, fixed-point analysis, deviations log
 ├── MILESTONES.md

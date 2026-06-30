@@ -1,7 +1,7 @@
 # Milestones
 
 ## M0: Numerical reference model & stability study
-- [ ] Python reference model (`model/fdtd_ref.py`)
+- [ ] MATLAB/Octave reference model (`model/fdtd_ref.m`)
 - [ ] CFL/stability sweep with plots
 - [ ] Repository scaffolding: `src/`, `sim/`, `docs/` tree and GHDL CI
 
