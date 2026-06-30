@@ -36,7 +36,8 @@ entity top_resonator is
     NX            : positive := 8;
     NY            : positive := 8;
     OS            : positive := 4;
-    FREE_BOUNDARY : boolean  := false
+    FREE_BOUNDARY : boolean  := false;
+    TIME_MUX      : boolean  := false  -- false: spatial mesh; true: time-multiplexed
   );
   port (
     -- system (mesh) domain
@@ -115,7 +116,8 @@ begin
   -- Oversampled non-linear mesh (system domain)
   ----------------------------------------------------------------------------
   core : entity work.mesh_resonator
-    generic map (NX => NX, NY => NY, OS => OS, FREE_BOUNDARY => FREE_BOUNDARY)
+    generic map (NX => NX, NY => NY, OS => OS, FREE_BOUNDARY => FREE_BOUNDARY,
+                 TIME_MUX => TIME_MUX)
     port map (clk => sys_clk, rst => sys_rst,
               frame => exc_valid, coeffs => coeffs,
               exc_in => signed(exc_slv), exc_en => '1',
