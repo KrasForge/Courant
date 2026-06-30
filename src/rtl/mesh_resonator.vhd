@@ -38,7 +38,8 @@ entity mesh_resonator is
     NX            : positive := 8;
     NY            : positive := 8;
     OS            : positive := 4;     -- oversampling factor (mesh steps / frame)
-    FREE_BOUNDARY : boolean  := false
+    FREE_BOUNDARY : boolean  := false;
+    TIME_MUX      : boolean  := false  -- false: spatial mesh; true: time-multiplexed
   );
   port (
     clk       : in  std_logic;
@@ -72,8 +73,9 @@ architecture rtl of mesh_resonator is
 
 begin
 
-  mesh : entity work.grid_mesh
-    generic map (NX => NX, NY => NY, FREE_BOUNDARY => FREE_BOUNDARY)
+  mesh : entity work.mesh
+    generic map (NX => NX, NY => NY, FREE_BOUNDARY => FREE_BOUNDARY,
+                 TIME_MUX => TIME_MUX)
     port map (clk => clk, rst => rst, strobe => m_strobe, coeffs => coeffs,
               exc_in => exc_in, exc_en => m_exc_en,
               pick_l => m_pick_l, pick_r => m_pick_r, valid => m_valid);
