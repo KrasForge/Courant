@@ -3,6 +3,7 @@
 ## M0: Numerical reference model & stability study
 - [ ] MATLAB/Octave reference model (`model/fdtd_ref.m`)
 - [ ] CFL/stability sweep with plots
+- [ ] Q1.23 fixed-point quantization study (`docs/fixed_point_analysis.md`)
 - [ ] Repository scaffolding: `src/`, `sim/`, `docs/` tree and GHDL CI
 
 ## M1: Node PE RTL & unit test
