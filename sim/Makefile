@@ -6,7 +6,7 @@ TB_DIR  := ../src/tb
 
 RTL_SRCS := $(wildcard $(RTL_DIR)/*.vhd)
 TB_SRCS  := $(wildcard $(TB_DIR)/*.vhd)
-ALL_VHDS := $(RTL_SRCS) $(TB_SRCS)
+ALL_VHDS := $(strip $(RTL_SRCS) $(TB_SRCS))
 TB_TOPS  := $(patsubst $(TB_DIR)/%_tb.vhd,%_tb,$(filter %_tb.vhd,$(TB_SRCS)))
 
 .PHONY: all clean
