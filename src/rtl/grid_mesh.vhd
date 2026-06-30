@@ -66,7 +66,7 @@ architecture structural of grid_mesh is
   signal nbw : nbgrid_t;     -- assembled N/S/E/W neighbour inputs per node
 
   signal exc_node : q123_t;                            -- forcing for the exc node
-  signal vsr      : std_logic_vector(2 downto 0) := (others => '0');
+  signal vsr      : std_logic_vector(3 downto 0) := (others => '0');
 
 begin
 
@@ -80,15 +80,15 @@ begin
   pick_l <= u(PICK_LY, PICK_LX);
   pick_r <= u(PICK_RY, PICK_RX);
 
-  -- Mesh-level valid: mirrors node_element's 3-clock strobe-to-commit latency.
-  valid <= vsr(2);
+  -- Mesh-level valid: mirrors node_element's 4-clock strobe-to-commit latency.
+  valid <= vsr(3);
   vld : process (clk)
   begin
     if rising_edge(clk) then
       if rst = '1' then
         vsr <= (others => '0');
       else
-        vsr <= vsr(1 downto 0) & strobe;
+        vsr <= vsr(2 downto 0) & strobe;
       end if;
     end if;
   end process;

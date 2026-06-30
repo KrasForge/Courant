@@ -81,9 +81,11 @@ begin
     variable steps  : natural := 0;
   begin
     -- Coefficients matched to the trace header (gamma2=0.09, sigma=1.5).
-    coeffs <= (gamma2 => to_q123(0.09),
-               a0     => to_q123(0.99996875),
-               sigk1  => to_q123(0.99996875));
+    coeffs <= (gamma2     => to_q123(0.09),
+               a0         => to_q123(0.99996875),
+               sigk1      => to_q123(0.99996875),
+               alpha      => Q123_ZERO,           -- linear (no chaos injection)
+               gamma2_max => to_q123(0.5));
     nb <= (n => Q123_ZERO, s => Q123_ZERO, e => Q123_ZERO, w => Q123_ZERO);
 
     -- Synchronous reset to rest
