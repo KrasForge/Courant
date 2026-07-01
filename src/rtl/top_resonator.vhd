@@ -15,7 +15,8 @@
 --     per audio frame, injecting the excitation, and decimates the stereo
 --     pickups to one audio sample per frame.
 --   * cdc_word (pickups): brings the stereo output back into the I2S domain.
---   * control_bus (system-clock domain): runtime coefficients to the mesh.
+--   * preset_bank (system-clock domain): runtime coefficients to the mesh,
+--     plus factory/user presets recalled via preset_index/recall/save.
 --
 -- Generics expose mesh size, oversampling factor, and boundary mode. A single
 -- global reset is used for both domains (sufficient for simulation; a real
@@ -49,11 +50,16 @@ entity top_resonator is
     sd_rx       : in  std_logic;          -- audio in  (from ADC)
     sd_tx       : out std_logic;          -- audio out (to DAC)
     -- control/register bus (system domain)
-    cfg_wr_en   : in  std_logic;
-    cfg_wr_addr : in  unsigned(3 downto 0);
-    cfg_wr_data : in  std_logic_vector(23 downto 0);
-    cfg_rd_addr : in  unsigned(3 downto 0);
-    cfg_rd_data : out std_logic_vector(23 downto 0)
+    cfg_wr_en     : in  std_logic;
+    cfg_wr_addr   : in  unsigned(3 downto 0);
+    cfg_wr_data   : in  std_logic_vector(23 downto 0);
+    cfg_rd_addr   : in  unsigned(3 downto 0);
+    cfg_rd_data   : out std_logic_vector(23 downto 0);
+    -- preset control (system domain); default to a no-op so existing
+    -- instantiations that only use the register port are unaffected
+    preset_index  : in  unsigned(3 downto 0) := (others => '0');
+    preset_recall : in  std_logic := '0';    -- pulse: load preset_index
+    preset_save   : in  std_logic := '0'      -- pulse: save into a user slot
   );
 end entity top_resonator;
 
@@ -94,12 +100,14 @@ begin
   ----------------------------------------------------------------------------
   -- Control / register bus (system domain)
   ----------------------------------------------------------------------------
-  ctrl : entity work.control_bus
+  ctrl : entity work.preset_bank
     port map (clk => sys_clk, rst => sys_rst,
               wr_en => cfg_wr_en, wr_addr => cfg_wr_addr, wr_data => cfg_wr_data,
               rd_addr => cfg_rd_addr, rd_data => cfg_rd_data,
+              preset_index => preset_index, recall => preset_recall, save => preset_save,
               coeffs => coeffs,
-              pick_lx => open, pick_ly => open, pick_rx => open, pick_ry => open);
+              pick_lx => open, pick_ly => open, pick_rx => open, pick_ry => open,
+              free_boundary => open);
 
   ----------------------------------------------------------------------------
   -- Excitation CDC: the mallet (rx_l) crosses into the mesh domain. Its
