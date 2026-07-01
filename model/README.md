@@ -17,6 +17,15 @@ MATLAB / Octave reference model and stability study for the 2D FDTD mesh.
   `docs/spatial_variation.md`.
 - `compare_capture.m` / `preset_gen.m` — hardware capture comparison (#27) and
   preset authoring (#30) helpers.
+- `StiffMesh2D.m` — membrane + bending-stiffness (biharmonic) + anisotropy
+  study model (issue #31); reduces exactly to `Mesh2D` when stiffness is off.
+- `stiffness_study.m` — confirms the stiff-scheme stability bound
+  `(g2x+g2y)+16*mu2 <= 1`, renders membrane/plate/anisotropic audio, and
+  prints the RTL cost + go/no-go (see `docs/materials_stiffness.md`).
+- `compare_capture.m` — compares an on-board audio capture to the simulation
+  reference (issue #27 hardware validation harness).
+- `preset_gen.m` — authors preset register words from physical parameters
+  (issue #30).
 
 ## Planned
 - `impulse_response.m` — generates reference impulse-response data for later
