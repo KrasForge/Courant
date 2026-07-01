@@ -12,6 +12,7 @@ Planned contents:
 - `spatial_variation.md` — per-node/region coefficient maps study + go/no-go (issue #32)
 - `materials_stiffness.md` — bending-stiffness / anisotropy study + go/no-go (issue #31)
 - `presets.md` — preset format, factory presets, and how to author/load them
+- `panel.md` — front-panel controller: knobs→coefficients, encoder→presets (issue #78)
 - `polyphony.md` — voice abstraction, allocation/stealing, and voice-count vs. cost
 - `midi.md` — MIDI/CV front-end: note→pitch, velocity→strike/timbre mapping
 - `cv.md` — control-voltage front-end: 1V/oct pitch, gate strike, mod→timbre (issue #70)
