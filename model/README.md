@@ -10,6 +10,8 @@ MATLAB / Octave reference model and stability study for the 2D FDTD mesh.
 - `stability_study.m` — CFL / Courant-number sweep; classifies stable vs.
   divergent runs and recommends a `gamma2_max` safety margin for the
   non-linear clamp (README §2). Writes `outputs/cfl_*.png`.
+- `Exciter.m` / `exciter_study.m` — physical mallet + bow exciter front-ends
+  study (issue #33); see `docs/exciters.md`.
 - `StiffMesh2D.m` / `stiffness_study.m` — bending-stiffness + anisotropy study
   (issue #31); see `docs/materials_stiffness.md`.
 - `VarMesh2D.m` / `spatial_study.m` — spatially-varying coefficient maps
