@@ -74,30 +74,16 @@ function render_phrase(name, C, v, scale, sched, total_s, outdir)
     printf('%s.wav  %.1f s  (%d notes)\n', name, total_s, size(sched,1));
 end
 
-% one struck note, NON-LINEAR update, stereo pickups
+% one struck note via the shared non-linear model, stereo pickups
 function note = render_note(C, gamma2, v, taps)
-    fs = C.FS; k = 1/fs;
-    a0 = 1/(1 + v.sigma*k); sigk1 = 1 - v.sigma*k;
-    U = zeros(C.NY, C.NX); U1 = U;
-    % Gaussian centre strike
-    [jj, ii] = meshgrid(0:C.NX-1, 0:C.NY-1);
-    d2 = (ii-(C.NY-1)/2).^2 + (jj-(C.NX-1)/2).^2;
-    U = exp(-d2 ./ (2*1.6^2));
-    n = round(v.note_dur * fs);
+    m = NLMesh2D(C.NX, C.NY, C.FS, gamma2, v.alpha, v.gmax, v.sigma, v.bc);
+    m.strike((C.NY-1)/2, (C.NX-1)/2, 1.6, 1.0);      % Gaussian centre strike
+    n = round(v.note_dur * C.FS);
     note = zeros(n, 2);
-    Lk = [0 1 0;1 -4 1;0 1 0];
     for t = 1:n
-        gl = min(max(gamma2 + v.alpha.*U.^2, 0), v.gmax);   % local nonlinear gamma2
-        if strcmp(v.bc, 'fixed')
-            lap = conv2(U, Lk, 'same');
-        else
-            UP = padarray_reflect(U);
-            lap = UP(3:end,2:end-1)+UP(1:end-2,2:end-1)+UP(2:end-1,3:end)+UP(2:end-1,1:end-2)-4*U;
-        end
-        Un = a0 .* (2*U - sigk1.*U1 + gl.*lap);
-        U1 = U; U = Un;
-        note(t,1) = U(taps(1),taps(2));
-        note(t,2) = U(taps(3),taps(4));
+        m.step();
+        note(t,1) = m.u(taps(1), taps(2));
+        note(t,2) = m.u(taps(3), taps(4));
     end
 end
 
@@ -111,14 +97,6 @@ function y = norm_hpf(x, fs)
         y(n) = a*(yp + x(n) - xp);
         xp = x(n); yp = y(n);
     end
-end
-
-function UP = padarray_reflect(U)
-    [ny,nx] = size(U);
-    UP = zeros(ny+2, nx+2);
-    UP(2:ny+1,2:nx+1) = U;
-    UP(1,2:nx+1)=U(2,:); UP(ny+2,2:nx+1)=U(ny-1,:);
-    UP(2:ny+1,1)=U(:,2); UP(2:ny+1,nx+2)=U(:,nx-1);
 end
 
 function P = parse_opts(P, args)
