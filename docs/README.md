@@ -7,3 +7,4 @@ Planned contents:
 - `cfl_derivation.md` — stability proof and safety-margin rationale for `gamma2_max`
 - `deviations.md` — log of intentional deviations from the reference model
 - `resource_budget.md` — DSP/LUT estimates per target (spatial vs. time-multiplexed)
+- `polyphony.md` — voice abstraction, allocation/stealing, and voice-count vs. cost
