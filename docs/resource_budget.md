@@ -81,9 +81,58 @@ So **time-multiplexing trades latency headroom for the O(N^2) area blow-up**,
 and is the route to a full-size mesh on a low-cost board. The same RTL builds
 either way (`grid_mesh` is parameterisable); the choice is per-target.
 
+## The playable synth (synth_top) vs. part (issue #77)
+
+Measured utilisation of the full playable design `synth_top` (MIDI ->
+polyphony -> I2S, incl. `midi_frontend` / `preset_bank` / `i2s_*` / CDC glue) at
+the default 8x8 mesh, OS=4, from the yosys flow (flattened, so the counts are
+aggregate primitives, not just the wrapper):
+
+### Time-multiplexed voices (`TIME_MUX=true`)
+
+| Voices | DSP48E1 | LUT | FF |
+| --- | --- | --- | --- |
+| 1 | 24 | 8.6k | 4.9k |
+| 2 | 38 | 15.6k | 8.3k |
+| 4 | 74 | 30.4k | 15.1k |
+| 8 | 146 | 61.6k | 28.7k |
+
+The trend is **~18 DSP per voice + ~6 DSP of glue** (`DSP ~= 6 + 18*NVOICES`);
+LUT/FF add ~7.3k / ~3.4k per voice on ~1.3k / ~1.5k of glue.
+
+### Fully-spatial (`TIME_MUX=false`)
+
+A single spatial 8x8 voice is **1158 DSP** (LUT 39k, FF 17k), so **spatial
+polyphony does not fit any Arty** (35T: 90 DSP, 100T: 240). Time-multiplexing is
+mandatory for a playable voice count, as issues #24/#29 anticipated.
+
+### Which part, how many voices
+
+| Part | DSP (90/240) | LUT (20.8k/63.4k) | Voices (DSP) | Voices (yosys LUT) |
+| --- | --- | --- | --- | --- |
+| Arty A7-35T (XC7A35T) | 90 | 20.8k | **4** (74 DSP) | ~2 (15.6k) |
+| Arty A7-100T (XC7A100T) | 240 | 63.4k | **~12** (~222) | ~8 (61.6k) |
+
+DSP scales cleanly and says **4 voices on the 35T, ~12 on the 100T**. FF is never
+close. The tension is **LUT**, which in yosys binds sooner (~2 voices on the 35T,
+~8 on the 100T).
+
+### Caveat: the LUT figure is yosys-pessimistic for time-mux
+
+The LUT count is a conservative upper bound, not the Vivado number.
+`grid_mesh_tdm` uses **combinational-read** grid memory, which yosys expands into
+LUT mux-trees rather than the LUTRAM/BRAM Vivado infers. Vivado maps that memory
+far more compactly (and the registered-read BRAM line-buffer refactor noted in
+`grid_mesh_tdm.vhd` removes it from the LUT budget entirely). So **DSP is the
+reliable planning limit** (4 / 12 voices); the true LUT usage sits between the
+yosys figure and much lower, and should be confirmed on the Vivado flow
+(`build_synth.tcl`) before committing to a voice count near the LUT edge.
+
 ## Reproducing
 
 ```sh
-cd syn/yosys && ./report_util.sh                # open-source estimate (this table)
-cd syn/vivado && vivado -mode batch -source build_arty.tcl -tclargs xc7a35ticsg324-1L 2 2 4
+cd syn/yosys && ./report_util.sh                # open-source estimate (these tables)
+# sweep synth_top configs by editing the -gTIME_MUX / -gNVOICES generics there
+cd syn/vivado && vivado -mode batch -source build_arty.tcl  -tclargs xc7a35ticsg324-1L 2 2 4
+cd syn/vivado && vivado -mode batch -source build_synth.tcl -tclargs xc7a35ticsg324-1L 4 8 8 4 true
 ```
