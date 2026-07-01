@@ -14,4 +14,5 @@ Planned contents:
 - `presets.md` — preset format, factory presets, and how to author/load them
 - `polyphony.md` — voice abstraction, allocation/stealing, and voice-count vs. cost
 - `midi.md` — MIDI/CV front-end: note→pitch, velocity→strike/timbre mapping
+- `cv.md` — control-voltage front-end: 1V/oct pitch, gate strike, mod→timbre (issue #70)
 - `codec_bringup.md` — Pmod I2S2 (CS5343/CS4344) clocking, wiring, and bring-up
