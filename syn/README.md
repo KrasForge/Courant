@@ -40,3 +40,26 @@ vivado -mode batch -source build_arty.tcl -tclargs xc7a35ticsg324-1L 8 8 4 true
 ```
 
 This produces `util_<tag>.rpt` and `timing_<tag>.rpt`.
+
+## Building the playable synth (synth_top)
+
+[`vivado/build_synth.tcl`](vivado/build_synth.tcl) builds the flagship playable
+design, the board wrapper [`vivado/arty_synth.vhd`](vivado/arty_synth.vhd) around
+`synth_top` (#68): MIDI in, polyphonic voices, I2S out. The wrapper adds an MMCM
+that turns the 100 MHz oscillator into the system clock and the ~12.288 MHz audio
+master clock, and maps the buttons/switches/LEDs and the Pmod I2S2 codec pins
+([`vivado/arty_synth.xdc`](vivado/arty_synth.xdc)). The MMCM instantiation is a
+synthesis-only Xilinx primitive, so `arty_synth.vhd` lives under `syn/` and is
+not part of the (vendor-neutral) GHDL simulation flow; `synth_top` itself is
+fully simulated in `src/tb/synth_top_tb.vhd`.
+
+```sh
+# Arty A7-35T, 4 voices, time-multiplexed (fits the part)
+vivado -mode batch -source build_synth.tcl -tclargs xc7a35ticsg324-1L 4 8 8 4 true
+# Arty A7-100T, 8 voices
+vivado -mode batch -source build_synth.tcl -tclargs xc7a100tcsg324-1  8 8 8 4 true
+```
+
+Same opt/place/route + pass/fail timing gate as `build_arty.tcl`. (Quick check:
+`synth_top` synthesises under the open-source yosys flow at ~19 DSP per
+time-multiplexed voice; see issue #77 for the full voices-vs-part table.)
