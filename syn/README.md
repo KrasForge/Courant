@@ -22,16 +22,21 @@ scale linearly with `NX*NY`.)
 ## Vivado (sign-off)
 
 [`vivado/build_arty.tcl`](vivado/build_arty.tcl) is a non-project flow that
-synthesises `top_resonator` for a chosen part and mesh size and writes
-utilisation + timing reports. [`vivado/arty_a7.xdc`](vivado/arty_a7.xdc)
-constrains the 100 MHz system clock, the I2S bit clock, and the
-async clock-domain crossing.
+synthesises **and implements** (opt / place / route) `top_resonator` for a
+chosen part and mesh size, then writes utilisation + post-route timing reports
+and exits non-zero on negative slack (a pass/fail timing gate).
+[`vivado/arty_a7.xdc`](vivado/arty_a7.xdc) constrains the 100 MHz system clock,
+the I2S bit clock, the Pmod I2S2 audio pins, and the async clock-domain crossing
+(false path + bounded bus skew on the `cdc_word` handshake). The full timing
+closure rationale is in [`../docs/timing_closure.md`](../docs/timing_closure.md).
 
 ```sh
 # Arty A7-35T, 2x2 mesh, 4x oversampling
 vivado -mode batch -source build_arty.tcl -tclargs xc7a35ticsg324-1L 2 2 4
 # Arty A7-100T, 3x3 mesh
 vivado -mode batch -source build_arty.tcl -tclargs xc7a100tcsg324-1 3 3 4
+# time-multiplexed build (one PE pool; fits larger grids)
+vivado -mode batch -source build_arty.tcl -tclargs xc7a35ticsg324-1L 8 8 4 true
 ```
 
 This produces `util_<tag>.rpt` and `timing_<tag>.rpt`.
