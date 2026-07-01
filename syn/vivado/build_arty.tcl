@@ -30,7 +30,7 @@ read_vhdl -vhdl2008 [list \
   $rtl/cdc_word.vhd \
   $rtl/i2s_transceiver.vhd \
   $rtl/mesh_resonator.vhd \
-  $rtl/control_bus.vhd \
+  $rtl/preset_bank.vhd \
   $rtl/top_resonator.vhd ]
 
 read_xdc [file dirname [info script]]/arty_a7.xdc

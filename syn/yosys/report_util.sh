@@ -36,7 +36,7 @@ report grid_mesh     $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd
 report top_resonator $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
                      $RTL/grid_mesh_tdm.vhd $RTL/mesh.vhd \
                      $RTL/cdc_word.vhd $RTL/i2s_transceiver.vhd \
-                     $RTL/mesh_resonator.vhd $RTL/control_bus.vhd \
+                     $RTL/mesh_resonator.vhd $RTL/preset_bank.vhd \
                      $RTL/top_resonator.vhd
 
 echo
