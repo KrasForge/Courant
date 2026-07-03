@@ -54,7 +54,9 @@ entity synth_top is
     BAUD          : positive := 31_250;
     -- I2S clock division from the audio master clock
     MCLK_TO_BCLK  : positive := 4;
-    BCLK_TO_LRCK  : positive := 64
+    BCLK_TO_LRCK  : positive := 64;
+    -- control-voltage ADC width
+    CV_W          : positive := 16
   );
   port (
     -- system (mesh / control) domain
@@ -64,6 +66,11 @@ entity synth_top is
     mclk         : in  std_logic;
     -- serial MIDI in
     midi_rx      : in  std_logic;
+    -- control voltage in (system domain); cv_sel = '1' plays from CV, else MIDI
+    cv_sel       : in  std_logic := '0';
+    pitch_cv     : in  signed(CV_W-1 downto 0) := (others => '0');
+    gate         : in  std_logic := '0';
+    mod_cv       : in  signed(CV_W-1 downto 0) := (others => '0');
     -- preset control (system domain)
     preset_index : in  unsigned(3 downto 0) := (others => '0');
     preset_recall: in  std_logic := '0';
@@ -103,6 +110,20 @@ architecture rtl of synth_top is
   signal m_note_off : std_logic;
   signal m_note     : std_logic_vector(6 downto 0);
   signal m_vel      : std_logic_vector(6 downto 0);
+
+  -- cv_frontend outputs (note mapping)
+  signal c_coeffs   : coeffs_t;
+  signal c_exc_in   : q123_t;
+  signal c_note_on  : std_logic;
+  signal c_note_off : std_logic;
+  signal c_note     : std_logic_vector(6 downto 0);
+
+  -- selected source (MIDI or CV) feeding the voices
+  signal s_coeffs   : coeffs_t;
+  signal s_exc_in   : q123_t;
+  signal s_note_on  : std_logic;
+  signal s_note_off : std_logic;
+  signal s_note     : std_logic_vector(6 downto 0);
 
   -- preset_bank base coefficients
   signal p_coeffs : coeffs_t;
@@ -163,6 +184,24 @@ begin
               note => m_note, velocity => m_vel);
 
   ----------------------------------------------------------------------------
+  -- CV front-end: pitch/gate/mod -> note mapping (same interface as MIDI)
+  ----------------------------------------------------------------------------
+  cv : entity work.cv_frontend
+    generic map (CV_W => CV_W)
+    port map (clk => sys_clk, rst => sys_rst, frame => frame,
+              pitch_cv => pitch_cv, gate => gate, mod_cv => mod_cv,
+              coeffs => c_coeffs, exc_in => c_exc_in, exc_en => open,
+              note_on => c_note_on, note_off => c_note_off,
+              note => c_note, velocity => open);
+
+  -- select the active source (MIDI or CV)
+  s_coeffs   <= c_coeffs   when cv_sel = '1' else m_coeffs;
+  s_exc_in   <= c_exc_in   when cv_sel = '1' else m_exc_in;
+  s_note_on  <= c_note_on  when cv_sel = '1' else m_note_on;
+  s_note_off <= c_note_off when cv_sel = '1' else m_note_off;
+  s_note     <= c_note     when cv_sel = '1' else m_note;
+
+  ----------------------------------------------------------------------------
   -- Preset bank: base "body" coefficients + register edit/read-back
   ----------------------------------------------------------------------------
   presets : entity work.preset_bank
@@ -174,10 +213,10 @@ begin
               pick_lx => open, pick_ly => open, pick_rx => open, pick_ry => open,
               free_boundary => open);
 
-  -- merge: note sets pitch (gamma2) + velocity timbre (alpha); preset sets the
-  -- body (decay a0/sigk1, CFL clamp gamma2_max)
-  v_coeffs.gamma2     <= m_coeffs.gamma2;
-  v_coeffs.alpha      <= m_coeffs.alpha;
+  -- merge: the selected source sets pitch (gamma2) + timbre (alpha); the preset
+  -- sets the body (decay a0/sigk1, CFL clamp gamma2_max)
+  v_coeffs.gamma2     <= s_coeffs.gamma2;
+  v_coeffs.alpha      <= s_coeffs.alpha;
   v_coeffs.a0         <= p_coeffs.a0;
   v_coeffs.sigk1      <= p_coeffs.sigk1;
   v_coeffs.gamma2_max <= p_coeffs.gamma2_max;
@@ -189,8 +228,8 @@ begin
     generic map (NVOICES => NVOICES, NX => NX, NY => NY, OS => OS,
                  FREE_BOUNDARY => FREE_BOUNDARY, TIME_MUX => TIME_MUX)
     port map (clk => sys_clk, rst => sys_rst, frame => frame,
-              note_on => m_note_on, note_off => m_note_off, note => m_note,
-              coeffs_in => v_coeffs, exc_in => m_exc_in,
+              note_on => s_note_on, note_off => s_note_off, note => s_note,
+              coeffs_in => v_coeffs, exc_in => s_exc_in,
               out_l => mix_l, out_r => mix_r, out_valid => mix_valid,
               active => active);
 

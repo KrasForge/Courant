@@ -35,9 +35,21 @@ entity arty_synth is
   );
   port (
     clk100     : in  std_logic;                       -- 100 MHz oscillator (E3)
-    btn        : in  std_logic_vector(3 downto 0);    -- btn0 reset, btn1 recall, btn2 save
-    sw         : in  std_logic_vector(3 downto 0);    -- preset index
+    btn        : in  std_logic_vector(3 downto 0);    -- btn0 = reset
+    sw         : in  std_logic_vector(3 downto 0);    -- sw0 = MIDI/CV select
     midi_rx    : in  std_logic;                       -- serial MIDI in
+    -- front-panel: rotary encoder (select/recall/save presets)
+    enc_a      : in  std_logic;
+    enc_b      : in  std_logic;
+    enc_btn    : in  std_logic;
+    -- panel pots + CV, from an XADC / external ADC block (that ADC is out of
+    -- scope here; these are the digitised sample ports panel_ctrl / cv consume)
+    pot_pitch  : in  unsigned(11 downto 0) := (others => '0');
+    pot_decay  : in  unsigned(11 downto 0) := (others => '0');
+    pot_timbre : in  unsigned(11 downto 0) := (others => '0');
+    pitch_cv   : in  signed(15 downto 0)   := (others => '0');
+    mod_cv     : in  signed(15 downto 0)   := (others => '0');
+    gate       : in  std_logic := '0';                -- CV gate/trigger (comparator)
     -- Pmod I2S2 codec
     codec_mclk : out std_logic;
     codec_bclk : out std_logic;
@@ -60,6 +72,14 @@ architecture rtl of arty_synth is
   signal sys_rst                    : std_logic := '1';
 
   signal active : std_logic_vector(NVOICES-1 downto 0);
+
+  -- panel_ctrl -> synth_top control
+  signal p_wr_en   : std_logic;
+  signal p_wr_addr : unsigned(3 downto 0);
+  signal p_wr_data : std_logic_vector(23 downto 0);
+  signal p_index   : unsigned(3 downto 0);
+  signal p_recall  : std_logic;
+  signal p_save    : std_logic;
 
 begin
 
@@ -108,20 +128,30 @@ begin
   end process;
 
   ----------------------------------------------------------------------------
-  -- The playable synth
+  -- Front panel: pots -> coefficients, encoder -> preset select/recall/save
+  ----------------------------------------------------------------------------
+  panel : entity work.panel_ctrl
+    generic map (POT_W => 12, N_PRESETS => 7)
+    port map (clk => sys_clk, rst => sys_rst,
+              pot_pitch => pot_pitch, pot_decay => pot_decay, pot_timbre => pot_timbre,
+              enc_a => enc_a, enc_b => enc_b, enc_btn => enc_btn,
+              cfg_wr_en => p_wr_en, cfg_wr_addr => p_wr_addr, cfg_wr_data => p_wr_data,
+              preset_index => p_index, preset_recall => p_recall, preset_save => p_save);
+
+  ----------------------------------------------------------------------------
+  -- The playable synth (MIDI/CV selectable, driven by the panel controls)
   ----------------------------------------------------------------------------
   core : entity work.synth_top
     generic map (NVOICES => NVOICES, NX => NX, NY => NY, OS => OS,
                  TIME_MUX => TIME_MUX,
                  CLK_HZ => 100_000_000, BAUD => 31_250,
-                 MCLK_TO_BCLK => 4, BCLK_TO_LRCK => 64)
+                 MCLK_TO_BCLK => 4, BCLK_TO_LRCK => 64, CV_W => 16)
     port map (sys_clk => sys_clk, sys_rst => sys_rst, mclk => mclk,
               midi_rx => midi_rx,
-              preset_index => unsigned(sw),
-              preset_recall => btn(1), preset_save => btn(2),
-              cfg_wr_en => '0', cfg_wr_addr => (others => '0'),
-              cfg_wr_data => (others => '0'), cfg_rd_addr => (others => '0'),
-              cfg_rd_data => open,
+              cv_sel => sw(0), pitch_cv => pitch_cv, gate => gate, mod_cv => mod_cv,
+              preset_index => p_index, preset_recall => p_recall, preset_save => p_save,
+              cfg_wr_en => p_wr_en, cfg_wr_addr => p_wr_addr, cfg_wr_data => p_wr_data,
+              cfg_rd_addr => (others => '0'), cfg_rd_data => open,
               codec_mclk => codec_mclk, codec_bclk => codec_bclk,
               codec_lrclk => codec_lrclk, sd_tx => codec_sdin,
               active => active);

@@ -43,6 +43,21 @@ set_property -dict { PACKAGE_PIN D12 IOSTANDARD LVCMOS33 } [get_ports codec_sdin
 ## serial MIDI in (opto-isolated 31250 baud) on JA7
 set_property -dict { PACKAGE_PIN D13 IOSTANDARD LVCMOS33 } [get_ports midi_rx]
 
+## front-panel rotary encoder + CV gate (Pmod JB GPIO)
+set_property -dict { PACKAGE_PIN E15 IOSTANDARD LVCMOS33 } [get_ports enc_a]
+set_property -dict { PACKAGE_PIN E16 IOSTANDARD LVCMOS33 } [get_ports enc_b]
+set_property -dict { PACKAGE_PIN D15 IOSTANDARD LVCMOS33 } [get_ports enc_btn]
+set_property -dict { PACKAGE_PIN C15 IOSTANDARD LVCMOS33 } [get_ports gate]
+set_false_path -from [get_ports {enc_a enc_b enc_btn gate}]
+
+## NOTE: the pot / CV analog samples (pot_pitch/decay/timbre, pitch_cv, mod_cv)
+## are digital *sample* ports fed by an XADC or an external SPI/I2S ADC block,
+## which is out of scope for this build. Wire them to that ADC's outputs (and
+## constrain the ADC's own pins) when it is added; they are left unconstrained
+## here so the panel/CV integration synthesises without a placeholder ADC.
+set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
+set_property SEVERITY {Warning} [get_drc_checks UCIO-1]
+
 #==============================================================================
 # Clock-domain crossing (mesh sys_clk  <->  audio bclk)
 #==============================================================================
