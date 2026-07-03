@@ -35,18 +35,18 @@ and cost. This project is about the former.
 
 ## The model
 
-A lossy 2D wave equation for the surface displacement `u(x,y,t)`, discretised
-with centred finite differences (spacing `h`, time step `k = 1/f_s`):
+A lossy 2D wave equation for the surface displacement $u(x,y,t)$, discretised
+with centred finite differences (spacing $h$, time step $k = 1/f_s$):
 
 $$u_{i,j}^{n+1} = a_0\left[\,2u_{i,j}^{n} - \mathrm{sigk1}\,u_{i,j}^{n-1} + \gamma^2\left(u_{i+1,j}^{n} + u_{i-1,j}^{n} + u_{i,j+1}^{n} + u_{i,j-1}^{n} - 4u_{i,j}^{n}\right)\right]$$
 
-where `gamma = ck/h` is the **Courant number**, `a0 = 1/(1+sigma*k)` and
-`sigk1 = 1-sigma*k` are precomputed damping coefficients (no per-node division),
-and the Laplacian stencil is the only inter-node coupling. `c` sets pitch,
-`sigma` sets decay.
+where $\gamma = ck/h$ is the **Courant number**, $a_0 = 1/(1+\sigma k)$ and
+$\mathrm{sigk1} = 1-\sigma k$ are precomputed damping coefficients (no per-node
+division), and the Laplacian stencil is the only inter-node coupling. $c$ sets
+pitch, $\sigma$ sets decay.
 
 **Stability is the whole game.** The explicit scheme is stable only for
-`gamma^2 <= 1/2`; cross that line and it diverges exponentially.
+$\gamma^2 \le 1/2$; cross that line and it diverges exponentially.
 
 ### The non-linear twist
 
@@ -56,15 +56,15 @@ where it moves hardest:
 $$\gamma_{i,j}^2 = \gamma_0^2 + \alpha\,(u_{i,j}^{n})^2$$
 
 This is the "tension modulation" of struck plates and gongs (pitch glide,
-inharmonic bloom, genuine routes into chaos). But `alpha*u^2` only *raises*
-`gamma^2`, hardest exactly when the sound is loudest, pushing toward the CFL
+inharmonic bloom, genuine routes into chaos). But $\alpha u^2$ only *raises*
+$\gamma^2$, hardest exactly when the sound is loudest, pushing toward the CFL
 cliff. Output saturation alone does not save you (the state pins to the rails and
 buzzes at Nyquist). The structural fix, treated as first-class here:
 
-1. **Clamp the local term** to `gamma2_max < 1/2` (a CFL safety margin), bounding
-   the instability into a rich but convergent limit-cycle regime.
+1. **Clamp the local term** to $\gamma^2_{\max} < 1/2$ (a CFL safety margin),
+   bounding the instability into a rich but convergent limit-cycle regime.
 2. **Saturating Q1.23 state arithmetic**, turning blow-up into musical soft-clip.
-3. **Guaranteed decay** via the `sigma` damping term.
+3. **Guaranteed decay** via the $\sigma$ damping term.
 
 A squaring non-linearity aliases above Nyquist; the mitigation is **oversampling
 + decimation** (a documented quality/area knob), not a "zero aliasing" claim.
@@ -79,12 +79,12 @@ A squaring non-linearity aliases above Nyquist; the mitigation is **oversampling
         panel knobs/encoder --'   sample strobe <--'  (I2S word clock -> frame)
 ```
 
-- **Node PE** (`node_element`): state registers `u^n`/`u^{n-1}` and a pipelined
-  Q1.23 datapath (Laplacian, `alpha*u^2`, the `gamma2_local` clamp, `a0` scale)
+- **Node PE** (`node_element`): state registers $u^n$/$u^{n-1}$ and a pipelined
+  Q1.23 datapath (Laplacian, $\alpha u^2$, the `gamma2_local` clamp, $a_0$ scale)
   on DSP slices, with N/S/E/W wiring and fixed (Dirichlet) or free (Neumann)
   edges.
 - **Spatial vs. time-multiplexed** (`mesh` selector): one PE per node is
-  `O(N^2)` DSP and tops out fast; the time-mux mesh folds the grid through one
+  $O(N^2)$ DSP and tops out fast; the time-mux mesh folds the grid through one
   PE (~18 DSP/voice, independent of grid size). Same RTL, a synthesis-time
   choice, this is what makes polyphony fit a small part.
 - **Playability**: MIDI and CV front-ends map note/velocity (or 1V/oct + gate +
