@@ -1,260 +1,133 @@
 # Courant
-A 2D finite-difference physical-modeling synthesis engine in structural VHDL,
-with amplitude-dependent non-linear "chaos injection."
 
-This project simulates a vibrating two-dimensional acoustic membrane (a drum
-head, a plate, a sheet of metal) directly in FPGA fabric. Instead of recording
-or sampling an instrument, it solves the acoustic wave equation in real time on
-a spatial mesh of arithmetic cells and streams the result out as audio. A
-non-linear tension term makes the mesh stiffen under load, so hard hits bend
-pitch upward and bloom into inharmonic, metallic partials before settling back
-into a natural decay.
+A 2D finite-difference physical-modeling synthesis engine in structural VHDL.
 
-> **Status: pre-silicon, simulation-first.** This is a design and reference
-> model repository. The numerical model and RTL are developed and validated in
-> simulation (GHDL) before any board bring-up.
+Instead of sampling an instrument, Courant solves the 2D acoustic wave equation
+in real time on an FPGA mesh of arithmetic cells and streams the result out as
+stereo audio, a vibrating drum head, plate, or sheet of metal, computed rather
+than recorded. An amplitude-dependent non-linear term makes the mesh stiffen
+under load, so hard hits bend pitch upward and bloom into inharmonic, metallic
+partials before decaying. It is playable polyphonically over MIDI or CV, with
+recallable presets.
 
----
+> **Status: simulation-first, feature-complete in sim, pre-hardware.** The
+> engine, a Q1.23 reference model that is *bit-exact* to the RTL, and a full
+> playable top (MIDI/CV -> polyphony -> I2S) are developed and verified in GHDL
+> (23 testbenches). Board bring-up (Arty A7 + Pmod I2S2) is the next step;
+> nothing is claimed to work on hardware until it does.
 
 ## Why an FPGA
 
-A 2D mesh is embarrassingly parallel: every node runs the *same* small update
-every time step, reading only its four neighbours. That maps naturally onto
-FPGA fabric, where many nodes update concurrently and the per-sample cost does
-not grow the way a sequential `for`-loop over the grid does on a CPU.
+A 2D mesh is embarrassingly parallel: every node runs the same small update each
+time step, reading only its four neighbours. That maps onto FPGA fabric, where
+nodes update concurrently and the per-sample cost does not grow with grid size
+the way a sequential CPU loop does. The honest trade:
 
-The honest trade is real, though, and this README states it plainly rather than
-selling a fantasy:
-
-| Aspect | Software (CPU / plugin) | This FPGA engine |
+| | Software (CPU / plugin) | This FPGA engine |
 | --- | --- | --- |
-| **Grid scaling** | Sequential per node; cost grows with node count | Concurrent nodes; one mesh step per audio sample, independent of node count (up to the fabric's DSP/LUT budget) |
-| **Latency** | Governed by the host audio buffer (roughly 0.7 to 6 ms typical) | Deterministic, sub-sample; no block buffering. Group delay through the model is the physical wave propagation itself |
-| **Per-node non-linearity** | Often simplified or dropped to save CPU | Evaluated on every node, every step |
-| **Iteration speed** | Edit, recompile in seconds | Requires re-synthesis (minutes); behaviour bounded by chosen fabric |
-| **Cost / footprint** | Runs on hardware you already own | Needs an FPGA plus audio codec; each extra voice consumes finite DSP/LUT |
+| **Grid scaling** | cost grows per node | concurrent; one mesh step per sample, up to the DSP/LUT budget |
+| **Latency** | host audio buffer (~0.7-6 ms) | deterministic, sub-sample; no block buffering |
+| **Per-node non-linearity** | often dropped to save CPU | evaluated every node, every step |
+| **Iteration / cost** | recompile in seconds; runs on hardware you own | re-synthesis (minutes); needs an FPGA + codec |
 
-FPGAs win on **deterministic parallelism and latency**. Software wins on
-**flexibility and cost**. This project is about the former.
+FPGAs win on deterministic parallelism and latency; software wins on flexibility
+and cost. This project is about the former.
 
----
+## The model
 
-## 1. Mathematical foundation
+A lossy 2D wave equation for the surface displacement `u(x,y,t)`, discretised
+with centred finite differences (spacing `h`, time step `k = 1/f_s`):
 
-The engine models a lossy 2D wave equation for the transverse displacement
-`u(x, y, t)` of the surface:
+$$u_{i,j}^{n+1} = a_0\left[\,2u_{i,j}^{n} - \mathrm{sigk1}\,u_{i,j}^{n-1} + \gamma^2\left(u_{i+1,j}^{n} + u_{i-1,j}^{n} + u_{i,j+1}^{n} + u_{i,j-1}^{n} - 4u_{i,j}^{n}\right)\right]$$
 
-$$\frac{\partial^2 u}{\partial t^2} = c^2\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right) - 2\sigma\frac{\partial u}{\partial t}$$
+where `gamma = ck/h` is the **Courant number**, `a0 = 1/(1+sigma*k)` and
+`sigk1 = 1-sigma*k` are precomputed damping coefficients (no per-node division),
+and the Laplacian stencil is the only inter-node coupling. `c` sets pitch,
+`sigma` sets decay.
 
-* `c` is the wave propagation speed (sets pitch and tension)
-* `sigma` is the frequency-independent damping (sets decay time)
+**Stability is the whole game.** The explicit scheme is stable only for
+`gamma^2 <= 1/2`; cross that line and it diverges exponentially.
 
-### Discretisation
+### The non-linear twist
 
-Using centred finite differences on a grid with spacing `h` and time step
-`k = 1/f_s` (with `f_s` the audio rate, e.g. 48 kHz), the explicit update for
-node `(i, j)` is:
-
-$$u_{i,j}^{n+1} = \frac{1}{1+\sigma k}\left[\,2u_{i,j}^{n} - (1-\sigma k)\,u_{i,j}^{n-1} + \gamma^2\left(u_{i+1,j}^{n} + u_{i-1,j}^{n} + u_{i,j+1}^{n} + u_{i,j-1}^{n} - 4u_{i,j}^{n}\right)\right]$$
-
-where `gamma = ck/h` is the **Courant number**. The bracketed Laplacian stencil
-is the only inter-node coupling; everything else is local.
-
-### Stability (CFL), and why it is the whole game here
-
-An explicit 2D scheme is only stable when the Courant number satisfies:
-
-$$\gamma^2 \le \tfrac{1}{2}\qquad\left(\gamma \le \tfrac{1}{\sqrt 2}\approx 0.7071\right)$$
-
-Cross that line and the scheme does not merely "sound bad," it diverges
-**exponentially**. This matters enormously for the next section.
-
----
-
-## 2. The non-linear twist: chaos injection
-
-A linear mesh with constant `gamma` is predictable and, frankly, a bit sterile.
-This engine makes the local Courant term **amplitude-dependent**, so the mesh
-stiffens where it is moving hardest:
+Courant makes the local Courant term amplitude-dependent, so the mesh stiffens
+where it moves hardest:
 
 $$\gamma_{i,j}^2 = \gamma_0^2 + \alpha\,(u_{i,j}^{n})^2$$
 
-* `gamma0^2` is the base stiffness and pitch
-* `alpha` is the chaos coupling
+This is the "tension modulation" of struck plates and gongs (pitch glide,
+inharmonic bloom, genuine routes into chaos). But `alpha*u^2` only *raises*
+`gamma^2`, hardest exactly when the sound is loudest, pushing toward the CFL
+cliff. Output saturation alone does not save you (the state pins to the rails and
+buzzes at Nyquist). The structural fix, treated as first-class here:
 
-High-amplitude regions momentarily raise the local wave speed, bending the
-wavefront, shifting pitch up, and bleeding energy into inharmonic partials. This
-is the characteristic "tension modulation" of struck plates and gongs, including
-genuine period-doubling routes into chaos.
+1. **Clamp the local term** to `gamma2_max < 1/2` (a CFL safety margin), bounding
+   the instability into a rich but convergent limit-cycle regime.
+2. **Saturating Q1.23 state arithmetic**, turning blow-up into musical soft-clip.
+3. **Guaranteed decay** via the `sigma` damping term.
 
-### The catch (and the fix)
+A squaring non-linearity aliases above Nyquist; the mitigation is **oversampling
++ decimation** (a documented quality/area knob), not a "zero aliasing" claim.
 
-`alpha * u^2` only ever *increases* `gamma^2`, and it does so most exactly when
-the sound is loudest. In other words it pushes toward the CFL boundary precisely
-when you least want it to. Naively, a hard hit drives `gamma^2 > 1/2` and the
-mesh blows up. **Output saturation alone does not save you**: it clamps the
-*displayed* sample while the internal state pins to the rails and buzzes at
-Nyquist. You get a brick, not a gong.
-
-The fix is structural, and is treated here as a first-class part of the design
-rather than an afterthought:
-
-1. **Clamp the local term:** `gamma2_local = clamp(gamma0^2 + alpha*u^2, 0,
-   gamma2_max)` with `gamma2_max < 1/2` (a safety margin below the CFL limit).
-   This bounds the instability into a limit-cycle / soft-clip regime that is
-   chaotic and rich, but convergent.
-2. **Saturating state arithmetic:** displacement is clamped to the Q1.23 range,
-   turning blow-up energy into musical soft saturation.
-3. **Guaranteed decay:** the damping term `sigma` ensures the linear regime
-   always returns to rest.
-
-### Aliasing, stated rather than hidden
-
-A squaring non-linearity at the base sample rate generates harmonics above
-Nyquist that fold back as aliasing. "Zero aliasing" would be a false claim for
-any non-linear scheme. The mitigation is **oversampling**: run the mesh at an
-integer multiple of `f_s` (the FPGA has ample clock headroom, see below) and
-decimate on output. The oversampling factor is a documented quality and area
-knob, not magic.
-
----
-
-## 3. Architecture
+## Architecture
 
 ```
-                 +-------------------------------------+
-                 |        Control / Register Bus       |
-                 |  (gamma0^2, sigma, alpha, g2_max)   |
-                 +-------------------------------------+
-                                    |  (control rate; coeffs precomputed)
-                                    v
- +---------------+   +-----------------------------------+   +----------------+
- |  Audio In     |   |         Parallel Node Mesh        |   |  Audio Out     |
- | (I2S RX)      |==>| [0,0] [0,1] [0,2] ... (NX cols)   |==>| (I2S TX)       |
- | strike/mallet |   |   |     |     |                   |   | stereo pickup  |
- +---------------+   | [1,0] [1,1] [1,2] ...             |   +----------------+
-                     |   |     |     |                   |
-                     |  ... (NY rows; fixed/free edges)  |
-                     +-----------------------------------+
-                                    ^
-                       sample strobe (approx f_s), derived
-                       from the I2S word clock (CDC)
+ MIDI / CV --> note mapping --.                     .--> I2S TX --> codec (DAC)
+                              v                     |
+   preset bank --> coeffs --> poly voices (N meshes + mix) --> CDC --> (audio clk)
+                              ^                     |
+        panel knobs/encoder --'   sample strobe <--'  (I2S word clock -> frame)
 ```
 
-### Node Processing Element (PE)
+- **Node PE** (`node_element`): state registers `u^n`/`u^{n-1}` and a pipelined
+  Q1.23 datapath (Laplacian, `alpha*u^2`, the `gamma2_local` clamp, `a0` scale)
+  on DSP slices, with N/S/E/W wiring and fixed (Dirichlet) or free (Neumann)
+  edges.
+- **Spatial vs. time-multiplexed** (`mesh` selector): one PE per node is
+  `O(N^2)` DSP and tops out fast; the time-mux mesh folds the grid through one
+  PE (~18 DSP/voice, independent of grid size). Same RTL, a synthesis-time
+  choice, this is what makes polyphony fit a small part.
+- **Playability**: MIDI and CV front-ends map note/velocity (or 1V/oct + gate +
+  mod) to pitch/strike/timbre; `poly_voices` allocates voices and mixes them;
+  `preset_bank` recalls instrument setups; `panel_ctrl` maps knobs/encoder to
+  the engine.
+- **`synth_top` / `arty_synth`**: the flashable design tying it together, FPGA
+  as I2S master.
 
-Each node owns:
-
-* **State registers** holding `u^n` and `u^(n-1)`.
-* **A fixed-point datapath** for the update above (Laplacian, the `alpha*u^2`
-  term, the `gamma2_local` clamp, the bracket, and the `a0 * (...)` scale),
-  mapped to DSP slices.
-* **Nearest-neighbour wiring** (N/S/E/W). Edge nodes use **fixed** (`u = 0`,
-  Dirichlet) or **free** (mirrored, Neumann) boundaries.
-
-### Parallel vs. time-multiplexed: the real engineering choice
-
-A *fully spatial* mesh instantiates one PE per node. That is `O(N^2)` DSP slices
-and hits a hard ceiling fast: a 32x32 mesh with a couple of multipliers per node
-is well over a thousand DSPs, beyond most mid-range parts. The honest options:
-
-* **Fully spatial:** small mesh on a large FPGA. Lowest latency, biggest area.
-* **Time-multiplexed:** fold the grid through a small pool of PEs. At 100 MHz
-  over 48 kHz there are roughly 2083 system-clock cycles per audio sample,
-  plenty to sweep a modest grid through a pipeline and still finish within one
-  sample period.
-
-This repo targets a *parameterisable* mesh so the same RTL can be built either
-way; the choice is a synthesis-time trade, documented per target.
-
-### "Single cycle" and "zero latency": what is actually true
-
-The per-node update is a multi-stage pipeline (multiplies, the clamp, the final
-scale), not a single combinational clock edge. What *is* true:
-
-* **One mesh time-step per audio sample:** the mesh advances on each sample
-  strobe.
-* **No audio-buffer latency:** there is no DAW block to fill, so end-to-end
-  latency is sub-sample and deterministic, dominated by the codec and the PE
-  pipeline depth (nanoseconds to microseconds), not milliseconds.
-
-### Interfaces
-
-* **I2S transceiver:** serial and parallel RX/TX. RX captures the incoming
-  sample used as the excitation (the "mallet"); TX streams two pickup nodes as
-  left and right.
-* **Clock-domain crossing:** the mesh is strobed once per audio frame from the
-  I2S word clock, isolating the arithmetic core from the system clock.
-
----
-
-## 4. Numerics
-
-| Property | Value |
-| --- | --- |
-| Format | Signed **Q1.23** (24-bit two's complement) |
-| Range / resolution | `[-1.0, +1.0)` / `2^-23` (approx `1.19e-7`) |
-| Multiply | Q1.23 times Q1.23 gives Q2.46, rescaled by a `>>23` shift, saturated |
-| Accumulation | Wide (48-bit) guard accumulator, saturated on store |
-| Coefficients | `a0 = 1/(1+sigma*k)` and `sigk1 = (1-sigma*k)` are **precomputed** on the control bus, so there is no per-node division (division is expensive; this avoids it entirely) |
-| Overflow | Saturating arithmetic throughout, giving graceful soft-clip, never wrap-around spikes |
-
----
-
-## 5. Repository structure (planned)
+## What's here
 
 ```text
-.
-├── src/
-│   ├── rtl/
-│   │   ├── fdtd_pkg.vhd          # Q1.23 types, math helpers, the node_update function
-│   │   ├── node_element.vhd      # single-node PE (registers + datapath)
-│   │   ├── grid_mesh.vhd         # NX x NY structural mesh, boundary wiring, pickup taps
-│   │   ├── i2s_transceiver.vhd   # I2S RX/TX + sample-strobe generation
-│   │   └── top_resonator.vhd     # mesh + I/O + control bus + CDC
-│   └── tb/
-│       ├── node_element_tb.vhd   # unit test for the node datapath / node_update
-│       └── top_resonator_tb.vhd  # system impulse-response & stability tests
-├── model/                        # MATLAB/Octave reference model + stability study
-├── sim/                          # GHDL scripts, Makefile, captured impulse responses
-├── docs/                         # derivation, fixed-point analysis, deviations log
-├── MILESTONES.md
-└── README.md
+src/rtl/   engine (node/mesh/nonlinear, time-mux), I2S + CDC + master clocks,
+           preset bank, MIDI + CV front-ends, polyphony, panel, synth_top
+src/tb/    23 GHDL testbenches (unit -> bit-exact golden -> end-to-end audio)
+model/     MATLAB/Octave reference model (bit-exact to the RTL) + studies + demos
+sim/       GHDL Makefile (`make -C sim` runs the whole suite)
+syn/       yosys (open-source estimate) + Vivado (sign-off) flows for the Arty A7
+docs/      derivations, fixed-point + CFL analysis, resource budget, per-feature notes
 ```
 
----
+## Build & simulate
 
-## 6. Building & simulating
-
-The reference flow uses **GHDL** (open-source, VHDL-2008):
+Open-source flow, GHDL (VHDL-2008):
 
 ```sh
-# analyse + elaborate + run the node unit test
-ghdl -a --std=08 src/rtl/fdtd_pkg.vhd src/rtl/node_element.vhd src/tb/node_element_tb.vhd
-ghdl -r --std=08 node_element_tb --wave=sim/node.ghw
-
-# full system impulse-response / stability test
-make -C sim
+make -C sim                      # analyse + run all testbenches
+octave-cli --eval "demo_render"  # render nonlinear polyphonic demo audio (model/)
+cd syn/yosys && ./report_util.sh # DSP/LUT/FF resource estimate
 ```
 
-Synthesis targets a low-cost dev board for bring-up, for example a **Digilent
-Arty A7** (Xilinx Artix-7) with a **PMOD I2S2** codec, keeping the path to real
-audio cheap and reproducible. Resource budgeting (spatial vs. time-multiplexed)
-is tracked per target in `docs/`.
+Synthesis targets a **Digilent Arty A7** (Artix-7) + **Pmod I2S2** codec. A
+4-voice time-multiplexed build fits the low-cost A7-35T (~18 DSP/voice); see
+`docs/resource_budget.md`.
 
----
+## What this is and is not
 
-## 7. What this is and is not
-
-* It **is** a deterministic, low-latency, parallel physical-modeling engine and
-  an honest study of non-linear FDTD on FPGA.
-* It **is** simulation-first: nothing is claimed to "work on hardware" until it
-  has.
-* It is **not** zero-latency, zero-aliasing, or single-clock-cycle. Those are
-  marketing, and this document avoids them deliberately.
-* It is **not** a finished instrument yet. See the roadmap.
-
----
+- It **is** a deterministic, low-latency, parallel physical-modeling engine and
+  an honest study of non-linear FDTD on FPGA, simulation-first.
+- It is **not** zero-latency, zero-aliasing, or single-clock-cycle. Those are
+  marketing; this document avoids them.
+- It is **not** yet a hardware product: the RTL is complete and verified in
+  simulation, but board bring-up and the analog front-end remain.
 
 ## License
 
