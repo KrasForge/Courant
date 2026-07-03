@@ -24,6 +24,11 @@ master. It is the design a board would flash. RTL:
 - **midi_frontend** (#28) parses the serial MIDI and maps note -> `gamma2`
   (pitch), velocity -> `alpha` (timbre) + strike amplitude, and emits the
   note-on/off events plus a one-frame excitation.
+- **cv_frontend** (#70) runs in parallel and produces the *same* note-mapping
+  interface from control voltage (1V/oct pitch, gate, mod CV). A runtime
+  `cv_sel` mux picks which source (MIDI or CV) drives the voices, so the same
+  design plays from either. CV inputs default off, so a MIDI-only instantiation
+  is unaffected.
 - **preset_bank** (#30) supplies the instrument "body": `a0`/`sigk1` (decay) and
   `gamma2_max` (CFL clamp), recalled/saved via `preset_index`/`recall`/`save`
   and editable through the `cfg_*` register port.
@@ -86,6 +91,18 @@ divergence). Passes under GHDL:
 
 ```
 synth_top_tb: voice sounded, peak |out| = 191121
-synth_top_tb: all checks passed (MIDI -> 3-voice polyphony -> I2S audio;
+synth_top_tb: CV voice sounded, peak |out| = 276330
+synth_top_tb: all checks passed (MIDI and CV -> 3-voice polyphony -> I2S audio;
               voices allocate, sound, bounded)
 ```
+
+## Board top (arty_synth): panel controls
+
+On the board, [`syn/vivado/arty_synth.vhd`](../syn/vivado/arty_synth.vhd) wraps
+`synth_top` with the MMCM clocking (see `syn/README.md`) and adds the front
+panel: [`panel_ctrl`](../src/rtl/panel_ctrl.vhd) (#78) drives `synth_top`'s
+`cfg_*` / `preset_*` control ports from the pots and rotary encoder (see
+[`panel.md`](panel.md)), `sw0` selects MIDI vs CV, and the pot/CV analog samples
+come from an XADC / external ADC (that ADC block is out of scope; the sample
+ports are left for it). So the flashable design is playable from MIDI or CV with
+the knobs live.

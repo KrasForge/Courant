@@ -35,7 +35,8 @@ SYNTH_SRCS="$RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
   $RTL/grid_mesh_tdm.vhd $RTL/mesh.vhd $RTL/cdc_word.vhd $RTL/i2s_transceiver.vhd \
   $RTL/i2s_clkgen.vhd $RTL/sample_strobe.vhd $RTL/mesh_resonator.vhd \
   $RTL/voice_allocator.vhd $RTL/poly_voices.vhd $RTL/midi_uart_rx.vhd \
-  $RTL/midi_frontend.vhd $RTL/preset_bank.vhd $RTL/synth_top.vhd"
+  $RTL/midi_frontend.vhd $RTL/cv_frontend.vhd $RTL/preset_bank.vhd \
+  $RTL/synth_top.vhd"
 
 report node_element  $RTL/fdtd_pkg.vhd $RTL/node_element.vhd
 report grid_mesh     $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd

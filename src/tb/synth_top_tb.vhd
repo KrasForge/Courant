@@ -48,6 +48,12 @@ architecture sim of synth_top_tb is
   signal sd_tx : std_logic;
   signal active : std_logic_vector(NVOICES-1 downto 0);
 
+  -- control-voltage inputs
+  signal cv_sel   : std_logic := '0';
+  signal pitch_cv : signed(15 downto 0) := (others => '0');
+  signal gate     : std_logic := '0';
+  signal mod_cv   : signed(15 downto 0) := (others => '0');
+
   -- loopback codec RX (decodes sd_tx)
   signal cod_l, cod_r : q123_t;
   signal cod_v        : std_logic;
@@ -88,6 +94,7 @@ begin
                  MCLK_TO_BCLK => 4, BCLK_TO_LRCK => 64)
     port map (sys_clk => sys_clk, sys_rst => sys_rst, mclk => mclk,
               midi_rx => midi_rx,
+              cv_sel => cv_sel, pitch_cv => pitch_cv, gate => gate, mod_cv => mod_cv,
               preset_index => preset_index, preset_recall => preset_recall,
               preset_save => '0',
               cfg_wr_en => '0', cfg_wr_addr => (others => '0'),
@@ -153,6 +160,8 @@ begin
     begin
       for f in 0 to k-1 loop wait until rising_edge(codec_bclk) and cod_v = '1'; end loop;
     end procedure;
+
+    variable cvpeak : integer := 0;
   begin
     sys_rst <= '1';
     for i in 0 to 20 loop sys_step; end loop;
@@ -191,12 +200,37 @@ begin
     run_frames(40);
 
     --------------------------------------------------------------------------
-    -- 3. no divergence anywhere in the run
+    -- 3. CV path: switch to CV, a gate strike sounds a voice
+    --------------------------------------------------------------------------
+    sys_rst <= '1'; for i in 0 to 20 loop sys_step; end loop; sys_rst <= '0';
+    for i in 0 to 4 loop sys_step; end loop;
+    cv_sel   <= '1';
+    pitch_cv <= to_signed(4096, 16);         -- one octave above the reference note
+    mod_cv   <= to_signed(16384, 16);        -- some timbre
+    for i in 0 to 3 loop sys_step; end loop;
+    gate     <= '1';                          -- gate rising -> CV strike
+    wait_active(1);
+    assert popcount(active) >= 1
+      report "synth_top_tb: CV gate did not allocate a voice" severity failure;
+    -- the codec must recover non-zero audio from the CV-driven voice
+    cvpeak := 0;
+    for f in 0 to 60 loop
+      wait until rising_edge(codec_bclk) and cod_v = '1';
+      if abs(to_integer(cod_l)) > cvpeak then cvpeak := abs(to_integer(cod_l)); end if;
+      if abs(to_integer(cod_r)) > cvpeak then cvpeak := abs(to_integer(cod_r)); end if;
+    end loop;
+    assert cvpeak > 0
+      report "synth_top_tb: no audio out of the codec from a CV strike" severity failure;
+    report "synth_top_tb: CV voice sounded, peak |out| = " & integer'image(cvpeak)
+      severity note;
+
+    --------------------------------------------------------------------------
+    -- 4. no divergence anywhere in the run
     --------------------------------------------------------------------------
     assert not oor
       report "synth_top_tb: output left the Q1.23 range (divergence)" severity failure;
 
-    report "synth_top_tb: all checks passed (MIDI -> " & integer'image(NVOICES) &
+    report "synth_top_tb: all checks passed (MIDI and CV -> " & integer'image(NVOICES) &
            "-voice polyphony -> I2S audio; voices allocate, sound, bounded)"
       severity note;
     done <= true;

@@ -37,6 +37,8 @@ read_vhdl -vhdl2008 [list \
   $rtl/voice_allocator.vhd \
   $rtl/poly_voices.vhd \
   $rtl/midi_uart_rx.vhd \
+  $rtl/cv_frontend.vhd \
+  $rtl/panel_ctrl.vhd \
   $rtl/midi_frontend.vhd \
   $rtl/preset_bank.vhd \
   $rtl/synth_top.vhd \
