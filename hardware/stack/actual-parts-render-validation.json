@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "assembly": "panel/cad/RADIAN_actual_parts_stack.step",
+  "panel_board_occ_bbox_mm": [
+    18.0,
+    10.0,
+    -10.0393,
+    198.5,
+    118.0,
+    -7.6507
+  ],
+  "main_board_occ_bbox_mm": [
+    8.0,
+    14.25,
+    -31.5686,
+    168.0,
+    114.25,
+    -29.1214
+  ],
+  "physical_faces": {
+    "panel_back_face_z_mm": -9.6,
+    "main_front_face_z_mm": -29.59,
+    "pcb_face_gap_mm": 19.99,
+    "target_gap_mm": 19.99,
+    "method": "raw KiCad STEP board faces + exact product transforms; transformed OCC bounding boxes are not used for face spacing"
+  },
+  "actual_part_collision_validation": {
+    "component_vs_physical_enclosure_clashes": [],
+    "non_samtec_panel_vs_main_clashes": [],
+    "non_samtec_panel_vs_main_overlap_mm3": 0.0
+  },
+  "group_bboxes_mm": {
+    "panel_board": [
+      18.0,
+      10.0,
+      -10.039,
+      198.5,
+      118.0,
+      -7.651
+    ],
+    "panel_pots": [
+      32.298,
+      64.493,
+      -11.839,
+      119.701,
+      103.154,
+      12.588
+    ],
+    "panel_encoder": [
+      34.824,
+      35.0,
+      -10.687,
+      49.176,
+      51.0,
+      18.504
+    ],
+    "panel_mode": [
+      147.07,
+      78.15,
+      -10.687,
+      153.93,
+      90.85,
+      17.661
+    ],
+    "panel_jacks": [
+      182.0,
+      20.227,
+      -11.567,
+      191.0,
+      105.0,
+      7.746
+    ],
+    "panel_leds": [
+      122.475,
+      106.089,
+      -10.505,
+      155.918,
+      109.911,
+      0.32
+    ],
+    "panel_samtec": [
+      30.109,
+      48.859,
+      -18.195,
+      126.475,
+      74.725,
+      -7.145
+    ],
+    "panel_wurth": [
+      160.5,
+      53.82,
+      -18.829,
+      178.425,
+      89.253,
+      -4.6
+    ],
+    "panel_molex": [
+      23.46,
+      26.1,
+      -21.385,
+      138.62,
+      54.9,
+      -6.125
+    ],
+    "panel_buttons": [
+      114.562,
+      22.0,
+      -14.032,
+      149.838,
+      29.0,
+      -6.185
+    ],
+    "panel_ics": [
+      32.6,
+      23.527,
+      -8.013,
+      154.0,
+      69.479,
+      -6.226
+    ],
+    "panel_resistors": [
+      32.298,
+      18.598,
+      -11.839,
+      164.802,
+      103.154,
+      12.676
+    ],
+    "panel_capacitors": [
+      21.749,
+      16.749,
+      -8.006,
+      157.801,
+      74.626,
+      -5.504
+    ],
+    "panel_power_discretes": [
+      22.15,
+      21.7,
+      -8.03,
+      167.25,
+      66.817,
+      -3.005
+    ],
+    "main_board": [
+      8.0,
+      14.25,
+      -31.569,
+      168.0,
+      114.25,
+      -29.121
+    ],
+    "main_ics": [
+      29.5,
+      21.563,
+      -32.805,
+      140.2,
+      88.75,
+      -25.663
+    ],
+    "main_service_connectors": [
+      14.825,
+      21.075,
+      -33.065,
+      113.54,
+      101.79,
+      -18.835
+    ],
+    "main_samtec": [
+      30.046,
+      48.796,
+      -31.855,
+      126.54,
+      74.79,
+      -14.205
+    ],
+    "main_resistors": [
+      21.198,
+      19.848,
+      -29.507,
+      159.802,
+      98.652,
+      -29.053
+    ],
+    "main_capacitors": [
+      17.999,
+      19.849,
+      -31.986,
+      152.801,
+      100.501,
+      -27.004
+    ],
+    "main_diodes": [
+      22.1,
+      23.433,
+      -29.514,
+      144.25,
+      47.767,
+      -28.238
+    ],
+    "main_inductors": [
+      22.974,
+      39.224,
+      -29.512,
+      27.026,
+      89.276,
+      -26.479
+    ],
+    "main_oscillators": [
+      66.397,
+      81.995,
+      -29.509,
+      69.605,
+      91.503,
+      -28.858
+    ]
+  },
+  "model_policy": {
+    "native_placement": "all component geometry is exported component-filtered by KiCad from the canonical .kicad_pcb files, so PCB placement/orientation is native",
+    "real_open_models": [
+      "panel RV1-RV6 PTV09A family body with selected 20 mm shaft",
+      "panel J301-J305 PJ398SM open mechanical CAD",
+      "panel SW3/SW4 Omron B3F model"
+    ],
+    "package_accurate_models": [
+      "LED 3 mm green package",
+      "TPS54302 SOT-23-6",
+      "OPA2192 SOIC-8",
+      "BAT54S SOT-23",
+      "standard passives/fuses/SMB packages",
+      "mainboard IC/passive package models"
+    ],
+    "drawing_reference_models": [
+      "Samtec J17/J18/J100/J101",
+      "Molex J1-J4",
+      "panel PEC11R encoder",
+      "panel E-Switch MODE",
+      "panel SRP7050TA inductor"
+    ],
+    "not_claimed_as_vendor_step": "drawing-reference models above remain explicit mechanical references, not manufacturer STEP downloads"
+  }
+}

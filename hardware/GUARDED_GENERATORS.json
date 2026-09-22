@@ -1,0 +1,21 @@
+{
+  "policy": "Repaired native PCB is authoritative. Use hardware/refresh_outputs.py. Run legacy reconstruction only in a separate experimental copy without NATIVE_BASELINE.json.",
+  "guarded": [
+    "courant/scripts/route.py",
+    "courant/scripts/finish.py",
+    "courant/scripts/close.py",
+    "courant/scripts/bga_escape.py",
+    "courant/scripts/gnd_stitch.py",
+    "courant/scripts/hop.py",
+    "courant/scripts/nudge.py",
+    "courant/scripts/plane_escape.py",
+    "courant/scripts/power.py",
+    "courant/scripts/reland_decaps.py",
+    "courant/scripts/stitch.py",
+    "courant/scripts/export.ts",
+    "panel/source/export_ecad.py",
+    "panel/source/design_data.py"
+  ],
+  "mainboard_sha256": "92e66042479df826fed7b9fa62116f5fa4a31a84fc075922198cf18b91b7c6c5",
+  "panel_sha256": "9ddd199c1c5e68db47bafff481415ce4db48de8bb185d7cad0d8c10a837b4292"
+}

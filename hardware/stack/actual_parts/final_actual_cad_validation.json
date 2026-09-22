@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "final_assembly": "panel/cad/RADIAN_actual_parts_full_assembly.step",
+  "colored_step_children": 715,
+  "children_missing_explicit_color": [],
+  "near_white_default_children": [],
+  "u8": {
+    "reference": "U8 / H11L1M",
+    "native_footprint_center_mm": [
+      48.0,
+      139.0
+    ],
+    "raw_kicad_step_expected_center_mm": [
+      48.0,
+      -139.0
+    ],
+    "raw_kicad_step_actual_bbox_center_mm": [
+      48.0,
+      -139.0
+    ],
+    "center_error_mm": [
+      0.0,
+      0.0
+    ],
+    "model": "courant/deliverables/cad/models/DIP6_W7.62_U8_centered.step",
+    "pin_alignment": "PASS: six STEP lead centers map exactly to six native footprint pads under KiCad Y inversion"
+  },
+  "panel_drc": {
+    "violations": 0,
+    "unconnected": 0
+  },
+  "main_drc": {
+    "violations": 0,
+    "unconnected": 0
+  },
+  "direct_stack": {
+    "status": "PASS",
+    "checked": 40,
+    "matched": 40
+  },
+  "actual_part_collisions": {
+    "status": "PASS",
+    "panel_main_unintended_clashes": [],
+    "rear_guard_or_dock_clashes": [],
+    "intentional_stack_overlap": "P_STACK <-> M_STACK excluded; validated by direct-stack-validation.json"
+  },
+  "model_policy": {
+    "actual_or_package_geometry": "PTV09A family, PJ398SM, Omron B3F, LEDs, all normal IC/passive packages and selected Wurth/Molex models",
+    "explicit_drawing_derived_only": [
+      "PEC11R encoder",
+      "E-Switch MODE",
+      "Samtec stack pair",
+      "mainboard Molex J1-J4"
+    ],
+    "generic_white_component_envelopes": "NONE"
+  }
+}

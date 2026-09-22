@@ -1,0 +1,56 @@
+[
+  {
+    "file": "courant.kicad_pcb",
+    "sha256": "0683ead4a73049f5a2276b2cd3bf6389199609574a67aab8e27f48040a18deec",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant.kicad_pro",
+    "sha256": "c0e9824c19a95061b562f756c77f8a53870a33f02f0da2f811606eaa1efe2e29",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant-assembly.step",
+    "sha256": "5c2f0ce6bb0c26e9238e15df43c1ea901f06d30a4737d4bc70c42c0c9fc234b2",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant-panel-interface.csv",
+    "sha256": "6bc4fccbe2f51fdec63e53fe4295c54f5519a4a97a7b3e7603ddc4fc3440892d",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant-panel-hardware.md",
+    "sha256": "f17477e9ef2c793b653305bb57475ae2488c3f60ef81cae378ad133ce2b2d25e",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant-bom.csv",
+    "sha256": "4fe74896c152a276bd1a0a37fc066c6c26dd296950eadb39afc0c03581f3fb3f",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "courant-source-design.ts",
+    "sha256": "0554d412eced4c1fd5cdd44aef4780f26692f7103972e492ec83d79fcba2a45e",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "Bourns_PEC11R_encoder.pdf",
+    "sha256": "ac88f657e611bc82fe79b102426fb5abcb7f40740540f0c681727e2d74784491",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  },
+  {
+    "file": "Bourns_PTV09_potentiometer.pdf",
+    "sha256": "411cdb6a62e61f9c5bc2df76ed64ee21d7bcfbee035c1ba36beff08c43f28558",
+    "original_modified": false,
+    "matches_previous_CAD_input": true
+  }
+]

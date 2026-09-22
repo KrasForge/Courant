@@ -1,0 +1,10 @@
+# Reference environment used for this engineering draft; native KiCad 10 is separate.
+cadquery>=2.5,<3
+shapely>=2,<3
+numpy>=2,<3
+scipy>=1.13,<2
+reportlab>=4,<5
+CairoSVG>=2.7,<3
+PyMuPDF>=1.24,<2
+vtk>=9.3,<10
+Pillow>=10

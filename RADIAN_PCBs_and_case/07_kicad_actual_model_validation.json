@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "renderer": "KiCad 10 high-quality 3D renderer",
+  "mainboard_models": {"total": 180, "colorless_or_missing": 0},
+  "panel_models": {"total": 59, "colorless_or_missing": 0},
+  "geometry_validation": "All changed representative 3D component bounding boxes matched before/after exactly.",
+  "electrical_geometry": "MATCH: footprint/pad/track/via/net signatures unchanged on both boards.",
+  "mainboard_drc": "0 violations, 0 unconnected items",
+  "panel_drc": "23 violations, 57 unconnected items; pre-change backup had 44 violations, 57 unconnected items",
+  "direct_stack": "PASS 40/40 contacts",
+  "collision_validation": "PASS: 0 enclosure clashes, 0 unintended panel/main clashes",
+  "j1_power_orientation": "preserved corrected orientation"
+}

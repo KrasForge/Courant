@@ -1,0 +1,234 @@
+{
+  "revision": "CASE-P3-TWO-ROW",
+  "source_case": "cad/RADIAN_P1_case_legacy_reference.step",
+  "stack_revision": "STACK-P2",
+  "mainboard_shift_forward_mm": 0.46000000000000085,
+  "panel_to_mainboard_pcb_gap_mm": 19.99,
+  "samtec": {
+    "main": "IPT1-110-06-L-D",
+    "panel": "IPS1-110-01-L-D",
+    "fully_mated_gap_mm": 19.99,
+    "max_gap_mm": 20.45,
+    "support_target_mm": 20.0
+  },
+  "front_panel": {
+    "old_macro_holes_closed": [
+      [
+        42,
+        84
+      ],
+      [
+        80,
+        84
+      ],
+      [
+        118,
+        84
+      ]
+    ],
+    "primary_large_knob_centers": [
+      [
+        38,
+        96
+      ],
+      [
+        76,
+        96
+      ],
+      [
+        114,
+        96
+      ]
+    ],
+    "fx_small_knob_centers": [
+      [
+        66,
+        70
+      ],
+      [
+        88,
+        70
+      ],
+      [
+        110,
+        70
+      ]
+    ],
+    "pot_hole_diameter_mm": 6.8,
+    "primary_knob_diameter_mm": 23.0,
+    "fx_knob_diameter_mm": 14.0,
+    "mode_center": [
+      150.5,
+      84.5
+    ],
+    "mode_hole_diameter_mm": 6.6,
+    "mode_insert_role": "MODE"
+  },
+  "supports": {
+    "front_support_rear_z_mm": -29.54,
+    "rear_spacer_front_z_mm": -31.14,
+    "rear_guard_unchanged": true
+  },
+  "validation": {
+    "panel_valid": true,
+    "mode_insert_valid": true,
+    "panel_bbox_mm": [
+      -0.0,
+      -0.0,
+      0.0,
+      202.8,
+      128.5,
+      2.0
+    ],
+    "mainboard_bbox_mm": [
+      8.0,
+      14.25,
+      -32.31,
+      168.0,
+      114.25,
+      -13.45
+    ],
+    "support_zmin_mm": -29.54,
+    "rear_spacer_zmax_mm": -31.14,
+    "pcb_gap_mm": 19.99,
+    "target_gap_mm": 19.99,
+    "control_enclosure_intersection_mm3": {
+      "RV1": 0.0,
+      "RV2": 0.0,
+      "RV3": 0.0,
+      "RV4": 0.0,
+      "RV5": 0.0,
+      "RV6": 0.0,
+      "SW1_bushing": 0.0,
+      "SW1_shaft": 0.0
+    },
+    "panel_component_vs_mainboard_clashes": [],
+    "samtec_nominal_geometric_insertion_mm": 3.82,
+    "samtec_geometric_insertion_at_max_gap_mm": 3.36,
+    "samtec_fully_mated_wipe_mm": 0.84,
+    "samtec_min_wipe_at_max_gap_mm": 0.38,
+    "samtec_housing_ref_rounding_depth_mm": 0.01,
+    "samtec_reference_models": [
+      {
+        "id": "A",
+        "panel_model_z": [
+          -18.11,
+          -7.06
+        ],
+        "main_model_z": [
+          -31.94,
+          -14.29
+        ],
+        "solid_overlap_mm3": 0.3430395,
+        "solid_overlap_z_mm": 0.01
+      },
+      {
+        "id": "B",
+        "panel_model_z": [
+          -18.11,
+          -7.06
+        ],
+        "main_model_z": [
+          -31.94,
+          -14.29
+        ],
+        "solid_overlap_mm3": 0.3430395,
+        "solid_overlap_z_mm": 0.01
+      }
+    ],
+    "changed_enclosure_intersections": [
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "rear_guard",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "desktop_dock",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "panel",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "mode_blank",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "corner_support_BL",
+        "volume_mm3": 8.1726962
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "corner_support_BR",
+        "volume_mm3": 8.1726962
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "corner_support_TL",
+        "volume_mm3": 8.1726962
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "corner_support_TR",
+        "volume_mm3": 8.1726962
+      },
+      {
+        "a": "MAINBOARD_REPAIRED",
+        "b": "spacers_reference",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV4_body",
+        "b": "rear_guard",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV4_body",
+        "b": "desktop_dock",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV5_body",
+        "b": "rear_guard",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV5_body",
+        "b": "desktop_dock",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV6_body",
+        "b": "rear_guard",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "RV6_body",
+        "b": "desktop_dock",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "SW1_body",
+        "b": "rear_guard",
+        "volume_mm3": 0.0
+      },
+      {
+        "a": "SW1_body",
+        "b": "desktop_dock",
+        "volume_mm3": 0.0
+      }
+    ],
+    "changed_enclosure_unintended_intersections": []
+  },
+  "limitations": [
+    "Samtec connector solids are drawing-derived reference models, not Samtec-supplied STEP downloads",
+    "connector insertion/retention forces and case tolerances require first-article validation",
+    "0.01 mm nominal housing-plane overlap comes from rounded REF dimensions in the Samtec prints",
+    "knob/nut/washer stack remains reference geometry"
+  ]
+}

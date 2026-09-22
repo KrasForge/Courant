@@ -1,0 +1,28 @@
+{
+  "source_board": "panel/design/radian_panel.kicad_pcb",
+  "source_sha256": "9ddd199c1c5e68db47bafff481415ce4db48de8bb185d7cad0d8c10a837b4292",
+  "review_only": true,
+  "files": {
+    "BOM.csv": "88546a7bb758061f861d802ea07d375900db7bbe989a469597b2af0365f2cb6b",
+    "ENGINEERING_EXPORT_ONLY.txt": "97adb51a0bdc14d21b92e00cf6947dd97f7bc1b8e5f09127c9ec5bb6ca0e7f91",
+    "REVIEW_ONLY.txt": "c18ed7dc993c2d3e53cea37a67fca2d8dc0d2e7a6f983d3b122dc1b0fdd8f3ca",
+    "radian_panel-B_Cu.gbl": "301a359634c024b1c5498f067dd537ec496a9a4459bd91363a2ca459b0e71672",
+    "radian_panel-B_Mask.gbs": "e24bafb2996e5b12dcb09d8e69361d1d9df9d1e60cab129db00931e69a472d42",
+    "radian_panel-B_Paste.gbp": "7517c1c8c140626b2974aa357e89d197084a5fb5e6a5d3d46ae260ce505ef788",
+    "radian_panel-B_Silkscreen.gbo": "e67c8d746b1e721100a97af52e50554c229308f68a8106b9dd25af09be220cb9",
+    "radian_panel-Edge_Cuts.gm1": "f0b6f6ca06ae5b3e4b47e2e3990f3173128328274785c59ca402c75b6d64d76f",
+    "radian_panel-F_Cu.gtl": "f41082a4e88df99de94f3c4dac2c5466511446425ed045cfafb5f645f17082a6",
+    "radian_panel-F_Mask.gts": "58ac7dd904d4f0df96afa4bc44630a45c6d8e14b0f677cc301af1bc0c800d9c1",
+    "radian_panel-F_Paste.gtp": "170b2c4305fbdd5f719d07b137b00d7606c6744d74977720ab8ce3e33ccd5bf1",
+    "radian_panel-F_Silkscreen.gto": "eee898fb6c61205a5d1a38b0e07e25075a8d6fc07ed3fd7bd84ff78c42e77eb9",
+    "radian_panel-In1_Cu.g1": "78142977a394434477aa40f30da268993cdaa27da3e522d0ae322ba0f6c9e333",
+    "radian_panel-In2_Cu.g2": "85f49333fab3b9c15d9282c69f807a1bfa78356d9b1bd126bf77be1d1b07b83a",
+    "radian_panel-NPTH-drl_map.pdf": "888075948592fe1871d156d739131470a893177541d5c4473a82c51732396c49",
+    "radian_panel-NPTH.drl": "0ad59fc539e305321cc7b8249361470ddb40824eab37ba576bf3151896c001c2",
+    "radian_panel-PTH-drl_map.pdf": "872c95cfa75ddb771a9b0fbe10553480a8e2a1311548bb240d6bdf494c5d5eb2",
+    "radian_panel-PTH.drl": "3e3f0414b971172ce6a7dba7f0db50eeadbfc755cf752d4d7d6041e528c76c8f",
+    "radian_panel-job.gbrjob": "c13c80333fdcd30c23233bc1fc2112fe644770de0929f2dbd31d238112c84d7c",
+    "radian_panel-pos.csv": "84b6ef6e1b81cf34f262c8a94688d8b6fb67e7cf80156e9bf489683b29a888dd",
+    "source_sha256.txt": "6f1074d98db6447d308e9b43de72b7a2f15d2b4985bbd0c23f348698b9942913"
+  }
+}

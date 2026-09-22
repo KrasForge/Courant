@@ -12,15 +12,16 @@
 -- operands and a registered result):
 --   stage 1 : Laplacian sum, sigk1*u^{n-1}, u^2, 2*u^n        (capture inputs)
 --   stage 2 : alpha*u^2, gamma2_local = clamp(gamma2+alpha*u^2, 0, gamma2_max)
---   stage 3 : gamma2_local*lap, form 2u - sigk1*u1 + g2l*lap
+--   stage 3 : gamma2_local*lap - mu2*biharm, form the guarded stiff-surface sum
 --   stage 4 : a0*(...) + forcing, saturate, commit u^n / u^{n-1}
 -- Latency from `strobe` to `valid` is 4 clocks. Strobes must be spaced at least
 -- 4 clocks apart (the mesh has ~2083 clocks per sample at 100 MHz / 48 kHz).
 --
--- The committed result is bit-exact with node_update (and the Q1.23 reference
--- model) when the forcing input `exc` is 0. With coeffs.alpha = 0 and
--- coeffs.gamma2_max >= coeffs.gamma2, the non-linear term vanishes and the PE
--- reduces exactly to the linear update.
+-- With STIFFNESS=0 the committed result is bit-exact with node_update (and the
+-- legacy Q1.23 reference) when forcing `exc` is 0. With coeffs.alpha=0 and
+-- coeffs.gamma2_max>=coeffs.gamma2, that path reduces exactly to the linear
+-- membrane update. Nonzero STIFFNESS adds the separately verified biharmonic
+-- plate term.
 --
 -- `exc` is an optional additive forcing (the "mallet"), captured with the
 -- update and added into the 48-bit guard before the store-saturate. It
@@ -35,14 +36,20 @@ use ieee.numeric_std.all;
 
 library work;
 use work.fdtd_pkg.all;
+use work.physical_pkg.all;
 
 entity node_element is
+  generic (HF_DAMPING : boolean := false);
   port (
     clk    : in  std_logic;
     rst    : in  std_logic;          -- synchronous, active-high; resets to rest
     strobe : in  std_logic;          -- begin one sample update
     coeffs : in  coeffs_t;           -- gamma2 / a0 / sigk1 / alpha / gamma2_max
     nb     : in  neighbours_t;       -- N/S/E/W neighbour displacements (u^n)
+    material : in material_t := (others=>'0');
+    anisotropy : in aniso_t := (others=>'0');
+    stiffness_ctrl : in unsigned(7 downto 0) := (others=>'0');
+    biharm : in acc_t := (others=>'0');      -- 13-point plate operator at u^n
     exc    : in  q123_t := (others => '0'); -- additive forcing (mallet); default rest
     u_out  : out q123_t;             -- this node's current displacement u^n
     valid  : out std_logic           -- 1-cycle pulse when u_out has advanced
@@ -55,8 +62,15 @@ architecture rtl of node_element is
   signal u_n   : q123_t := (others => '0');
   signal u_nm1 : q123_t := (others => '0');
 
+  -- Previous local curvature for the optional frequency-dependent loss.
+  -- A 27-bit Q.23 word spans the full 5-point Laplacian range (about +/-8).
+  signal lap_hist : signed(26 downto 0) := (others=>'0');
+
   -- Stage-1 registers
   signal s1_lap    : acc_t  := (others => '0');
+  signal s1_lapv   : acc_t  := (others => '0');
+  signal s1_biharm : acc_t  := (others => '0');
+  signal s1_stiff  : unsigned(7 downto 0) := (others=>'0');
   signal s1_su1    : acc_t  := (others => '0');
   signal s1_u2     : q123_t := (others => '0');   -- u^2
   signal s1_two_u  : acc_t  := (others => '0');
@@ -69,6 +83,9 @@ architecture rtl of node_element is
 
   -- Stage-2 registers
   signal s2_lap   : acc_t  := (others => '0');
+  signal s2_lapv  : acc_t  := (others => '0');
+  signal s2_biharm: acc_t  := (others => '0');
+  signal s2_stiff : unsigned(7 downto 0) := (others=>'0');
   signal s2_su1   : acc_t  := (others => '0');
   signal s2_g2l   : q123_t := (others => '0');     -- gamma2_local (clamped)
   signal s2_two_u : acc_t  := (others => '0');
@@ -96,12 +113,15 @@ begin
       if rst = '1' then
         u_n      <= (others => '0');
         u_nm1    <= (others => '0');
-        s1_lap   <= (others => '0'); s1_su1   <= (others => '0');
+        lap_hist <= (others => '0');
+        s1_lap   <= (others => '0'); s1_lapv  <= (others => '0');
+        s1_biharm<= (others => '0'); s1_stiff <= (others=>'0'); s1_su1 <= (others => '0');
         s1_u2    <= (others => '0'); s1_two_u <= (others => '0');
         s1_ucap  <= (others => '0'); s1_exc   <= (others => '0');
         s1_gamma2<= (others => '0'); s1_alpha <= (others => '0');
         s1_gmax  <= (others => '0'); s1_a0    <= (others => '0');
-        s2_lap   <= (others => '0'); s2_su1   <= (others => '0');
+        s2_lap   <= (others => '0'); s2_lapv  <= (others => '0');
+        s2_biharm<= (others => '0'); s2_stiff <= (others=>'0'); s2_su1 <= (others => '0');
         s2_g2l   <= (others => '0'); s2_two_u <= (others => '0');
         s2_ucap  <= (others => '0'); s2_exc   <= (others => '0');
         s2_a0    <= (others => '0');
@@ -117,8 +137,22 @@ begin
 
         -- Stage 1: capture inputs and the first arithmetic layer
         if strobe = '1' then
-          s1_lap    <= to_acc(nb.n) + to_acc(nb.s) + to_acc(nb.e) + to_acc(nb.w)
-                       - shift_left(to_acc(u_n), 2);          -- (uN+uS+uE+uW) - 4*u^n
+          s1_lap <= anisotropic_lap(
+                      to_acc(nb.e)+to_acc(nb.w)-shift_left(to_acc(u_n),1),
+                      to_acc(nb.n)+to_acc(nb.s)-shift_left(to_acc(u_n),1),
+                      effective_aniso(anisotropy,material));
+          s1_lapv <= anisotropic_lap(
+                       to_acc(nb.e)+to_acc(nb.w)-shift_left(to_acc(u_n),1),
+                       to_acc(nb.n)+to_acc(nb.s)-shift_left(to_acc(u_n),1),
+                       effective_aniso(anisotropy,material)) - resize(lap_hist,ACC_BITS);
+          if HF_DAMPING then
+            lap_hist <= resize(anisotropic_lap(
+                          to_acc(nb.e)+to_acc(nb.w)-shift_left(to_acc(u_n),1),
+                          to_acc(nb.n)+to_acc(nb.s)-shift_left(to_acc(u_n),1),
+                          effective_aniso(anisotropy,material)),lap_hist'length);
+          end if;
+          s1_biharm <= biharm;
+          s1_stiff  <= stiffness_ctrl;
           s1_su1    <= mul_coeff(coeffs.sigk1, to_acc(u_nm1));-- sigk1 * u^{n-1}
           s1_u2     <= q_mul(u_n, u_n);                       -- u^2 (saturating)
           s1_two_u  <= shift_left(to_acc(u_n), 1);            -- 2 * u^n
@@ -126,7 +160,7 @@ begin
           s1_exc    <= exc;
           s1_gamma2 <= coeffs.gamma2;
           s1_alpha  <= coeffs.alpha;
-          s1_gmax   <= coeffs.gamma2_max;
+          s1_gmax   <= stiff_gamma2_max(coeffs.gamma2_max,stiffness_ctrl);
           s1_a0     <= coeffs.a0;
         end if;
 
@@ -135,6 +169,9 @@ begin
           s2_g2l  <= clamp(sat_add(s1_gamma2, q_mul(s1_alpha, s1_u2)),
                            Q123_ZERO, s1_gmax);
           s2_lap   <= s1_lap;
+          s2_lapv  <= s1_lapv;
+          s2_biharm<= s1_biharm;
+          s2_stiff <= s1_stiff;
           s2_su1   <= s1_su1;
           s2_two_u <= s1_two_u;
           s2_ucap  <= s1_ucap;
@@ -144,7 +181,16 @@ begin
 
         -- Stage 3: gamma2_local * lap, then the guard-accumulator sum
         if vsr(1) = '1' then
-          s3_acc  <= s2_two_u - s2_su1 + mul_coeff(s2_g2l, s2_lap);
+          if HF_DAMPING then
+            -- Kelvin-Voigt-like loss: high-curvature velocity components lose
+            -- energy faster than low modes. 1/128 is deliberately subtle.
+            s3_acc <= s2_two_u - s2_su1 + mul_coeff(s2_g2l,s2_lap)
+                      - stiffness_term(s2_biharm,s2_stiff)
+                      + hf_loss_term(s2_lapv,material);
+          else
+            s3_acc <= s2_two_u - s2_su1 + mul_coeff(s2_g2l,s2_lap)
+                      - stiffness_term(s2_biharm,s2_stiff);
+          end if;
           s3_ucap <= s2_ucap;
           s3_exc  <= s2_exc;
           s3_a0   <= s2_a0;

@@ -61,13 +61,13 @@ begin
   end process;
 
   spatial : entity work.grid_mesh
-    generic map (NX => NX, NY => NY, FREE_BOUNDARY => false)
+    generic map (NX => NX, NY => NY, FREE_BOUNDARY => false, HF_DAMPING => true)
     port map (clk => clk, rst => rst, strobe => strobe, coeffs => coeffs,
               exc_in => exc_in, exc_en => exc_en,
               pick_l => sp_l, pick_r => sp_r, valid => sp_v);
 
   tdm : entity work.grid_mesh_tdm
-    generic map (NX => NX, NY => NY, FREE_BOUNDARY => false)
+    generic map (NX => NX, NY => NY, FREE_BOUNDARY => false, HF_DAMPING => true)
     port map (clk => clk, rst => rst, strobe => strobe, coeffs => coeffs,
               exc_in => exc_in, exc_en => exc_en,
               pick_l => tm_l, pick_r => tm_r, valid => tm_v);
@@ -104,7 +104,7 @@ begin
     end loop;
 
     report "tdm_tb: all checks passed (time-mux bit-exact with spatial, " &
-           integer'image(STEPS) & " steps, non-linear)" severity note;
+           integer'image(STEPS) & " steps, non-linear + HF damping)" severity note;
     done <= true;
     finish;
   end process;

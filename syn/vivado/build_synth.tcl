@@ -25,6 +25,17 @@ set rtl  [file normalize $here/../../src/rtl]
 # RTL in dependency-friendly order (Vivado resolves regardless; listed for clarity)
 read_vhdl -vhdl2008 [list \
   $rtl/fdtd_pkg.vhd \
+  $rtl/physical_pkg.vhd \
+  $rtl/physical_mallet.vhd \
+  $rtl/fx_pkg.vhd \
+  $rtl/fx_drive.vhd \
+  $rtl/fx_tone.vhd \
+  $rtl/fx_chorus.vhd \
+  $rtl/fx_delay.vhd \
+  $rtl/fx_fdn_reverb.vhd \
+  $rtl/fx_master_bus.vhd \
+  $rtl/fx_chain.vhd \
+  $rtl/musical_pkg.vhd \
   $rtl/node_element.vhd \
   $rtl/grid_mesh.vhd \
   $rtl/grid_mesh_tdm.vhd \

@@ -1,0 +1,741 @@
+{
+  "updated": [
+    {
+      "path": "hardware/courant/deliverables/courant-assembly.step",
+      "sha256_before": "257215db1fdc4f6ac7ef991b2bd8092f330e596e80c7c21d2f384eb991e62597",
+      "sha256_after": "257215db1fdc4f6ac7ef991b2bd8092f330e596e80c7c21d2f384eb991e62597"
+    },
+    {
+      "path": "hardware/courant/deliverables/courant-mechanical.pdf",
+      "sha256_before": "8d74263e985db576c9ddc9213dcb7f381f86142ca3fe116d5a5c228cd7c9e076",
+      "sha256_after": "0eee9362c266cef398d8581dd7ab6c6c28f2ea25a9e5852e9a00631894167050"
+    },
+    {
+      "path": "hardware/courant/deliverables/courant-outline.dxf",
+      "sha256_before": "92f344bf6a0996b152171737658459ec4c41dbd703754047c63ee2fe52da7567",
+      "sha256_after": "92f344bf6a0996b152171737658459ec4c41dbd703754047c63ee2fe52da7567"
+    },
+    {
+      "path": "hardware/panel/cad/RADIAN_P1_native_board.step",
+      "sha256_before": "ccd4c3ac9e8b9c0f168d7824128861924fc5c623a59efc2350bb156e3ae83c7a",
+      "sha256_after": "ccd4c3ac9e8b9c0f168d7824128861924fc5c623a59efc2350bb156e3ae83c7a"
+    },
+    {
+      "path": "hardware/panel/cad/RADIAN_P1_populated_reference.step",
+      "sha256_before": "39a703863a65e6f27cbf606394b955fa55d40adf2daf036f983d95bd81748338",
+      "sha256_after": "aacb6586be0e9fd853bbcbb5c803cc4f36259ad6761831f988136bf7a95717ca"
+    },
+    {
+      "path": "hardware/panel/cad/RADIAN_P1_desktop_fit_study.step",
+      "sha256_before": "99516adb583ff0881bcb4b3d3d8167b7433342cab1ddb90ed9ce5e069d463aae",
+      "sha256_after": "708befea18f05c658e1183b96554ee3fa83ac04866c6ff208b8ad058b96841db"
+    },
+    {
+      "path": "hardware/panel/cad/RADIAN_P1_bare_board.step",
+      "sha256_before": "12d6c15525e0da12fd2c78a95afb029449807f6eb059cc83491cb49e78ef0690",
+      "sha256_after": "e609cfd3745a7f0442a9490a5c24f737f50b76c8748e0401d58680db714b560d"
+    },
+    {
+      "path": "hardware/panel/cad/RADIAN_P1_fit_template.stl",
+      "sha256_before": "b2efbe278d92b7a7955d747363ee38549ae5fc7c9929b2244a42861d257a8194",
+      "sha256_after": "23c98cfd3c19469d9c1e272cdabc3a70b1fba958a395098adaef572f265b1021"
+    },
+    {
+      "path": "hardware/panel/previews/desktop_fit_study.png",
+      "sha256_before": "f04849da32bb45895e6eaab965c7475695fc8729292da8504d86d5e53fb3f258",
+      "sha256_after": "7f21bcb087bec4119dc8d829d17f8fa16b1f9f33e247553ad671847feb45796f"
+    },
+    {
+      "path": "hardware/panel/previews/stack_exploded.png",
+      "sha256_before": "74e79a66c4f754df4a6680f14b98f19da61158a2702a75c9efaf3f69ae4881db",
+      "sha256_after": "79a7c912f62a640695bae277da89efa61563c87decbac4b20cc499e068994f02"
+    },
+    {
+      "path": "hardware/panel/previews/module_without_dock.png",
+      "sha256_before": null,
+      "sha256_after": "6abe6e1e644504854daf3dffe984758a99549350a0abf22354566f9b3cd92710"
+    },
+    {
+      "path": "hardware/panel/previews/panel_pcb_3d.png",
+      "sha256_before": "aaae9202964f6aca936f22d0f6328766059a1defac7f45ae3370bd4813db0ffc",
+      "sha256_after": "aaae9202964f6aca936f22d0f6328766059a1defac7f45ae3370bd4813db0ffc"
+    },
+    {
+      "path": "hardware/courant/dist/3d/asm-top.png",
+      "sha256_before": "91ab6aae93fa3d01138a65b0325ad1eae0e8abc54d991b1c258c6007f72f74dd",
+      "sha256_after": "023c9d20a4ca88adcd1998747b5b4b95a211f6247566313c3ef9dda3897a7283"
+    },
+    {
+      "path": "hardware/courant/dist/3d/asm-bottom.png",
+      "sha256_before": "ef75eb6f08e96b67dd69aceabcdbc97fbca031f7e178db258e43b3184157e745",
+      "sha256_after": "6bf48d7772569992d465b8c0530828af8f4b56280e8b7783b6d77778088dfe94"
+    },
+    {
+      "path": "hardware/courant/dist/3d/asm-iso.png",
+      "sha256_before": "8aea40099ec48a410fe1476f505a80605c8701baece2055cb419aa4d471e0ccc",
+      "sha256_after": "3780ca49335cbc13c4472c0a13c5c9f24cdef985354dce7d1b9d7402a7b45511"
+    },
+    {
+      "path": "hardware/courant/dist/3d/courant-iso-bottom.png",
+      "sha256_before": "8aa33d0c8c1b9c46174cd7bf5f9222c2e4d9e29276ac0f08a19c0bb473f1e7b9",
+      "sha256_after": "8c51fefc41b6778a153258d9880f92f9f034f5ae3308caa84f10124a4d517c3f"
+    },
+    {
+      "path": "hardware/courant/dist/3d/courant-bga.png",
+      "sha256_before": "23ec1aae54008730aaa33d5160ee4fe858352eb2978b2fdf828e487e626babf2",
+      "sha256_after": "79ba0f826810c73e7e06eeb7ce0713d021904c30767e0c635d92b2827969b7e9"
+    },
+    {
+      "path": "hardware/courant/dist/3d/courant-top.png",
+      "sha256_before": "91ab6aae93fa3d01138a65b0325ad1eae0e8abc54d991b1c258c6007f72f74dd",
+      "sha256_after": "023c9d20a4ca88adcd1998747b5b4b95a211f6247566313c3ef9dda3897a7283"
+    },
+    {
+      "path": "hardware/courant/dist/3d/courant-bottom.png",
+      "sha256_before": "ef75eb6f08e96b67dd69aceabcdbc97fbca031f7e178db258e43b3184157e745",
+      "sha256_after": "6bf48d7772569992d465b8c0530828af8f4b56280e8b7783b6d77778088dfe94"
+    },
+    {
+      "path": "hardware/courant/dist/3d/courant-iso.png",
+      "sha256_before": "8aea40099ec48a410fe1476f505a80605c8701baece2055cb419aa4d471e0ccc",
+      "sha256_after": "3780ca49335cbc13c4472c0a13c5c9f24cdef985354dce7d1b9d7402a7b45511"
+    },
+    {
+      "path": "hardware/courant/dist/route-top.svg",
+      "sha256_before": "fd90cec5942ec74b973c9ff8398669d24e6037c6ab6f8ba621ce6353dba9f296",
+      "sha256_after": "dd7e9faf2d28dd9897f8ed33e03f24a5977b23906848a7993b8f179156d160fb"
+    },
+    {
+      "path": "hardware/courant/dist/route-top.png",
+      "sha256_before": "b1ca783aacab6df958a444ff790f09ea2176e36b44ca4997ea68133483abcd96",
+      "sha256_after": "1dd134b1682a8241ea7e3b6361b1c8c25e00c13c9f41a0e6239703b03ab70756"
+    },
+    {
+      "path": "hardware/courant/dist/route-bottom.svg",
+      "sha256_before": "a95f57d544bebe40f52f547959c36b3b1c663b8e14c12cde871660e42a9f8098",
+      "sha256_after": "2e22fb11d046b98bc0cc381eb82e1a29a64ccea78dd8d47492ace06fa0d0e467"
+    },
+    {
+      "path": "hardware/courant/dist/route-bottom.png",
+      "sha256_before": "5c307ba7dc73897a9840d7ac6111c21f9b6f2ec3404689a7e55be3c67b6da3f5",
+      "sha256_after": "76446acc9665f92bcea245cca4d4277b87948aab3f0f516754ca697558c33b38"
+    },
+    {
+      "path": "hardware/courant/dist/route-inner.svg",
+      "sha256_before": "a9088e10869cb0f45e48de74adb4af0c6425ba339314b27aca657024709139fc",
+      "sha256_after": "718e183a50c789f3578d725e76b86e0cf7bafd73b1b12e83699afaac7786d015"
+    },
+    {
+      "path": "hardware/courant/dist/route-inner.png",
+      "sha256_before": "23bf52fd0486cb8a386080cf71de0a1e43ad3b43a5c37fb13baea9c78bae59e1",
+      "sha256_after": "04f13855a0434d5447de6a7b510306a7be0e0946aa5a493978396b44f8b98e0c"
+    },
+    {
+      "path": "hardware/courant/dist/courant.pcb.svg",
+      "sha256_before": "fd90cec5942ec74b973c9ff8398669d24e6037c6ab6f8ba621ce6353dba9f296",
+      "sha256_after": "dd7e9faf2d28dd9897f8ed33e03f24a5977b23906848a7993b8f179156d160fb"
+    },
+    {
+      "path": "hardware/courant/dist/3d/hero(20260915-013936).png",
+      "sha256_before": null,
+      "sha256_after": "7f21bcb087bec4119dc8d829d17f8fa16b1f9f33e247553ad671847feb45796f"
+    },
+    {
+      "path": "hardware/courant/dist/3d/hero(8).png",
+      "sha256_before": null,
+      "sha256_after": "7f21bcb087bec4119dc8d829d17f8fa16b1f9f33e247553ad671847feb45796f"
+    },
+    {
+      "path": "hardware/courant/dist/3d/dock_removal.png",
+      "sha256_before": "7a0165f54fc5a081640efcece59a397d380bf4e0aa648fc13cb6d5bb1d80b321",
+      "sha256_after": "6abe6e1e644504854daf3dffe984758a99549350a0abf22354566f9b3cd92710"
+    },
+    {
+      "path": "hardware/courant/dist/courant.kicad_pcb",
+      "sha256_before": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b",
+      "sha256_after": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b"
+    },
+    {
+      "path": "hardware/courant/dist/courant.routed.kicad_pcb",
+      "sha256_before": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b",
+      "sha256_after": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b"
+    },
+    {
+      "path": "hardware/courant/dist/courant.kicad_pro",
+      "sha256_before": "c0e9824c19a95061b562f756c77f8a53870a33f02f0da2f811606eaa1efe2e29",
+      "sha256_after": "c0e9824c19a95061b562f756c77f8a53870a33f02f0da2f811606eaa1efe2e29"
+    },
+    {
+      "path": "hardware/courant/dist/courant.routed.kicad_pro",
+      "sha256_before": "c0e9824c19a95061b562f756c77f8a53870a33f02f0da2f811606eaa1efe2e29",
+      "sha256_after": "c0e9824c19a95061b562f756c77f8a53870a33f02f0da2f811606eaa1efe2e29"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/1N4148W__9d65e6bad1.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "b03bf360b0a59614c30cdd7c527505d014a433cf77c5c7dadae6e500d6eec11c"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/5V_INPUT__f4047b8a89.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "496b440238fffdf841aa3fdc19c2db3f9861a37aaafd3bb250933e66853bd3cf"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/ASE-100_000MHZ-LC-T__ae75d0e002.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "7dfa11e8ece5e2ddb73d50e399809392b1d94702b42cce9661b149cc0776274e"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/BAT54S__32fc1a4b3f.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "c06a11d11c6a1290506f775e3895a3a5ad71fd832abeda86c083cf4d99f51e94"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/ENCODER_A_GND_B_SW_GND__4457e21765.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "3f9c90a7833e2ef41aa6da7b2f173dd347a7a4f50f36ec4ddd9520712278652a"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/H11L1M__c5e750f5d3.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "e2750858b09f9d726aa1604a9d17c62a0cbb939a8f96e1db51a45db0ebabb093"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/JTAG_VREF_GND_TCK_TDO_TDI_TMS__2864413b98.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "895c7b69b68e9ed170d9b341963a2928e50babbbe83ecea8d9514766f4b502bb"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/MCP3208-CI_SL__76680cdae2.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "a6cb75679fea36030c8dbacb9c26a8ff5f34c6ddeb64024758b210d32b31f688"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/MCP6002-I_SN__77edb9acaf.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "f293b9b846ab3baa6ea17a6c5b84907506f8a4e1e83a493989ad7486e24da127"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/MCP6561T-E_OT__273f09eb8c.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "307e9671fe298cee023c480d500f80f822f708a79146f2f0cad5e435aedfe5de"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/PCM5102APWR__31e6901811.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "deebb86b59bb532effa2aa743737b2405c1af0fe6535940d5b075042098f2e76"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/PITCH_CV_GND__251db257b6.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "dbf64dabf2f36c562ac169b6d2fe88220eb59dc87f2875ac109a1bf2bb7a377d"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/POT_DECAY_REF_WIPER_GND__e941a4a611.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "38e7da99790f0dd28f7027888a98b55f8e33c2c40472ef465cfaa9288b2824ff"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/README.md",
+      "sha256_before": null,
+      "sha256_after": "207ae3fd020b9763b370e3a08958ee169e9b5c9026411e53645e39872a8124c6"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/RESET_GND__232228838d.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "44b1f3527b5a3769cb8cb87261394da22ca80f6c91f4b4b5e71dea3a45073c90"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/STEREO_LINE_OUT_L_G_R__812a81a5dc.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "b36c89b0a347f80e6ade469648f8e319f0252c7a0155b7e409dcdeb57dd11f12"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/TPS62130ARGTR__6ea9868580.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "a6beb67207af9dfeee64bef116bf73c3ec16cdd14c9737675133ef78c37bd3c2"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/Unknown__17e6b9bcfa.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "4bf9cf464db2eddfa0cee524c2d284cd1e472d57900c5a87cba08feb807c7eca"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/W25Q64JVSSIQ__3f416348df.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "544e6f0b5c0b2ace46c660850073b7dbd75a951c3fbfa05d4ea14878574f57c6"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/XC7A35T-1FTG256C__c6a6b2a4af.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "40893e025c8b9345461d71872aab59a1c7940d4ac7fc6fac80010c442074e97e"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0201__093e0f1319.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "6dd759d25dca0e159bd0973256c576fb2de6ba060ccaed086c07997d02efcb4e"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0201__63acabd7b4.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "fee06312b07e5cf17b67cdec3f5f2e9812f084681d2d986bd4092c2e4da6f1b3"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0201__ba1a793164.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "c673f08ce14e0d7e2cafedc5a59c58cd6c6fdcb3c6ed82629d4f164030527974"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0201__dadfb7a195.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "9843c3435479c5547fd6a80c85eee771d8825b00acbee55752c28a8c28e195b1"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0201__f559b25a67.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "5ad5f845c28765597ada36cae3cb07dd3b0e296568b646d7cd42de402f7f8da2"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0603__d5291f488c.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "e435dcb3a2c09e18d1459981eb05931615a26284886a5d8c40cdb1197820588f"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0805__06f2194478.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "a70630abf0e9388975150428b6dce276ee0040453a2c77689c0e0f4f347277cc"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap0805__10beff2a36.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "9d9511f0bbb4e39bc43fdca55f426e32dc5743ebab828ed5b7bb2483e74a93fe"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap1210__180759c794.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "2aee319704641130c9a520f2d8c62e9e454d5ce989c9d872bdf00c15ac9da809"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/capacitor_cap1210__6451707d90.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "6c79bdcf37b9495153dd8a61bb0599bb7ef637a567dedaec81ce1180823d1e39"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/hole_circle_holeDiameter3.2mm__6815d6f763.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "6b4cdc55e085647f263b08db4dfedb5fb837968165bc2fcdf3405a9bc817ed27"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/inductor__e5f50d491f.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "73e67934ec8be783cab3f280cd6673bc340ef97d0abef017334d92bc7222446a"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/resistor_res0603__39c83d2b18.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "41c1eb565bec4270f43266adc32b3fc0d702014c0691e4bc4e84e71973215cae"
+    },
+    {
+      "path": "hardware/courant/dist/RadianMain.pretty/smtpad_circle_diameter1mm__18e3aa3a2a.kicad_mod",
+      "sha256_before": null,
+      "sha256_after": "b8c389f53e77919127307c09e23eb9e958b87222ed6f320aa11da8e27eaa2de2"
+    },
+    {
+      "path": "hardware/courant/dist/fp-lib-table",
+      "sha256_before": "a868f6f6d80516df8dc9008c8bfe7f9132d00aad4713f2351149b79e754c68fb",
+      "sha256_after": "a868f6f6d80516df8dc9008c8bfe7f9132d00aad4713f2351149b79e754c68fb"
+    },
+    {
+      "path": "hardware/courant/dist/courant.schematic.svg",
+      "sha256_before": "ce570f497f6eb074dadf0a82eafa668d0a35858a3b78a4a2d84173aeb3d9e8df",
+      "sha256_after": "ce570f497f6eb074dadf0a82eafa668d0a35858a3b78a4a2d84173aeb3d9e8df"
+    },
+    {
+      "path": "hardware/courant/dist/courant.netlist.txt",
+      "sha256_before": "ace6e9d009a9b1deb3ea139573f2c688894ecab4f8253d2113bb22796af36339",
+      "sha256_after": "ace6e9d009a9b1deb3ea139573f2c688894ecab4f8253d2113bb22796af36339"
+    },
+    {
+      "path": "hardware/courant/dist/fab/ENGINEERING_EXPORT_ONLY.txt",
+      "sha256_before": null,
+      "sha256_after": "e5a27250c791e72e93d38195a3392cf66d37007ead624721c21587c1f27767e5"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant-bom.csv",
+      "sha256_before": null,
+      "sha256_after": "9e30e2c07b737c08d044a472478adcafb52d08f9a2d2b2681cf9c686126a49e7"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant-pos.csv",
+      "sha256_before": null,
+      "sha256_after": "c2a11a6bcfe4ebafba18dff902c9441f57001125adc7bd0217e706f883b9c933"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-B_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "50eff3854042a8032778ca613aa21dc02d66d804b8fd408589f7c53a4dfd7566"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-B_Mask.gbr",
+      "sha256_before": null,
+      "sha256_after": "ca61954f7cef77175682284180ff94dd67839741597ef7c74c857b3056682308"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-B_Paste.gbr",
+      "sha256_before": null,
+      "sha256_after": "30f5c1cc2d8a4a9c51ba036b64927e5152ba66e8fd3972416fc70659337e8eae"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-B_Silkscreen.gbr",
+      "sha256_before": null,
+      "sha256_after": "870f4998132632547d602438fad1c18260980dbd855139f14d0c007ed809a447"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-Edge_Cuts.gbr",
+      "sha256_before": null,
+      "sha256_after": "ea8eb1ddd47da82871243e9e1917c02ebf9101d6eddee3a0189786f45b2ac0b7"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-F_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "348d11b8a96102f4d6fb45de48a2f62d4a3fb424beb4fc789bec4a682b5e1b58"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-F_Mask.gbr",
+      "sha256_before": null,
+      "sha256_after": "9691498efba75a3eff81cc2f1b22220346edcbdc3addf9ccd4b417c4f579f13d"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-F_Paste.gbr",
+      "sha256_before": null,
+      "sha256_after": "90e01283db55a91825aedc60622673c825a5cc054532bc63b8ea395181e98c81"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-F_Silkscreen.gbr",
+      "sha256_before": null,
+      "sha256_after": "243b56ef5900114f879a73794accbe9bacf441fd5f2bc74cca58ab7bb9fae83d"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-In1_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "1ae8bff1964c1c0f3a108c5783a116d71c666e438b30666ca3996626da4fd9c1"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-In2_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "3bfd47afae231d2fe22cc8d1b0fb98b6f0db9a578cfd1ef36cc58dc6b312c765"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-In3_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "bd649f4eeac40fd65d9aac618e6801c39cac26c3cdad3eb38740f1541ade3d3a"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-In4_Cu.gbr",
+      "sha256_before": null,
+      "sha256_after": "9abefbdd34c92ddcb278e9b9a4e4e553abee8a36a49dc7cee9e9b61b3fc487a5"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-NPTH-drl_map.pdf",
+      "sha256_before": null,
+      "sha256_after": "fe9b40fe6dd774e4d4e90c46771aaaf6be3da3468114927cf2c91ff40421d0c2"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-NPTH.drl",
+      "sha256_before": null,
+      "sha256_after": "0d2ab613fe545cc6b16b3b74d84b4e315c88d8c7397fa35085f404ef9ccbad22"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-PTH-drl_map.pdf",
+      "sha256_before": null,
+      "sha256_after": "06b1b3a9441a0610adeab9a76608220e42fc685459a3c555ed6fd215e57977ae"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-PTH.drl",
+      "sha256_before": null,
+      "sha256_after": "aa292ed0f336b7fa0f2e98fdfae8171a6d18d8c29a9150a897227f9d4804dde7"
+    },
+    {
+      "path": "hardware/courant/dist/fab/courant.routed-job.gbrjob",
+      "sha256_before": null,
+      "sha256_after": "deb689ade50e5deddb1b36e3d8888965482e3a77cab40ee2747941f820233bd0"
+    },
+    {
+      "path": "hardware/courant/dist/fab/source_sha256.txt",
+      "sha256_before": null,
+      "sha256_after": "17bb3d3fd2670d28691e351f4396248689572888bc56ce2b6bf6fdf6ab23d34a"
+    },
+    {
+      "path": "hardware/panel/fab/BOM.csv",
+      "sha256_before": null,
+      "sha256_after": "fa154bc93713642b1936972fd819ac3787ea8e46d1bcb07b5583cd6a3b165552"
+    },
+    {
+      "path": "hardware/panel/fab/ENGINEERING_EXPORT_ONLY.txt",
+      "sha256_before": null,
+      "sha256_after": "97adb51a0bdc14d21b92e00cf6947dd97f7bc1b8e5f09127c9ec5bb6ca0e7f91"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-B_Cu.gbl",
+      "sha256_before": null,
+      "sha256_after": "624ebe82b2ebe9fad1fac67a6bf3f1a7044b9d6518ba4498576450cb84682582"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-B_Mask.gbs",
+      "sha256_before": null,
+      "sha256_after": "cf437656af163692ea8fc0fe936201b8ab38d6f2ecca3cf33ce847b4aa060789"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-B_Paste.gbp",
+      "sha256_before": null,
+      "sha256_after": "0f5de6d81c9e44e7adc3634796b615e3691e9e751c4e9eb86b86984a35bd1aaf"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-B_Silkscreen.gbo",
+      "sha256_before": null,
+      "sha256_after": "596e3e82106f9b02ecaa14d441e99492590f497c276f10e6426c91a682d02a43"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-Edge_Cuts.gm1",
+      "sha256_before": null,
+      "sha256_after": "8665154ef5e3c4587cc97dc2e5ab19541783f9f3b8d20788ab63c807c73e1751"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-F_Cu.gtl",
+      "sha256_before": null,
+      "sha256_after": "43e090b2a5903f631e1f5a30733a9d8644aae41113857b833e06d78ad07826bf"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-F_Mask.gts",
+      "sha256_before": null,
+      "sha256_after": "b1c72b5cc1720fefd5ba86b5cc5dc05c5f403a603ee54514d73c0005899ba63c"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-F_Paste.gtp",
+      "sha256_before": null,
+      "sha256_after": "731fd1355b7af9d5765375ee3a92a99f8ca4761c944d52550d601c0ccaf96ba3"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-F_Silkscreen.gto",
+      "sha256_before": null,
+      "sha256_after": "79685906cda1aa8f7ab638720b9ae4385ab9cab9e60ceedbc258dad94db27ea0"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-In1_Cu.g1",
+      "sha256_before": null,
+      "sha256_after": "8298f59ed2f23e214305caa4a4775045b7d207b72361f8a97316596838e0fa6b"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-In2_Cu.g2",
+      "sha256_before": null,
+      "sha256_after": "3e6902adba1680eeaccc52778ab6bc84eb4a9436d4be687bfe378c4c06866989"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-NPTH-drl_map.pdf",
+      "sha256_before": null,
+      "sha256_after": "6eb1e4b48b5f42bc0c12693655ec701bdd7b02b27e5fa05c8c66501ac40e7be6"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-NPTH.drl",
+      "sha256_before": null,
+      "sha256_after": "0c68c12446d539156be3be2b2264d16eebb7fa4e2db2d01649c81b8aef6e2e83"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-PTH-drl_map.pdf",
+      "sha256_before": null,
+      "sha256_after": "e306073233b181563f1ea959e602d337043fc06fd619cbc1a2c12b4804fd7a59"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-PTH.drl",
+      "sha256_before": null,
+      "sha256_after": "36aff7da753f500a1d20939c9966b4f1a4c893e49e567cdf82fd7d8714728f18"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-job.gbrjob",
+      "sha256_before": null,
+      "sha256_after": "8d98498a7d81d109497814ab9613dce55210987c2b2cdabc9612deb5c5707381"
+    },
+    {
+      "path": "hardware/panel/fab/radian_panel-pos.csv",
+      "sha256_before": null,
+      "sha256_after": "4d01b008017ad929c8eefd730b3ad0eaab8b195f361ffe25f84e3f69921ae0bf"
+    },
+    {
+      "path": "hardware/panel/fab/source_sha256.txt",
+      "sha256_before": null,
+      "sha256_after": "6f1074d98db6447d308e9b43de72b7a2f15d2b4985bbd0c23f348698b9942913"
+    },
+    {
+      "path": "hardware/courant/dist/courant-fab.zip",
+      "sha256_before": "a6686a8695e554ff65324bb8fe05b5bc09949117154e40fe583f5d5ea81e7d31",
+      "sha256_after": "42232aebeb7003384aed0010850a4d95c4f0a718513a1230951ef1a5c37e8ac2"
+    },
+    {
+      "path": "hardware/panel/radian_panel-fab.zip",
+      "sha256_before": "3aab4e0fb69de3dddbf281a08d7a5eb4b4bafe0e872d4e649ecdb759c13a87f2",
+      "sha256_after": "eef4c986144ecc631b42f93257fb01669953a757a5672cb9cc2d6a572d87189b"
+    },
+    {
+      "path": "hardware/courant/reports/native/drc.json",
+      "sha256_before": "ff1c2e08a4fe6acdf6ac331df6a6d6aac0d7bf34c700e93d81cdb120fb7794ba",
+      "sha256_after": "ec24fa26736acf7aef716e724f30519c9139f163caed9ab083a31c52130350de"
+    },
+    {
+      "path": "hardware/courant/reports/native/drc.log",
+      "sha256_before": "ce50596204e3be49b5b501443b482e77e88e5ad18f14d7f018375f0132280dd4",
+      "sha256_after": "22efa785601a5d90294fbe3bd051fc0ab43c44445635d3e12064f18c713442bf"
+    },
+    {
+      "path": "hardware/courant/reports/native/drc.command.json",
+      "sha256_before": "61954ac2c44068f0694acea1124dc37a3df139a9f580fa997514a32c326fb0cc",
+      "sha256_after": "9bf73b2823273840c1d88c7759139f36ba0ca088f457f739d7c4430433d96d38"
+    },
+    {
+      "path": "hardware/panel/reports/native/drc.json",
+      "sha256_before": "834372e081913132fc438b4cf4c41fa49f2f5df23a76bbbe4b5fb25c4d7d6bb9",
+      "sha256_after": "c3ca29579327b9022c4c8bc980281b8236059458c065ffefffeecaa73822bc7e"
+    },
+    {
+      "path": "hardware/panel/reports/native/erc.json",
+      "sha256_before": "d8fad706cba8625f45729ba5afcd28ab5fc64bcf66737c1de365bb8cfc4dca65",
+      "sha256_after": "f4c7325e8384f70861bd57ada7931e3179701b785a163abf67402b7052f86651"
+    },
+    {
+      "path": "hardware/synchronization/product_cad_update.json",
+      "sha256_before": null,
+      "sha256_after": "228e5ebfe730430daea340175faa67494b33e37b3da956b4cf48ce2b470c274c"
+    },
+    {
+      "path": "hardware/synchronization/bare_panel_refresh.json",
+      "sha256_before": null,
+      "sha256_after": "78d17eeeb03c3f92ff195eb23655bbb429a22241062096bea2f3700e1a6859e4"
+    },
+    {
+      "path": "hardware/synchronization/published_main_drc.command.json",
+      "sha256_before": null,
+      "sha256_after": "9bf73b2823273840c1d88c7759139f36ba0ca088f457f739d7c4430433d96d38"
+    },
+    {
+      "path": "hardware/synchronization/published_main_alias_drc.command.json",
+      "sha256_before": null,
+      "sha256_after": "5c755700674a582a1e177fde2bd6b734e66418c35dd0d0f3bc604833149e5d83"
+    },
+    {
+      "path": "hardware/synchronization/published_panel_drc.command.json",
+      "sha256_before": null,
+      "sha256_after": "37ee822b8b9a740b8ded43e0fbeac12e40182766e19c524dad40fbfedf03edbb"
+    },
+    {
+      "path": "hardware/synchronization/published_panel_erc.command.json",
+      "sha256_before": null,
+      "sha256_after": "c1a9b937cca15690a227a23b848281a65c6ffff600c3961a6502c9bbab68de2a"
+    }
+  ],
+  "retired": [
+    {
+      "old_path": "hardware/courant/dist/courant.circuit.json",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/dist/courant.circuit.json"
+    },
+    {
+      "old_path": "hardware/courant/dist/courant",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/dist/courant"
+    },
+    {
+      "old_path": "hardware/courant/courant.circuit.circuit.json",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/courant.circuit.circuit.json"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work"
+    }
+  ],
+  "completed_utc": "2026-09-16T02:24:42.335881+00:00",
+  "project": "/home/ik/ChatGPT/Courant",
+  "backup_archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/backup_hardware_before_sync.tar.gz",
+  "canonical_board_hashes": {
+    "hardware/courant/deliverables/courant.kicad_pcb": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b",
+    "hardware/panel/design/radian_panel.kicad_pcb": "5c37aa04e39cf2ce4aefce5373201c6c3f49c9220217e3084b0abb485bc1dad0"
+  },
+  "native_board_contents_unchanged": true,
+  "published_checks": {
+    "main_drc": 0,
+    "main_alias_drc": 0,
+    "panel_drc": 0,
+    "panel_erc": 0
+  },
+  "git_commit_created": false,
+  "git_pushed": false,
+  "all_retired_files": [
+    {
+      "old_path": "hardware/courant/courant.circuit.circuit.json",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/courant.circuit.circuit.json",
+      "sha256": "4a9ff92cc009ac6056f90be27d5fe7bf207750d2830245069fcced972bb899a7"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/radian_panel.kicad_pcb",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/radian_panel.kicad_pcb",
+      "sha256": "5c37aa04e39cf2ce4aefce5373201c6c3f49c9220217e3084b0abb485bc1dad0"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/radian_panel.kicad_pro",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/radian_panel.kicad_pro",
+      "sha256": "fbecb115c2475b932913b5c91c2f312f6bfe36f1d63f763e9eba8030f376d2cc"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/controls.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/controls.kicad_sch",
+      "sha256": "32f159dbab6ff0069f3ea5fe3f82b437fe51761b2770b6c264a41d366133f7e5"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/io.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/io.kicad_sch",
+      "sha256": "04696a67ae4b514eb16e8e932f44211024b87bd61e48c25705b9f7f200c81485"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/mod.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/mod.kicad_sch",
+      "sha256": "d5ed14724dffcb826493900858bcf51bb92f165c3bde8228c9af7550fb2881e1"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/power.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/power.kicad_sch",
+      "sha256": "5545568e4dacf08a626061042cfe7ecc9f58a5dba848cd614ea4fdb82d7f38c4"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/radian_panel.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/radian_panel.kicad_sch",
+      "sha256": "b8cb4d670122b4390cba49cb77cd939a86e45b684d3dfb8a0996b82d83847fc1"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/service.kicad_sch",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/service.kicad_sch",
+      "sha256": "e37e0a3b4130c8ba3f9c3a784e78c642b39d80bf91bdd74349901e7b56963d50"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/fp-lib-table",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/fp-lib-table",
+      "sha256": "a4b9599c26c20717e08f82bb6af587c5dc7a1298d76f8ce7d4850ed7fa2109b9"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/sym-lib-table",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/sym-lib-table",
+      "sha256": "0ca76b138c494c57a1a0ce6cdbff3ab94f8aaac2106822c88731fb4f21afd0f7"
+    },
+    {
+      "old_path": "hardware/panel/reports/native/work/radian_panel.kicad_prl",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/panel/reports/native/work/radian_panel.kicad_prl",
+      "sha256": "400da916b3de9e9ec408070c0cb3966e24ad9d55561ecb32eb2f7c051259acdb"
+    },
+    {
+      "old_path": "hardware/courant/dist/courant.circuit.json",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/dist/courant.circuit.json",
+      "sha256": "7eed6d3defaefe71f9793787dc9cd7613447e46a05545b863ca0055826233e63"
+    },
+    {
+      "old_path": "hardware/courant/dist/courant/circuit.json",
+      "archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_intermediates/hardware/courant/dist/courant/circuit.json",
+      "sha256": "9d52cd73d1148116cd53328ee457dee61d18e65574b11c9874358a9c19fa0618"
+    }
+  ],
+  "audit_passed": true
+}

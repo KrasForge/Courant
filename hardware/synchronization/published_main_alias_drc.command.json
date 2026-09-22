@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/ik/ChatGPT/RADIAN_Backplane_review_3ldc8m0x/tools/runtime/backplane-kicad-linux-x86_64-10.0.6/bin/kicad-cli",
+    "pcb",
+    "drc",
+    "--refill-zones",
+    "--all-track-errors",
+    "--severity-all",
+    "--exit-code-violations",
+    "--format",
+    "json",
+    "--output",
+    "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/reports/published_main_alias_drc.json",
+    "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+  ],
+  "exit_code": 0
+}

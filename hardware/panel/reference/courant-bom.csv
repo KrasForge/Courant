@@ -1,0 +1,58 @@
+Reference(s),Qty,Value,Footprint,Side,Manufacturer,MPN,LCSC,Notes
+"C100,C101,C102,C103,C104,C105,C106,C107,C108,C109,C110,C111,C112,C113,C114,C115,C116,C117,C118,C119,C120,C121,C122,C123,C124,C125,C126,C127,C128,C129,C130,C131,C132,C133,C134,C135,C136,C137",38,100nF,capacitor_cap0201,bottom,CCTC,TCC0201X5R104K100ZT,C5142565,10 V X5R. JLC extended library: one setup fee for the whole array
+"C11,C21,C31,C146,C150,C151,C152,C161,C162,C166,C170,C172,C190,C195,C200",15,100nF,capacitor_cap0603,top,Samsung,CL10B104KB8NNNC,C1591,50 V X7R
+"R12,R22,R32,R103,R104,R105,R106,R121,R130,R143,R144,R145,R146,R169",14,10kΩ,resistor_res0603,top,Yageo,RC0603FR-0710KL,C98220,thick film 1%
+"R131,R132,R133,R140,R141,R142,R147,R148,R149,R150",10,1kΩ,resistor_res0603,top,Yageo,RC0603FR-071KL,,thick film 1%
+"C174,C175,C176,C180,C181,C182,C193,C194",8,10nF,capacitor_cap0603,top,Murata,GRM1885C1H103JA01D,C85973,"50 V C0G -- ADC anti-alias, C0G for low voltage coefficient"
+"R110,R114,R115,R122,R123,R124,R125",7,33Ω,resistor_res0603,top,Yageo,RC0603FR-0733RL,,thick film 1%
+"C12,C13,C22,C23,C32,C33",6,22uF,capacitor_cap0805,top,Samsung,CL21A226MAQNNNE,C45783,"25 V X5R, JLC basic library -- switcher output"
+"R100,R101,R102,R111,R112,R113",6,4.7kΩ,resistor_res0603,top,Yageo,RC0603FR-074K7L,,thick film 1%
+"R11,R21,R31,R166",4,100kΩ,resistor_res0603,top,Yageo,RC0603FR-07100KL,,thick film 1%
+"C10,C20,C30,C160",4,10uF,capacitor_cap0805,top,Samsung,CL21A106KAYNNNE,C15850,"25 V X5R, JLC basic library"
+"R160,R161,R163,R164",4,20kΩ,resistor_res0603,top,Yageo,RT0603BRD0720KL,C723637,"0.1%, 25 ppm/C thin film -- matched CV divider pair"
+"C1,C140,C141,C142",4,47uF,capacitor_cap1210,top,Murata,GRM32ER61C476KE15L,C77101,16 V X5R -- bulk input
+"C191,C192,C196",3,1nF,capacitor_cap0603,top,Murata,GRM1885C1H102JA01D,,"50 V C0G, same series as the 10 nF"
+"C165,C171,C173",3,1uF,capacitor_cap0603,top,Samsung,CL10B105KB8NQNC,C5199872,50 V X7R
+"L1,L2,L3",3,1µH,inductor,top,cjiang,FNR4030S1R0MT,C167865,"4x4 mm shielded, 18 mOhm, 5.7 A sat -- must exceed the TPS62130's 3 A plus ripple"
+"C14,C24,C34",3,3.3nF,capacitor_cap0603,top,Murata,GRM1885C1H332JA01D,,50 V C0G -- switcher soft-start
+"C143,C144,C145",3,4.7uF,capacitor_cap0805,top,Yageo,CC0805KKX7R8BB475,C354262,25 V X7R
+"D10,D11,D12",3,BAT54S,BAT54S,top,,BAT54S,,"dual Schottky, CV input clamp"
+"U11,U12,U13",3,TPS62130ARGTR,TPS62130ARGTR,top,Texas Instruments,TPS62130ARGTR,,"3 A buck, QFN-16 with exposed pad"
+"R162,R165",2,100Ω,resistor_res0603,top,Yageo,RC0603FR-07100RL,,thick film 1%
+"C167,C168",2,2.2nF,capacitor_cap0603,top,Murata,GRM1885C1H222JA01D,,"50 V C0G, same series"
+"C163,C164",2,2.2uF,capacitor_cap0603,top,Samsung,CL10A225KO8NNNC,C23630,"16 V X5R, JLC basic library"
+"R126,R127",2,470Ω,resistor_res0603,top,Yageo,RC0603FR-07470RL,,thick film 1%
+R20,1,124kΩ,resistor_res0603,top,Yageo,RC0603FR-07124KL,,thick film 1%
+D20,1,1N4148W,1N4148W,top,,1N4148W,,signal diode
+J12,1,1x02 header,PITCH_CV_GND,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J4,1,1x02 header,RESET_GND,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J1,1,1x02 header,5V_INPUT,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J15,1,1x02 header,MIDI_DIN4_DIN5,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J13,1,1x02 header,MOD_CV_GND,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J14,1,1x02 header,GATE_GND,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J3,1,1x02 header,PROGRAM_GND,top,,"1x02 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J7,1,1x03 header,POT_DECAY_REF_WIPER_GND,top,,"1x03 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J6,1,1x03 header,POT_PITCH_REF_WIPER_GND,top,,"1x03 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J8,1,1x03 header,POT_TIMBRE_REF_WIPER_GND,top,,"1x03 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J5,1,1x03 header,STEREO_LINE_OUT_L_G_R,top,,"1x03 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J10,1,1x03 header,MODE_3V3_CV_SEL_GND,top,,"1x03 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J9,1,1x05 header,ENCODER_A_GND_B_SW_GND,top,,"1x05 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J11,1,1x05 header,STATUS_GND_VOICE0_3,top,,"1x05 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+J2,1,1x06 header,JTAG_VREF_GND_TCK_TDO_TDI_TMS,top,,"1x06 2.54 mm header, vertical THT",,panel harness connector -- mates to off-board hardware
+R120,1,1Ω,resistor_res0603,top,Yageo,RC0603FR-071RL,,thick film 1%
+R181,1,2.2kΩ,resistor_res0603,top,Yageo,RC0603FR-072K2L,,thick film 1%
+R180,1,220Ω,resistor_res0603,top,Yageo,RC0603FR-07220RL,,thick film 1%
+R10,1,24.9kΩ,resistor_res0603,top,Yageo,RC0603FR-0724K9L,C137761,thick film 1%
+R30,1,316kΩ,resistor_res0603,top,Yageo,RC0603FR-07316KL,,thick film 1%
+R167,1,33kΩ,resistor_res0603,top,Yageo,RC0603FR-0733KL,,thick film 1%
+R168,1,40.2kΩ,resistor_res0603,top,Yageo,RC0603FR-0740K2L,,thick film 1%
+Y1,1,ASE-100.000MHZ-LC-T,ASE-100_000MHZ-LC-T,top,Abracon,ASE-100.000MHZ-LC-T,,100 MHz system oscillator
+Y2,1,ASE-12.288MHZ-LC-T,ASE-12_288MHZ-LC-T,top,Abracon,ASE-12.288MHZ-LC-T,,12.288 MHz audio master clock
+U8,1,H11L1M,H11L1M,top,onsemi,H11L1M,,"Schmitt optocoupler, MIDI input"
+U4,1,MCP3208-CI/SL,MCP3208-CI_SL,top,Microchip,MCP3208-CI/SL,,8-ch 12-bit SPI ADC
+U6,1,MCP6002-I/SN,MCP6002-I_SN,top,Microchip,MCP6002-I/SN,,"dual op-amp, CV buffer"
+U7,1,MCP6561T-E/OT,MCP6561T-E_OT,top,Microchip,MCP6561T-E/OT,,"comparator, gate input"
+U3,1,PCM5102APWR,PCM5102APWR,top,Texas Instruments,PCM5102APWR,,stereo audio DAC
+U5,1,REF3125AIDBZR,REF3125AIDBZR,top,Texas Instruments,REF3125AIDBZR,,2.5 V reference
+U2,1,W25Q64JVSSIQ,W25Q64JVSSIQ,top,Winbond,W25Q64JVSSIQ,,64 Mbit SPI flash
+U1,1,XC7A50T-1FTG256I,XC7A35T-1FTG256C,top,AMD/Xilinx,XC7A50T-1FTG256I,C3272410,"FPGA, 52160 logic cells, industrial temp"

@@ -1,0 +1,45 @@
+{
+  "status": "drawing-derived mechanical reference; not vendor-supplied STEP",
+  "sources": {
+    "ipt_print": "https://suddendocs.samtec.com/prints/ipt1-1xx-xx-xx-d-xx-mkt.pdf",
+    "ips_print": "https://suddendocs.samtec.com/prints/ips1-1xx-xx-xx-d-xx-mkt.pdf",
+    "ipt_footprint": "https://suddendocs.samtec.com/prints/ipt1-1xx-xx-x-d-xxx_ipt1-1xx-xx-x-d-ra-xxx-mkt.pdf",
+    "ips_footprint": "https://suddendocs.samtec.com/prints/ips1-th.pdf",
+    "mated": "https://suddendocs.samtec.com/prints/ipx1%20mated%20document-mkt.pdf"
+  },
+  "ipt": {
+    "part": "IPT1-110-06-L-D",
+    "body_width": 5.08,
+    "body_length": 25.908,
+    "shroud_height": 6.35,
+    "insulation_height": 15.3,
+    "tail": 2.35,
+    "pin_square": 0.64,
+    "mating_contact": 3.94,
+    "hole": 1.02
+  },
+  "ips": {
+    "part": "IPS1-110-01-L-D",
+    "body_width": 4.95,
+    "body_length": 25.781,
+    "height": 8.51,
+    "tower": 3.81,
+    "tail": 2.54,
+    "tail_x": 0.79,
+    "tail_y": 0.41,
+    "hole": 1.04
+  },
+  "mated": {
+    "fully_mated_board_gap": 19.99,
+    "max_board_gap": 20.45,
+    "fully_mated_wipe": 0.84,
+    "min_wipe_at_max_gap": 0.38
+  },
+  "contacts_per_connector": 20,
+  "nominal_geometric_insertion_mm": 3.82,
+  "geometric_insertion_at_max_gap_mm": 3.36,
+  "models": [
+    "Samtec_IPT1-110-06-L-D_drawing_reference.step",
+    "Samtec_IPS1-110-01-L-D_drawing_reference.step"
+  ]
+}

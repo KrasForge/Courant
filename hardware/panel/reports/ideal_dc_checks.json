@@ -1,0 +1,18 @@
+{
+  "model": "Ideal DC resistor network only. Not SPICE, no op-amp macro-model, no switching converter transient simulation. Monte Carlo assumes independent uniform resistor errors +/-0.1%.",
+  "mod_nominal_gain": 0.5,
+  "mod_nominal_zero_V": 2.5,
+  "gain_range_sampled": [
+    0.49890855317664606,
+    0.5010418984472397
+  ],
+  "zero_range_sampled_V": [
+    2.4956032418541674,
+    2.504215590481196
+  ],
+  "rail_endpoint_warning": "Nominal -5/+5 V maps to supply rails: real output swing and loading reduce usable endpoint range. Calibrate/limit firmware range.",
+  "power_feedback_nominal_V": 5.0794391278195485,
+  "power_EN_at_VRAW_11V": 1.875,
+  "inductor_ripple_nominal_A_at_VIN12": 0.732345160012716,
+  "input_power_formula": "I_RACK = (Vout * Iout)/(VIN * converter_efficiency) + housekeeping; unknown actual FPGA load and efficiency"
+}

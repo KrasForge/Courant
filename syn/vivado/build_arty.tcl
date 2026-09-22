@@ -23,6 +23,8 @@ set rtl [file normalize [file dirname [info script]]/../../src/rtl]
 
 read_vhdl -vhdl2008 [list \
   $rtl/fdtd_pkg.vhd \
+  $rtl/physical_pkg.vhd \
+  $rtl/physical_mallet.vhd \
   $rtl/node_element.vhd \
   $rtl/grid_mesh.vhd \
   $rtl/grid_mesh_tdm.vhd \

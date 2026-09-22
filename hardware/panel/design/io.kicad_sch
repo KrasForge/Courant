@@ -1,0 +1,1060 @@
+(kicad_sch
+  (version 20231120)
+  (generator "radian_panel_generator")
+  (uuid "32a0fbd8-9981-5a75-9f13-b39ca692f8b0")
+  (paper "A2")
+  (title_block
+    (title "03 | PATCH JACKS AND MIDI")
+    (date "2026-09-15")
+    (rev "P1 DRAFT")
+    (comment 1 "Native ERC, footprint verification and hardware testing REQUIRED"))
+  (lib_symbols
+    (symbol "RadianPanel:J301"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "PITCH 0-5V"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J301_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J301_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "NORMAL"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "QingPu / Thonk"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J302"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "MOD"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J302_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J302_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "NORMAL"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "QingPu / Thonk"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J303"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "GATE"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J303_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J303_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "NORMAL"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "QingPu / Thonk"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J304"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LINE L"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J304_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J304_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "NORMAL"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "QingPu / Thonk"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J305"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LINE R"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J305_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J305_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "NORMAL"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "QingPu / Thonk"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J306"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "22-27-2021"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Molex_22-27-2021_J306_B"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J306_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J306_1_1"
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))))
+  (text "03 | PATCH JACKS AND MIDI"
+    (at 20 20 0)
+    (effects
+      (font
+        (size 3 3))
+      (justify left top))
+    (uuid "e208e191-1ef9-594d-a9a6-a0ffe90c0c21"))
+  (text "RADIAN PANEL P1 | NET-LABELLED ELECTRICAL SCHEMATIC"
+    (at 20 30 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid "7bbae22e-829a-5e1e-8ea7-db1efe410c9c"))
+  (symbol
+    (lib_id "RadianPanel:J301")
+    (at 78.74 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1d1426a6-6ee9-5869-8b4b-7ecb976e988e")
+    (property "Reference" "J301"
+      (at 78.74 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "PITCH 0-5V"
+      (at 78.74 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "WQP518MA (Thonkiconn/PJ398SM)"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "c1001082-2376-5d45-827b-81b50339e2ef"))
+    (pin "2"
+      (uuid "4aca6c34-5fb7-5355-b206-3fdb3acbf20a"))
+    (pin "3"
+      (uuid "cac5bfbc-9bdc-5bbe-a9d2-08a9083ae355"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J301")
+          (unit 1))))
+    (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "QingPu / Thonk"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 69.85)
+      (xy 60.96 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "dcfc7c32-d671-5186-9674-b12ef9eb299d"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "15a16db0-29be-54c2-bd2e-f4923dabbe1f"))
+  (wire
+    (pts
+      (xy 66.04 72.39)
+      (xy 60.96 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "f399aa72-9246-5ee8-8841-639029a362fb"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "602883bb-8e6b-5ed4-ab0d-6dfbdf8ce5cf"))
+  (wire
+    (pts
+      (xy 66.04 74.93)
+      (xy 60.96 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1d9c5697-6dbe-5716-828e-51e7e93c0d42"))
+  (global_label "PITCH_IN"
+    (shape bidirectional)
+    (at 60.96 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "db6e35df-4bcf-50c4-a74c-8e389bbb994c"))
+  (symbol
+    (lib_id "RadianPanel:J302")
+    (at 219.71 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c1806fec-6f4c-552c-ac14-80ec675f5a36")
+    (property "Reference" "J302"
+      (at 219.71 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "MOD"
+      (at 219.71 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "WQP518MA (Thonkiconn/PJ398SM)"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "f57314cc-54ee-5edb-9887-e12d68741ab0"))
+    (pin "2"
+      (uuid "b5c4478b-d1e1-5bc2-a273-797fa99e1a6c"))
+    (pin "3"
+      (uuid "e299fca0-e641-5870-936b-41fb4d702f84"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J302")
+          (unit 1))))
+    (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "QingPu / Thonk"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 69.85)
+      (xy 201.93 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2334b8c8-e616-58f2-906d-9c93e322063e"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c076c0c8-b82f-553f-a1a2-a59ff0ccb19a"))
+  (wire
+    (pts
+      (xy 207.01 72.39)
+      (xy 201.93 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e838bf16-aaf4-5779-a949-d26af9585024"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "cedd9ff6-06e9-5394-827f-da38f2ccf0a1"))
+  (wire
+    (pts
+      (xy 207.01 74.93)
+      (xy 201.93 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "16048e5a-d651-51d9-a4af-5de13dbd8c3a"))
+  (global_label "MOD_RAW"
+    (shape bidirectional)
+    (at 201.93 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "53982c69-d127-5a73-a7c9-f5bf370f1817"))
+  (symbol
+    (lib_id "RadianPanel:J303")
+    (at 360.68 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "be78fd5a-3121-50f1-a6c8-33469a59e66e")
+    (property "Reference" "J303"
+      (at 360.68 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "GATE"
+      (at 360.68 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "WQP518MA (Thonkiconn/PJ398SM)"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "b545fe30-2b6f-503e-94ed-06da2b22ad8a"))
+    (pin "2"
+      (uuid "80cf60d1-e714-53f1-ad7d-d198c3b80354"))
+    (pin "3"
+      (uuid "555919cf-2b93-5788-8b20-a4896cdc340f"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J303")
+          (unit 1))))
+    (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "QingPu / Thonk"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 347.98 69.85)
+      (xy 342.9 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "47f734ec-d1e8-52c6-bbf0-98f2084e4369"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 342.9 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0ebff840-79cc-52f2-9b4c-bb78ab0ed48a"))
+  (wire
+    (pts
+      (xy 347.98 72.39)
+      (xy 342.9 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "704c709a-f6e6-5d13-ac7f-34082aeaa3cd"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 342.9 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "6d4ef7cb-cf91-5765-bb9e-d4782eb7c4df"))
+  (wire
+    (pts
+      (xy 347.98 74.93)
+      (xy 342.9 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c086748d-4ddd-51d0-a5b3-2c5b9aa626c4"))
+  (global_label "GATE_IN"
+    (shape bidirectional)
+    (at 342.9 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "84106118-d3f5-5753-b4c7-6165eab28647"))
+  (symbol
+    (lib_id "RadianPanel:J304")
+    (at 501.65 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "20a12c22-8872-522b-8afe-80cd0acffe87")
+    (property "Reference" "J304"
+      (at 501.65 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "LINE L"
+      (at 501.65 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "WQP518MA (Thonkiconn/PJ398SM)"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "1e81a308-8d4a-5a3a-904a-734e1513b345"))
+    (pin "2"
+      (uuid "4a41af0b-d936-5535-81e1-ecc49a7bbd05"))
+    (pin "3"
+      (uuid "52fa76f8-8933-54fa-8758-9a068f51b30a"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J304")
+          (unit 1))))
+    (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "QingPu / Thonk"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 488.95 69.85)
+      (xy 483.87 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2e7ff049-af96-5d07-95ae-96ae737bfba4"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 483.87 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0b045594-453d-5cd3-b5b0-cc7f33ecad32"))
+  (no_connect
+    (at 488.95 72.39)
+    (uuid "69066b0d-fe0b-5a67-b385-001c7c808a64"))
+  (wire
+    (pts
+      (xy 488.95 74.93)
+      (xy 483.87 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b3ab3f5d-a02c-5e3c-a845-0f4344fee89f"))
+  (global_label "LINE_L"
+    (shape bidirectional)
+    (at 483.87 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c47128e0-fef9-5d17-839a-1d763a933e2d"))
+  (symbol
+    (lib_id "RadianPanel:J305")
+    (at 78.74 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "39bd0795-f68c-5b3f-83ac-033c8b0bcb76")
+    (property "Reference" "J305"
+      (at 78.74 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "LINE R"
+      (at 78.74 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:WQP518MA_PJ398SM_Vertical"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "WQP518MA (Thonkiconn/PJ398SM)"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "62a2e023-5d57-583a-ac88-f81daf777f86"))
+    (pin "2"
+      (uuid "42fae961-63a1-5ea9-802f-e16bd37e3db8"))
+    (pin "3"
+      (uuid "b8352148-b1a0-5de8-a96e-ef8bc2e840bf"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J305")
+          (unit 1))))
+    (property "Description" "Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "QingPu / Thonk"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 133.35)
+      (xy 60.96 133.35))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "54df975c-4a19-5b3f-b2af-e4afe8bca14b"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 133.35 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "1f6cfd36-aaf4-58e3-a5ec-4d51a00c24f2"))
+  (no_connect
+    (at 66.04 135.89)
+    (uuid "2e7b5fbf-b3a1-5801-bfea-8419dc8f73ee"))
+  (wire
+    (pts
+      (xy 66.04 138.43)
+      (xy 60.96 138.43))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6dbfb4a2-4a36-53aa-8342-e039a81cd06b"))
+  (global_label "LINE_R"
+    (shape bidirectional)
+    (at 60.96 138.43 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0b6618bb-b84f-59fe-ae81-dd5a51cd1c3c"))
+  (symbol
+    (lib_id "RadianPanel:J306")
+    (at 219.71 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f536e084-c6a1-57ea-8653-b1afeea3b2ff")
+    (property "Reference" "J306"
+      (at 219.71 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "22-27-2021"
+      (at 219.71 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Molex_22-27-2021_J306_B"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "22-27-2021"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "0bd88116-795d-5671-ade4-a131ce621318"))
+    (pin "2"
+      (uuid "00b0ed7f-0524-545b-a23f-988c2c7d4bad"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/1578ecd5-bea0-5ad2-8ccb-a84196c400b8"
+          (reference "J306")
+          (unit 1))))
+    (property "Description" "Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB."
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 134.62)
+      (xy 201.93 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e7a76266-738f-5136-8fcb-41ec860044d4"))
+  (global_label "MIDI4"
+    (shape bidirectional)
+    (at 201.93 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "95f27c88-8ac4-5826-9ef5-0d118d4e4a00"))
+  (wire
+    (pts
+      (xy 207.01 137.16)
+      (xy 201.93 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "24e80138-19aa-54ea-ba45-463e6d9182cd"))
+  (global_label "MIDI5"
+    (shape bidirectional)
+    (at 201.93 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "a12c3763-8a49-5773-a60a-e90e6b2f70f3"))
+  (text "Pitch and Gate follow the existing mainboard front ends. LINE L/R are NOT new modular-level or headphone drivers."
+    (at 20 365 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "1cdaf8e9-bd20-5d6b-aac9-cfe86bb7e175"))
+  (text "WQP518MA: 1=SLEEVE, 2=NORMAL, 3=TIP. Inputs normal to ground; output normal pins intentionally NC."
+    (at 20 373 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "cd7beb03-52db-5608-ab04-3c9dfe24bfe6"))
+  (text "DIN socket remains panel-supported off-board with two wires. Keep DIN pin 2/shield isolated from board GND."
+    (at 20 381 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "e2387899-433a-55a7-a545-5f3b69aafc67"))
+  (text "Input overvoltage, unpowered behavior, jack insertion shorts and output back-drive still need bench validation."
+    (at 20 389 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "129cfad1-5d30-5db0-8c4c-2548cffd7654")))

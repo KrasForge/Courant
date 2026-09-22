@@ -1,0 +1,149 @@
+(footprint "Abracon_ASE_3225_4Pin"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -3 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d590d5e3-814c-43ed-90e6-de2cfde373cc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Abracon ASE 3225"
+		(at 0 3 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "37d94b51-f385-4d80-b599-96c2b5970eba")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e5e1d075-5117-4670-8a9f-076df8a0b094")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ae0fcc2d-484a-4ea8-a252-64f67aad4571")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Part Number" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "daa0a587-a57f-436a-8fbe-c9aa2a55d1e4")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.95 -1.55)
+		(end 1.95 1.55)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6c34d874-0d16-4bab-b60a-53521a1c15e1")
+	)
+	(fp_line
+		(start -1.6 -1.25)
+		(end 1.6 -1.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "1bf8a511-7ffb-4f58-aa09-6fff04933b87")
+	)
+	(fp_line
+		(start -1.6 1.25)
+		(end -1.6 -1.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "f0204954-a76d-460d-a518-6942f46482ad")
+	)
+	(fp_line
+		(start 1.6 -1.25)
+		(end 1.6 1.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "454abc17-3350-4e85-afe4-8e010228eaf5")
+	)
+	(fp_line
+		(start 1.6 1.25)
+		(end -1.6 1.25)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "2bc9afb5-b2a2-44f0-a763-a7d7dac8823d")
+	)
+	(pad "1" smd rect
+		(at -1.1 0.8)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "358063f1-3dca-42d2-a076-df5ac56ccbc3")
+	)
+	(pad "2" smd rect
+		(at 1.1 0.8)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "77d52ecb-dfc3-4b97-8f65-33f8aaa6609b")
+	)
+	(pad "3" smd rect
+		(at 1.1 -0.8)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "08f19459-130b-4f5f-b516-412d1bdf4c27")
+	)
+	(pad "4" smd rect
+		(at -1.1 -0.8)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1c83578a-f8dd-40e0-9459-d5704f7b4f80")
+	)
+	
+	(model "${KIPRJMOD}/cad/models/Oscillator_3225_4Pin.step"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 0))
+	)
+(embedded_fonts no)
+)

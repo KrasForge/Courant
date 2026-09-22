@@ -13,3 +13,18 @@ sim/work-obj*.cf
 
 # Captured simulation outputs (e.g. mesh_impulse_response.txt from the testbenches)
 sim/*.txt
+/hardware/_backups/
+/hardware/panel_2row_work/
+/hardware/panel_direct_stack_experiment/
+/hardware/courant_direct_stack_experiment/
+/RADIAN_PCBs_and_case_backup_*/
+/model/outputs/
+*.step
+*.stp
+*.zip
+*.jar
+*.png
+*.pdf
+*.pyc
+**/__pycache__/
+/src/tb/*_trace.txt

@@ -1,0 +1,60 @@
+Reference,Value,Manufacturer,MPN_or_selection_gate,Footprint,Side,X_panel_mm,Y_panel_mm,DNP,Notes
+J100,IPS1-110-01-L-D,Samtec,IPS1-110-01-L-D,RadianPanel:Stack_2x10_P2.54,B,124.0,61.75,False,Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.
+J101,IPS1-110-01-L-D,Samtec,IPS1-110-01-L-D,RadianPanel:Stack_2x10_P2.54,B,43.0,72.25,False,Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.
+RV1,10k linear / TENSION,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,38.0,96.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+RV2,10k linear / DECAY,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,76.0,96.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+RV3,10k linear / CHAOS,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,114.0,96.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+RV4,10k linear / DRIVE,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,66.0,70.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+RV5,10k linear / DELAY,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,88.0,70.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+RV6,10k linear / REVERB,Bourns,PTV09A-4020F-B103,RadianPanel:Bourns_PTV09A4_RearFacing,F,110.0,70.0,False,"Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+ENC1,24 PPR / PUSH,Bourns,PEC11R-4220F-S0024,RadianPanel:Bourns_PEC11R4_RearFacing_Switch,F,42.0,43.0,False,20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack.
+SW1,MODE / SPDT ON-ON,E-Switch,100SP1T1B1M2REH,RadianPanel:E_Switch_100SP_M2,F,150.5,84.5,False,"Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required."
+D10,VOICE 1,Kingbright,L-934GD,RadianPanel:LED_D3.0_P2.54,F,124.0,108.0,False,"3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+D11,VOICE 2,Kingbright,L-934GD,RadianPanel:LED_D3.0_P2.54,F,134.0,108.0,False,"3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+D12,VOICE 3,Kingbright,L-934GD,RadianPanel:LED_D3.0_P2.54,F,144.0,108.0,False,"3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+D13,VOICE 4,Kingbright,L-934GD,RadianPanel:LED_D3.0_P2.54,F,154.0,108.0,False,"3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+J301,PITCH 0-5V,QingPu / Thonk,WQP518MA (Thonkiconn/PJ398SM),RadianPanel:WQP518MA_PJ398SM_Vertical,F,186.5,99.0,False,"Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+J302,MOD,QingPu / Thonk,WQP518MA (Thonkiconn/PJ398SM),RadianPanel:WQP518MA_PJ398SM_Vertical,F,186.5,81.0,False,"Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+J303,GATE,QingPu / Thonk,WQP518MA (Thonkiconn/PJ398SM),RadianPanel:WQP518MA_PJ398SM_Vertical,F,186.5,63.0,False,"Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+J304,LINE L,QingPu / Thonk,WQP518MA (Thonkiconn/PJ398SM),RadianPanel:WQP518MA_PJ398SM_Vertical,F,186.5,45.0,False,"Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+J305,LINE R,QingPu / Thonk,WQP518MA (Thonkiconn/PJ398SM),RadianPanel:WQP518MA_PJ398SM_Vertical,F,186.5,27.0,False,"Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."
+J306,22-27-2021,Molex,22-27-2021,RadianPanel:Molex_22-27-2021_J306_B,B,57.5,39.0,False,Exact KK-254 2-circuit friction-lock header to retained Same Sky SDS-50J MIDI DIN pins 4 and 5. No DIN 2/shield-to-GND connection.
+J200,61201021621,Wurth Elektronik,61201021621,RadianPanel:Wurth_61201021621_Exact_B,B,174.0,64.0,False,"Exact keyed WR-BHD 2x5 2.54 mm header. Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections."
+J201,22-27-2021,Molex,22-27-2021,RadianPanel:Molex_22-27-2021_J201_B,B,26.0,52.0,False,Exact KK-254 2-circuit friction-lock header from the chassis-mounted 12 V DC inlet. NOT a 5 V inlet.
+F1,2A FUSE / >=32V,,SELECT 2 A >=32 V 1206 fuse,RadianPanel:Fuse_1206,F,53.0,65.0,False,"Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate."
+F2,2A FUSE / >=32V,,SELECT 2 A >=32 V 1206 fuse,RadianPanel:Fuse_1206,F,26.0,59.0,False,"Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate."
+D1,SS54 / OR,Vishay,SS54-E3/57T,RadianPanel:D_SMB,F,44.0,65.0,False,"Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature."
+D2,SS54 / OR,Vishay,SS54-E3/57T,RadianPanel:D_SMB,F,35.0,59.0,False,"Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature."
+D3,SMBJ15A,Vishay,SMBJ15A-E3/52,RadianPanel:D_SMB,F,25.0,46.0,False,Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test.
+U1,TPS54302DDCR,Texas Instruments,TPS54302DDCR,RadianPanel:TI_DDC0006A_SOT23_6,F,34.0,25.0,False,"3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit."
+L1,10uH 4A / Isat7.5A,Bourns,SRP7050TA-100M,RadianPanel:Bourns_SRP7050TA,F,26.0,25.0,False,4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing.
+C1,10uF,,SELECT 10uF 50V X7R 1210,RadianPanel:C_1210,F,31.0,18.0,False,50V X7R; verify effective capacitance at DC bias
+C2,100nF,,SELECT 100nF 50V X7R 0603,RadianPanel:C_0603,F,32.0,21.5,False,50V X7R; verify effective capacitance at DC bias
+C3,100nF,,SELECT 100nF 16V X7R 0603,RadianPanel:C_0603,F,34.0,29.0,False,16V X7R; verify effective capacitance at DC bias
+C4,22uF,,SELECT 22uF 25V X7R 1210,RadianPanel:C_1210,F,23.0,33.0,False,25V X7R; verify effective capacitance at DC bias
+C5,22uF,,SELECT 22uF 25V X7R 1210,RadianPanel:C_1210,F,29.0,33.0,False,25V X7R; verify effective capacitance at DC bias
+R1,100k,,SELECT 100k 1% 0603,RadianPanel:R_0603,F,39.5,27.0,False,Resistor 1%
+R2,13.3k,,SELECT 13.3k 1% 0603,RadianPanel:R_0603,F,39.0,20.0,False,Resistor 1%
+R3,511k,,SELECT 511k 1% 0603,RadianPanel:R_0603,F,46.0,23.0,False,Resistor 1%
+R4,105k,,SELECT 105k 1% 0603,RadianPanel:R_0603,F,43.0,19.0,False,Resistor 1%
+R5,49.9,,SELECT 49.9 1% 0603,RadianPanel:R_0603,F,39.0,32.0,False,Resistor 1%
+C6,75pF,,SELECT 75pF 50V C0G 0603,RadianPanel:C_0603,F,43.0,27.0,False,50V C0G; verify effective capacitance at DC bias
+C7,10uF,,SELECT 10uF 50V X7R 1210,RadianPanel:C_1210,F,43.0,59.0,False,50V X7R; verify effective capacitance at DC bias
+JP1,450301014042,Wurth Elektronik,450301014042,RadianPanel:Wurth_450301014042_Exact_B,B,165.5,88.0,False,Actual SPDT configuration switch replaces the removable shunt. One throw selects direct unipolar MOD_RAW; the other selects MOD_BIPOLAR. NOT the front MODE switch.
+U2,OPA2192ID,Texas Instruments,OPA2192ID,RadianPanel:SOIC8_3.9x4.9_P1.27,F,151.0,67.0,False,"A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping."
+R20,200k,,SELECT 200k 0.1% 0603,RadianPanel:R_0603,F,164.0,75.0,False,Resistor 0.1%
+R21,100k,,SELECT 100k 0.1% 0603,RadianPanel:R_0603,F,158.0,75.0,False,Resistor 0.1%
+R22,200k,,SELECT 200k 0.1% 0603,RadianPanel:R_0603,F,164.0,71.0,False,Resistor 0.1%
+R23,10k,,SELECT 10k 0.1% 0603,RadianPanel:R_0603,F,159.5,57.0,False,Resistor 0.1%
+R24,10k,,SELECT 10k 0.1% 0603,RadianPanel:R_0603,F,163.0,59.0,False,Resistor 0.1%
+D4,BAT54S,Nexperia,"BAT54S,215",RadianPanel:SOT23_BAT54S,F,166.0,65.0,False,"Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior."
+C20,100nF,,SELECT 100nF 16V X7R 0603,RadianPanel:C_0603,F,157.0,69.0,False,16V X7R; verify effective capacitance at DC bias
+C21,1uF,,SELECT 1uF 16V X7R 0805,RadianPanel:C_0805,F,149.0,74.0,False,16V X7R; verify effective capacitance at DC bias
+J202,22-27-2061,Molex,22-27-2061,RadianPanel:Molex_22-27-2061_J202_B,B,131.0,29.0,False,Exact KK-254 6-circuit friction-lock service header; pin-for-pin to the JTAG nets already carried through J101/J18. No level conversion; validate JTAG frequency.
+SW3,PROGRAM / SERVICE,Omron,B3F-1000,RadianPanel:SW_PUSH_6x6_P6.5x4.5,B,118.4,25.0,False,"Internal service push button, accessible after module removal."
+SW4,RESET / SERVICE,Omron,B3F-1000,RadianPanel:SW_PUSH_6x6_P6.5x4.5,B,146.0,26.0,False,
+TP1,GND,,PCB test pad,RadianPanel:TestPoint_D2,B,25.0,42.0,False,"Exposed soldermask aperture, no component."
+TP2,VIN5,,PCB test pad,RadianPanel:TestPoint_D2,B,29.0,42.0,False,"Exposed soldermask aperture, no component."
+TP3,VRAW,,PCB test pad,RadianPanel:TestPoint_D2,B,48.0,59.0,False,"Exposed soldermask aperture, no component."
+TP4,VREF25,,PCB test pad,RadianPanel:TestPoint_D2,B,149.0,62.0,False,"Exposed soldermask aperture, no component."
+TP5,MOD_BIPOLAR,,PCB test pad,RadianPanel:TestPoint_D2,B,165.0,61.0,False,"Exposed soldermask aperture, no component."

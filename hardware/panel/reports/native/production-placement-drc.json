@@ -1,0 +1,292 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-18T05:22:27",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "radian_panel.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 5 [GND] of J202 on B.Cu",
+                    "pos": {
+                        "x": 68.73,
+                        "y": 97.635
+                    },
+                    "uuid": "99eb859f-3916-44dc-86d0-d4606856cf9d"
+                },
+                {
+                    "description": "PTH pad 3 [GND] of J201",
+                    "pos": {
+                        "x": 84.0,
+                        "y": 112.8
+                    },
+                    "uuid": "f480b451-dc1d-4851-858f-875de24e41c7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 13 [MIDI4] of J101",
+                    "pos": {
+                        "x": 46.81,
+                        "y": 57.52
+                    },
+                    "uuid": "f0c43fea-00ef-4fb2-9bc3-6065ada127c7"
+                },
+                {
+                    "description": "PTH pad 4 [MIDI4] of J306",
+                    "pos": {
+                        "x": 81.110913,
+                        "y": 81.610913
+                    },
+                    "uuid": "49eb46c8-7c42-4620-b7c6-c8f30377c079"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 14 [MIDI5] of J101",
+                    "pos": {
+                        "x": 46.81,
+                        "y": 54.98
+                    },
+                    "uuid": "c417ab40-72ad-41b8-99ff-c3c9e16ce2e8"
+                },
+                {
+                    "description": "PTH pad 5 [MIDI5] of J306",
+                    "pos": {
+                        "x": 81.110913,
+                        "y": 89.389087
+                    },
+                    "uuid": "8ce509bf-970d-4732-89f3-8ba5ff536fb8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [DESKTOP_12V] of F2 on F.Cu",
+                    "pos": {
+                        "x": 24.5,
+                        "y": 69.5
+                    },
+                    "uuid": "a3c2b3cd-ba8a-5279-84d0-101c4b134a37"
+                },
+                {
+                    "description": "PTH pad 1 [DESKTOP_12V] of J201",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 110.0
+                    },
+                    "uuid": "c00270e9-094b-4b68-a5d2-dc59c86fb0eb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 71.27,
+                        "y": 97.635
+                    },
+                    "uuid": "149cc440-4f66-42aa-adb2-b3701a1fd9e1"
+                },
+                {
+                    "description": "Track [V3V3] on B.Cu, length 49.5000 mm",
+                    "pos": {
+                        "x": 109.0,
+                        "y": 105.0
+                    },
+                    "uuid": "a2d49722-b427-5b48-8629-3f0cb7ece0a8"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 17 [JTAG_TCK] of J101",
+                    "pos": {
+                        "x": 51.89,
+                        "y": 57.52
+                    },
+                    "uuid": "a0555407-4dae-4140-9cb7-6443ff1458e7"
+                },
+                {
+                    "description": "Pad 4 [JTAG_TCK] of J202 on B.Cu",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 96.365
+                    },
+                    "uuid": "f27c366e-a90f-42ad-a2f2-ac1a28e330ce"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 18 [JTAG_TDO] of J101",
+                    "pos": {
+                        "x": 51.89,
+                        "y": 54.98
+                    },
+                    "uuid": "9fceef77-b285-40e2-b698-720639f36120"
+                },
+                {
+                    "description": "Pad 6 [JTAG_TDO] of J202 on B.Cu",
+                    "pos": {
+                        "x": 68.73,
+                        "y": 96.365
+                    },
+                    "uuid": "38ab14fe-fcb5-4851-8aae-c3074a69e476"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 19 [JTAG_TDI] of J101",
+                    "pos": {
+                        "x": 54.43,
+                        "y": 57.52
+                    },
+                    "uuid": "1299caea-88a2-434d-a78f-f87a7af4ff3a"
+                },
+                {
+                    "description": "Pad 3 [JTAG_TDI] of J202 on B.Cu",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 97.635
+                    },
+                    "uuid": "89ee0a76-bdae-4863-ba80-8059e24a4930"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 20 [JTAG_TMS] of J101",
+                    "pos": {
+                        "x": 54.43,
+                        "y": 54.98
+                    },
+                    "uuid": "140088ad-61d8-4e1f-9be9-0df357b24e43"
+                },
+                {
+                    "description": "Pad 2 [JTAG_TMS] of J202 on B.Cu",
+                    "pos": {
+                        "x": 71.27,
+                        "y": 96.365
+                    },
+                    "uuid": "3c938b79-6e34-4561-b58b-a6950f0352e2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - NOT FABRICATION RELEASE' on B.Silkscreen",
+                    "pos": {
+                        "x": 75.0,
+                        "y": 116.5
+                    },
+                    "uuid": "d20b2117-a16e-5c86-86a2-87b202be9ff4"
+                },
+                {
+                    "description": "PTH pad 2 [unconnected-(J201-Pad2)] of J201",
+                    "pos": {
+                        "x": 87.7,
+                        "y": 115.3
+                    },
+                    "uuid": "52a97b9c-f1e6-4ac3-9590-c27671df4b69"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '12 V DESKTOP / RACK +12 ONLY' on B.Silkscreen",
+                    "pos": {
+                        "x": 82.0,
+                        "y": 111.0
+                    },
+                    "uuid": "69d97ec7-f7bb-5336-88a2-256ee2d1d115"
+                },
+                {
+                    "description": "PTH pad 1 [DESKTOP_12V] of J201",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 110.0
+                    },
+                    "uuid": "c00270e9-094b-4b68-a5d2-dc59c86fb0eb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

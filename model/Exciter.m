@@ -1,11 +1,11 @@
 classdef Exciter < handle
     % Exciter  Physical excitation front-ends for the mesh (issue #33).
     %
-    % Replaces the raw single-sample "mallet" strike with physical exciter
-    % models that COUPLE to the surface: each step the exciter reads the surface
-    % displacement at the excitation node and returns a force to inject there,
-    % closing the interaction loop (milestone M9). Reference-model only; the
-    % study vehicle for the RTL feasibility recommendation.
+    % Physical exciter study model from issue #33. The mallet concept is now
+    % implemented in production RTL by issue #87 (`physical_mallet.vhd`), while
+    % this class remains the floating-point/SI-scale character reference. The
+    % production fixed-point normalization is mirrored independently by
+    % `mallet_reference.py`. The bow branch remains reference-only.
     %
     % Two types:
     %

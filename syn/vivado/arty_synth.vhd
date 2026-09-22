@@ -31,14 +31,15 @@ entity arty_synth is
     NX       : positive := 8;
     NY       : positive := 8;
     OS       : positive := 4;
-    TIME_MUX : boolean  := true          -- fold voices onto shared PEs (fits the part)
+    TIME_MUX : boolean  := true;         -- fold voices onto shared PEs (fits the part)
+    N_EDIT_PAGES : positive := 1         -- page 0=SURFACE; later pages can be enabled without PCB changes
   );
   port (
     clk100     : in  std_logic;                       -- 100 MHz oscillator (E3)
     btn        : in  std_logic_vector(3 downto 0);    -- btn0 = reset
-    sw         : in  std_logic_vector(3 downto 0);    -- sw0 = MIDI/CV select
+    sw         : in  std_logic_vector(3 downto 0);    -- sw0 = 0 PLAY, 1 EDIT
     midi_rx    : in  std_logic;                       -- serial MIDI in
-    -- front-panel: rotary encoder (select/recall/save presets)
+    -- front-panel: rotary encoder (presets in PLAY, edit pages in EDIT)
     enc_a      : in  std_logic;
     enc_b      : in  std_logic;
     enc_btn    : in  std_logic;
@@ -47,6 +48,9 @@ entity arty_synth is
     pot_pitch  : in  unsigned(11 downto 0) := (others => '0');
     pot_decay  : in  unsigned(11 downto 0) := (others => '0');
     pot_timbre : in  unsigned(11 downto 0) := (others => '0');
+    pot_drive  : in  unsigned(11 downto 0) := (others => '0');
+    pot_delay  : in  unsigned(11 downto 0) := (others => '0');
+    pot_reverb : in  unsigned(11 downto 0) := (others => '0');
     pitch_cv   : in  signed(15 downto 0)   := (others => '0');
     mod_cv     : in  signed(15 downto 0)   := (others => '0');
     gate       : in  std_logic := '0';                -- CV gate/trigger (comparator)
@@ -56,7 +60,7 @@ entity arty_synth is
     codec_lrclk: out std_logic;
     codec_sdin : out std_logic;                       -- audio to the DAC (sd_tx)
     -- status
-    led        : out std_logic_vector(3 downto 0)     -- active voices
+    led        : out std_logic_vector(3 downto 0)     -- voices in PLAY, edit-page one-hot in EDIT
   );
 end entity arty_synth;
 
@@ -72,14 +76,19 @@ architecture rtl of arty_synth is
   signal sys_rst                    : std_logic := '1';
 
   signal active : std_logic_vector(NVOICES-1 downto 0);
+  signal active_leds : std_logic_vector(3 downto 0);
 
   -- panel_ctrl -> synth_top control
   signal p_wr_en   : std_logic;
   signal p_wr_addr : unsigned(3 downto 0);
   signal p_wr_data : std_logic_vector(23 downto 0);
+  signal p_rd_addr : unsigned(3 downto 0);
+  signal p_rd_data : std_logic_vector(23 downto 0);
   signal p_index   : unsigned(3 downto 0);
   signal p_recall  : std_logic;
   signal p_save    : std_logic;
+  signal p_edit_page : unsigned(1 downto 0);
+  signal p_edit_leds : std_logic_vector(3 downto 0);
 
 begin
 
@@ -128,18 +137,21 @@ begin
   end process;
 
   ----------------------------------------------------------------------------
-  -- Front panel: pots -> coefficients, encoder -> preset select/recall/save
+  -- Front panel: PLAY controls/presets or encoder-selected EDIT page
   ----------------------------------------------------------------------------
   panel : entity work.panel_ctrl
-    generic map (POT_W => 12, N_PRESETS => 7)
-    port map (clk => sys_clk, rst => sys_rst,
+    generic map (POT_W => 12, N_PRESETS => 7, N_EDIT_PAGES => N_EDIT_PAGES)
+    port map (clk => sys_clk, rst => sys_rst, edit_mode=>sw(0),
               pot_pitch => pot_pitch, pot_decay => pot_decay, pot_timbre => pot_timbre,
+              pot_drive => pot_drive, pot_delay => pot_delay, pot_reverb => pot_reverb,
               enc_a => enc_a, enc_b => enc_b, enc_btn => enc_btn,
               cfg_wr_en => p_wr_en, cfg_wr_addr => p_wr_addr, cfg_wr_data => p_wr_data,
-              preset_index => p_index, preset_recall => p_recall, preset_save => p_save);
+              cfg_rd_addr => p_rd_addr, cfg_rd_data => p_rd_data,
+              preset_index => p_index, preset_recall => p_recall, preset_save => p_save,
+              edit_page => p_edit_page, edit_leds => p_edit_leds);
 
   ----------------------------------------------------------------------------
-  -- The playable synth (MIDI/CV selectable, driven by the panel controls)
+  -- The playable synth (MIDI/CV AUTO arbitration; sw0 is PLAY/EDIT)
   ----------------------------------------------------------------------------
   core : entity work.synth_top
     generic map (NVOICES => NVOICES, NX => NX, NY => NY, OS => OS,
@@ -148,18 +160,20 @@ begin
                  MCLK_TO_BCLK => 4, BCLK_TO_LRCK => 64, CV_W => 16)
     port map (sys_clk => sys_clk, sys_rst => sys_rst, mclk => mclk,
               midi_rx => midi_rx,
-              cv_sel => sw(0), pitch_cv => pitch_cv, gate => gate, mod_cv => mod_cv,
+              cv_sel => '0', pitch_cv => pitch_cv, gate => gate, mod_cv => mod_cv,
               preset_index => p_index, preset_recall => p_recall, preset_save => p_save,
               cfg_wr_en => p_wr_en, cfg_wr_addr => p_wr_addr, cfg_wr_data => p_wr_data,
-              cfg_rd_addr => (others => '0'), cfg_rd_data => open,
+              cfg_rd_addr => p_rd_addr, cfg_rd_data => p_rd_data,
               codec_mclk => codec_mclk, codec_bclk => codec_bclk,
               codec_lrclk => codec_lrclk, sd_tx => codec_sdin,
               active => active);
 
-  -- surface the active-voice mask on the LEDs (pad/truncate to 4)
+  -- In PLAY the LEDs retain their active-voice display. In EDIT panel_ctrl
+  -- owns them as a one-hot page indicator, requiring no extra panel hardware.
   led_gen : for i in 0 to 3 generate
-    on_g  : if i < NVOICES generate  led(i) <= active(i); end generate;
-    off_g : if i >= NVOICES generate led(i) <= '0';       end generate;
+    on_g  : if i < NVOICES generate  active_leds(i) <= active(i); end generate;
+    off_g : if i >= NVOICES generate active_leds(i) <= '0';       end generate;
   end generate;
+  led <= p_edit_leds when sw(0)='1' else active_leds;
 
 end architecture rtl;

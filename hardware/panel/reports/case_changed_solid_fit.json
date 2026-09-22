@@ -1,0 +1,91 @@
+{
+  "pairs": [
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "rear_guard",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "desktop_dock",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "panel",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "reverb_insert",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "corner_support_BL",
+      "volume_mm3": 11.592476891746346
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "corner_support_BR",
+      "volume_mm3": 11.592476891746337
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "corner_support_TL",
+      "volume_mm3": 11.592476891746342
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "corner_support_TR",
+      "volume_mm3": 11.592476891746365
+    },
+    {
+      "a": "MAINBOARD_REPAIRED",
+      "b": "spacers_reference",
+      "volume_mm3": 92.5377493721202
+    },
+    {
+      "a": "RV4_body",
+      "b": "rear_guard",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "RV4_body",
+      "b": "desktop_dock",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "RV5_body",
+      "b": "rear_guard",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "RV5_body",
+      "b": "desktop_dock",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "RV6_body",
+      "b": "rear_guard",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "RV6_body",
+      "b": "desktop_dock",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "SW1_body",
+      "b": "rear_guard",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "SW1_body",
+      "b": "desktop_dock",
+      "volume_mm3": 0.0
+    }
+  ],
+  "unintended_positive_volume_intersections": [],
+  "changed_case_solid_fit": "pass"
+}

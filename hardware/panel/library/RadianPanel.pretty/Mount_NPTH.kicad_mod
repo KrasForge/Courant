@@ -1,0 +1,42 @@
+(footprint "Mount_NPTH"
+  (version 20260206)
+  (generator "radian_native_cleanup")
+  (layer "F.Cu")
+  (property "Reference" ""
+    (at 0 0 0)
+    (layer "F.SilkS")
+    (uuid "c4fb6e21-cce0-4b62-9e52-6ce068c25e04")
+    (effects
+      (font
+        (size 1.27 1.27))))
+  (property "Value" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (uuid "d97feb12-e188-4d2a-b92d-c716abd91eba")
+    (effects
+      (font
+        (size 1.27 1.27))))
+  (property "Datasheet" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "97b6f070-e203-40df-8036-29dd96b18564")
+    (effects
+      (font
+        (size 1.27 1.27))))
+  (property "Description" ""
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (uuid "e668aaa6-993a-4210-b3bc-9119c2a14e79")
+    (effects
+      (font
+        (size 1.27 1.27))))
+  (attr board_only exclude_from_pos_files exclude_from_bom)
+  (duplicate_pad_numbers_are_jumpers no)
+  (pad "" np_thru_hole circle
+    (at 0 0)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask"))
+  (embedded_fonts no))

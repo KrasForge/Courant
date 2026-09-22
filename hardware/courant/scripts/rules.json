@@ -1,0 +1,114 @@
+{
+  "_comment": [
+    "Fabrication design rules for the Courant Rev A board, as a KiCad project",
+    "file. scripts/route.py writes this next to dist/courant.kicad_pcb so that",
+    "the router, the DRC and the Gerber export all read the same numbers.",
+    "",
+    "Why these values, and not KiCad's defaults (0.2 mm track / 0.2 mm clearance",
+    "/ 0.6 mm via): the XC7A35T's FTG256 balls are 0.5 mm pads on a 1.0 mm",
+    "pitch, so the gap between two neighbouring balls is 0.5 mm. Escaping a",
+    "signal between them needs width + 2 x clearance to fit in that gap, and",
+    "KiCad's defaults need 0.6 mm. At 0.15/0.15 it is 0.45 mm and it fits.",
+    "",
+    "The same argument sets the via: a dog-bone via sits in the diagonal gap",
+    "between four balls, 0.707 mm from each ball centre. With a 0.55 mm via pad",
+    "and a 0.5 mm ball pad that leaves 0.707 - 0.25 - 0.275 = 0.182 mm, which",
+    "clears 0.15 mm. A 0.6 mm via would leave 0.157 mm and would not.",
+    "",
+    "0.25 mm drill in a 1.6 mm board is a 6.4:1 aspect ratio (<= 8:1 preferred)",
+    "and the 0.15 mm annular ring is past the 0.13 mm knee where breakout risk",
+    "collapses. All of this is inside every standard 6-layer process.",
+    "",
+    "The Power class widens the rails. It keeps the Default clearance and via,",
+    "deliberately: VCCO, VCCINT and VCCAUX balls are inside the same 1.0 mm ball",
+    "field as the signals, so a wider power via could not be fanned out at all.",
+    "",
+    "GND has its own class so the router can be told where signals may go without also telling GND where it may not. scripts/route.py restricts every class except Ground to the non-plane layers via a Specctra `use_layer` clause. The earlier attempt marked the plane layers `(type power)` instead, which does not mean 'no signals here' -- it makes the layer unavailable for connections at all, so GND pins could not reach their own plane. That single mistake left 50-odd GND connections unrouted in three separate routing runs and was misread as the board being too dense."
+  ],
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.15,
+        "min_track_width": 0.15,
+        "min_through_hole_diameter": 0.25,
+        "min_via_annular_width": 0.125,
+        "min_via_diameter": 0.5,
+        "min_hole_to_hole": 0.25,
+        "min_silk_clearance": 0.0
+      }
+    }
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.15,
+        "track_width": 0.15,
+        "via_diameter": 0.55,
+        "via_drill": 0.25,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1
+      },
+      {
+        "name": "Power",
+        "clearance": 0.15,
+        "track_width": 0.4,
+        "via_diameter": 0.55,
+        "via_drill": 0.25,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1
+      },
+      {
+        "name": "Ground",
+        "clearance": 0.15,
+        "track_width": 0.3,
+        "via_diameter": 0.55,
+        "via_drill": 0.25,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1
+      }
+    ],
+    "netclass_patterns": [
+      {
+        "netclass": "Ground",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VIN5"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "V1"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "V1V8"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "V3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "A3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "SW1"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "SW2"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "SW3"
+      }
+    ]
+  },
+  "meta": {
+    "filename": "courant.kicad_pro",
+    "version": 3
+  }
+}

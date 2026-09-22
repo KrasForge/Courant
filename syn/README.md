@@ -54,12 +54,16 @@ not part of the (vendor-neutral) GHDL simulation flow; `synth_top` itself is
 fully simulated in `src/tb/synth_top_tb.vhd`.
 
 ```sh
-# Arty A7-35T, 4 voices, time-multiplexed (fits the part)
+# Historical Arty A7-35T 4-voice time-multiplexed implementation check
 vivado -mode batch -source build_synth.tcl -tclargs xc7a35ticsg324-1L 4 8 8 4 true
 # Arty A7-100T, 8 voices
 vivado -mode batch -source build_synth.tcl -tclargs xc7a100tcsg324-1  8 8 8 4 true
 ```
 
-Same opt/place/route + pass/fail timing gate as `build_arty.tcl`. (Quick check:
-`synth_top` synthesises under the open-source yosys flow at ~19 DSP per
-time-multiplexed voice; see issue #77 for the full voices-vs-part table.)
+Same opt/place/route + pass/fail timing gate as `build_arty.tcl`. Current
+refined 8x8 time-multiplexed surface-voice mapping is **18 DSP per voice** in the
+open-source flow, including STIFFNESS and the #87 HARDNESS/contact path. The
+stateful `physical_mallet` itself maps to **0 DSP**; the complete post-mesh FX
+chain maps to **23 DSP**. These module figures are planning data, not a
+substitute for the current full-top Vivado utilization/timing report; see
+`docs/resource_budget.md`.

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "panel_main_unintended_clashes": [],
+  "rear_guard_or_dock_clashes": [],
+  "intentional_stack_overlap": "P_STACK <-> M_STACK excluded; validated by direct-stack-validation.json"
+}

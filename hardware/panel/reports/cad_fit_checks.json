@@ -1,0 +1,35 @@
+{
+  "scope": "Reference-envelope CAD only. No manufacturer STEP or component lead-form certification. Zero nominal intersections is not fit approval.",
+  "board_valid": true,
+  "board_solids": 1,
+  "board_bounds_mm": [
+    18.0,
+    10.0,
+    -9.6,
+    198.5,
+    118.0,
+    -8.0
+  ],
+  "component_reference_count": 69,
+  "body_only_mechanical_checks": {
+    "positive_volume_intersections": [],
+    "exclusions": [
+      "leads, solder fillets, cables, fastener threads, torques and inserted plugs",
+      "DIN support is retained as a provisional bracket; its socket retention without the former carrier PCB is not validated",
+      "generic mating headers are separately bounded, not exact purchased assemblies"
+    ]
+  },
+  "reference_parts_valid": true,
+  "mainboard_modified": false,
+  "native_KiCad_3D_import": "NOT RUN; local model alignments require native 3D viewer validation",
+  "assumed_16mm_panel_header_envelope_vs_mainboard": [],
+  "desktop_dock_geometry": "unchanged from Rev F.1; inlet cutout, strain relief and feet remain provisional",
+  "panel_changes": [
+    "two new M2.5 clearance holes at 24,14 and 55,14",
+    "6.6 mm mode-switch bore in existing raised insert",
+    "existing shaft and jack locations retained"
+  ],
+  "board_bounds_method": "OCCT AddOptimal without triangulation, avoids conservative meshed bounding-box inflation",
+  "status": "HISTORICAL PRE-DIRECT-STACK FIT STUDY",
+  "superseded_by": "case_direct_stack_update.json"
+}

@@ -1,0 +1,8 @@
+{
+  "fit_template_watertight": true,
+  "fit_template_winding_consistent": true,
+  "fit_template_positive_volume": true,
+  "note": "Bare PCB mechanical template, not a fabrication approval or a conductive PCB.",
+  "bare_board_step_reimport_valid": true,
+  "bare_board_step_solid_count": 1
+}
