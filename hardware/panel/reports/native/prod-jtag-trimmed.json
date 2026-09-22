@@ -1,0 +1,267 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-18T05:41:07",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "radian_panel.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on F.Cu, length 2.5000 mm",
+                    "pos": {
+                        "x": 113.0,
+                        "y": 101.0
+                    },
+                    "uuid": "0ca97225-6898-45c9-a7bf-449994c6f706"
+                },
+                {
+                    "description": "PTH pad 3 [JTAG_TCK] of J202",
+                    "pos": {
+                        "x": 132.27,
+                        "y": 99.5
+                    },
+                    "uuid": "5ae78381-e8fc-430b-8190-d3569db3d833"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on F.Cu, length 2.1213 mm",
+                    "pos": {
+                        "x": 111.0,
+                        "y": 102.5
+                    },
+                    "uuid": "7f516815-4539-5436-8ddd-c8814b66f6a0"
+                },
+                {
+                    "description": "PTH pad 4 [JTAG_TDO] of J202",
+                    "pos": {
+                        "x": 129.73,
+                        "y": 99.5
+                    },
+                    "uuid": "9ea76d1c-6ec8-4544-ade9-71a6b5740f4e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "PTH pad 5 [JTAG_TDI] of J202",
+                    "pos": {
+                        "x": 127.19,
+                        "y": 99.5
+                    },
+                    "uuid": "123187a2-aa9c-48cb-b4a1-460cec415a16"
+                },
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 2.1213 mm",
+                    "pos": {
+                        "x": 111.0,
+                        "y": 102.5
+                    },
+                    "uuid": "6721c926-1d62-5712-8011-88a2feef7243"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.5000 mm",
+                    "pos": {
+                        "x": 115.5,
+                        "y": 93.0
+                    },
+                    "uuid": "53ce1daa-77bb-5300-9c5a-46e68418215a"
+                },
+                {
+                    "description": "PTH pad 6 [JTAG_TMS] of J202",
+                    "pos": {
+                        "x": 124.65,
+                        "y": 99.5
+                    },
+                    "uuid": "4d7841d4-bfc6-4ddd-bcd3-7146576c459e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Via [V3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 99.0
+                    },
+                    "uuid": "5881630b-7d2d-4b3d-bcef-2a09fcda0e14"
+                },
+                {
+                    "description": "Track [JTAG_TCK] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 113.0,
+                        "y": 98.0
+                    },
+                    "uuid": "fc4ccd8f-cbc6-4ab8-a58f-52807bc6499a"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2250 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on F.Cu, length 3.0000 mm",
+                    "pos": {
+                        "x": 113.0,
+                        "y": 98.0
+                    },
+                    "uuid": "fc4ccd8f-cbc6-4ab8-a58f-52807bc6499a"
+                },
+                {
+                    "description": "Via [V3V3] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 113.5,
+                        "y": 99.0
+                    },
+                    "uuid": "5881630b-7d2d-4b3d-bcef-2a09fcda0e14"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 1.3842 mm",
+                    "pos": {
+                        "x": 103.73,
+                        "y": 98.635
+                    },
+                    "uuid": "ce199854-a9d7-4993-8f55-783577bcd0c9"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 3.7478 mm",
+                    "pos": {
+                        "x": 106.27,
+                        "y": 98.635
+                    },
+                    "uuid": "20757403-0745-4b47-8805-071a726661f3"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 3.3650 mm",
+                    "pos": {
+                        "x": 105.0,
+                        "y": 97.365
+                    },
+                    "uuid": "a391f70b-88e3-47a0-b648-499466c01173"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8650 mm",
+                    "pos": {
+                        "x": 103.73,
+                        "y": 97.365
+                    },
+                    "uuid": "e71fdb24-6f7a-4c4a-973e-b4f4faf2cbed"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 1.8650 mm",
+                    "pos": {
+                        "x": 105.0,
+                        "y": 98.635
+                    },
+                    "uuid": "aed07714-4339-49e7-8842-adc1ab02bc98"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 2.2037 mm",
+                    "pos": {
+                        "x": 106.27,
+                        "y": 97.365
+                    },
+                    "uuid": "b0c787df-e5fa-4ad1-83ea-204a60f3b9b5"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

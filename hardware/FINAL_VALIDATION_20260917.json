@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-17",
+  "scope": "RADIAN six-pot FX panel + direct panel/mainboard mezzanine + enclosure revision",
+  "authoritative_boards": {
+    "mainboard": {
+      "path": "hardware/courant/deliverables/courant.kicad_pcb",
+      "sha256": "d7e2a898628225a0c21e27cb2387acf627036a41f7194c9551310b80ddac1b14",
+      "drc_violations": 0,
+      "unconnected": 0
+    },
+    "panel": {
+      "path": "hardware/panel/design/radian_panel.kicad_pcb",
+      "sha256": "2640a117c312d2dd634bed3f620eb7622dab7716cf4d0946a9230fb8ff92d2a2",
+      "erc_violations": 0,
+      "drc_violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    }
+  },
+  "controls": [
+    "TENSION",
+    "DECAY",
+    "CHAOS",
+    "DRIVE",
+    "DELAY",
+    "REVERB"
+  ],
+  "stack": {
+    "revision": "STACK-P2",
+    "main_mpn": "IPT1-110-06-L-D",
+    "panel_mpn": "IPS1-110-01-L-D",
+    "main_drill_mm": 1.02,
+    "panel_drill_mm": 1.04,
+    "fully_mated_gap_mm": 19.99,
+    "max_gap_mm": 20.45,
+    "support_target_mm": 20.0,
+    "mating_pins_checked": 40,
+    "net_xy_mismatches": 0,
+    "max_xy_delta_mm": 1.59e-14
+  },
+  "rtl": {
+    "ghdl_testbenches_passed": 28,
+    "failed": 0,
+    "includes": [
+      "six-pot panel RMW",
+      "onboard FX chain",
+      "presets",
+      "MIDI/CV",
+      "I2S",
+      "TDM",
+      "top-level resonator"
+    ]
+  },
+  "tscircuit": {
+    "main_typecheck": "pass",
+    "main_source_check": "pass",
+    "main_full_build": "pass",
+    "panel_build": "pass",
+    "bga_0201_pad_comparison": {
+      "pads": 76,
+      "mismatches": 0,
+      "worst_center_delta_mm": 3.362880601580381e-07,
+      "note": "custom tscircuit pad-only 0201 model avoids a false rotated-bottom courtyard-overlap diagnostic; native KiCad DRC remains authoritative for courtyards"
+    }
+  },
+  "bom": {
+    "main_placements": 191,
+    "main_unresolved": 0,
+    "main_stack_qty": 2,
+    "panel_stack_qty": 2
+  },
+  "packages": {
+    "main_fab_zip": {
+      "path": "hardware/courant/dist/courant-fab.zip",
+      "sha256": "9159e62b65503af61e786e26a80dcd1be913c5a04e104c1cc5c3a0e2f93ee9a7",
+      "zip_integrity": "pass",
+      "embedded_bom_current": true
+    },
+    "panel_fab_zip": {
+      "path": "hardware/panel/radian_panel-fab.zip",
+      "sha256": "341016495117f15b1a56e051833066d1dab58a5879c722866f3b8b892b004080",
+      "zip_integrity": "pass",
+      "embedded_bom_current": true
+    }
+  },
+  "remaining_physical_only_gates": [
+    "first-article Samtec seating/retention and ~20.0 mm support-stack tolerance check",
+    "real knob/nut/washer and enclosure manufacturing tolerance check",
+    "power/load/fault/thermal measurements",
+    "target FPGA implementation/timing and physical bring-up"
+  ],
+  "git_action": "No commit/push/reset/revert performed; existing dirty worktree preserved.",
+  "case": {
+    "revision": "CASE-P2-DIRECT-STACK",
+    "assembly_path": "hardware/panel/cad/RADIAN_P1_desktop_fit_study.step",
+    "assembly_sha256": "ef70ab0a0f20970f53eebf58b0f1367d4517faeeebfa8a1866a3acb62fd81d42",
+    "case_shell_path": "hardware/panel/cad/RADIAN_P1_case_shell_updated.step",
+    "case_shell_sha256": "4537715b2c1a7ae8ba7100f1178de85cac9fc652569fd058491b34546737527b",
+    "front_panel_path": "hardware/panel/cad/RADIAN_P1_front_panel_updated.step",
+    "front_panel_sha256": "3fdc030bb6edc160ecaa7e856368a2fdaf281691856615a3044ea26f26cef1b4",
+    "mainboard_shift_forward_mm": 0.46,
+    "pcb_gap_mm": 19.99,
+    "six_control_openings": "pass",
+    "mode_relocated": "pass",
+    "support_planes_updated": "pass",
+    "exported_step_validation": "pass",
+    "samtec_body_envelope_overlap": "0",
+    "obsolete_panel_harness_models": 0,
+    "preview_render": "pass",
+    "legacy_reference_sha256": "836ae149942d608420dbd1fcac250d0003f63a8b03143adf13a52d9e3234e33c",
+    "exact_faceplate_thickness_mm": 2.0,
+    "exact_reverb_insert_thickness_mm": 2.0,
+    "changed_enclosure_solid_fit": "pass",
+    "exported_step_roundtrip": "pass"
+  }
+}

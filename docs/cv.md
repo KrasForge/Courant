@@ -22,8 +22,7 @@ the `gate` is brought in through a two-flop synchroniser inside the block.
 ## Mapping
 
 - **Pitch: 1V/oct → note → `gamma2`.** The pitch CV is quantised to a semitone
-  and looked up in the same note→`gamma2` table as `midi_frontend` (one octave =
-  `gamma2` x4, CFL-clamped). Calibration is by generics:
+  and looked up in the same **discrete-mesh calibrated** fixed/free table as `midi_frontend`. The table depends on `NX`, `NY`, `OS`, `FS_HZ`, and the current boundary mode; one octave still requires approximately `gamma2` x4 in the low-frequency limit. CV voltage calibration itself is by generics:
 
   ```
   note = NOTE_REF + (pitch_cv - CV_OFFSET) * CV_SCALE >> CV_SHIFT   (semitone)
@@ -46,9 +45,7 @@ the `gate` is brought in through a two-flop synchroniser inside the block.
   amplitude stiffening): more mod = brighter, more non-linear. Unpatched
   (`mod_cv = 0`) gives `ALPHA_MIN`.
 
-The fixed body fields (`a0`, `sigk1`, `gamma2_max`) come from generics, as in
-`midi_frontend`; in a wired top they would instead come from `preset_bank`
-(#30, #69), the same merge `synth_top` (#68) does.
+`synth_top` merges the CV note/CHAOS values with the live preset body. TENSION, DECAY, pickup positions, boundary mode, and the CFL ceiling therefore behave the same whether the note source is CV or MIDI.
 
 ## Using it
 
@@ -61,8 +58,7 @@ the strike; today the strike level is fixed and `mod_cv` shapes timbre.
 
 [`src/tb/cv_frontend_tb.vhd`](../src/tb/cv_frontend_tb.vhd) drives CV stimulus
 into the front-end and feeds its outputs into a live `mesh_resonator`. It checks:
-0 V maps to the reference note (`gamma2 = 0.09`); +4096 counts (one octave)
-quadruples `gamma2` (note +12); a gate edge delivers a strike (one frame of
+0 V maps to the calibrated reference note; +4096 counts advances one octave and selects the corresponding calibrated coefficient; a gate edge delivers a strike (one frame of
 `exc_en`) and gate-low a note-off; more mod CV raises `alpha`; and the mesh
 sounds in response and stays inside Q1.23. Passes under GHDL:
 

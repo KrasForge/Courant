@@ -1,0 +1,1269 @@
+(kicad_sch
+  (version 20231120)
+  (generator "radian_panel_generator")
+  (uuid "5b54220b-44a3-599b-82a2-32b92902b7db")
+  (paper "A2")
+  (title_block
+    (title "05 | INTERNAL SERVICE ACCESS")
+    (date "2026-09-15")
+    (rev "P1 DRAFT")
+    (comment 1 "Native ERC, footprint verification and hardware testing REQUIRED"))
+  (lib_symbols
+    (symbol "RadianPanel:J101"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 29.209999999999997 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "IPS1-110-01-L-D"
+        (at 0 -29.209999999999997 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Stack_2x10_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J101_0_1"
+        (rectangle
+          (start -10.16 26.669999999999998)
+          (end 10.16 -26.669999999999998)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J101_1_1"
+        (pin passive line
+          (at -12.7 24.13 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 21.59 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 19.05 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 16.51 0)
+          (length 2.54)
+          (name "4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 13.97 0)
+          (length 2.54)
+          (name "5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 11.43 0)
+          (length 2.54)
+          (name "6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 8.89 0)
+          (length 2.54)
+          (name "7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 6.35 0)
+          (length 2.54)
+          (name "8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 3.81 0)
+          (length 2.54)
+          (name "9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "11"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "11"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -3.81 0)
+          (length 2.54)
+          (name "12"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "12"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -6.35 0)
+          (length 2.54)
+          (name "13"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "13"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -8.89 0)
+          (length 2.54)
+          (name "14"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "14"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -11.43 0)
+          (length 2.54)
+          (name "15"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "15"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -13.97 0)
+          (length 2.54)
+          (name "16"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "16"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -16.51 0)
+          (length 2.54)
+          (name "17"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "17"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -19.05 0)
+          (length 2.54)
+          (name "18"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "18"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -21.59 0)
+          (length 2.54)
+          (name "19"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "19"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -24.13 0)
+          (length 2.54)
+          (name "20"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "20"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Samtec"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:J202"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "22-27-2061"
+        (at 0 -11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Molex_22-27-2061_J202_B"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J202_0_1"
+        (rectangle
+          (start -10.16 8.89)
+          (end 10.16 -8.89)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J202_1_1"
+        (pin passive line
+          (at -12.7 6.35 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 3.81 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -3.81 0)
+          (length 2.54)
+          (name "5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -6.35 0)
+          (length 2.54)
+          (name "6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin-for-pin to J102 -> main J2, no level conversion. Short cable, validate JTAG frequency."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:SW3"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "PROGRAM / SERVICE"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:SW_PUSH_6x6_P6.5x4.5"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "SW3_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "SW3_1_1"
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Internal service push button, accessible after module removal."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Omron"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:SW4"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "RESET / SERVICE"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:SW_PUSH_6x6_P6.5x4.5"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "SW4_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "SW4_1_1"
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Omron"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))))
+  (text "05 | INTERNAL SERVICE ACCESS"
+    (at 20 20 0)
+    (effects
+      (font
+        (size 3 3))
+      (justify left top))
+    (uuid "bc0e1ac3-4ab7-5b5e-a832-9402bc22d576"))
+  (text "RADIAN PANEL P1 | NET-LABELLED ELECTRICAL SCHEMATIC"
+    (at 20 30 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid "7bbae22e-829a-5e1e-8ea7-db1efe410c9c"))
+  (symbol
+    (lib_id "RadianPanel:J101")
+    (at 78.74 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "37c3ba3a-67a8-53b0-9b31-8f009dd72af4")
+    (property "Reference" "J101"
+      (at 78.74 41.72 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "IPS1-110-01-L-D"
+      (at 78.74 103.06 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Stack_2x10_P2.54"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "IPS1-110-01-L-D"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "fed2a520-64fe-5fa9-b21f-51c76e145523"))
+    (pin "2"
+      (uuid "3cf6ed4c-e5a9-5e94-9207-342b1dfba489"))
+    (pin "3"
+      (uuid "4b030e80-5476-5c3d-9e8f-e1ba5a241ccf"))
+    (pin "4"
+      (uuid "17ea7552-e8b1-5020-a070-a4c8c6502e91"))
+    (pin "5"
+      (uuid "90d846ea-e7cf-5bfb-b732-cd79b848a4df"))
+    (pin "6"
+      (uuid "ad7881d5-4698-5089-9f4a-1dd5bd1a3df3"))
+    (pin "7"
+      (uuid "fcfa5aee-5675-5759-8145-50fa1ad91905"))
+    (pin "8"
+      (uuid "4f95f3e2-8a58-5bc4-9ecf-56a28fa0329d"))
+    (pin "9"
+      (uuid "d256f3d7-a2bc-5a0b-8f1d-7bd0ca181eec"))
+    (pin "10"
+      (uuid "2cd46347-1ddb-5d77-a70c-a581672073f3"))
+    (pin "11"
+      (uuid "22cbb318-eac4-5492-a242-b6317fc29bf0"))
+    (pin "12"
+      (uuid "470d1d54-4f7b-5269-8e2a-e1c9a2437bc0"))
+    (pin "13"
+      (uuid "7841ddf5-86b0-5729-bb5f-cf66a0924620"))
+    (pin "14"
+      (uuid "2eb20391-e7bb-5424-a8df-22f6e3d071c1"))
+    (pin "15"
+      (uuid "3aadd9c2-5281-54f5-b6f9-22cbed839333"))
+    (pin "16"
+      (uuid "a6ef4a25-b9e3-5acc-a04b-5bec525091a9"))
+    (pin "17"
+      (uuid "7263e90f-c545-5aa5-bcb4-c19e3d3ecf5c"))
+    (pin "18"
+      (uuid "f1a3cf7e-b8b5-5bad-b461-a14c17f2cace"))
+    (pin "19"
+      (uuid "e498c234-9226-5462-a6b9-c6e2d5b8026f"))
+    (pin "20"
+      (uuid "77774b90-6a2b-5bcf-b262-e6f04ec3d3ec"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/dd60d741-95e3-5383-9836-1c68c07ca20b"
+          (reference "J101")
+          (unit 1))))
+    (property "Description" "Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Samtec"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 48.26)
+      (xy 60.96 48.26))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b0d866b8-1bb1-5d80-9507-51b978a0c2fe"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 48.26 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "a28cd9e7-d82c-5e6d-917a-11f27c3b256c"))
+  (wire
+    (pts
+      (xy 66.04 50.8)
+      (xy 60.96 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2b8c9895-3ab9-572f-b182-f31a01ba5134"))
+  (global_label "V3V3"
+    (shape bidirectional)
+    (at 60.96 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "2d5fa0da-eb45-5f6b-8fa2-efbba7f6a575"))
+  (wire
+    (pts
+      (xy 66.04 53.34)
+      (xy 60.96 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fd36b248-6077-537d-8a95-389798ef7495"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "d0aeacea-d902-5419-b476-46d19b16189a"))
+  (wire
+    (pts
+      (xy 66.04 55.88)
+      (xy 60.96 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "41a7ffa1-fce4-55b6-a0f5-b7b6b1db1654"))
+  (global_label "ENC_A_RAW"
+    (shape bidirectional)
+    (at 60.96 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "baf22c9f-7e1c-50c4-bbb4-7715b746192a"))
+  (wire
+    (pts
+      (xy 66.04 58.42)
+      (xy 60.96 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "73c73367-030f-56ef-a613-c7ec2f418e62"))
+  (global_label "ENC_B_RAW"
+    (shape bidirectional)
+    (at 60.96 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "52a229de-bf87-5e27-9651-1e1eaa70329c"))
+  (wire
+    (pts
+      (xy 66.04 60.96)
+      (xy 60.96 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1da74ccb-696c-55e4-b3e2-f669ea27cb2c"))
+  (global_label "ENC_SW_RAW"
+    (shape bidirectional)
+    (at 60.96 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ff2cfac0-bebd-5cae-90a5-4b4e44af336e"))
+  (wire
+    (pts
+      (xy 66.04 63.5)
+      (xy 60.96 63.5))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "37733eed-7d28-574b-8829-d2474ca8ce21"))
+  (global_label "cv_select"
+    (shape bidirectional)
+    (at 60.96 63.5 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "85635adb-0b76-5460-9abd-d49a2762c1cf"))
+  (wire
+    (pts
+      (xy 66.04 66.04)
+      (xy 60.96 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "d196a151-7ec6-5135-ba7d-85b3213a3057"))
+  (global_label "LED0_A"
+    (shape bidirectional)
+    (at 60.96 66.04 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "a17f0ac1-b3f2-5927-9305-066b1c3e68aa"))
+  (wire
+    (pts
+      (xy 66.04 68.58)
+      (xy 60.96 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "67f03564-ab9e-590f-9163-7dbfd75f63ed"))
+  (global_label "LED1_A"
+    (shape bidirectional)
+    (at 60.96 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "61f22558-f339-5a9f-9034-f6edaad6e210"))
+  (wire
+    (pts
+      (xy 66.04 71.12)
+      (xy 60.96 71.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "631846a9-c3bd-574b-b106-19defe9f3304"))
+  (global_label "LED2_A"
+    (shape bidirectional)
+    (at 60.96 71.12 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "8a364d4a-a001-55ea-892d-8f76e00cd2fb"))
+  (wire
+    (pts
+      (xy 66.04 73.66)
+      (xy 60.96 73.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "d85395df-8ab3-5833-a554-26a5e824f440"))
+  (global_label "LED3_A"
+    (shape bidirectional)
+    (at 60.96 73.66 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "f13398f5-09e4-51c6-b295-f8ac5d2aa4f5"))
+  (wire
+    (pts
+      (xy 66.04 76.2)
+      (xy 60.96 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "8625138a-4369-5230-af0e-979271ea216e"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "4a74b5fe-b8d5-5e6e-b0cb-18dad5cffdfa"))
+  (wire
+    (pts
+      (xy 66.04 78.74)
+      (xy 60.96 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "bcaa59a6-20e6-5e9c-9062-5477fb548704"))
+  (global_label "MIDI4"
+    (shape bidirectional)
+    (at 60.96 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "8864e566-7560-591e-98ee-e21a43fd26d5"))
+  (wire
+    (pts
+      (xy 66.04 81.28)
+      (xy 60.96 81.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "41dd7606-3407-596f-89a8-1d61cb244fb5"))
+  (global_label "MIDI5"
+    (shape bidirectional)
+    (at 60.96 81.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e732b9bb-f57d-5bdb-a53f-3eba52da504c"))
+  (wire
+    (pts
+      (xy 66.04 83.82)
+      (xy 60.96 83.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "bb04bf79-5e66-55ca-b897-708b7abb72e3"))
+  (global_label "PROGRAM_B"
+    (shape bidirectional)
+    (at 60.96 83.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0933c96a-7d2c-50cf-873f-4be6d9b9ea61"))
+  (wire
+    (pts
+      (xy 66.04 86.36)
+      (xy 60.96 86.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "38471e6e-43ed-56f0-9bcd-e8145d02e51d"))
+  (global_label "reset_n"
+    (shape bidirectional)
+    (at 60.96 86.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "d614f3e1-4c23-5f60-872a-79a49184605a"))
+  (wire
+    (pts
+      (xy 66.04 88.9)
+      (xy 60.96 88.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "df1de271-b02c-5d7c-a7a4-d8a75b5b5919"))
+  (global_label "JTAG_TCK"
+    (shape bidirectional)
+    (at 60.96 88.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "7675a73d-0831-50fe-94bd-8f7c60bfaa1f"))
+  (wire
+    (pts
+      (xy 66.04 91.44)
+      (xy 60.96 91.44))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "8032c7bd-28b1-5162-b78a-f41db31a161d"))
+  (global_label "JTAG_TDO"
+    (shape bidirectional)
+    (at 60.96 91.44 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ba16d64c-58c4-506b-8b79-2f3551edcd12"))
+  (wire
+    (pts
+      (xy 66.04 93.98)
+      (xy 60.96 93.98))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3ba2ffa9-7b7a-5ebb-8014-5e92bd41b508"))
+  (global_label "JTAG_TDI"
+    (shape bidirectional)
+    (at 60.96 93.98 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e611e231-a86e-575e-84eb-2af91312fa8f"))
+  (wire
+    (pts
+      (xy 66.04 96.52)
+      (xy 60.96 96.52))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3e3050dd-a8a3-5f3d-8406-5ca74c6b3bc8"))
+  (global_label "JTAG_TMS"
+    (shape bidirectional)
+    (at 60.96 96.52 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "87734cd1-2143-5665-9f8f-9f317ac7bea5"))
+  (symbol
+    (lib_id "RadianPanel:J202")
+    (at 219.71 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6e352fab-9100-5920-bc40-ba528cdf06e9")
+    (property "Reference" "J202"
+      (at 219.71 59.5 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "22-27-2061"
+      (at 219.71 85.28 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Molex_22-27-2061_J202_B"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "22-27-2061"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "b7daa827-686f-5079-9d78-5f67db00d820"))
+    (pin "2"
+      (uuid "6af139a8-40e9-5b85-a3e7-8ea7c51d11b7"))
+    (pin "3"
+      (uuid "9c42a128-d3d1-5cd2-a26d-4e1fd15cec37"))
+    (pin "4"
+      (uuid "fb3b2563-3178-5cc7-8206-b23bc7b69722"))
+    (pin "5"
+      (uuid "4fe55b40-1231-5e06-a841-dfafb350710c"))
+    (pin "6"
+      (uuid "b4608faf-4a92-5343-92cf-f40fbf0b5a03"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/dd60d741-95e3-5383-9836-1c68c07ca20b"
+          (reference "J202")
+          (unit 1))))
+    (property "Description" "Pin-for-pin to J102 -> main J2, no level conversion. Short cable, validate JTAG frequency."
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 66.04)
+      (xy 201.93 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "70101bd5-7f73-5e15-b83e-9e4c2df89f65"))
+  (global_label "V3V3"
+    (shape bidirectional)
+    (at 201.93 66.04 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0a7059a4-9ade-50af-a919-c75817eadfc0"))
+  (wire
+    (pts
+      (xy 207.01 68.58)
+      (xy 201.93 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "0fe7f572-07f6-517e-8262-f4ed3f925e82"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c724b6f5-ddae-5b70-8768-493a5c6e285d"))
+  (wire
+    (pts
+      (xy 207.01 71.12)
+      (xy 201.93 71.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "bdf4b630-d10d-5f2f-a893-1297349a2863"))
+  (global_label "JTAG_TCK"
+    (shape bidirectional)
+    (at 201.93 71.12 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ccdbcf82-f7e4-5944-9a5e-3ca184042a3c"))
+  (wire
+    (pts
+      (xy 207.01 73.66)
+      (xy 201.93 73.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b7f275a5-c4bf-5608-8550-a1603eee8808"))
+  (global_label "JTAG_TDO"
+    (shape bidirectional)
+    (at 201.93 73.66 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e41679f8-6675-559c-bb84-82f15df9c849"))
+  (wire
+    (pts
+      (xy 207.01 76.2)
+      (xy 201.93 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "4f3f39e6-b0a7-5be3-a07f-9f1c6d100454"))
+  (global_label "JTAG_TDI"
+    (shape bidirectional)
+    (at 201.93 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ef6c5703-0802-56c7-8dfe-4212f778e2b0"))
+  (wire
+    (pts
+      (xy 207.01 78.74)
+      (xy 201.93 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "76b5a140-e5e1-50d9-828c-7093af2c0f90"))
+  (global_label "JTAG_TMS"
+    (shape bidirectional)
+    (at 201.93 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e8265240-b892-5d2c-9dae-f4f1b959dad5"))
+  (symbol
+    (lib_id "RadianPanel:SW3")
+    (at 360.68 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6ac8d041-74b6-51e1-b114-8a9f2fd7723c")
+    (property "Reference" "SW3"
+      (at 360.68 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "PROGRAM / SERVICE"
+      (at 360.68 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:SW_PUSH_6x6_P6.5x4.5"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "B3F-1000"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "3f0f9bc2-46a4-52c5-9c65-a24bb2e3e043"))
+    (pin "2"
+      (uuid "284544d9-cc6d-52a4-a849-cc0e8637627d"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/dd60d741-95e3-5383-9836-1c68c07ca20b"
+          (reference "SW3")
+          (unit 1))))
+    (property "Description" "Internal service push button, accessible after module removal."
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Omron"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 347.98 72.39)
+      (xy 342.9 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6378f22e-4cef-5262-b215-e1294c752c62"))
+  (global_label "PROGRAM_B"
+    (shape bidirectional)
+    (at 342.9 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "60961659-7bb6-53e1-a42b-947b20ee5728"))
+  (wire
+    (pts
+      (xy 373.38 72.39)
+      (xy 378.46 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "85949e38-a730-5e23-b9a3-5c7292147b55"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 378.46 72.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "df6eb7f2-fe20-55b0-a627-23e6069ce9f4"))
+  (symbol
+    (lib_id "RadianPanel:SW4")
+    (at 501.65 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ac438e8b-9f2d-50a4-ab02-b0bd7ac6245f")
+    (property "Reference" "SW4"
+      (at 501.65 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "RESET / SERVICE"
+      (at 501.65 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:SW_PUSH_6x6_P6.5x4.5"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "B3F-1000"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "5611b965-f527-586d-829d-002c94ca8eab"))
+    (pin "2"
+      (uuid "cc1e170b-c9f2-5e95-afe4-b92d3192a23b"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/dd60d741-95e3-5383-9836-1c68c07ca20b"
+          (reference "SW4")
+          (unit 1))))
+    (property "Description" ""
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Omron"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 488.95 72.39)
+      (xy 483.87 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "92fdda4e-f82a-54d1-9b30-d77bcadc6a3e"))
+  (global_label "reset_n"
+    (shape bidirectional)
+    (at 483.87 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "a452af3b-43bf-522d-88ce-df742d2899de"))
+  (wire
+    (pts
+      (xy 514.35 72.39)
+      (xy 519.43 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e6de8948-eb33-5cbc-b13f-3949e741cf7d"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 519.43 72.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c12a8b28-4967-5280-8423-3e2a5e09b3f8"))
+  (text "Internal-only JTAG, PROGRAM and RESET. No additional exterior cutouts assumed."
+    (at 20 365 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "1d38c6c8-fa65-57f4-9568-c8bbae38da96"))
+  (text "Keep programming cables short and verify the actual programmer pinout. No level shifting is added."
+    (at 20 373 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "8a0077e8-a3e1-58f5-bedc-11425b2109e2")))

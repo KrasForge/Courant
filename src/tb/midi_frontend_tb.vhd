@@ -199,9 +199,9 @@ begin
       report "midi_frontend_tb: A4 note/velocity mis-parsed (note " &
              integer'image(cap_note) & " vel " & integer'image(cap_vel) & ")"
       severity failure;
-    assert coeffs.gamma2 = to_q123(0.09)
+    assert coeffs.gamma2 = to_signed(7210,24)
       report "midi_frontend_tb: A4 pitch (gamma2) wrong" severity failure;
-    assert exc_in = vscale(to_q123(0.9), 100)
+    assert exc_in = vscale(to_q123(0.002), 100)
       report "midi_frontend_tb: A4 strike amplitude wrong" severity failure;
     g2_a4 := to_integer(coeffs.gamma2);
 
@@ -215,18 +215,16 @@ begin
     p := no_count;
     note_on_msg(81, 100);
     wait_note_on(p);
-    assert coeffs.gamma2 = to_q123(0.36)
+    assert coeffs.gamma2 = to_signed(28837,24)
       report "midi_frontend_tb: A5 pitch (octave up) not gamma2 x4" severity failure;
     g2_a5 := to_integer(coeffs.gamma2);
     assert g2_a5 > g2_a4
       report "midi_frontend_tb: higher note did not raise gamma2" severity failure;
 
     --------------------------------------------------------------------------
-    -- 3. Velocity sensitivity: a harder hit scales both the strike amplitude
-    --    (louder) and alpha (brighter / more non-linear timbre). Both are held
-    --    coefficient levels, so this is checked exactly. (Raw pickup energy is
-    --    deliberately NOT asserted monotonic: with the velocity->alpha coupling
-    --    the non-linear mesh redistributes energy, which is real behaviour.)
+    -- 3. Velocity sensitivity: a harder hit scales strike amplitude only.
+    --    CHAOS is deliberately independent from MIDI velocity so dynamics and
+    --    non-linearity can be controlled separately from the panel / mod CV.
     --------------------------------------------------------------------------
     p := no_count;
     note_on_msg(60, 20);
@@ -244,8 +242,8 @@ begin
       report "midi_frontend_tb: harder hit did not raise strike amplitude (" &
              integer'image(e_hard) & " <= " & integer'image(e_soft) & ")"
       severity failure;
-    assert g2_a5 > g2_a4
-      report "midi_frontend_tb: harder hit did not raise alpha (timbre)"
+    assert g2_a5 = 0 and g2_a4 = 0
+      report "midi_frontend_tb: velocity changed CHAOS"
       severity failure;
 
     -- and the mesh actually makes sound in response to a strike (from rest)

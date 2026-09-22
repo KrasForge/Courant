@@ -1,0 +1,3121 @@
+(kicad_sch
+  (version 20231120)
+  (generator "radian_panel_generator")
+  (uuid "457489a2-9460-526e-a43d-77e41ace7837")
+  (paper "A2")
+  (title_block
+    (title "02 | FRONT-PANEL CONTROLS")
+    (date "2026-09-15")
+    (rev "P1 DRAFT")
+    (comment 1 "Native ERC, footprint verification and hardware testing REQUIRED"))
+  (lib_symbols
+    (symbol "RadianPanel:J100"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 29.209999999999997 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "IPS1-110-01-L-D"
+        (at 0 -29.209999999999997 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Stack_2x10_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "J100_0_1"
+        (rectangle
+          (start -10.16 26.669999999999998)
+          (end 10.16 -26.669999999999998)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "J100_1_1"
+        (pin passive line
+          (at -12.7 24.13 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 21.59 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 19.05 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 16.51 0)
+          (length 2.54)
+          (name "4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 13.97 0)
+          (length 2.54)
+          (name "5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 11.43 0)
+          (length 2.54)
+          (name "6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 8.89 0)
+          (length 2.54)
+          (name "7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 6.35 0)
+          (length 2.54)
+          (name "8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 3.81 0)
+          (length 2.54)
+          (name "9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "11"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "11"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -3.81 0)
+          (length 2.54)
+          (name "12"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "12"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -6.35 0)
+          (length 2.54)
+          (name "13"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "13"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -8.89 0)
+          (length 2.54)
+          (name "14"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "14"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -11.43 0)
+          (length 2.54)
+          (name "15"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "15"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -13.97 0)
+          (length 2.54)
+          (name "16"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "16"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -16.51 0)
+          (length 2.54)
+          (name "17"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "17"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -19.05 0)
+          (length 2.54)
+          (name "18"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "18"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -21.59 0)
+          (length 2.54)
+          (name "19"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "19"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -24.13 0)
+          (length 2.54)
+          (name "20"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "20"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Samtec"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV1"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / TENSION"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV1_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV1_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV2"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / DECAY"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV2_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV2_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV3"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / CHAOS"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV3_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV3_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV4"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / DRIVE"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV4_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV4_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV5"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / DELAY"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV5_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV5_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:RV6"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "RV"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k linear / REVERB"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "RV6_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "RV6_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:ENC1"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "ENC"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "24 PPR / PUSH"
+        (at 0 -8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Bourns_PEC11R4_RearFacing_Switch"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "ENC1_0_1"
+        (rectangle
+          (start -10.16 6.35)
+          (end 10.16 -6.35)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "ENC1_1_1"
+        (pin passive line
+          (at -12.7 3.81 0)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "A"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "C"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "C"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "B"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "B"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -3.81 0)
+          (length 2.54)
+          (name "S1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "S1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 2.54 180)
+          (length 2.54)
+          (name "S2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "S2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 2.54)
+          (name "MP1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 -2.54 180)
+          (length 2.54)
+          (name "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "MP2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Bourns"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:SW1"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "MODE / SPDT ON-ON"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:E_Switch_100SP_M2"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "SW1_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "SW1_1_1"
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "E-Switch"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:D10"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VOICE 1"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "D10_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.52)
+            (xy -2.54 1.52))
+          (stroke
+            (width 0.3)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "D10_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Kingbright"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:D11"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VOICE 2"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "D11_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.52)
+            (xy -2.54 1.52))
+          (stroke
+            (width 0.3)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "D11_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Kingbright"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:D12"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VOICE 3"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "D12_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.52)
+            (xy -2.54 1.52))
+          (stroke
+            (width 0.3)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "D12_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Kingbright"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:D13"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VOICE 4"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "D13_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -1.52)
+            (xy -2.54 1.52))
+          (stroke
+            (width 0.3)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "D13_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Kingbright"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))))
+  (text "02 | FRONT-PANEL CONTROLS"
+    (at 20 20 0)
+    (effects
+      (font
+        (size 3 3))
+      (justify left top))
+    (uuid "8cbb5020-2954-5b5e-8a1d-a6cb800847dd"))
+  (text "RADIAN PANEL P1 | NET-LABELLED ELECTRICAL SCHEMATIC"
+    (at 20 30 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid "7bbae22e-829a-5e1e-8ea7-db1efe410c9c"))
+  (symbol
+    (lib_id "RadianPanel:J100")
+    (at 78.74 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8d29a3b6-4dc8-5d80-8428-86e24030d339")
+    (property "Reference" "J100"
+      (at 78.74 41.72 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "IPS1-110-01-L-D"
+      (at 78.74 103.06 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Stack_2x10_P2.54"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "IPS1-110-01-L-D"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "79857a46-2dd4-596a-9ab8-2db4848504a7"))
+    (pin "2"
+      (uuid "df78160c-ca59-58e2-a77c-bb5d8ee537bb"))
+    (pin "3"
+      (uuid "a4bb56e8-04ab-5ad1-a27e-108693afc6b6"))
+    (pin "4"
+      (uuid "73efb442-dee2-53c0-9949-f9307c888af3"))
+    (pin "5"
+      (uuid "be4c2672-d1ba-5d1d-ac29-040737f39cd8"))
+    (pin "6"
+      (uuid "893b1c9d-85aa-5020-a8fc-3b1d88038855"))
+    (pin "7"
+      (uuid "5c8acdff-2729-5ea9-b3bb-a2b03ec5ca88"))
+    (pin "8"
+      (uuid "7aa216e5-412f-5d0f-addf-ad6fef000e38"))
+    (pin "9"
+      (uuid "da81772c-92f1-5659-b57d-2069ddc9d2ff"))
+    (pin "10"
+      (uuid "aae2660c-36fd-5ac8-bf40-e52c8e61c948"))
+    (pin "11"
+      (uuid "8eb83950-fe6f-5316-99b4-a785250bcc26"))
+    (pin "12"
+      (uuid "6e0d3717-8a02-5856-a0fa-6a29c09fc7e8"))
+    (pin "13"
+      (uuid "cd02d985-2b21-5c30-89e4-8ae6f98d5b12"))
+    (pin "14"
+      (uuid "b14f1495-d6ce-5e2e-b18a-4f9896137207"))
+    (pin "15"
+      (uuid "cc610f62-fb9d-5e30-ba17-d0b55d2a5e66"))
+    (pin "16"
+      (uuid "1a39c23d-8eaa-534d-ab46-759ac09fb418"))
+    (pin "17"
+      (uuid "d4d81bff-9360-518f-b885-525ce9bc1b28"))
+    (pin "18"
+      (uuid "4b223d5f-5b21-5dfc-b430-d9a500b5904d"))
+    (pin "19"
+      (uuid "37ae44fc-d177-5fa8-b41e-8fc86c6b9d57"))
+    (pin "20"
+      (uuid "cadd38f7-14b1-5526-86bf-67ecf0cb0d1c"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "J100")
+          (unit 1))))
+    (property "Description" "Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Samtec"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 48.26)
+      (xy 60.96 48.26))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a462f5c8-9a78-5176-a2d9-df5debfdf952"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 48.26 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "cf625237-0fb1-5e78-a1c4-889562e93a2b"))
+  (wire
+    (pts
+      (xy 66.04 50.8)
+      (xy 60.96 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "cd05d277-4f08-52b0-a352-ba84fef693d3"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 60.96 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "14fcf054-f7ea-5ce0-9895-7e40e72c5464"))
+  (wire
+    (pts
+      (xy 66.04 53.34)
+      (xy 60.96 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c15b3c82-9027-5c70-9d68-7535ddc8bf39"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 60.96 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "acd3cb39-a57d-5ad8-b1fb-c2dd13ae72cc"))
+  (wire
+    (pts
+      (xy 66.04 55.88)
+      (xy 60.96 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "cf8cbc8a-016f-5c75-b64c-eacf7c5427aa"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 60.96 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "f73c6074-7f7e-5fce-b2a8-85b66bb1738b"))
+  (wire
+    (pts
+      (xy 66.04 58.42)
+      (xy 60.96 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "9bf9b6d0-dbd3-54d6-80db-571f83df2aee"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ccfcbcea-975d-53e5-b715-2c813dd1d6e8"))
+  (wire
+    (pts
+      (xy 66.04 60.96)
+      (xy 60.96 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a59be477-6ddc-5846-951b-87a35205db98"))
+  (global_label "POT_PITCH_RAW"
+    (shape bidirectional)
+    (at 60.96 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e951a781-449f-597c-9df1-5a9427f02e91"))
+  (wire
+    (pts
+      (xy 66.04 63.5)
+      (xy 60.96 63.5))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a6732ddf-3985-504d-b372-0a24cab7528f"))
+  (global_label "POT_DECAY_RAW"
+    (shape bidirectional)
+    (at 60.96 63.5 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e0d46c0a-9f8d-5a81-aa03-60bdba48c1f2"))
+  (wire
+    (pts
+      (xy 66.04 66.04)
+      (xy 60.96 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c9edb372-fb4b-529b-9492-eb8256dd2452"))
+  (global_label "POT_TIMBRE_RAW"
+    (shape bidirectional)
+    (at 60.96 66.04 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "fab750f7-65a1-5adf-b9cc-65283d762c19"))
+  (wire
+    (pts
+      (xy 66.04 68.58)
+      (xy 60.96 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fda1af29-da2b-50db-9a41-75c43a7e29e5"))
+  (global_label "POT_DRIVE_RAW"
+    (shape bidirectional)
+    (at 60.96 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "acf161e9-d527-5445-a7e9-4b9d70d41035"))
+  (wire
+    (pts
+      (xy 66.04 71.12)
+      (xy 60.96 71.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2298189e-a259-5d19-9167-2bc003e2587c"))
+  (global_label "POT_DELAY_RAW"
+    (shape bidirectional)
+    (at 60.96 71.12 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "52b41759-dc0d-5cc1-9eda-6a3a4bd8b9d1"))
+  (wire
+    (pts
+      (xy 66.04 73.66)
+      (xy 60.96 73.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "39cbe018-fc24-5a72-a302-12edec07aef9"))
+  (global_label "POT_REVERB_RAW"
+    (shape bidirectional)
+    (at 60.96 73.66 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "315a7ffb-8e30-54fa-ac16-fdadf5558e22"))
+  (wire
+    (pts
+      (xy 66.04 76.2)
+      (xy 60.96 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2ce1edb0-5723-54fe-bfb0-705bcbe9d4a5"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "eea43acf-700f-5af7-9fe8-074749702989"))
+  (wire
+    (pts
+      (xy 66.04 78.74)
+      (xy 60.96 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "252a6c31-4391-5117-8511-03e8719a40d8"))
+  (global_label "PITCH_IN"
+    (shape bidirectional)
+    (at 60.96 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e2437bb7-6abd-565e-8036-940af80189fc"))
+  (wire
+    (pts
+      (xy 66.04 81.28)
+      (xy 60.96 81.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "76aa70e1-3c57-5401-9771-265afaf692f7"))
+  (global_label "MOD_IN"
+    (shape bidirectional)
+    (at 60.96 81.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "443f960b-1418-53c1-a681-717aee0e4b5d"))
+  (wire
+    (pts
+      (xy 66.04 83.82)
+      (xy 60.96 83.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3eeaf687-2caa-5a04-b3ca-d60b72f60316"))
+  (global_label "GATE_IN"
+    (shape bidirectional)
+    (at 60.96 83.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "fc5e6cfd-05d0-596d-bc3f-528340a1b488"))
+  (wire
+    (pts
+      (xy 66.04 86.36)
+      (xy 60.96 86.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "686b637d-01e9-5a90-806b-34949d47b1a5"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 86.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "72a18522-cd95-5897-a0e8-b3167447f25e"))
+  (wire
+    (pts
+      (xy 66.04 88.9)
+      (xy 60.96 88.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "dc47d843-c66c-514d-9bc5-cdc2f2bed5b4"))
+  (global_label "LINE_L"
+    (shape bidirectional)
+    (at 60.96 88.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "5baad0d0-c7e2-5274-9c4a-5fad05a19ba5"))
+  (wire
+    (pts
+      (xy 66.04 91.44)
+      (xy 60.96 91.44))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b8be85e6-4e5e-556d-bed2-a3b5130564a1"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 91.44 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c5367ce9-b1b7-5daa-8f75-296ab807ca2f"))
+  (wire
+    (pts
+      (xy 66.04 93.98)
+      (xy 60.96 93.98))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e57ef3bb-7c2d-531a-85ef-3cf37741248a"))
+  (global_label "LINE_R"
+    (shape bidirectional)
+    (at 60.96 93.98 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "6ad5f9ca-1e73-5872-9341-83dae455b8f0"))
+  (wire
+    (pts
+      (xy 66.04 96.52)
+      (xy 60.96 96.52))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2d641335-300b-563b-9658-ae5eda3d4402"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 96.52 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "934f9c8d-b1ca-5dbb-b654-e3a4eba35367"))
+  (symbol
+    (lib_id "RadianPanel:RV1")
+    (at 219.71 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7509de8e-e60c-5e1e-9ec3-c1c2df981adc")
+    (property "Reference" "RV1"
+      (at 219.71 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / TENSION"
+      (at 219.71 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "9d6db597-a08c-5324-ace8-7aec038e904a"))
+    (pin "2"
+      (uuid "35a925c3-2df4-53e0-9eb5-f8ad718002c9"))
+    (pin "3"
+      (uuid "82d21d82-cdb9-5870-b6a5-4b3fa5f0184f"))
+    (pin "MP1"
+      (uuid "2c5432fa-514a-53b6-9fe9-9889141f4c06"))
+    (pin "MP2"
+      (uuid "af7d8903-6ef8-5401-9f84-fa3470c59dd8"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV1")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 69.85)
+      (xy 201.93 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "192495c7-e076-5a94-b209-be9a87902303"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "d39efdb5-e469-581a-bb4f-b962500d8731"))
+  (wire
+    (pts
+      (xy 207.01 72.39)
+      (xy 201.93 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "d8d3b584-28d2-55d7-a72d-58bc6abfe0a9"))
+  (global_label "POT_PITCH_RAW"
+    (shape bidirectional)
+    (at 201.93 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "1b0c7df8-2ea6-508f-a3bd-d418327d171e"))
+  (wire
+    (pts
+      (xy 207.01 74.93)
+      (xy 201.93 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b50f49f9-eccc-5361-9f8c-c5e3352165a2"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 201.93 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e58d054f-26a6-52b8-ab06-9133702c4bbb"))
+  (no_connect
+    (at 232.41 71.12)
+    (uuid "2ecbefe0-35e8-505d-83c0-c6d3282f6477"))
+  (no_connect
+    (at 232.41 73.66)
+    (uuid "4fe70372-202a-58f7-84dd-42ddf28b44bf"))
+  (symbol
+    (lib_id "RadianPanel:RV2")
+    (at 360.68 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "feaf009e-cdb0-5dd4-a19f-e89862601cfb")
+    (property "Reference" "RV2"
+      (at 360.68 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / DECAY"
+      (at 360.68 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "4c004ab6-0bef-5b46-83a5-cf691af9c079"))
+    (pin "2"
+      (uuid "7c1ef643-455d-5864-87db-b56c95c2f346"))
+    (pin "3"
+      (uuid "96b5639f-8c33-59d8-a53d-e9c21e87b1c5"))
+    (pin "MP1"
+      (uuid "141c3018-72bc-5dec-9708-2e6e627e1832"))
+    (pin "MP2"
+      (uuid "c9306bc0-1cd1-5817-aeaf-937dcbe5fad4"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV2")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 347.98 69.85)
+      (xy 342.9 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "201a8073-06a6-5586-9858-fe57ff9abcd9"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 342.9 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "89857807-e997-53d7-9372-0aaaf3cd0db0"))
+  (wire
+    (pts
+      (xy 347.98 72.39)
+      (xy 342.9 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "77321a73-164c-59e8-9833-4b5ecf3d0798"))
+  (global_label "POT_DECAY_RAW"
+    (shape bidirectional)
+    (at 342.9 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "8a96dc37-5ce2-5ebd-af36-3002ce5e4070"))
+  (wire
+    (pts
+      (xy 347.98 74.93)
+      (xy 342.9 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c6704a2a-85c4-58bc-ad01-a74234ef27ef"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 342.9 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "8f0d0f7c-6f76-573d-8393-cb588e9cb456"))
+  (no_connect
+    (at 373.38 71.12)
+    (uuid "83daff65-0a9d-515f-9cd3-e885563f95b9"))
+  (no_connect
+    (at 373.38 73.66)
+    (uuid "4c931dfa-9dca-577b-9a5b-c7a4327098a7"))
+  (symbol
+    (lib_id "RadianPanel:RV3")
+    (at 501.65 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6050cafe-321e-5010-9ad6-cdd72088f2d6")
+    (property "Reference" "RV3"
+      (at 501.65 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / CHAOS"
+      (at 501.65 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "4bc7e851-98b8-5b2b-8f2f-8607f6404f99"))
+    (pin "2"
+      (uuid "7914a964-92ce-5faa-8f3f-60588238bca3"))
+    (pin "3"
+      (uuid "c9ff84cf-a4ce-5749-8db5-a8c20c03a132"))
+    (pin "MP1"
+      (uuid "7c1755e0-32d9-56a8-86b3-5d52f3d3ddc7"))
+    (pin "MP2"
+      (uuid "18d4ad83-8bdd-52d1-aa82-339983337501"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV3")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 488.95 69.85)
+      (xy 483.87 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "0c07fedf-dd91-5591-8590-5e99b11e37e2"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 483.87 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "9e1c6345-f7bc-5a6c-801c-32f42d5e7ae8"))
+  (wire
+    (pts
+      (xy 488.95 72.39)
+      (xy 483.87 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "f496658f-dbac-5251-970e-1602d639c8c7"))
+  (global_label "POT_TIMBRE_RAW"
+    (shape bidirectional)
+    (at 483.87 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "d18bc9c0-7ee4-54f4-8b68-88af0955193b"))
+  (wire
+    (pts
+      (xy 488.95 74.93)
+      (xy 483.87 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2be3b8af-96b6-5ee4-9be6-8c65079f3432"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 483.87 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "9bf88f08-5710-55a4-96c2-f35e835cbfeb"))
+  (no_connect
+    (at 514.35 71.12)
+    (uuid "af1a59ab-6b0b-5fe0-9ec4-fdf8ecc79d70"))
+  (no_connect
+    (at 514.35 73.66)
+    (uuid "94824ab8-92c5-5687-85b9-63fd54017e9b"))
+  (symbol
+    (lib_id "RadianPanel:RV4")
+    (at 78.74 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cb6c0109-b436-5916-be99-c5b95f57a16b")
+    (property "Reference" "RV4"
+      (at 78.74 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / DRIVE"
+      (at 78.74 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "bb53feb2-7829-5028-95f3-2326b768ca59"))
+    (pin "2"
+      (uuid "b44d905d-0756-575a-83b9-e32d36c2b2f9"))
+    (pin "3"
+      (uuid "3ef30cf1-cd53-55cc-aa82-f156b9c30512"))
+    (pin "MP1"
+      (uuid "a05ecfbe-44ad-5031-a1c4-f4618459538f"))
+    (pin "MP2"
+      (uuid "a13b0e35-4a45-5351-90cc-f2d6021c6225"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV4")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 133.35)
+      (xy 60.96 133.35))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a5c3897a-1e8d-58df-8cbc-0c6f3e101f2e"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 133.35 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "4246703c-4aea-58e1-81cf-d5456b1b570a"))
+  (wire
+    (pts
+      (xy 66.04 135.89)
+      (xy 60.96 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b58475c2-1f42-524f-ab85-fc15c85dd77f"))
+  (global_label "POT_DRIVE_RAW"
+    (shape bidirectional)
+    (at 60.96 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "b70f86c7-29de-5a27-bd4c-7403860719b9"))
+  (wire
+    (pts
+      (xy 66.04 138.43)
+      (xy 60.96 138.43))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "08278a70-5fb3-5c8c-aa96-37e98e4a5616"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 60.96 138.43 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c255f314-7a7c-5a5a-92eb-faec47b96a0c"))
+  (no_connect
+    (at 91.44 134.62)
+    (uuid "6433688f-5cbf-551b-84ec-b19db3a0cb44"))
+  (no_connect
+    (at 91.44 137.16)
+    (uuid "e8688290-c7c9-517f-878e-46dc4fbc05b2"))
+  (symbol
+    (lib_id "RadianPanel:RV5")
+    (at 219.71 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a77ff7f6-ae92-50bd-b28b-442cd55be9b6")
+    (property "Reference" "RV5"
+      (at 219.71 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / DELAY"
+      (at 219.71 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "00922a50-1afb-53e2-a610-05d19130b84e"))
+    (pin "2"
+      (uuid "e20f2b43-de8c-528d-a55b-3e6a2ee50872"))
+    (pin "3"
+      (uuid "148e906e-8eb6-5cd2-b441-a06d741281b4"))
+    (pin "MP1"
+      (uuid "4d761403-a0fb-5209-b8a1-fe97fdf3a78f"))
+    (pin "MP2"
+      (uuid "7f8188aa-a85f-53ac-a0ed-438b7d49b182"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV5")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 133.35)
+      (xy 201.93 133.35))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fc898d67-b732-58a3-8236-34d625b2a16d"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 133.35 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "43d19495-bf25-5359-a842-a2525fd378a3"))
+  (wire
+    (pts
+      (xy 207.01 135.89)
+      (xy 201.93 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fdf77846-7f70-597e-bf48-b4f8acb5ef60"))
+  (global_label "POT_DELAY_RAW"
+    (shape bidirectional)
+    (at 201.93 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "5eb19723-0358-5a63-aa00-b8403e02e2be"))
+  (wire
+    (pts
+      (xy 207.01 138.43)
+      (xy 201.93 138.43))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "7156598e-2de1-55d4-9eca-a2266084fbc2"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 201.93 138.43 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "eaf472e7-3e16-51c9-aa7f-de4a0112fa02"))
+  (no_connect
+    (at 232.41 134.62)
+    (uuid "01b6939d-0ff9-57fc-9b36-5c6247e42998"))
+  (no_connect
+    (at 232.41 137.16)
+    (uuid "67bad469-f6a4-5217-98a6-bab0924d2492"))
+  (symbol
+    (lib_id "RadianPanel:RV6")
+    (at 360.68 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0849b9e4-ac33-55b8-87e2-939f457734af")
+    (property "Reference" "RV6"
+      (at 360.68 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k linear / REVERB"
+      (at 360.68 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PTV09A4_RearFacing"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PTV09A-4020F-B103"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "99c3d25c-5aed-52a0-a926-81895afefce7"))
+    (pin "2"
+      (uuid "9a0f9d7a-217d-5ff9-8795-c5cdca953055"))
+    (pin "3"
+      (uuid "d82a2088-307d-5ad8-97cd-d43698c253bb"))
+    (pin "MP1"
+      (uuid "0afc5606-6f4c-5653-ad4a-8d144a278e99"))
+    (pin "MP2"
+      (uuid "1f63603b-38bf-54c3-8315-ff5fb2163630"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "RV6")
+          (unit 1))))
+    (property "Description" "Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 347.98 133.35)
+      (xy 342.9 133.35))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "8e1b64f9-4c11-5192-b018-28c55589e99e"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 342.9 133.35 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c7e03533-6b23-5f58-9ee2-22a3aa44a866"))
+  (wire
+    (pts
+      (xy 347.98 135.89)
+      (xy 342.9 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "91459fad-4b8c-529e-96f5-4edf11d68b2a"))
+  (global_label "POT_REVERB_RAW"
+    (shape bidirectional)
+    (at 342.9 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "bced4426-5fcb-5110-87fa-3b66ba1a7525"))
+  (wire
+    (pts
+      (xy 347.98 138.43)
+      (xy 342.9 138.43))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2aae6c59-774f-5028-be24-484a6a41baed"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 342.9 138.43 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "dfd744e1-98b7-50a4-8d43-f09f410bbc69"))
+  (no_connect
+    (at 373.38 134.62)
+    (uuid "1c885a24-66cd-5d52-8ee0-8290bf84a7a9"))
+  (no_connect
+    (at 373.38 137.16)
+    (uuid "080b5257-ca88-5995-8c62-d474a34f1ffb"))
+  (symbol
+    (lib_id "RadianPanel:ENC1")
+    (at 501.65 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "82881ed2-d2b6-51a6-9dad-cffbe9d62def")
+    (property "Reference" "ENC1"
+      (at 501.65 125.54 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "24 PPR / PUSH"
+      (at 501.65 146.24 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Bourns_PEC11R4_RearFacing_Switch"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PEC11R-4220F-S0024"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "A"
+      (uuid "45137892-cd14-522f-98ec-53a8ac41413d"))
+    (pin "C"
+      (uuid "7ccc3420-c214-5929-9d45-92ff2735f9dd"))
+    (pin "B"
+      (uuid "a6a84913-a71e-5c34-82de-f6e43dfc2377"))
+    (pin "S1"
+      (uuid "104cb106-cf6d-509f-9d5e-e84e3cc3da64"))
+    (pin "S2"
+      (uuid "1acfcde8-0d2f-57a1-abea-71b6ecdcd00b"))
+    (pin "MP1"
+      (uuid "58bb698b-96d9-5ece-842f-a3ebbf425af1"))
+    (pin "MP2"
+      (uuid "3bcdef97-c8a8-5627-bec8-a7ff869e8566"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "ENC1")
+          (unit 1))))
+    (property "Description" "20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack."
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Bourns"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 488.95 132.08)
+      (xy 483.87 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e4fe8ca2-88fd-58ec-8f25-a8c968954570"))
+  (global_label "ENC_A_RAW"
+    (shape bidirectional)
+    (at 483.87 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "4b358b02-2bea-56a8-bc07-d05dbe4ee58d"))
+  (wire
+    (pts
+      (xy 488.95 134.62)
+      (xy 483.87 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fa9dba91-37a7-53e7-9f40-cfd27d945ba1"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 483.87 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "5db3643f-0e43-59c7-8430-1ba1e028ebff"))
+  (wire
+    (pts
+      (xy 488.95 137.16)
+      (xy 483.87 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "08f5f06e-ad3f-5e79-91a8-18fed5153819"))
+  (global_label "ENC_B_RAW"
+    (shape bidirectional)
+    (at 483.87 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "1341b1d4-cf66-5aaf-90ab-cb593069d919"))
+  (wire
+    (pts
+      (xy 488.95 139.7)
+      (xy 483.87 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "ffc35bdb-db1d-5e1b-b43a-fe9d1942a0d3"))
+  (global_label "ENC_SW_RAW"
+    (shape bidirectional)
+    (at 483.87 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c9e3db04-e652-5191-8560-926f7927e125"))
+  (wire
+    (pts
+      (xy 514.35 133.35)
+      (xy 519.43 133.35))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6a09e4e7-7672-5ad6-b913-ea82de53bf1c"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 519.43 133.35 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "556d4043-8c7c-5c2b-af18-d033925ba23f"))
+  (no_connect
+    (at 514.35 135.89)
+    (uuid "8b149355-53c9-57bb-8508-36a8c1c975e1"))
+  (no_connect
+    (at 514.35 138.43)
+    (uuid "c8a91d6e-43cb-5b92-8b65-4415233aa73c"))
+  (symbol
+    (lib_id "RadianPanel:SW1")
+    (at 78.74 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f5afaab2-c860-5fc4-9b76-5a05e19eaa7a")
+    (property "Reference" "SW1"
+      (at 78.74 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "MODE / SPDT ON-ON"
+      (at 78.74 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:E_Switch_100SP_M2"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "100SP1T1B1M2REH"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "fd8fa6b7-d257-5c4e-bf74-1b760f05e37f"))
+    (pin "2"
+      (uuid "9c9131a9-3fd5-5e91-997a-a1fa8d1a5f0a"))
+    (pin "3"
+      (uuid "aec72b04-a480-578f-aab9-3229f950ef04"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "SW1")
+          (unit 1))))
+    (property "Description" "Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required."
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "E-Switch"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 198.12)
+      (xy 60.96 198.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2ee2eee1-a9a7-585f-a766-ca4cef264c61"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 60.96 198.12 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "70a95291-9918-5c79-bbc4-60a089af2803"))
+  (wire
+    (pts
+      (xy 66.04 200.66)
+      (xy 60.96 200.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e1175de9-d4f0-5c5c-9045-e82981dca934"))
+  (global_label "cv_select"
+    (shape bidirectional)
+    (at 60.96 200.66 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "69a09108-4f29-51bc-aae9-8488969cf0ff"))
+  (wire
+    (pts
+      (xy 91.44 199.39)
+      (xy 96.52 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "04c8a0b5-70ed-5e1d-a4b6-fc33191809a9"))
+  (global_label "V3V3"
+    (shape bidirectional)
+    (at 96.52 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "63bb2fe6-9193-535b-9fba-b5f4dba05c2a"))
+  (symbol
+    (lib_id "RadianPanel:D10")
+    (at 219.71 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fe276ab0-ff85-5ab2-898b-ed8075966655")
+    (property "Reference" "D10"
+      (at 219.71 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "VOICE 1"
+      (at 219.71 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "L-934GD"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "30d9f0b5-2578-5e39-9848-77378a6e3cba"))
+    (pin "2"
+      (uuid "9c721976-1f8a-5d46-a7e0-bd878654162b"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "D10")
+          (unit 1))))
+    (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Kingbright"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 209.55 199.39)
+      (xy 204.47 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e6ff21ee-51c8-5e90-b95a-87e56a2d0576"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 204.47 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "069b74bf-d299-5271-8364-1855e60ef048"))
+  (wire
+    (pts
+      (xy 229.87 199.39)
+      (xy 234.95 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "c95580d0-6c86-5e40-bf2d-8c378b9fa415"))
+  (global_label "LED0_A"
+    (shape bidirectional)
+    (at 234.95 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "b7fcf4ac-d86b-591e-a65a-fc641577aa28"))
+  (symbol
+    (lib_id "RadianPanel:D11")
+    (at 360.68 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b36d9fe8-1d28-5e73-9188-b569959c7a35")
+    (property "Reference" "D11"
+      (at 360.68 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "VOICE 2"
+      (at 360.68 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "L-934GD"
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "113595dc-c7f4-529f-807b-d5f414844c40"))
+    (pin "2"
+      (uuid "89652a53-cad3-563b-bb01-5a66092af042"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "D11")
+          (unit 1))))
+    (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Kingbright"
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 350.52 199.39)
+      (xy 345.44 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fb86d0bc-db9c-5748-b878-62a8d04631e2"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 345.44 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "ab1a9d31-5e69-5a10-8682-70e5e9881ac9"))
+  (wire
+    (pts
+      (xy 370.84 199.39)
+      (xy 375.92 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "171bb763-3fea-5a8c-8a0b-6e7c0e564228"))
+  (global_label "LED1_A"
+    (shape bidirectional)
+    (at 375.92 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "fac1ac4c-7474-55c9-927c-eb59bb5acde1"))
+  (symbol
+    (lib_id "RadianPanel:D12")
+    (at 501.65 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8581a420-1ba2-5d16-a609-c9a592c237c5")
+    (property "Reference" "D12"
+      (at 501.65 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "VOICE 3"
+      (at 501.65 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "L-934GD"
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "93846911-8b2d-5024-b8e6-3c4fde2f7fbb"))
+    (pin "2"
+      (uuid "83eb9c20-8928-5fe6-a52e-b6022580fc85"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "D12")
+          (unit 1))))
+    (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Kingbright"
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 491.49 199.39)
+      (xy 486.41 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1e559ea4-3e2c-5bcd-b3d8-95da1d197ced"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 486.41 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "4f08cd1f-5d88-58ac-83cb-08c37eca50ec"))
+  (wire
+    (pts
+      (xy 511.81 199.39)
+      (xy 516.89 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1da79964-e68c-59a8-ac12-2853cf023a82"))
+  (global_label "LED2_A"
+    (shape bidirectional)
+    (at 516.89 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "2e856806-c28f-5e2f-a4ae-743b02dfb99c"))
+  (symbol
+    (lib_id "RadianPanel:D13")
+    (at 78.74 264.16 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cb84da0a-7689-587d-8688-e97d2e4c3449")
+    (property "Reference" "D13"
+      (at 78.74 255.08 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "VOICE 4"
+      (at 78.74 273.24 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:LED_D3.0_P2.54"
+      (at 78.74 264.16 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "L-934GD"
+      (at 78.74 264.16 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "53f06f5d-2665-5ec2-8c1a-23d830d70e68"))
+    (pin "2"
+      (uuid "389c1e1e-baf0-52e3-a4e2-f321f578255e"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/fe425aa9-89e9-5e5b-9592-3f1bdae47718"
+          (reference "D13")
+          (unit 1))))
+    (property "Description" "3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."
+      (at 78.74 264.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Kingbright"
+      (at 78.74 264.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 68.58 264.16)
+      (xy 63.5 264.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "cfbefef9-8d7e-5fa0-a0da-146ea9c2bac7"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 63.5 264.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c0e520e4-bf30-50e5-a765-ee9fcabef13c"))
+  (wire
+    (pts
+      (xy 88.9 264.16)
+      (xy 93.98 264.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "025358f0-b9cc-5e85-beec-64900091af12"))
+  (global_label "LED3_A"
+    (shape bidirectional)
+    (at 93.98 264.16 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "41855ab2-749e-5c76-a9c7-52324d9d6539"))
+  (text "No additional pot wiper RC or LED series resistors: these are already on the RADIAN mainboard."
+    (at 20 365 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "788a3fdc-0e51-59f7-8d4a-723b8b10eec3"))
+  (text "RV physical pin 1 = CCW/GND; physical pin 3 = CW/VREF25. This is not the main header pin order."
+    (at 20 373 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "6a3962b5-0d4b-5977-8162-19203822c196"))
+  (text "Encoder part changes to 20 mm shaft / 7 mm bushing. Match knob heights and verify turn direction."
+    (at 20 381 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "3b4643f5-8ec6-53ca-9005-596db171b081"))
+  (text "SW1 logic mapping depends on installed orientation and firmware. Mechanical tab pins are intentionally NC."
+    (at 20 389 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "c6eccb55-c407-59a5-baca-1cb3cb0fe48e")))

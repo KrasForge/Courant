@@ -1,5 +1,5 @@
 function stiffness_study(varargin)
-% STIFFNESS_STUDY  Bending stiffness / anisotropy exploration (issue #31).
+% STIFFNESS_STUDY  Bending stiffness / anisotropy exploration (#31/#86).
 %
 % Reference-model study for the "advanced materials" stretch (milestone M9):
 %   A. confirms the stiff-scheme stability boundary  (g2x+g2y)+16*mu2 <= 1

@@ -30,7 +30,26 @@ pool, in priority order:
 A note-off marks its voice free for reuse; it does not silence it (the mesh keeps
 ringing and decays naturally, so a released note still sounds until it decays).
 Stealing is bounded and deterministic: the active-voice count never exceeds
-`NVOICES`, and the pool never diverges.
+`NVOICES`, and the pool never diverges. In the playable `MUSICAL_VOICES` mode,
+retrigger/steal resets the selected mesh instead of inheriting the previous
+resonator state, with a 32-frame output crossfade from the old pickup value to
+avoid a hard discontinuity. The fade interpolation is now time-multiplexed
+through one shared narrow DSP multiplier for the whole voice pool; at four
+voices it completes in nine 100 MHz clocks, rather than dedicating four
+left/right multiplier pairs to every voice.
+
+Musical voices additionally enable RTL-only physical-model refinements:
+
+- **velocity/exciter-dependent strike shape**: auto/point/soft-mallet/pluck/rim/scrape-burst modes use the existing oversample substeps rather than another audio engine;
+- **sub-grid geometry**: strike force is bilinearly distributed and left/right pickups are bilinearly interpolated at quarter-cell offsets, increasing positional resolution without increasing `NX*NY`;
+- **anisotropy**: a signed macro applies a shift/add X-vs-Y Laplacian bias, splitting otherwise symmetric modes without another coefficient multiplier;
+- **bending stiffness / plate dispersion**: an 8-bit STIFFNESS macro drives the 13-point biharmonic operator; it is latched per voice and its `mu2*Biharm` scale is shift/add so the mesh still uses 18 DSPs;
+- **physical mallet**: an 8-bit HARDNESS macro is latched per voice; nonzero HARDNESS with AUTO/MALLET CHARACTER runs a stateful hammer that reads the actual strike-point surface, reacts to contact force, and continues across frames after the one-shot note trigger. The contact curve is shift/add and consumes 0 DSPs;
+- **MATERIAL macro**: neutral/membrane/wood/metal/glass coordinate anisotropy bias, high-frequency loss, nonlinearity and default exciter character;
+- **micro-variation**: a deterministic LFSR adds ±3.125% strike variation and moves each stereo pickup by at most one grid node on a new strike;
+- **frequency-dependent loss**: a Laplacian-of-velocity term damps high spatial modes faster than low modes, with MATERIAL selecting the loss strength.
+
+These are preset/register features only: no ADC channels or PCB signals are added. `musical_refine_tb` drives nonzero material, anisotropy, fractional geometry and explicit scrape excitation; `stiffness_tb` drives nonzero bending stiffness against an independent fixed-point golden; `mallet_tb` does the same for the stateful physical mallet and requires spatial/TDM contact-driven responses to remain bit-identical.
 
 ## Mixing
 
@@ -55,8 +74,9 @@ Fully-spatial polyphony is hopeless on the target board even for one voice, for
 the same O(N^2) reason a single spatial mesh is (issue #24). The DSP cost is the
 binding resource.
 
-**Time-multiplexing is what makes polyphony fit.** With `TIME_MUX = true` each
-voice folds its mesh through one shared PE (~18 DSP), independent of grid size:
+**Time-multiplexing is what makes polyphony fit.** The table below records the older ~18-DSP/voice planning model. The current full physical-model 8x8 `grid_mesh_tdm` maps to **18 DSP** in the open-source XC7 flow, including runtime STIFFNESS/plate dispersion, HARDNESS/stateful contact, MATERIAL/anisotropy, HF loss and fractional strike/pickup geometry; see `resource_budget.md`. Four grids therefore use 72 DSP before mixer/front-end/FX glue. Full-top Vivado utilization remains the authoritative board number.
+
+Historical planning table:
 
 | Voices | TIME_MUX DSP (~18/voice) | Fits A7-35T (90)? | Fits A7-100T (240)? |
 | --- | --- | --- | --- |
@@ -65,19 +85,19 @@ voice folds its mesh through one shared PE (~18 DSP), independent of grid size:
 | 8 | ~144 | no (35T) / yes (100T) | yes |
 | 12 | ~216 | no | yes |
 
-So an A7-35T comfortably runs ~4 voices and an A7-100T ~12, at 8x8 (a further PE
-pool per voice, issue #24, trades DSP for cycles and can go larger).
+Those rows are retained as pre-FX historical planning data. The current custom board target is the XC7A50T. Each fully refined 8x8 time-mux surface voice, including runtime STIFFNESS and HARDNESS, maps to **18 DSPs**, so four voice meshes account for 72 DSPs before the shared fade/front-end/FX logic. The current four-voice `synth_top` maps to **116 / 120 DSPs (96.7%)** in the open-source XC7 flow; the separate PLAY/EDIT panel controller adds one standalone DSP, for an approximate board-level planning total of **117 / 120**. That margin is intentionally treated as provisional until Vivado place/route.
 
 ### The cycle budget is the other limit
 
 Each voice sweeps its mesh every oversampled step. Per audio frame there are
-~2083 cycles at 100 MHz / 48 kHz ([`timing_budget.md`](timing_budget.md)). A
-`TIME_MUX` voice at NX*NY = 64 nodes, OS = 4 costs ~`OS * NX*NY` = ~256
-cycles/frame per voice if the voices run **sequentially** through one pool; run
-them on **parallel** PE pools (one per voice) and they overlap. The as-built
-`poly_voices` gives each voice its own resonator, so voices run concurrently and
-the per-frame cost is one voice's sweep regardless of `NVOICES` (area, not time,
-scales) - the same trade the single mesh makes.
+~2083 cycles at 100 MHz / 48 kHz ([`timing_budget.md`](timing_budget.md)). For
+the 8x8/OS=4 production configuration, STIFFNESS=0 retains the legacy ~264
+mesh clocks/frame. Nonzero STIFFNESS activates four two-tap gather states per
+node for the 13-point plate stencil: `stiffness_tb` measures **322 clocks per
+mesh step**, or 1288 mesh clocks at OS=4 before the small resonator handshake
+overhead. The as-built `poly_voices` gives each voice its own resonator, so
+voices run concurrently and the per-frame cost is one voice's sweep regardless
+of `NVOICES` (area, not time, scales).
 
 ## Configurability
 

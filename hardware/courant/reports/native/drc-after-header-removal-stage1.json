@@ -1,0 +1,308 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-18T04:07:18",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "courant.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [cv_select] on F.Cu, length 5.4094 mm",
+                    "pos": {
+                        "x": 145.0,
+                        "y": 60.0
+                    },
+                    "uuid": "d81d4d51-ee9f-4662-b994-465fd758ee7d"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [ENC_SW_RAW] on F.Cu, length 6.9917 mm",
+                    "pos": {
+                        "x": 123.54,
+                        "y": 60.0
+                    },
+                    "uuid": "c613be8d-4633-44c4-989d-e135ae36ea58"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [VREF25] on In2.Cu, length 0.9767 mm",
+                    "pos": {
+                        "x": 61.46,
+                        "y": 60.0
+                    },
+                    "uuid": "60f48f4c-a09e-41e9-9f40-520ffc8791e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [POT_DECAY_RAW] on F.Cu, length 5.8017 mm",
+                    "pos": {
+                        "x": 82.0,
+                        "y": 60.0
+                    },
+                    "uuid": "2420a937-8ae4-4b40-ab2c-bb682daa8932"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on In2.Cu, length 2.0932 mm",
+                    "pos": {
+                        "x": 29.4803,
+                        "y": 140.21
+                    },
+                    "uuid": "4d7850ca-ba31-4f5e-bec1-13602ba25cac"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [LINE_L] on In2.Cu, length 0.9770 mm",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 89.46
+                    },
+                    "uuid": "1a0c52b1-68e0-4f8b-a310-4632a58ef9b5"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [ENC_A_RAW] on F.Cu, length 0.9767 mm",
+                    "pos": {
+                        "x": 115.92,
+                        "y": 60.0
+                    },
+                    "uuid": "1df5410d-3bb9-44c1-9cac-ecce0baebca4"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [ENC_B_RAW] on F.Cu, length 8.1233 mm",
+                    "pos": {
+                        "x": 121.0,
+                        "y": 60.0
+                    },
+                    "uuid": "11d071cc-36e9-4b5c-ba9f-a3e6bdab2750"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [PITCH_IN] on F.Cu, length 7.1630 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 116.73
+                    },
+                    "uuid": "d6fab9ab-cabc-46ea-ad42-049448d1eeb7"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [LINE_R] on In2.Cu, length 0.7778 mm",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 94.54
+                    },
+                    "uuid": "e12a802a-a7c5-4014-8a13-4b1efdd1a1f1"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MOD_IN] on F.Cu, length 7.1630 mm",
+                    "pos": {
+                        "x": 172.0,
+                        "y": 129.73
+                    },
+                    "uuid": "4fb08a80-a65d-42d1-aae5-5eb96acd240a"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [GATE_IN] on F.Cu, length 0.9770 mm",
+                    "pos": {
+                        "x": 171.0,
+                        "y": 139.73
+                    },
+                    "uuid": "d1ac5d6b-1e14-42d4-8f7a-207c6e9e2326"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [LED1_A] on F.Cu, length 0.2475 mm",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 60.0
+                    },
+                    "uuid": "2a1eee80-a41a-4d18-9499-35ac7cdfc697"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [POT_PITCH_RAW] on F.Cu, length 5.8017 mm",
+                    "pos": {
+                        "x": 64.0,
+                        "y": 60.0
+                    },
+                    "uuid": "10047635-61f3-4a88-a364-32d02d35b7d7"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [LED0_A] on F.Cu, length 6.9917 mm",
+                    "pos": {
+                        "x": 161.46,
+                        "y": 60.0
+                    },
+                    "uuid": "7acbfab2-50d7-4357-a200-459614694fa1"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 0.9770 mm",
+                    "pos": {
+                        "x": 28.0,
+                        "y": 141.27
+                    },
+                    "uuid": "a05cedd0-7928-449c-b2b6-06ce8429b7be"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [LED2_A] on F.Cu, length 0.9308 mm",
+                    "pos": {
+                        "x": 166.54,
+                        "y": 60.0
+                    },
+                    "uuid": "8b6d1289-e20f-41b2-84b1-598865d79555"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [POT_TIMBRE_RAW] on F.Cu, length 5.8017 mm",
+                    "pos": {
+                        "x": 100.0,
+                        "y": 60.0
+                    },
+                    "uuid": "e66ef71b-46b8-4f18-9d4a-7878d8396092"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

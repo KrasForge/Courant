@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "assembly": "panel/cad/RADIAN_actual_parts_full_assembly.step",
+  "renders": [
+    "panel/previews/actual_parts_full_assembly_iso.png",
+    "panel/previews/actual_parts_full_assembly_side.png",
+    "panel/previews/actual_parts_full_assembly_front.png"
+  ],
+  "source_of_truth": "native KiCad component-filter STEP exports",
+  "color_persistence": "PASS: 715 colored children, 0 missing",
+  "u8_alignment": {
+    "reference": "U8 / H11L1M",
+    "native_footprint_center_mm": [
+      48.0,
+      139.0
+    ],
+    "raw_kicad_step_expected_center_mm": [
+      48.0,
+      -139.0
+    ],
+    "raw_kicad_step_actual_bbox_center_mm": [
+      48.0,
+      -139.0
+    ],
+    "center_error_mm": [
+      0.0,
+      0.0
+    ],
+    "model": "courant/deliverables/cad/models/DIP6_W7.62_U8_centered.step",
+    "pin_alignment": "PASS: six STEP lead centers map exactly to six native footprint pads under KiCad Y inversion"
+  },
+  "collision_validation": {
+    "status": "PASS",
+    "panel_main_unintended_clashes": [],
+    "rear_guard_or_dock_clashes": [],
+    "intentional_stack_overlap": "P_STACK <-> M_STACK excluded; validated by direct-stack-validation.json"
+  },
+  "placeholder_component_geometry_included": false
+}

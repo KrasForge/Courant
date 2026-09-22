@@ -1,0 +1,6 @@
+{
+  "authoritative_board": "deliverables/courant.kicad_pcb",
+  "sha256": "92e66042479df826fed7b9fa62116f5fa4a31a84fc075922198cf18b91b7c6c5",
+  "policy": "Repaired native PCB is authoritative. Use hardware/refresh_outputs.py. Run legacy reconstruction only in a separate experimental copy without NATIVE_BASELINE.json.",
+  "review_only": true
+}

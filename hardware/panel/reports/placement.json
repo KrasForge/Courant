@@ -1,0 +1,4 @@
+{
+  "violations": [],
+  "scope": "Nominal pad-to-pad and pad-to-board containment only; not native KiCad DRC or physical fit."
+}

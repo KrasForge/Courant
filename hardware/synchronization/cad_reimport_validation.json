@@ -1,0 +1,44 @@
+[
+  {
+    "file": "RADIAN_P1_desktop_fit_study.step",
+    "bytes": 96556477,
+    "imported_leaf_parts": 178,
+    "bbox": [
+      -6.0,
+      -6.0,
+      -57.0,
+      208.8,
+      134.5,
+      22.06
+    ],
+    "step_import_succeeded": true
+  },
+  {
+    "file": "RADIAN_P1_populated_reference.step",
+    "bytes": 30417443,
+    "imported_leaf_parts": 148,
+    "bbox": [
+      18.0,
+      10.0,
+      -18.8,
+      198.5,
+      118.0,
+      19.4
+    ],
+    "step_import_succeeded": true
+  },
+  {
+    "file": "courant-assembly.step",
+    "bytes": 30311145,
+    "imported_leaf_parts": 191,
+    "bbox": [
+      20.0,
+      -150.0,
+      -1.705,
+      180.0,
+      -50.0,
+      10.135
+    ],
+    "step_import_succeeded": true
+  }
+]

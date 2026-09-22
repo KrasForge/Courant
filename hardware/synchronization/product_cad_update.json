@@ -1,0 +1,35 @@
+{
+  "component_repositioning": [
+    {
+      "reference": "SW3",
+      "translation_mm": [
+        -0.5999999999999943,
+        0.0,
+        0
+      ]
+    }
+  ],
+  "old_mainboard_bbox": [
+    8.0,
+    14.25,
+    -32.965,
+    168.0,
+    114.25,
+    -21.425
+  ],
+  "new_mainboard_bbox": [
+    8.0,
+    14.25,
+    -33.265,
+    168.0,
+    114.25,
+    -21.425
+  ],
+  "case_shapes_changed": false,
+  "native_board_layers_added": 8,
+  "current_panel_parts": 148,
+  "source_mainboard": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/stage/main/courant.kicad_pcb",
+  "source_panel": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/stage/panel/design/radian_panel.kicad_pcb",
+  "product_visual_simplification": "Product assembly retains the current mainboard substrate, drilled holes, components, masks and silkscreen but omits separate copper track/pad/barrel solids. Full copper is retained in courant-assembly.step.",
+  "scope": "Native board geometry synchronized. Existing reference components, enclosure, fastener assumptions and unverified mechanical tolerances are retained; no new physical fit approval."
+}

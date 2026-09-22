@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "panel_native_board": "/home/ik/ChatGPT/Courant/hardware/panel/design/radian_panel.kicad_pcb",
+  "main_native_board": "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb",
+  "dedicated_populated_board_cad": {
+    "panel": "panel/cad/RADIAN_actual_parts_panel_board.step",
+    "main": "panel/cad/RADIAN_actual_parts_main_board.step"
+  },
+  "dedicated_populated_board_renders": [
+    "panel/previews/actual_parts_panel_board_top.png",
+    "panel/previews/actual_parts_panel_board_bottom.png",
+    "panel/previews/actual_parts_main_board_top.png",
+    "panel/previews/actual_parts_main_board_bottom.png"
+  ],
+  "panel_groups": {
+    "P_POTS": "RV1,RV2,RV3,RV4,RV5,RV6",
+    "P_ENCODER": "ENC1",
+    "P_MODE": "SW1",
+    "P_JACKS": "J301,J302,J303,J304,J305",
+    "P_LEDS": "D10,D11,D12,D13",
+    "P_STACK": "J100,J101",
+    "P_WURTH": "J200,JP1",
+    "P_MOLEX": "J201,J202,J306",
+    "P_BUTTONS": "SW3,SW4",
+    "P_ACTIVE": "U1,U2,D1,D2,D3,D4,L1,F1,F2",
+    "P_PASSIVES": "R*,C*"
+  },
+  "main_groups": {
+    "M_STACK": "J17,J18",
+    "M_MOLEX": "J1,J2,J3,J4",
+    "M_ICS": "U*,Y*",
+    "M_PASSIVES": "R*,C*",
+    "M_MAGNETICS": "L*",
+    "M_DIODES": "D*"
+  },
+  "collision_validation": "Use direct-stack-validation.json and case_direct_stack_update.json; this renderer preserves native KiCad placement.",
+  "panel_transform": {
+    "x": 0,
+    "y": 128.5,
+    "z": -9.6
+  },
+  "main_transform": {
+    "x": -12,
+    "y": 164.25,
+    "z": -31.1
+  },
+  "actual_or_package_models": [
+    "Bourns PTV09A family geometry aligned to PTV09A-4020F-B103 footprint/20 mm shaft",
+    "QingPu/Thonk PJ398SM open mechanical CAD with knurled nut",
+    "Omron B3F-1000 package geometry",
+    "3 mm green LED package geometry",
+    "all selected Wurth/Molex/Samtec and mainboard package STEP models already attached in KiCad"
+  ],
+  "drawing_derived_remaining": [
+    "ENC1 Bourns PEC11R-4220F-S0024",
+    "SW1 E-Switch 100SP1T1B1M2REH",
+    "Samtec J100/J101/J17/J18",
+    "Molex mainboard J1-J4"
+  ],
+  "note": "No generic white component envelopes are used in this final assembly; component placement comes from KiCad STEP export."
+}

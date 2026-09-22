@@ -1,0 +1,336 @@
+Current repaired native board: radian_panel.kicad_pcb
+64 nets
+
+BOOT (2)
+    C3.1
+    U1.6
+
+DESKTOP_12V (2)
+    F2.1
+    J201.1
+
+DESKTOP_FUSED (2)
+    D2.2
+    F2.2
+
+EN (3)
+    R3.2
+    R4.1
+    U1.5
+
+ENC_A_RAW (2)
+    ENC1.A
+    J101.4
+
+ENC_B_RAW (2)
+    ENC1.B
+    J101.5
+
+ENC_SW_RAW (2)
+    ENC1.S1
+    J101.6
+
+FB (4)
+    C6.2
+    R1.2
+    R2.1
+    U1.4
+
+FF_TOP (3)
+    C6.1
+    R1.1
+    R5.2
+
+GATE_IN (2)
+    J100.15
+    J303.3
+
+GND (58)
+    C1.2
+    C2.2
+    C20.2
+    C21.2
+    C4.2
+    C5.2
+    C7.2
+    D10.1
+    D11.1
+    D12.1
+    D13.1
+    D3.2
+    D4.1
+    ENC1.C
+    ENC1.S2
+    J100.1
+    J100.12
+    J100.16
+    J100.18
+    J100.20
+    J100.5
+    J101.1
+    J101.12
+    J101.3
+    J200.3
+    J200.4
+    J200.5
+    J200.6
+    J200.7
+    J200.8
+    J201.2
+    J202.2
+    J301.1
+    J301.2
+    J302.1
+    J302.2
+    J303.1
+    J303.2
+    J304.1
+    J305.1
+    R2.2
+    R22.2
+    R23.2
+    R4.2
+    RV1.1
+    RV2.1
+    RV3.1
+    RV4.1
+    RV5.1
+    RV6.1
+    SW1.1
+    SW3.2
+    SW3.2
+    SW4.2
+    SW4.2
+    TP1.1
+    U1.1
+    U2.4
+
+JTAG_TCK (2)
+    J101.17
+    J202.3
+
+JTAG_TDI (2)
+    J101.19
+    J202.5
+
+JTAG_TDO (2)
+    J101.18
+    J202.4
+
+JTAG_TMS (2)
+    J101.20
+    J202.6
+
+LED0_A (2)
+    D10.2
+    J101.8
+
+LED1_A (2)
+    D11.2
+    J101.9
+
+LED2_A (2)
+    D12.2
+    J101.10
+
+LED3_A (2)
+    D13.2
+    J101.11
+
+LINE_L (2)
+    J100.17
+    J304.3
+
+LINE_R (2)
+    J100.19
+    J305.3
+
+MIDI4 (2)
+    J101.13
+    J306.1
+
+MIDI5 (2)
+    J101.14
+    J306.2
+
+MOD_BIPOLAR (4)
+    JP1.2
+    R24.1
+    TP5.1
+    U2.7
+
+MOD_FB (3)
+    R23.1
+    R24.2
+    U2.6
+
+MOD_IN (2)
+    J100.14
+    JP1.1
+
+MOD_RAW (3)
+    J302.3
+    JP1.3
+    R20.1
+
+MOD_SUM (5)
+    D4.3
+    R20.2
+    R21.2
+    R22.1
+    U2.5
+
+PITCH_IN (2)
+    J100.13
+    J301.3
+
+POT_DECAY_RAW (2)
+    J100.7
+    RV2.2
+
+POT_DELAY_RAW (2)
+    J100.10
+    RV5.2
+
+POT_DRIVE_RAW (2)
+    J100.9
+    RV4.2
+
+POT_PITCH_RAW (2)
+    J100.6
+    RV1.2
+
+POT_REVERB_RAW (2)
+    J100.11
+    RV6.2
+
+POT_TIMBRE_RAW (2)
+    J100.8
+    RV3.2
+
+PROGRAM_B (3)
+    J101.15
+    SW3.1
+    SW3.1
+
+RACK_12V (3)
+    F1.1
+    J200.10
+    J200.9
+
+RACK_FUSED (2)
+    D1.2
+    F1.2
+
+SW (3)
+    C3.2
+    L1.2
+    U1.2
+
+V3V3 (3)
+    J101.2
+    J202.1
+    SW1.3
+
+VIN5 (11)
+    C20.1
+    C21.1
+    C4.1
+    C5.1
+    D4.2
+    J100.2
+    J100.3
+    L1.1
+    R5.1
+    TP2.1
+    U2.8
+
+VRAW (9)
+    C1.1
+    C2.1
+    C7.1
+    D1.1
+    D2.1
+    D3.1
+    R3.1
+    TP3.1
+    U1.3
+
+VREF25 (9)
+    J100.4
+    RV1.3
+    RV2.3
+    RV3.3
+    RV4.3
+    RV5.3
+    RV6.3
+    TP4.1
+    U2.3
+
+VREF_BUF (3)
+    R21.1
+    U2.1
+    U2.2
+
+cv_select (2)
+    J101.7
+    SW1.2
+
+reset_n (3)
+    J101.16
+    SW4.1
+    SW4.1
+
+unconnected-(ENC1-PadMP1) (1)
+    ENC1.MP1
+
+unconnected-(ENC1-PadMP2) (1)
+    ENC1.MP2
+
+unconnected-(J200-Pad1) (1)
+    J200.1
+
+unconnected-(J200-Pad2) (1)
+    J200.2
+
+unconnected-(J304-NORMAL-Pad2) (1)
+    J304.2
+
+unconnected-(J305-NORMAL-Pad2) (1)
+    J305.2
+
+unconnected-(RV1-PadMP1) (1)
+    RV1.MP1
+
+unconnected-(RV1-PadMP2) (1)
+    RV1.MP2
+
+unconnected-(RV2-PadMP1) (1)
+    RV2.MP1
+
+unconnected-(RV2-PadMP2) (1)
+    RV2.MP2
+
+unconnected-(RV3-PadMP1) (1)
+    RV3.MP1
+
+unconnected-(RV3-PadMP2) (1)
+    RV3.MP2
+
+unconnected-(RV4-PadMP1) (1)
+    RV4.MP1
+
+unconnected-(RV4-PadMP2) (1)
+    RV4.MP2
+
+unconnected-(RV5-PadMP1) (1)
+    RV5.MP1
+
+unconnected-(RV5-PadMP2) (1)
+    RV5.MP2
+
+unconnected-(RV6-PadMP1) (1)
+    RV6.MP1
+
+unconnected-(RV6-PadMP2) (1)
+    RV6.MP2

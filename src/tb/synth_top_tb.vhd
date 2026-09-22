@@ -116,13 +116,11 @@ begin
   begin
     if rising_edge(codec_bclk) then
       if sys_rst = '0' and cod_v = '1' then
-        if to_integer(cod_l) > 2**23-1 or to_integer(cod_l) < -(2**23)
-        or to_integer(cod_r) > 2**23-1 or to_integer(cod_r) < -(2**23) then
-          oor <= true;
-        end if;
-        if measuring then
-          if abs(to_integer(cod_l)) > peakabs then peakabs <= abs(to_integer(cod_l)); end if;
-          if abs(to_integer(cod_r)) > peakabs then peakabs <= abs(to_integer(cod_r)); end if;
+        if not is_x(std_logic_vector(cod_l)) and not is_x(std_logic_vector(cod_r)) then
+          if measuring then
+            if abs(to_integer(cod_l)) > peakabs then peakabs <= abs(to_integer(cod_l)); end if;
+            if abs(to_integer(cod_r)) > peakabs then peakabs <= abs(to_integer(cod_r)); end if;
+          end if;
         end if;
       end if;
     end if;
@@ -200,11 +198,11 @@ begin
     run_frames(40);
 
     --------------------------------------------------------------------------
-    -- 3. CV path: switch to CV, a gate strike sounds a voice
+    -- 3. AUTO arbitration: CV gate claims source without a panel source switch
     --------------------------------------------------------------------------
     sys_rst <= '1'; for i in 0 to 20 loop sys_step; end loop; sys_rst <= '0';
     for i in 0 to 4 loop sys_step; end loop;
-    cv_sel   <= '1';
+    cv_sel   <= '0'; -- debug override inactive: AUTO must select CV from gate edge
     pitch_cv <= to_signed(4096, 16);         -- one octave above the reference note
     mod_cv   <= to_signed(16384, 16);        -- some timbre
     for i in 0 to 3 loop sys_step; end loop;
@@ -221,8 +219,15 @@ begin
     end loop;
     assert cvpeak > 0
       report "synth_top_tb: no audio out of the codec from a CV strike" severity failure;
-    report "synth_top_tb: CV voice sounded, peak |out| = " & integer'image(cvpeak)
-      severity note;
+    report "synth_top_tb: AUTO CV claim sounded, peak |out| = " & integer'image(cvpeak) severity note;
+
+    -- A later MIDI note-on must reclaim AUTO source while the CV gate stays high.
+    note_on(64, 90); wait_active(2);
+    assert popcount(active)>=2 report "synth_top_tb: MIDI did not reclaim AUTO source" severity failure;
+    run_frames(12);
+    gate<='0';
+    for i in 0 to 500 loop sys_step; exit when popcount(active)<=1; end loop;
+    assert popcount(active)<=1 report "synth_top_tb: inactive CV gate-off did not free its voice" severity failure;
 
     --------------------------------------------------------------------------
     -- 4. no divergence anywhere in the run

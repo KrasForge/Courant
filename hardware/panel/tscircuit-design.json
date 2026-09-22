@@ -1,0 +1,4032 @@
+{
+  "revision": "P1",
+  "status": "ENGINEERING PROTOTYPE - NOT FABRICATION RELEASE",
+  "center_product_mm": {
+    "x": 103.25,
+    "y": 64.25
+  },
+  "outline": [
+    {
+      "x": -85.25,
+      "y": -54.25
+    },
+    {
+      "x": 59.25,
+      "y": -54.25
+    },
+    {
+      "x": 59.25,
+      "y": -44.75
+    },
+    {
+      "x": 68.25,
+      "y": -44.75
+    },
+    {
+      "x": 68.25,
+      "y": -54.25
+    },
+    {
+      "x": 95.25,
+      "y": -54.25
+    },
+    {
+      "x": 95.25,
+      "y": 53.75
+    },
+    {
+      "x": 68.25,
+      "y": 53.75
+    },
+    {
+      "x": 68.25,
+      "y": 44.75
+    },
+    {
+      "x": 59.25,
+      "y": 44.75
+    },
+    {
+      "x": 59.25,
+      "y": 53.75
+    },
+    {
+      "x": -85.25,
+      "y": 53.75
+    }
+  ],
+  "windows": [
+    [
+      {
+        "x": -42.25,
+        "y": -39.25
+      },
+      {
+        "x": 5.75,
+        "y": -39.25
+      },
+      {
+        "x": 5.75,
+        "y": -3.25
+      },
+      {
+        "x": -42.25,
+        "y": -3.25
+      }
+    ],
+    [
+      {
+        "x": 13.25,
+        "y": -28.75
+      },
+      {
+        "x": 46.25,
+        "y": -28.75
+      },
+      {
+        "x": 46.25,
+        "y": -15.75
+      },
+      {
+        "x": 13.25,
+        "y": -15.75
+      }
+    ]
+  ],
+  "mounts": [
+    {
+      "x": -78.25,
+      "y": 8.75,
+      "diameter": 2.7
+    },
+    {
+      "x": 31.75,
+      "y": 8.75,
+      "diameter": 2.7
+    },
+    {
+      "x": -78.25,
+      "y": 32.75,
+      "diameter": 2.7
+    },
+    {
+      "x": 31.75,
+      "y": 32.75,
+      "diameter": 2.7
+    },
+    {
+      "x": 73.25,
+      "y": -48.75,
+      "diameter": 2.7
+    },
+    {
+      "x": 93.25,
+      "y": -48.75,
+      "diameter": 2.7
+    },
+    {
+      "x": 73.25,
+      "y": 48.25,
+      "diameter": 2.7
+    },
+    {
+      "x": 93.25,
+      "y": 48.25,
+      "diameter": 2.7
+    },
+    {
+      "x": -79.25,
+      "y": -50.25,
+      "diameter": 2.7
+    },
+    {
+      "x": -48.25,
+      "y": -50.25,
+      "diameter": 2.7
+    }
+  ],
+  "parts": [
+    {
+      "ref": "J100",
+      "value": "IPS1-110-01-L-D",
+      "block": "controls",
+      "x": 20.75,
+      "y": -2.5,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        4.95,
+        25.78
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 1.27,
+          "y": 11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": -1.27,
+          "y": 11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "VIN5"
+        },
+        {
+          "n": "3",
+          "x": 1.27,
+          "y": 8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VIN5"
+        },
+        {
+          "n": "4",
+          "x": -1.27,
+          "y": 8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "4",
+          "port": "pin4",
+          "net": "VREF25"
+        },
+        {
+          "n": "5",
+          "x": 1.27,
+          "y": 6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "5",
+          "port": "pin5",
+          "net": "GND"
+        },
+        {
+          "n": "6",
+          "x": -1.27,
+          "y": 6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "6",
+          "port": "pin6",
+          "net": "POT_PITCH_RAW"
+        },
+        {
+          "n": "7",
+          "x": 1.27,
+          "y": 3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "7",
+          "port": "pin7",
+          "net": "POT_DECAY_RAW"
+        },
+        {
+          "n": "8",
+          "x": -1.27,
+          "y": 3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "8",
+          "port": "pin8",
+          "net": "POT_TIMBRE_RAW"
+        },
+        {
+          "n": "9",
+          "x": 1.27,
+          "y": 1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "9",
+          "port": "pin9",
+          "net": "POT_DRIVE_RAW"
+        },
+        {
+          "n": "10",
+          "x": -1.27,
+          "y": 1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "10",
+          "port": "pin10",
+          "net": "POT_DELAY_RAW"
+        },
+        {
+          "n": "11",
+          "x": 1.27,
+          "y": -1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "11",
+          "port": "pin11",
+          "net": "POT_REVERB_RAW"
+        },
+        {
+          "n": "12",
+          "x": -1.27,
+          "y": -1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "12",
+          "port": "pin12",
+          "net": "GND"
+        },
+        {
+          "n": "13",
+          "x": 1.27,
+          "y": -3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "13",
+          "port": "pin13",
+          "net": "PITCH_IN"
+        },
+        {
+          "n": "14",
+          "x": -1.27,
+          "y": -3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "14",
+          "port": "pin14",
+          "net": "MOD_IN"
+        },
+        {
+          "n": "15",
+          "x": 1.27,
+          "y": -6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "15",
+          "port": "pin15",
+          "net": "GATE_IN"
+        },
+        {
+          "n": "16",
+          "x": -1.27,
+          "y": -6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "16",
+          "port": "pin16",
+          "net": "GND"
+        },
+        {
+          "n": "17",
+          "x": 1.27,
+          "y": -8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "17",
+          "port": "pin17",
+          "net": "LINE_L"
+        },
+        {
+          "n": "18",
+          "x": -1.27,
+          "y": -8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "18",
+          "port": "pin18",
+          "net": "GND"
+        },
+        {
+          "n": "19",
+          "x": 1.27,
+          "y": -11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "19",
+          "port": "pin19",
+          "net": "LINE_R"
+        },
+        {
+          "n": "20",
+          "x": -1.27,
+          "y": -11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "20",
+          "port": "pin20",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "J101",
+      "value": "IPS1-110-01-L-D",
+      "block": "service",
+      "x": -60.25,
+      "y": 8.0,
+      "side": "bottom",
+      "rotation": 90,
+      "body": [
+        4.95,
+        25.78
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 1.27,
+          "y": 11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": -1.27,
+          "y": 11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "V3V3"
+        },
+        {
+          "n": "3",
+          "x": 1.27,
+          "y": 8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "GND"
+        },
+        {
+          "n": "4",
+          "x": -1.27,
+          "y": 8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "4",
+          "port": "pin4",
+          "net": "ENC_A_RAW"
+        },
+        {
+          "n": "5",
+          "x": 1.27,
+          "y": 6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "5",
+          "port": "pin5",
+          "net": "ENC_B_RAW"
+        },
+        {
+          "n": "6",
+          "x": -1.27,
+          "y": 6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "6",
+          "port": "pin6",
+          "net": "ENC_SW_RAW"
+        },
+        {
+          "n": "7",
+          "x": 1.27,
+          "y": 3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "7",
+          "port": "pin7",
+          "net": "cv_select"
+        },
+        {
+          "n": "8",
+          "x": -1.27,
+          "y": 3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "8",
+          "port": "pin8",
+          "net": "LED0_A"
+        },
+        {
+          "n": "9",
+          "x": 1.27,
+          "y": 1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "9",
+          "port": "pin9",
+          "net": "LED1_A"
+        },
+        {
+          "n": "10",
+          "x": -1.27,
+          "y": 1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "10",
+          "port": "pin10",
+          "net": "LED2_A"
+        },
+        {
+          "n": "11",
+          "x": 1.27,
+          "y": -1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "11",
+          "port": "pin11",
+          "net": "LED3_A"
+        },
+        {
+          "n": "12",
+          "x": -1.27,
+          "y": -1.27,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "12",
+          "port": "pin12",
+          "net": "GND"
+        },
+        {
+          "n": "13",
+          "x": 1.27,
+          "y": -3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "13",
+          "port": "pin13",
+          "net": "MIDI4"
+        },
+        {
+          "n": "14",
+          "x": -1.27,
+          "y": -3.81,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "14",
+          "port": "pin14",
+          "net": "MIDI5"
+        },
+        {
+          "n": "15",
+          "x": 1.27,
+          "y": -6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "15",
+          "port": "pin15",
+          "net": "PROGRAM_B"
+        },
+        {
+          "n": "16",
+          "x": -1.27,
+          "y": -6.35,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "16",
+          "port": "pin16",
+          "net": "reset_n"
+        },
+        {
+          "n": "17",
+          "x": 1.27,
+          "y": -8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "17",
+          "port": "pin17",
+          "net": "JTAG_TCK"
+        },
+        {
+          "n": "18",
+          "x": -1.27,
+          "y": -8.89,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "18",
+          "port": "pin18",
+          "net": "JTAG_TDO"
+        },
+        {
+          "n": "19",
+          "x": 1.27,
+          "y": -11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "19",
+          "port": "pin19",
+          "net": "JTAG_TDI"
+        },
+        {
+          "n": "20",
+          "x": -1.27,
+          "y": -11.43,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.04,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "20",
+          "port": "pin20",
+          "net": "JTAG_TMS"
+        }
+      ]
+    },
+    {
+      "ref": "RV1",
+      "value": "10k linear / TENSION",
+      "block": "controls",
+      "x": -65.25,
+      "y": 31.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_PITCH_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "RV2",
+      "value": "10k linear / DECAY",
+      "block": "controls",
+      "x": -27.25,
+      "y": 31.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_DECAY_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "RV3",
+      "value": "10k linear / CHAOS",
+      "block": "controls",
+      "x": 10.75,
+      "y": 31.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_TIMBRE_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "RV4",
+      "value": "10k linear / DRIVE",
+      "block": "controls",
+      "x": -37.25,
+      "y": 5.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_DRIVE_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "RV5",
+      "value": "10k linear / DELAY",
+      "block": "controls",
+      "x": -15.25,
+      "y": 5.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_DELAY_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "RV6",
+      "value": "10k linear / REVERB",
+      "block": "controls",
+      "x": 6.75,
+      "y": 5.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        11.4,
+        11.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "POT_REVERB_RAW"
+        },
+        {
+          "n": "3",
+          "x": 2.5,
+          "y": -7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "MP1",
+          "x": -5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin4",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 5.3,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.2,
+          "drill": [
+            1.8,
+            2.2
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin5",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "ENC1",
+      "value": "24 PPR / PUSH",
+      "block": "controls",
+      "x": -61.25,
+      "y": -21.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        14,
+        16
+      ],
+      "pads": [
+        {
+          "n": "A",
+          "x": -2.5,
+          "y": -7.5,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "A",
+          "port": "pin1",
+          "net": "ENC_A_RAW"
+        },
+        {
+          "n": "C",
+          "x": 0,
+          "y": -7.5,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "C",
+          "port": "pin2",
+          "net": "GND"
+        },
+        {
+          "n": "B",
+          "x": 2.5,
+          "y": -7.5,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "B",
+          "port": "pin3",
+          "net": "ENC_B_RAW"
+        },
+        {
+          "n": "S1",
+          "x": -2.5,
+          "y": 7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "S1",
+          "port": "pin4",
+          "net": "ENC_SW_RAW"
+        },
+        {
+          "n": "S2",
+          "x": 2.5,
+          "y": 7,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1.0,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "S2",
+          "port": "pin5",
+          "net": "GND"
+        },
+        {
+          "n": "MP1",
+          "x": -6.6,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.6,
+          "drill": [
+            1.8,
+            2.6
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP1",
+          "port": "pin6",
+          "net": null
+        },
+        {
+          "n": "MP2",
+          "x": 6.6,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 3.6,
+          "drill": [
+            1.8,
+            2.6
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "MP2",
+          "port": "pin7",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "SW1",
+      "value": "MODE / SPDT ON-ON",
+      "block": "controls",
+      "x": 47.25,
+      "y": 20.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        6.86,
+        12.7
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -4.7,
+          "sx": 2.8,
+          "sy": 2.8,
+          "drill": 1.85,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": 0,
+          "sx": 2.8,
+          "sy": 2.8,
+          "drill": 1.85,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "cv_select"
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.7,
+          "sx": 2.8,
+          "sy": 2.8,
+          "drill": 1.85,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "V3V3"
+        }
+      ]
+    },
+    {
+      "ref": "D10",
+      "value": "VOICE 1",
+      "block": "controls",
+      "x": 20.75,
+      "y": 43.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.8,
+        3.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "LED0_A"
+        }
+      ]
+    },
+    {
+      "ref": "D11",
+      "value": "VOICE 2",
+      "block": "controls",
+      "x": 30.75,
+      "y": 43.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.8,
+        3.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "LED1_A"
+        }
+      ]
+    },
+    {
+      "ref": "D12",
+      "value": "VOICE 3",
+      "block": "controls",
+      "x": 40.75,
+      "y": 43.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.8,
+        3.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "LED2_A"
+        }
+      ]
+    },
+    {
+      "ref": "D13",
+      "value": "VOICE 4",
+      "block": "controls",
+      "x": 50.75,
+      "y": 43.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.8,
+        3.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 0.9,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "LED3_A"
+        }
+      ]
+    },
+    {
+      "ref": "J301",
+      "value": "PITCH 0-5V",
+      "block": "io",
+      "x": 83.25,
+      "y": 34.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        9,
+        10.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -6.48,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "SLEEVE",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -3.38,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "NORMAL",
+          "port": "pin2",
+          "net": "GND"
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.92,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "TIP",
+          "port": "pin3",
+          "net": "PITCH_IN"
+        },
+        {
+          "n": "",
+          "x": 0,
+          "y": 0,
+          "sx": 3,
+          "sy": 3,
+          "drill": 3,
+          "kind": "np_thru_hole",
+          "shape": "circle",
+          "name": "",
+          "port": "pin4",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "J302",
+      "value": "MOD",
+      "block": "io",
+      "x": 83.25,
+      "y": 16.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        9,
+        10.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -6.48,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "SLEEVE",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -3.38,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "NORMAL",
+          "port": "pin2",
+          "net": "GND"
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.92,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "TIP",
+          "port": "pin3",
+          "net": "MOD_RAW"
+        },
+        {
+          "n": "",
+          "x": 0,
+          "y": 0,
+          "sx": 3,
+          "sy": 3,
+          "drill": 3,
+          "kind": "np_thru_hole",
+          "shape": "circle",
+          "name": "",
+          "port": "pin4",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "J303",
+      "value": "GATE",
+      "block": "io",
+      "x": 83.25,
+      "y": -1.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        9,
+        10.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -6.48,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "SLEEVE",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -3.38,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "NORMAL",
+          "port": "pin2",
+          "net": "GND"
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.92,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "TIP",
+          "port": "pin3",
+          "net": "GATE_IN"
+        },
+        {
+          "n": "",
+          "x": 0,
+          "y": 0,
+          "sx": 3,
+          "sy": 3,
+          "drill": 3,
+          "kind": "np_thru_hole",
+          "shape": "circle",
+          "name": "",
+          "port": "pin4",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "J304",
+      "value": "LINE L",
+      "block": "io",
+      "x": 83.25,
+      "y": -19.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        9,
+        10.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -6.48,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "SLEEVE",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -3.38,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "NORMAL",
+          "port": "pin2",
+          "net": null
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.92,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "TIP",
+          "port": "pin3",
+          "net": "LINE_L"
+        },
+        {
+          "n": "",
+          "x": 0,
+          "y": 0,
+          "sx": 3,
+          "sy": 3,
+          "drill": 3,
+          "kind": "np_thru_hole",
+          "shape": "circle",
+          "name": "",
+          "port": "pin4",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "J305",
+      "value": "LINE R",
+      "block": "io",
+      "x": 83.25,
+      "y": -37.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        9,
+        10.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": -6.48,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "SLEEVE",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 0,
+          "y": -3.38,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "NORMAL",
+          "port": "pin2",
+          "net": null
+        },
+        {
+          "n": "3",
+          "x": 0,
+          "y": 4.92,
+          "sx": 2.3,
+          "sy": 2.6,
+          "drill": [
+            1.0,
+            1.9
+          ],
+          "kind": "thru_hole",
+          "shape": "oval",
+          "name": "TIP",
+          "port": "pin3",
+          "net": "LINE_R"
+        },
+        {
+          "n": "",
+          "x": 0,
+          "y": 0,
+          "sx": 3,
+          "sy": 3,
+          "drill": 3,
+          "kind": "np_thru_hole",
+          "shape": "circle",
+          "name": "",
+          "port": "pin4",
+          "net": null
+        }
+      ]
+    },
+    {
+      "ref": "J306",
+      "value": "22-27-2021",
+      "block": "io",
+      "x": -45.75,
+      "y": -25.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        5.3,
+        6.02
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MIDI4"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "MIDI5"
+        }
+      ]
+    },
+    {
+      "ref": "J200",
+      "value": "61201021621",
+      "block": "power",
+      "x": 70.75,
+      "y": -0.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        9.85,
+        21.36
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 5.08,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": null
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 5.08,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": null
+        },
+        {
+          "n": "3",
+          "x": -1.27,
+          "y": 2.54,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "GND"
+        },
+        {
+          "n": "4",
+          "x": 1.27,
+          "y": 2.54,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "4",
+          "port": "pin4",
+          "net": "GND"
+        },
+        {
+          "n": "5",
+          "x": -1.27,
+          "y": 0.0,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "5",
+          "port": "pin5",
+          "net": "GND"
+        },
+        {
+          "n": "6",
+          "x": 1.27,
+          "y": 0.0,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "6",
+          "port": "pin6",
+          "net": "GND"
+        },
+        {
+          "n": "7",
+          "x": -1.27,
+          "y": -2.54,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "7",
+          "port": "pin7",
+          "net": "GND"
+        },
+        {
+          "n": "8",
+          "x": 1.27,
+          "y": -2.54,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "8",
+          "port": "pin8",
+          "net": "GND"
+        },
+        {
+          "n": "9",
+          "x": -1.27,
+          "y": -5.08,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "9",
+          "port": "pin9",
+          "net": "RACK_12V"
+        },
+        {
+          "n": "10",
+          "x": 1.27,
+          "y": -5.08,
+          "sx": 1.65,
+          "sy": 1.65,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "10",
+          "port": "pin10",
+          "net": "RACK_12V"
+        }
+      ]
+    },
+    {
+      "ref": "J201",
+      "value": "22-27-2021",
+      "block": "power",
+      "x": -77.25,
+      "y": -12.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        5.3,
+        6.02
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "DESKTOP_12V"
+        },
+        {
+          "n": "2",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "F1",
+      "value": "2A FUSE / >=32V",
+      "block": "power",
+      "x": -50.25,
+      "y": 0.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.2,
+        1.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.5,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "RACK_12V"
+        },
+        {
+          "n": "2",
+          "x": 1.5,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "RACK_FUSED"
+        }
+      ]
+    },
+    {
+      "ref": "F2",
+      "value": "2A FUSE / >=32V",
+      "block": "power",
+      "x": -77.25,
+      "y": -5.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.2,
+        1.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.5,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "DESKTOP_12V"
+        },
+        {
+          "n": "2",
+          "x": 1.5,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "DESKTOP_FUSED"
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "value": "SS54 / OR",
+      "block": "power",
+      "x": -59.25,
+      "y": 0.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        5.4,
+        3.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "RACK_FUSED"
+        }
+      ]
+    },
+    {
+      "ref": "D2",
+      "value": "SS54 / OR",
+      "block": "power",
+      "x": -68.25,
+      "y": -5.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        5.4,
+        3.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "DESKTOP_FUSED"
+        }
+      ]
+    },
+    {
+      "ref": "D3",
+      "value": "SMBJ15A",
+      "block": "power",
+      "x": -78.25,
+      "y": -18.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        5.4,
+        3.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 2.7,
+          "y": 0,
+          "sx": 2.2,
+          "sy": 2.8,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "TPS54302DDCR",
+      "block": "power",
+      "x": -69.25,
+      "y": -39.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        2.9
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.1,
+          "y": 0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "GND",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": -1.1,
+          "y": 0,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "SW",
+          "port": "pin2",
+          "net": "SW"
+        },
+        {
+          "n": "3",
+          "x": -1.1,
+          "y": -0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "VIN",
+          "port": "pin3",
+          "net": "VRAW"
+        },
+        {
+          "n": "4",
+          "x": 1.1,
+          "y": -0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "FB",
+          "port": "pin4",
+          "net": "FB"
+        },
+        {
+          "n": "5",
+          "x": 1.1,
+          "y": 0,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "EN",
+          "port": "pin5",
+          "net": "EN"
+        },
+        {
+          "n": "6",
+          "x": 1.1,
+          "y": 0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "BOOT",
+          "port": "pin6",
+          "net": "BOOT"
+        }
+      ]
+    },
+    {
+      "ref": "L1",
+      "value": "10uH 4A / Isat7.5A",
+      "block": "power",
+      "x": -77.25,
+      "y": -39.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        7.3,
+        6.6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.95,
+          "y": 0,
+          "sx": 2.5,
+          "sy": 3.5,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 2.95,
+          "y": 0,
+          "sx": 2.5,
+          "sy": 3.5,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "SW"
+        }
+      ]
+    },
+    {
+      "ref": "C1",
+      "value": "10uF",
+      "block": "power",
+      "x": -72.25,
+      "y": -46.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.2,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF",
+      "block": "power",
+      "x": -71.25,
+      "y": -42.75,
+      "side": "top",
+      "rotation": 270,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "100nF",
+      "block": "power",
+      "x": -69.25,
+      "y": -35.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "BOOT"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "SW"
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "22uF",
+      "block": "power",
+      "x": -80.25,
+      "y": -31.25,
+      "side": "top",
+      "rotation": 90,
+      "body": [
+        3.2,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "22uF",
+      "block": "power",
+      "x": -74.25,
+      "y": -31.25,
+      "side": "top",
+      "rotation": 90,
+      "body": [
+        3.2,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "100k",
+      "block": "power",
+      "x": -63.75,
+      "y": -37.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "FF_TOP"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "FB"
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "13.3k",
+      "block": "power",
+      "x": -64.25,
+      "y": -44.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "FB"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "511k",
+      "block": "power",
+      "x": -57.25,
+      "y": -41.25,
+      "side": "top",
+      "rotation": 90,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "EN"
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "105k",
+      "block": "power",
+      "x": -60.25,
+      "y": -45.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "EN"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "49.9",
+      "block": "power",
+      "x": -64.25,
+      "y": -32.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "FF_TOP"
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "75pF",
+      "block": "power",
+      "x": -60.25,
+      "y": -37.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "FF_TOP"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "FB"
+        }
+      ]
+    },
+    {
+      "ref": "C7",
+      "value": "10uF",
+      "block": "power",
+      "x": -60.25,
+      "y": -5.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.2,
+        2.5
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        },
+        {
+          "n": "2",
+          "x": 1.65,
+          "y": 0,
+          "sx": 1.5,
+          "sy": 2.9,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "JP1",
+      "value": "450301014042",
+      "block": "mod",
+      "x": 62.25,
+      "y": 23.75,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        10.5,
+        3.0
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.3,
+          "drill": 0.8,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_IN"
+        },
+        {
+          "n": "2",
+          "x": 2.54,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.3,
+          "drill": 0.8,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "MOD_BIPOLAR"
+        },
+        {
+          "n": "3",
+          "x": -2.54,
+          "y": 0,
+          "sx": 1.3,
+          "sy": 1.3,
+          "drill": 0.8,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "MOD_RAW"
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "value": "OPA2192ID",
+      "block": "mod",
+      "x": 47.75,
+      "y": 2.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        3.9,
+        4.9
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -2.7,
+          "y": 1.905,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "OUTA",
+          "port": "pin1",
+          "net": "VREF_BUF"
+        },
+        {
+          "n": "2",
+          "x": -2.7,
+          "y": 0.635,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "INA-",
+          "port": "pin2",
+          "net": "VREF_BUF"
+        },
+        {
+          "n": "3",
+          "x": -2.7,
+          "y": -0.635,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "INA+",
+          "port": "pin3",
+          "net": "VREF25"
+        },
+        {
+          "n": "4",
+          "x": -2.7,
+          "y": -1.905,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "V-",
+          "port": "pin4",
+          "net": "GND"
+        },
+        {
+          "n": "5",
+          "x": 2.7,
+          "y": -1.905,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "INB+",
+          "port": "pin5",
+          "net": "MOD_SUM"
+        },
+        {
+          "n": "6",
+          "x": 2.7,
+          "y": -0.635,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "INB-",
+          "port": "pin6",
+          "net": "MOD_FB"
+        },
+        {
+          "n": "7",
+          "x": 2.7,
+          "y": 0.635,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "OUTB",
+          "port": "pin7",
+          "net": "MOD_BIPOLAR"
+        },
+        {
+          "n": "8",
+          "x": 2.7,
+          "y": 1.905,
+          "sx": 1.55,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "V+",
+          "port": "pin8",
+          "net": "VIN5"
+        }
+      ]
+    },
+    {
+      "ref": "R20",
+      "value": "200k",
+      "block": "mod",
+      "x": 60.75,
+      "y": 10.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_RAW"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "MOD_SUM"
+        }
+      ]
+    },
+    {
+      "ref": "R21",
+      "value": "100k",
+      "block": "mod",
+      "x": 54.75,
+      "y": 10.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VREF_BUF"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "MOD_SUM"
+        }
+      ]
+    },
+    {
+      "ref": "R22",
+      "value": "200k",
+      "block": "mod",
+      "x": 60.75,
+      "y": 6.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_SUM"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "R23",
+      "value": "10k",
+      "block": "mod",
+      "x": 56.25,
+      "y": -7.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_FB"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "R24",
+      "value": "10k",
+      "block": "mod",
+      "x": 59.75,
+      "y": -5.25,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_BIPOLAR"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "MOD_FB"
+        }
+      ]
+    },
+    {
+      "ref": "D4",
+      "value": "BAT54S",
+      "block": "mod",
+      "x": 62.75,
+      "y": 0.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.4,
+        2.9
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.0,
+          "y": 0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": -1.0,
+          "y": -0.95,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "VIN5"
+        },
+        {
+          "n": "3",
+          "x": 1.0,
+          "y": 0,
+          "sx": 1.0,
+          "sy": 0.6,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "3",
+          "port": "pin3",
+          "net": "MOD_SUM"
+        }
+      ]
+    },
+    {
+      "ref": "C20",
+      "value": "100nF",
+      "block": "mod",
+      "x": 53.75,
+      "y": 4.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        1.6,
+        0.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 0.825,
+          "y": 0,
+          "sx": 0.85,
+          "sy": 0.95,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "C21",
+      "value": "1uF",
+      "block": "mod",
+      "x": 45.75,
+      "y": 9.75,
+      "side": "top",
+      "rotation": 0,
+      "body": [
+        2.0,
+        1.25
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -1.05,
+          "y": 0,
+          "sx": 1.15,
+          "sy": 1.4,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        },
+        {
+          "n": "2",
+          "x": 1.05,
+          "y": 0,
+          "sx": 1.15,
+          "sy": 1.4,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "J202",
+      "value": "22-27-2061",
+      "block": "service",
+      "x": 27.75,
+      "y": -35.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        15.24,
+        5.8
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -6.35,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "rect",
+          "name": "1",
+          "port": "pin1",
+          "net": "V3V3"
+        },
+        {
+          "n": "2",
+          "x": -3.81,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin2",
+          "net": "GND"
+        },
+        {
+          "n": "3",
+          "x": -1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "3",
+          "port": "pin3",
+          "net": "JTAG_TCK"
+        },
+        {
+          "n": "4",
+          "x": 1.27,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "4",
+          "port": "pin4",
+          "net": "JTAG_TDO"
+        },
+        {
+          "n": "5",
+          "x": 3.81,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "5",
+          "port": "pin5",
+          "net": "JTAG_TDI"
+        },
+        {
+          "n": "6",
+          "x": 6.35,
+          "y": 0,
+          "sx": 1.6,
+          "sy": 1.6,
+          "drill": 1.1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "6",
+          "port": "pin6",
+          "net": "JTAG_TMS"
+        }
+      ]
+    },
+    {
+      "ref": "SW3",
+      "value": "PROGRAM / SERVICE",
+      "block": "service",
+      "x": 15.150000000000006,
+      "y": -39.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        6,
+        6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -3.25,
+          "y": -2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "PROGRAM_B"
+        },
+        {
+          "n": "1",
+          "x": -3.25,
+          "y": 2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin2",
+          "net": "PROGRAM_B"
+        },
+        {
+          "n": "2",
+          "x": 3.25,
+          "y": -2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin3",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 3.25,
+          "y": 2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin4",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "SW4",
+      "value": "RESET / SERVICE",
+      "block": "service",
+      "x": 42.75,
+      "y": -38.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        6,
+        6
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": -3.25,
+          "y": -2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin1",
+          "net": "reset_n"
+        },
+        {
+          "n": "1",
+          "x": -3.25,
+          "y": 2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "1",
+          "port": "pin2",
+          "net": "reset_n"
+        },
+        {
+          "n": "2",
+          "x": 3.25,
+          "y": -2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin3",
+          "net": "GND"
+        },
+        {
+          "n": "2",
+          "x": 3.25,
+          "y": 2.25,
+          "sx": 1.8,
+          "sy": 1.8,
+          "drill": 1,
+          "kind": "thru_hole",
+          "shape": "circle",
+          "name": "2",
+          "port": "pin4",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "TP1",
+      "value": "GND",
+      "block": "power",
+      "x": -78.25,
+      "y": -22.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        2,
+        2
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 2,
+          "sy": 2,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "GND"
+        }
+      ]
+    },
+    {
+      "ref": "TP2",
+      "value": "VIN5",
+      "block": "power",
+      "x": -74.25,
+      "y": -22.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        2,
+        2
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 2,
+          "sy": 2,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VIN5"
+        }
+      ]
+    },
+    {
+      "ref": "TP3",
+      "value": "VRAW",
+      "block": "power",
+      "x": -55.25,
+      "y": -5.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        2,
+        2
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 2,
+          "sy": 2,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VRAW"
+        }
+      ]
+    },
+    {
+      "ref": "TP4",
+      "value": "VREF25",
+      "block": "mod",
+      "x": 45.75,
+      "y": -2.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        2,
+        2
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 2,
+          "sy": 2,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "VREF25"
+        }
+      ]
+    },
+    {
+      "ref": "TP5",
+      "value": "MOD_BIPOLAR",
+      "block": "mod",
+      "x": 61.75,
+      "y": -3.25,
+      "side": "bottom",
+      "rotation": 0,
+      "body": [
+        2,
+        2
+      ],
+      "pads": [
+        {
+          "n": "1",
+          "x": 0,
+          "y": 0,
+          "sx": 2,
+          "sy": 2,
+          "drill": null,
+          "kind": "smd",
+          "shape": "roundrect",
+          "name": "1",
+          "port": "pin1",
+          "net": "MOD_BIPOLAR"
+        }
+      ]
+    }
+  ],
+  "stack": {
+    "revision": "STACK-P2",
+    "description": "Direct panel-to-mainboard Samtec IPT1/IPS1 mezzanine interface; no per-function harnesses",
+    "nominal_board_gap_mm": 19.99,
+    "mainboard_product_offset_mm": {
+      "x": 88.0,
+      "y": 64.25
+    },
+    "panel_product_center_mm": {
+      "x": 103.25,
+      "y": 64.25
+    },
+    "connector_footprint": {
+      "rows": 2,
+      "positions_per_row": 10,
+      "pitch_mm": 2.54,
+      "row_spacing_mm": 2.54,
+      "pad_diameter_mm": 1.8,
+      "main": {
+        "manufacturer": "Samtec",
+        "mpn": "IPT1-110-06-L-D",
+        "hole_mm": 1.02,
+        "body_mm": {
+          "x": 5.08,
+          "y": 25.91
+        },
+        "body_height_mm": 6.35,
+        "mounting": "vertical through-hole terminal strip",
+        "insulation_height_mm": 15.3,
+        "shroud_lower_face_mm": 8.95,
+        "post_tail_mm": 2.35,
+        "mating_contact_length_mm": 3.94,
+        "pin_square_mm": 0.64,
+        "drawing_reference_model": "models/Samtec_IPT1-110-06-L-D_drawing_reference.step"
+      },
+      "panel": {
+        "manufacturer": "Samtec",
+        "mpn": "IPS1-110-01-L-D",
+        "hole_mm": 1.04,
+        "body_mm": {
+          "x": 4.95,
+          "y": 25.78
+        },
+        "body_height_mm": 8.51,
+        "mounting": "vertical through-hole socket strip",
+        "socket_tower_height_mm": 3.81,
+        "post_tail_mm": 2.54,
+        "tail_section_mm": {
+          "x": 0.79,
+          "y": 0.41
+        },
+        "drawing_reference_model": "models/Samtec_IPS1-110-01-L-D_drawing_reference.step"
+      }
+    },
+    "connectors": [
+      {
+        "id": "A",
+        "role": "power / analog controls / CV-gate / stereo audio",
+        "main_ref": "J17",
+        "panel_ref": "J100",
+        "main_xy_mm": {
+          "x": 36.0,
+          "y": -2.5
+        },
+        "panel_xy_mm": {
+          "x": 124.0,
+          "y": 61.75
+        },
+        "rotation_deg": 0,
+        "signals": [
+          "GND",
+          "VIN5",
+          "VIN5",
+          "VREF25",
+          "GND",
+          "POT_PITCH_RAW",
+          "POT_DECAY_RAW",
+          "POT_TIMBRE_RAW",
+          "POT_DRIVE_RAW",
+          "POT_DELAY_RAW",
+          "POT_REVERB_RAW",
+          "GND",
+          "PITCH_IN",
+          "MOD_IN",
+          "GATE_IN",
+          "GND",
+          "LINE_L",
+          "GND",
+          "LINE_R",
+          "GND"
+        ]
+      },
+      {
+        "id": "B",
+        "role": "digital controls / LEDs / MIDI / configuration / JTAG",
+        "main_ref": "J18",
+        "panel_ref": "J101",
+        "main_xy_mm": {
+          "x": -45.0,
+          "y": 8.0
+        },
+        "panel_xy_mm": {
+          "x": 43.0,
+          "y": 72.25
+        },
+        "rotation_deg": 90,
+        "signals": [
+          "GND",
+          "V3V3",
+          "GND",
+          "ENC_A_RAW",
+          "ENC_B_RAW",
+          "ENC_SW_RAW",
+          "cv_select",
+          "LED0_A",
+          "LED1_A",
+          "LED2_A",
+          "LED3_A",
+          "GND",
+          "MIDI4",
+          "MIDI5",
+          "PROGRAM_B",
+          "reset_n",
+          "JTAG_TCK",
+          "JTAG_TDO",
+          "JTAG_TDI",
+          "JTAG_TMS"
+        ]
+      }
+    ],
+    "mechanical": {
+      "load_path": "mounting standoffs; mezzanine connectors are electrical/alignment only",
+      "panel_side": "bottom",
+      "mainboard_side": "top",
+      "panel_footprint_mirror_x": true,
+      "main_connector": "Samtec IPT1-110-06-L-D",
+      "panel_connector": "Samtec IPS1-110-01-L-D",
+      "fully_mated_gap_mm": 19.99,
+      "max_mated_gap_mm": 20.45,
+      "assembly_release_gate": "bench-fit connector seating and 20.0 mm standoff tolerance stack before production quantity",
+      "model_status": "Samtec drawing-derived reference geometry; official vendor STEP download remains gated by Samtec email access"
+    },
+    "mating": {
+      "fully_mated_gap_mm": 19.99,
+      "max_gap_mm": 20.45,
+      "fully_mated_wipe_mm": 0.84,
+      "min_wipe_at_max_gap_mm": 0.38,
+      "assembly_standoff_target_mm": 20.0,
+      "note": "Use 20.0 mm nominal standoffs/spacing and verify assembled seating; 19.99 mm is Samtec nominal fully-mated PCB gap for IPT1 lead style -06 with IPS1 lead style -01.",
+      "drawing_verified": true,
+      "drawing_source": "Samtec IPX1 MATED DOCUMENT Rev C, Table 1: IPT1 -06 with IPS1 -01",
+      "geometric_insertion_fully_mated_mm": 3.82,
+      "geometric_insertion_at_max_gap_mm": 3.36
+    },
+    "native_coordinate_transform": {
+      "panel": {
+        "product_x": "pcb_x",
+        "product_y": "128.5 - pcb_y",
+        "pcb_thickness_mm": 1.6
+      },
+      "mainboard": {
+        "product_x": "pcb_x - 12.0",
+        "product_y": "164.25 - pcb_y",
+        "pcb_thickness_mm": 1.6
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "scope": "Custom nominal pad/track/via geometry and exact design graph, NOT native KiCad ERC/DRC, not thermal/signal integrity/manufacturing approval",
+  "components": 69,
+  "pads": 201,
+  "nets": 43,
+  "tracks": 682,
+  "vias": 34,
+  "routed_length_mm": 1352.767216927618,
+  "minimum_rule_mm": 0.2,
+  "copper_edge_rule_mm": 0.3,
+  "copper_clearance_violations": [],
+  "copper_edge_violations": [],
+  "disconnected_non_ground_nets": {},
+  "ground_status": "Inner GND zone definitions provided. Native KiCad refill required; GND connectivity is not claimed by this test.",
+  "native_erc": "NOT RUN",
+  "native_drc": "NOT RUN",
+  "bench_tests": "NOT RUN",
+  "power_budget": "3 A IC target only; system capability not verified",
+  "mainboard_pin_crosscheck": {
+    "checked": 45,
+    "mismatches": []
+  },
+  "native_pcb_pin_net_crosscheck": {
+    "footprints": 69,
+    "mismatches": []
+  },
+  "syntax": {
+    "design/service.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/io.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/controls.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/power.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/radian_panel.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/mod.kicad_sch": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/SW_PUSH_6x6_P6.5x4.5.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Header_1x05_P2.54.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/IDC_2x05_P2.54_Shrouded.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Bourns_PEC11R4_RearFacing_Switch.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/SOT23_BAT54S.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/C_1210.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/TestPoint_D2.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/TI_DDC0006A_SOT23_6.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/WQP518MA_PJ398SM_Vertical.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/D_SMB.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Bourns_PTV09A4_RearFacing.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/R_0603.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/C_0603.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/LED_D3.0_P2.54.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/C_0805.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/E_Switch_100SP_M2.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Header_1x03_P2.54.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Header_1x02_P2.54.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Fuse_1206.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Bourns_SRP7050TA.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/Header_1x06_P2.54.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.pretty/SOIC8_3.9x4.9_P1.27.kicad_mod": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "library/RadianPanel.kicad_sym": {
+      "balanced": true,
+      "duplicate_uuids": []
+    },
+    "design/radian_panel.kicad_pcb": {
+      "balanced": true,
+      "duplicate_uuids": []
+    }
+  },
+  "custom_checks_pass": true
+}

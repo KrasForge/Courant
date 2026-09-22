@@ -1,0 +1,75 @@
+{
+  "assembly_children": 163,
+  "missing_required": [],
+  "panel_bbox_mm": [
+    -0.0,
+    -0.0,
+    0.0,
+    202.8,
+    128.5,
+    2.0
+  ],
+  "reverb_insert_bbox_mm": [
+    139.0,
+    71.0,
+    2.0,
+    162.0,
+    98.0,
+    4.0
+  ],
+  "mainboard_bbox_mm": [
+    8.0,
+    14.25,
+    -32.805,
+    168.0,
+    114.25,
+    -20.965
+  ],
+  "spacers_bbox_mm": [
+    9.535898,
+    16.25,
+    -39.6,
+    166.464102,
+    112.25,
+    -31.14
+  ],
+  "corner_support_bboxes_mm": {
+    "corner_support_BL": [
+      6.0,
+      12.25,
+      -29.54,
+      15.6,
+      21.85,
+      0.0
+    ],
+    "corner_support_BR": [
+      160.4,
+      12.25,
+      -29.54,
+      170.0,
+      21.85,
+      0.0
+    ],
+    "corner_support_TL": [
+      6.0,
+      106.65,
+      -29.54,
+      15.6,
+      116.25,
+      0.0
+    ],
+    "corner_support_TR": [
+      160.4,
+      106.65,
+      -29.54,
+      170.0,
+      116.25,
+      0.0
+    ]
+  },
+  "exact_faceplate_thickness_pass": true,
+  "exact_insert_thickness_pass": true,
+  "required_current_parts_present": true,
+  "obsolete_panel_harness_models": [],
+  "roundtrip_step_load": "pass"
+}

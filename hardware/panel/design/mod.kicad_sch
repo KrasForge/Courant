@@ -1,0 +1,2149 @@
+(kicad_sch
+  (version 20231120)
+  (generator "radian_panel_generator")
+  (uuid "63939905-9ade-5654-bce7-8a51e9d7ec88")
+  (paper "A2")
+  (title_block
+    (title "04 | OPTIONAL BIPOLAR MODULATION")
+    (date "2026-09-15")
+    (rev "P1 DRAFT")
+    (comment 1 "Native ERC, footprint verification and hardware testing REQUIRED"))
+  (lib_symbols
+    (symbol "RadianPanel:JP1"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "450301014042"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:Wurth_450301014042_Exact_B"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "JP1_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "JP1_1_1"
+        (pin passive line
+          (at -12.7 2.54 0)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 0.0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -2.54 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:U2"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "OPA2192ID"
+        (at 0 -8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:SOIC8_3.9x4.9_P1.27"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "U2_0_1"
+        (rectangle
+          (start -10.16 6.35)
+          (end 10.16 -6.35)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "U2_1_1"
+        (pin output line
+          (at -12.7 3.81 0)
+          (length 2.54)
+          (name "OUTA"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin input line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "INA-"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin input line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "INA+"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin power_in line
+          (at -12.7 -3.81 0)
+          (length 2.54)
+          (name "V-"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin input line
+          (at 12.7 3.81 180)
+          (length 2.54)
+          (name "INB+"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin input line
+          (at 12.7 1.27 180)
+          (length 2.54)
+          (name "INB-"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin output line
+          (at 12.7 -1.27 180)
+          (length 2.54)
+          (name "OUTB"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin power_in line
+          (at 12.7 -3.81 180)
+          (length 2.54)
+          (name "V+"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Texas Instruments"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:R20"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "200k"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:R_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "R20_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R20_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Resistor 0.1%"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:R21"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "100k"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:R_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "R21_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R21_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Resistor 0.1%"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:R22"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "200k"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:R_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "R22_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R22_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Resistor 0.1%"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:R23"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:R_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "R23_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R23_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Resistor 0.1%"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:R24"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "10k"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:R_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "R24_0_1"
+        (rectangle
+          (start -3.81 1.52)
+          (end 3.81 -1.52)
+          (stroke
+            (width 0.2)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -3.81 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 3.81 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R24_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Resistor 0.1%"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:D4"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "BAT54S"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:SOT23_BAT54S"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "D4_0_1"
+        (rectangle
+          (start -10.16 5.08)
+          (end 10.16 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "D4_1_1"
+        (pin passive line
+          (at -12.7 1.27 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -12.7 -1.27 0)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 12.7 0.0 180)
+          (length 2.54)
+          (name "3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" "Nexperia"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:C20"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "100nF"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:C_0603"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "C20_0_1"
+        (polyline
+          (pts
+            (xy -0.9 -2.54)
+            (xy -0.9 2.54))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.9 -2.54)
+            (xy 0.9 2.54))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -0.9 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.9 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "C20_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "16V X7R; verify effective capacitance at DC bias"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:C21"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "1uF"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:C_0805"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "C21_0_1"
+        (polyline
+          (pts
+            (xy -0.9 -2.54)
+            (xy -0.9 2.54))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.9 -2.54)
+            (xy 0.9 2.54))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -7.62 0)
+            (xy -0.9 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.9 0)
+            (xy 7.62 0))
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "C21_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 10.16 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "16V X7R; verify effective capacitance at DC bias"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:TP4"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VREF25"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:TestPoint_D2"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "TP4_0_1"
+        (circle
+          (center 0 0)
+          (radius 1)
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TP4_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Exposed soldermask aperture, no component."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide)))
+    (symbol "RadianPanel:TP5"
+      (pin_names
+        (offset 0.508))
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "MOD_BIPOLAR"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "RadianPanel:TestPoint_D2"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (symbol "TP5_0_1"
+        (circle
+          (center 0 0)
+          (radius 1)
+          (stroke
+            (width 0.15)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TP5_1_1"
+        (pin passive line
+          (at -10.16 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0))))))
+      (property "Description" "Exposed soldermask aperture, no component."
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))
+      (property "Manufacturer" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          hide))))
+  (text "04 | OPTIONAL BIPOLAR MODULATION"
+    (at 20 20 0)
+    (effects
+      (font
+        (size 3 3))
+      (justify left top))
+    (uuid "be05d7ae-3aab-5d48-81a6-814cee0c68cd"))
+  (text "RADIAN PANEL P1 | NET-LABELLED ELECTRICAL SCHEMATIC"
+    (at 20 30 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid "7bbae22e-829a-5e1e-8ea7-db1efe410c9c"))
+  (symbol
+    (lib_id "RadianPanel:JP1")
+    (at 78.74 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7a1dc449-3659-51a2-b518-7001903ac8ef")
+    (property "Reference" "JP1"
+      (at 78.74 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "450301014042"
+      (at 78.74 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:Wurth_450301014042_Exact_B"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "450301014042"
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "3"
+      (uuid "031fc1de-f652-56e7-993b-2ddd33f1cf5b"))
+    (pin "1"
+      (uuid "a988563f-0536-5d32-9cf9-0b06dc0ab031"))
+    (pin "2"
+      (uuid "4b7ea1de-3e57-5a72-ba4b-1ca26cb4b4f4"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "JP1")
+          (unit 1))))
+    (property "Description" "Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch."
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 78.74 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 66.04 69.85)
+      (xy 60.96 69.85))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "77ad7f38-b110-5976-aff0-441c6133daf8"))
+  (global_label "MOD_RAW"
+    (shape bidirectional)
+    (at 60.96 69.85 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0aa88358-bda8-5ee5-b693-30a7be8ac2bb"))
+  (wire
+    (pts
+      (xy 66.04 72.39)
+      (xy 60.96 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "1e3b7590-8dbd-5753-8f0d-d2f61300b7ca"))
+  (global_label "MOD_IN"
+    (shape bidirectional)
+    (at 60.96 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "8e2b5bb5-9a0d-51ed-8cee-0b9f7cd87f8e"))
+  (wire
+    (pts
+      (xy 66.04 74.93)
+      (xy 60.96 74.93))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2d0e70df-2f70-544c-b96c-a2a8435a841f"))
+  (global_label "MOD_BIPOLAR"
+    (shape bidirectional)
+    (at 60.96 74.93 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "7ee47f81-048b-551d-996f-f3c9b011402b"))
+  (symbol
+    (lib_id "RadianPanel:U2")
+    (at 219.71 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "76da6519-7887-5b94-ad4a-2323d80f01ec")
+    (property "Reference" "U2"
+      (at 219.71 62.04 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "OPA2192ID"
+      (at 219.71 82.74 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:SOIC8_3.9x4.9_P1.27"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "OPA2192ID"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "9f4c0eb2-1855-5eee-805a-3ea4d4d0e3a7"))
+    (pin "2"
+      (uuid "6c61c9c6-03c0-540d-8879-763d6e445930"))
+    (pin "3"
+      (uuid "5afcd98d-d80d-5bc1-833f-9fe2c531d728"))
+    (pin "4"
+      (uuid "cea005a5-4a83-5a9d-9d5f-3bb97c3b3988"))
+    (pin "5"
+      (uuid "20806f24-ef06-506c-a660-ac72c1d1a5af"))
+    (pin "6"
+      (uuid "08f42ddf-c7ec-5124-949c-666cddea05b0"))
+    (pin "7"
+      (uuid "ed7d5c70-1930-5d0d-b1b5-ed35629fd348"))
+    (pin "8"
+      (uuid "cba17c17-db74-5611-8de7-ee978817fd8f"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "U2")
+          (unit 1))))
+    (property "Description" "A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping."
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Texas Instruments"
+      (at 219.71 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 207.01 68.58)
+      (xy 201.93 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "0e666a74-cd4e-5810-aef3-b207fb14e99c"))
+  (global_label "VREF_BUF"
+    (shape bidirectional)
+    (at 201.93 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0ce3548a-8394-5403-a26d-053f8689c0ed"))
+  (wire
+    (pts
+      (xy 207.01 71.12)
+      (xy 201.93 71.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "846f82d5-132f-53b4-8047-ba5f3817f732"))
+  (global_label "VREF_BUF"
+    (shape bidirectional)
+    (at 201.93 71.12 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "04f6909d-0838-5bbf-9dea-f829bd5c825d"))
+  (wire
+    (pts
+      (xy 207.01 73.66)
+      (xy 201.93 73.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "effc7a86-57eb-5342-8911-f55589ba671d"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 201.93 73.66 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "db4fafd5-4b4e-5422-a109-1b96f0470a58"))
+  (wire
+    (pts
+      (xy 207.01 76.2)
+      (xy 201.93 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "50b7caad-96dc-5da5-9f47-8904ebe4366e"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 201.93 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "5d224b96-0753-5525-a0ed-a776db8cb2de"))
+  (wire
+    (pts
+      (xy 232.41 68.58)
+      (xy 237.49 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6dae3ce3-c2cb-52e6-abc8-edcf15586e3e"))
+  (global_label "MOD_SUM"
+    (shape bidirectional)
+    (at 237.49 68.58 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "9540e2dc-641f-56dc-a3a7-da8764c11fa9"))
+  (wire
+    (pts
+      (xy 232.41 71.12)
+      (xy 237.49 71.12))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "ff3fe510-9cac-526a-a196-ae0598edce09"))
+  (global_label "MOD_FB"
+    (shape bidirectional)
+    (at 237.49 71.12 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "30633f2d-6990-5cd1-9ab7-a59b8cbf98d0"))
+  (wire
+    (pts
+      (xy 232.41 73.66)
+      (xy 237.49 73.66))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "8d01b748-7b20-5094-adc6-b81b2a4fcab2"))
+  (global_label "MOD_BIPOLAR"
+    (shape bidirectional)
+    (at 237.49 73.66 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "2a1d7b78-2810-54cc-bbc7-28419da2cca6"))
+  (wire
+    (pts
+      (xy 232.41 76.2)
+      (xy 237.49 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "36a47249-7a47-5231-9b77-437f404a3302"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 237.49 76.2 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "1de90c17-ba4b-521e-a3a9-7d811a4615f0"))
+  (symbol
+    (lib_id "RadianPanel:R20")
+    (at 360.68 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "4f0fc251-9961-5f36-90aa-92cff98b7d48")
+    (property "Reference" "R20"
+      (at 360.68 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "200k"
+      (at 360.68 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:R_0603"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 200k 0.1% 0603"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "4ab322a0-3ce1-5ea9-8c43-8452f7da9344"))
+    (pin "2"
+      (uuid "448a9d19-fe6f-5530-9065-79a0e08bd035"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "R20")
+          (unit 1))))
+    (property "Description" "Resistor 0.1%"
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 360.68 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 350.52 72.39)
+      (xy 345.44 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "bf6627a5-bd67-5bec-825b-4fc715cbdc17"))
+  (global_label "MOD_RAW"
+    (shape bidirectional)
+    (at 345.44 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "20e8fd49-a4ba-5457-8c3f-464c7cfb6c93"))
+  (wire
+    (pts
+      (xy 370.84 72.39)
+      (xy 375.92 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "73d28374-567b-55e5-99cd-fdec76a5beea"))
+  (global_label "MOD_SUM"
+    (shape bidirectional)
+    (at 375.92 72.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c0e5ef7d-4854-5278-94a9-28f329c7ee00"))
+  (symbol
+    (lib_id "RadianPanel:R21")
+    (at 501.65 72.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8186e4ec-ba27-5931-9775-980ea06efde9")
+    (property "Reference" "R21"
+      (at 501.65 63.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "100k"
+      (at 501.65 81.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:R_0603"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 100k 0.1% 0603"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "520ad7bf-0f75-5b1f-bf1f-afeac0b69957"))
+    (pin "2"
+      (uuid "fbcd4eba-c3b0-5dd1-8c2f-7eb084b08c9a"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "R21")
+          (unit 1))))
+    (property "Description" "Resistor 0.1%"
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 501.65 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 491.49 72.39)
+      (xy 486.41 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "5576095f-b534-5bc6-a837-8736aa323c38"))
+  (global_label "VREF_BUF"
+    (shape bidirectional)
+    (at 486.41 72.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0d9e785b-b32a-5aac-b81d-bb410de2e3d4"))
+  (wire
+    (pts
+      (xy 511.81 72.39)
+      (xy 516.89 72.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "730e76c5-b956-5767-b921-3e9f226449db"))
+  (global_label "MOD_SUM"
+    (shape bidirectional)
+    (at 516.89 72.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "1def39de-c1e6-58ec-ba3b-e7868df50800"))
+  (symbol
+    (lib_id "RadianPanel:R22")
+    (at 78.74 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "86815e7d-c360-516d-afff-46eb3b0d64c0")
+    (property "Reference" "R22"
+      (at 78.74 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "200k"
+      (at 78.74 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:R_0603"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 200k 0.1% 0603"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "21a382d3-16f6-5430-8b44-8727e92739a2"))
+    (pin "2"
+      (uuid "d31b4479-11d9-5ceb-b81f-7345d04dce52"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "R22")
+          (unit 1))))
+    (property "Description" "Resistor 0.1%"
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 78.74 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 68.58 135.89)
+      (xy 63.5 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "cf9650d1-fc7f-5d62-bccc-d2322bda9ce6"))
+  (global_label "MOD_SUM"
+    (shape bidirectional)
+    (at 63.5 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "93660995-0ac3-5905-b1f7-9de77381f39e"))
+  (wire
+    (pts
+      (xy 88.9 135.89)
+      (xy 93.98 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "f4585739-a9de-55b7-b840-27cbc957106d"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 93.98 135.89 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "67a725c0-6ea7-520e-bc81-093525d383dc"))
+  (symbol
+    (lib_id "RadianPanel:R23")
+    (at 219.71 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "45109df0-d108-5e40-988e-420c2d961340")
+    (property "Reference" "R23"
+      (at 219.71 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k"
+      (at 219.71 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:R_0603"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 10k 0.1% 0603"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "e6e98757-c607-5dde-b460-dfdc4d54ddab"))
+    (pin "2"
+      (uuid "37703f59-30bf-5634-a28e-fdbef4540488"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "R23")
+          (unit 1))))
+    (property "Description" "Resistor 0.1%"
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 219.71 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 209.55 135.89)
+      (xy 204.47 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fe448156-42cf-508f-9a24-919c906e53d2"))
+  (global_label "MOD_FB"
+    (shape bidirectional)
+    (at 204.47 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "a065a9a8-eba7-5bf1-bc7e-6b0758cc8144"))
+  (wire
+    (pts
+      (xy 229.87 135.89)
+      (xy 234.95 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "01543df0-4f82-5a42-a863-bb9c5c9974de"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 234.95 135.89 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "e1e1fe8c-50d5-57a7-a047-88bdb980d4e8"))
+  (symbol
+    (lib_id "RadianPanel:R24")
+    (at 360.68 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5a1e97fe-608e-588b-abb0-73dfd93ea8dd")
+    (property "Reference" "R24"
+      (at 360.68 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "10k"
+      (at 360.68 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:R_0603"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 10k 0.1% 0603"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "901e7fa3-8f98-5aca-b90b-dac61dcf045a"))
+    (pin "2"
+      (uuid "818fb7e9-7452-5ab0-a996-3cebb41407c0"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "R24")
+          (unit 1))))
+    (property "Description" "Resistor 0.1%"
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 360.68 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 350.52 135.89)
+      (xy 345.44 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "b4d2e8a7-1d97-5d44-bddf-105bcbfcd9cb"))
+  (global_label "MOD_BIPOLAR"
+    (shape bidirectional)
+    (at 345.44 135.89 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "196f6f4e-9a0f-55cf-98b0-1687045be133"))
+  (wire
+    (pts
+      (xy 370.84 135.89)
+      (xy 375.92 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "d1c68a61-cddc-56e3-9732-fd9937a1e9c6"))
+  (global_label "MOD_FB"
+    (shape bidirectional)
+    (at 375.92 135.89 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "bdbb6009-0bc3-5fb3-838d-dc973a0bad7d"))
+  (symbol
+    (lib_id "RadianPanel:D4")
+    (at 501.65 135.89 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0a9cb6cd-78cb-5760-9975-5324be4a7a45")
+    (property "Reference" "D4"
+      (at 501.65 126.81 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "BAT54S"
+      (at 501.65 144.97 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:SOT23_BAT54S"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "BAT54S,215"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "0d45a8b9-bb06-545b-8d71-0b1bed37fda6"))
+    (pin "2"
+      (uuid "344b3218-9521-54ee-93ec-c2be6cdd874f"))
+    (pin "3"
+      (uuid "f26e5a97-6089-5470-b62f-ca9df7a90d5a"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "D4")
+          (unit 1))))
+    (property "Description" "Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior."
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" "Nexperia"
+      (at 501.65 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 488.95 134.62)
+      (xy 483.87 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "5f038c3b-7850-58e2-a7b2-6bda57e43f60"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 483.87 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "35db33ca-610d-5f25-b531-26697355ff97"))
+  (wire
+    (pts
+      (xy 488.95 137.16)
+      (xy 483.87 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "ac1fa494-d099-5265-b788-fe7564eb59bd"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 483.87 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "94df686a-57f9-5d67-b88f-788a8ba1ff4d"))
+  (wire
+    (pts
+      (xy 514.35 135.89)
+      (xy 519.43 135.89))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "09180d71-3f8d-547e-9197-f15555e006b2"))
+  (global_label "MOD_SUM"
+    (shape bidirectional)
+    (at 519.43 135.89 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "cce35c50-da66-5e56-acb7-6a2f701353f5"))
+  (symbol
+    (lib_id "RadianPanel:C20")
+    (at 78.74 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "60f3a6c1-6f01-5457-bd28-d2f52e211c96")
+    (property "Reference" "C20"
+      (at 78.74 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "100nF"
+      (at 78.74 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:C_0603"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 100nF 16V X7R 0603"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "0927cc37-4567-523e-8b88-a9985b7cd066"))
+    (pin "2"
+      (uuid "48c27119-79ce-5e72-bf24-9974516a30b4"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "C20")
+          (unit 1))))
+    (property "Description" "16V X7R; verify effective capacitance at DC bias"
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 78.74 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 68.58 199.39)
+      (xy 63.5 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "fb275b2a-a4a0-5186-8932-99a07754850f"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 63.5 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "bcbb7647-f761-5c94-806d-64733254ca18"))
+  (wire
+    (pts
+      (xy 88.9 199.39)
+      (xy 93.98 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "7d02fb18-62a4-5c2f-8f7c-cd01c7af81ee"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 93.98 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "aee1a280-56c9-54b3-8dce-a38c356e82f7"))
+  (symbol
+    (lib_id "RadianPanel:C21")
+    (at 219.71 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9b8308d0-0230-537b-ac42-dd90818e7824")
+    (property "Reference" "C21"
+      (at 219.71 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "1uF"
+      (at 219.71 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:C_0805"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "SELECT 1uF 16V X7R 0805"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "6e50762f-dbe7-5183-a3f2-3e67b26e1281"))
+    (pin "2"
+      (uuid "2a0766a4-f4c6-532f-b5b9-a346c9cbda78"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "C21")
+          (unit 1))))
+    (property "Description" "16V X7R; verify effective capacitance at DC bias"
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 219.71 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 209.55 199.39)
+      (xy 204.47 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "92038c36-dd9c-5220-a51e-1a52eec72fb5"))
+  (global_label "VIN5"
+    (shape bidirectional)
+    (at 204.47 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "cccdfe0b-f559-5a35-9656-b7d81d1ee184"))
+  (wire
+    (pts
+      (xy 229.87 199.39)
+      (xy 234.95 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3cbb3317-68fb-59ca-a17a-6af067d64ac8"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 234.95 199.39 180)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "c0dd7b7a-b0b2-5cab-99b7-bce53a19d519"))
+  (symbol
+    (lib_id "RadianPanel:TP4")
+    (at 360.68 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9a57579e-c67c-5118-aa2a-a9574281fbeb")
+    (property "Reference" "TP4"
+      (at 360.68 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "VREF25"
+      (at 360.68 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:TestPoint_D2"
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PCB test pad"
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "9fe26028-336f-51f2-be4d-0991fb7b7f4a"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "TP4")
+          (unit 1))))
+    (property "Description" "Exposed soldermask aperture, no component."
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 360.68 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 350.52 199.39)
+      (xy 345.44 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "900a9d99-6875-542f-9e32-51802380b40a"))
+  (global_label "VREF25"
+    (shape bidirectional)
+    (at 345.44 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "0f806622-af09-57cc-8763-377aea8d2e98"))
+  (symbol
+    (lib_id "RadianPanel:TP5")
+    (at 501.65 199.39 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "2d0eae80-797a-549c-a27f-4473fbcee434")
+    (property "Reference" "TP5"
+      (at 501.65 190.31 0)
+      (effects
+        (font
+          (size 1.6 1.6))))
+    (property "Value" "MOD_BIPOLAR"
+      (at 501.65 208.47 0)
+      (effects
+        (font
+          (size 1.05 1.05))))
+    (property "Footprint" "RadianPanel:TestPoint_D2"
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        hide))
+    (property "MPN" "PCB test pad"
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1 1))
+        hide))
+    (pin "1"
+      (uuid "fcd5c1a3-e915-52d2-bf6c-6f2e14641155"))
+    (instances
+      (project "radian_panel"
+        (path "/7d46cc62-3a7a-5bb5-ab56-ed22db4ad276/a353e908-e1f3-5887-a37d-be1463de1afa"
+          (reference "TP5")
+          (unit 1))))
+    (property "Description" "Exposed soldermask aperture, no component."
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide))
+    (property "Manufacturer" ""
+      (at 501.65 199.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        hide)))
+  (wire
+    (pts
+      (xy 491.49 199.39)
+      (xy 486.41 199.39))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "a9e2ce91-6b3e-52c3-8c5e-436ed2905da9"))
+  (global_label "MOD_BIPOLAR"
+    (shape bidirectional)
+    (at 486.41 199.39 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right))
+    (uuid "6654fa26-404b-5d1e-adba-648711604406"))
+  (text "JP1 is an SPDT configuration switch: one throw selects direct unipolar MOD_RAW; the other selects MOD_BIPOLAR."
+    (at 20 365 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "7b4fd508-b5b2-5b07-a689-d7b3c79560be"))
+  (text "JP1 pin 1 common to pin 2 selects MOD_BIPOLAR. Ideal Vout = 0.5*Vin + VREF25. -5/0/+5 V -> 0/2.5/5 V."
+    (at 20 373 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "80fe7b41-6f2a-594b-9af8-0ccef96fee07"))
+  (text "5 V op-amp cannot reach exact rails under load. Endpoints, tolerance, saturation and calibration need testing."
+    (at 20 381 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "bfcafe52-723e-50e4-8f4c-e66cc98f2f45"))
+  (text "Do not rescale the PITCH input implicitly. Bipolar MOD requires a matching firmware range/zero configuration."
+    (at 20 389 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid "7bbf9558-4806-565e-baf8-58c797d11d3b")))

@@ -145,7 +145,7 @@ begin
     wait_note_on(p);
     assert to_integer(unsigned(cv_note)) = 69
       report "cv_frontend_tb: 0 V did not map to the reference note" severity failure;
-    assert coeffs.gamma2 = to_q123(0.09)
+    assert coeffs.gamma2 = to_signed(7210,24)
       report "cv_frontend_tb: reference-note gamma2 wrong" severity failure;
     a_lo := to_integer(coeffs.alpha);             -- alpha at mod = 0
     wait_exc_en;
@@ -168,7 +168,7 @@ begin
     wait_note_on(p);
     assert to_integer(unsigned(cv_note)) = 81
       report "cv_frontend_tb: +1 octave CV did not map +12 semitones" severity failure;
-    assert coeffs.gamma2 = to_q123(0.36)
+    assert coeffs.gamma2 = to_signed(28837,24)
       report "cv_frontend_tb: octave-up gamma2 not x4" severity failure;
     gate <= '0'; wait_note_off(noff_count);
 

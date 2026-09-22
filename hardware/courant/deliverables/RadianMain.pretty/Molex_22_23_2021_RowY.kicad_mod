@@ -1,0 +1,122 @@
+(footprint "Molex_22_23_2021_RowY"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2.54 0)
+		(layer "F.SilkS")
+		(uuid "e9973227-7f2d-4457-8d78-21a5ef1c38b3")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "22-23-2021"
+		(at 0 3 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "005d9517-6a3e-4bb8-90a5-d1a6ce067dec")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "847f386c-5282-42c0-9f88-0b7f95bb1e5c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b01bfba3-e97a-40f9-a7be-5d937dd72663")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Supplier Part Number" ""
+		(at 0 0 270)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "48fe7599-5dfa-4c6f-8a95-eb881a91d28f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -2.7900 -3.4250)
+		(end 2.7900 3.4250)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5a251859-1ff9-4661-b1ba-ae4e331a40de")
+	)
+	(fp_text user "1"
+		(at -1.27 -1.35 180)
+		(layer "F.SilkS")
+		(uuid "1738d977-688b-47ed-ba3e-0a1ba039a4b2")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "2"
+		(at 1.27 -1.35 180)
+		(layer "F.SilkS")
+		(uuid "1ceba3f5-c1f3-4355-b033-335da84ce503")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0)
+		(size 1.5 1.5)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "dcb8bb6c-c10e-4309-b0d2-4b9d39530b6b")
+	)
+	(pad "2" thru_hole circle
+		(at 1.27 0 270)
+		(size 1.5 1.5)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "e3dbc1c9-7695-4d60-abb8-31f8208f1877")
+	)
+	
+	(model "${KIPRJMOD}/cad/models/Molex_22-23-2021_drawing_reference.step"
+		(offset (xyz 0 0 0))
+		(scale (xyz 1 1 1))
+		(rotate (xyz 0 0 180))
+	)
+(embedded_fonts no)
+)

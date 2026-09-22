@@ -1,0 +1,6 @@
+{
+  "pcb": "deliverables/courant.kicad_pcb",
+  "gerbers": [
+    "dist/fab"
+  ]
+}

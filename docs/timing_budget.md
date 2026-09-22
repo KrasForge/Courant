@@ -36,23 +36,48 @@ So a fully-spatial mesh has enormous headroom: oversampling up to roughly
 `OS = 2083 / 7 ~= 290` still fits within one sample period. Grid size does not
 change this number (the nodes update concurrently); it changes area, not time.
 
-### Time-multiplexed mesh (a pool of P PEs)
+### Time-multiplexed mesh
 
-If the grid is folded through `P` shared PEs instead, each oversampled step
-sweeps `NX*NY` nodes in `ceil(NX*NY / P)` passes, so:
+The current `grid_mesh_tdm` implementation serializes the raster through one
+shared arithmetic path. With STIFFNESS=0 it keeps the original one-node-per-clock
+sweep. Nonzero STIFFNESS needs the diagonal and second axial ring of the
+13-point biharmonic stencil, but it does **not** add eight simultaneous memory
+read ports: four gather states fetch two extra taps per clock, then the normal
+node-update state runs.
 
-```
-cycles / frame ~= OS * ceil(NX*NY / P) * (pipeline-limited per-pass cost)
-```
+For the production 8x8 grid:
 
-For example a 32x32 = 1024-node mesh at OS=4 through P=16 PEs is on the order of
-`4 * 64 * (~4) ~= 1024` cycles, still under the 2083-cycle budget; larger grids
-or higher OS trade against `P`. The fully-spatial and time-multiplexed builds
-share the same RTL (`grid_mesh` generics), so this is a synthesis-time choice.
+| TDM mode | clocks / mesh step | OS=4 mesh clocks / audio frame |
+| --- | ---: | ---: |
+| STIFFNESS=0 | legacy ~66 | ~264 |
+| STIFFNESS>0 | **322 measured** | **1288** |
+
+`stiffness_tb` pins the 322-clock nonzero-stiffness value. The surrounding
+`mesh_resonator` FIRE/WAIT handshake adds only a few clocks per substep, so a
+stiff OS=4 voice remains around 1.3k clocks/frame, below the 2,083-clock budget
+at 100 MHz / 48 kHz. Voices are separate TDM engines and run in parallel, so
+polyphony consumes area rather than multiplying this per-frame latency.
+
+Larger grids or higher OS must be re-budgeted: nonzero stiffness costs roughly
+five raster clocks per node in the current implementation, while membrane mode
+retains the legacy one-clock raster path.
+
+## Post-mesh FX latency
+
+The effects are handshake-driven between audio frames, not part of the mesh
+oversampling sweep. `fx_master_bus` accepts one post-FDN sample and returns it
+after three additional 100 MHz clocks (shared left/right compressor gain plus
+output), about **0.14%** of the 2,083-clock frame budget. Parameter smoothing,
+master crossfade and FDN modulation update once per 48 kHz sample and do not add
+block buffering. The four-voice retrigger/steal mixer now needs only nine system
+clocks for its shared fade interpolation, also negligible versus 2,083 clocks
+per frame. The musical mesh's legacy velocity/exciter-shaped strike uses the existing oversample substeps, while high-frequency damping and anisotropy are computed during the normal node update. RIM compliance is applied during the ordinary boundary-neighbour fetch. STRIKE SIZE/X/Y only change the per-node forcing comparison/weight during the same raster, and fractional pickup interpolation captures its four corner samples as the raster already visits them. The #87 physical mallet likewise adds **no extra raster state**: its two scalar hammer states advance on the existing mesh strobe, while the actual strike-point contact corners are captured during the normal TDM raster (the spatial backend reads them directly). STIFFNESS is the exception: when nonzero it activates the four two-tap gather states described above for the wider plate stencil; when zero those states are bypassed exactly.
+No audio clock, panel, or PCB change is needed.
 
 ## Conclusion
 
 The single-cycle `frame` strobe plus the `mesh_resonator` sequencer completes
-the full oversampled mesh sweep well within one audio sample period for every
-practical configuration: fully-spatial leaves >94% of the budget free even at
-16x oversampling, and the time-multiplexed fold still fits a 32x32 mesh.
+the configured production 8x8/OS=4 mesh within one audio sample period in both
+membrane and stiff-surface modes. Fully-spatial leaves large timing headroom;
+for TDM, larger grids or higher oversampling must be checked against the formulas
+above, especially when STIFFNESS is nonzero.

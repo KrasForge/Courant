@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "reference": "J1",
+  "part": "Molex 22-23-2021",
+  "board_center_mm": [30.0, 65.0],
+  "left_board_edge_mm": 19.95,
+  "model_rotation_about_footprint_deg": 180.0,
+  "lock_ramp_before_step_x_mm": 32.72,
+  "lock_ramp_after_step_x_mm": 27.28,
+  "orientation": "locking/friction-ramp side faces the left board edge",
+  "electrical_geometry": "pads and copper unchanged; J1.1 remains VIN5 and J1.2 remains GND",
+  "drc": "PASS: 0 violations, 0 unconnected items"
+}

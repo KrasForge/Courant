@@ -31,9 +31,13 @@ use ieee.math_real.all;
 
 library work;
 use work.fdtd_pkg.all;
+use work.musical_pkg.all;
 
 entity cv_frontend is
   generic (
+    NX : positive := 8; NY : positive := 8; OS : positive := 4;
+    FS_HZ : positive := 48_000;
+    CALIBRATED_PITCH : boolean := true; -- false retains explicit raw-coefficient API
     CV_W        : positive := 16;        -- ADC sample width (signed)
     -- pitch CV calibration: note = NOTE_REF + (pitch_cv-CV_OFFSET)*CV_SCALE>>CV_SHIFT
     CV_OFFSET   : integer  := 0;
@@ -49,7 +53,7 @@ entity cv_frontend is
     SIGK1       : real     := 0.99996875;
     GAMMA2_MAX  : real     := 0.451;
     -- strike / timbre
-    STRIKE_GAIN : real     := 0.9;       -- gate strike amplitude
+    STRIKE_GAIN : real     := 0.002;       -- gate strike amplitude
     VEL_STRIKE  : natural  := 100;       -- fixed strike velocity (gate is on/off)
     ALPHA_MIN   : real     := 0.0;       -- alpha at mod CV = 0
     ALPHA_MAX   : real     := 0.3        -- alpha at mod CV = full scale
@@ -57,6 +61,7 @@ entity cv_frontend is
   port (
     clk      : in  std_logic;
     rst      : in  std_logic;
+    free_mode: in boolean := false;
     frame    : in  std_logic;                    -- per-audio-frame tick
     pitch_cv : in  signed(CV_W-1 downto 0);      -- 1V/oct pitch (ADC)
     gate     : in  std_logic;                    -- gate / trigger (comparator)
@@ -76,7 +81,7 @@ architecture rtl of cv_frontend is
 
   -- note -> gamma2 table (identical to midi_frontend), CFL-clamped
   type g2_table_t is array (0 to 127) of q123_t;
-  function build_g2_table return g2_table_t is
+  function build_g2_table(free: boolean := false) return g2_table_t is
     variable t : g2_table_t;
     variable g : real;
   begin
@@ -84,11 +89,13 @@ architecture rtl of cv_frontend is
       g := GAMMA2_REF * 2.0 ** (real(n - NOTE_REF) / 6.0);
       if g > GAMMA2_CLAMP then g := GAMMA2_CLAMP; end if;
       if g < GAMMA2_MIN   then g := GAMMA2_MIN;   end if;
-      t(n) := to_q123(g);
+      if CALIBRATED_PITCH then t(n) := note_gamma2(n,NX,NY,OS,FS_HZ,free);
+      else t(n) := to_q123(g); end if;
     end loop;
     return t;
   end function;
-  constant G2_TABLE : g2_table_t := build_g2_table;
+  constant G2_TABLE : g2_table_t := build_g2_table(false);
+  constant G2_FREE : g2_table_t := build_g2_table(true);
 
   constant STRIKE_Q : q123_t := to_q123(STRIKE_GAIN);
   constant AMIN_Q   : q123_t := to_q123(ALPHA_MIN);
@@ -161,7 +168,8 @@ begin
 
         -- gate edges: rising = strike, falling = release (natural decay)
         if g_sync = '1' and g_d = '0' then
-          coeffs.gamma2     <= G2_TABLE(note_q);
+          if free_mode then coeffs.gamma2 <= G2_FREE(note_q);
+          else coeffs.gamma2 <= G2_TABLE(note_q); end if;
           coeffs.alpha      <= alpha_q;
           coeffs.a0         <= to_q123(A0);
           coeffs.sigk1      <= to_q123(SIGK1);

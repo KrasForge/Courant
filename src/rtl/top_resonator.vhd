@@ -72,6 +72,7 @@ architecture rtl of top_resonator is
 
   -- coefficients (system domain)
   signal coeffs : coeffs_t;
+  signal stiffness_ctrl,hardness_ctrl : unsigned(7 downto 0) := (others=>'0');
 
   -- excitation CDC (I2S -> system)
   signal exc_slv   : std_logic_vector(23 downto 0);
@@ -107,7 +108,11 @@ begin
               preset_index => preset_index, recall => preset_recall, save => preset_save,
               coeffs => coeffs,
               pick_lx => open, pick_ly => open, pick_rx => open, pick_ry => open,
-              free_boundary => open);
+              free_boundary => open, physical_ctrl => open,
+              rim_ctrl=>open,strike_size=>open,strike_x_ctrl=>open,strike_y_ctrl=>open,
+              stiffness_ctrl=>stiffness_ctrl,hardness_ctrl=>hardness_ctrl,
+              fx_ctrl0 => open, fx_ctrl1 => open, fx_ctrl2 => open,
+              fx_ctrl3 => open, fx_ctrl4 => open, fx_ctrl5 => open);
 
   ----------------------------------------------------------------------------
   -- Excitation CDC: the mallet (rx_l) crosses into the mesh domain. Its
@@ -127,7 +132,8 @@ begin
     generic map (NX => NX, NY => NY, OS => OS, FREE_BOUNDARY => FREE_BOUNDARY,
                  TIME_MUX => TIME_MUX)
     port map (clk => sys_clk, rst => sys_rst,
-              frame => exc_valid, coeffs => coeffs,
+              frame => exc_valid, coeffs => coeffs, stiffness_ctrl=>stiffness_ctrl,
+              hardness_ctrl=>hardness_ctrl,
               exc_in => signed(exc_slv), exc_en => '1',
               out_l => out_l, out_r => out_r, out_valid => out_valid);
 

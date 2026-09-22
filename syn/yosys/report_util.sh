@@ -9,7 +9,7 @@
 # Requires: yosys + yosys-plugin-ghdl + ghdl.
 #   sudo apt-get install yosys yosys-plugin-ghdl ghdl
 #
-# Usage:  ./report_util.sh            # node_element, grid_mesh, top_resonator
+# Usage:  ./report_util.sh            # node_element, physical_mallet, grid_mesh, top_resonator, FX, synth_top
 set -euo pipefail
 
 # Point the ghdl yosys plugin at the installed ghdl library prefix.
@@ -31,20 +31,27 @@ report() {            # $1 = top entity, $2... = source files
   rm -f "$tmp"
 }
 
-SYNTH_SRCS="$RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
+SYNTH_SRCS="$RTL/fdtd_pkg.vhd $RTL/physical_pkg.vhd $RTL/physical_mallet.vhd $RTL/fx_pkg.vhd $RTL/fx_drive.vhd $RTL/fx_tone.vhd \
+  $RTL/fx_chorus.vhd $RTL/fx_delay.vhd $RTL/fx_fdn_reverb.vhd $RTL/fx_master_bus.vhd \
+  $RTL/fx_chain.vhd $RTL/musical_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
   $RTL/grid_mesh_tdm.vhd $RTL/mesh.vhd $RTL/cdc_word.vhd $RTL/i2s_transceiver.vhd \
   $RTL/i2s_clkgen.vhd $RTL/sample_strobe.vhd $RTL/mesh_resonator.vhd \
   $RTL/voice_allocator.vhd $RTL/poly_voices.vhd $RTL/midi_uart_rx.vhd \
   $RTL/midi_frontend.vhd $RTL/cv_frontend.vhd $RTL/preset_bank.vhd \
   $RTL/synth_top.vhd"
 
-report node_element  $RTL/fdtd_pkg.vhd $RTL/node_element.vhd
-report grid_mesh     $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd
-report top_resonator $RTL/fdtd_pkg.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
+report node_element  $RTL/fdtd_pkg.vhd $RTL/physical_pkg.vhd $RTL/node_element.vhd
+report physical_mallet $RTL/fdtd_pkg.vhd $RTL/physical_pkg.vhd $RTL/physical_mallet.vhd
+report grid_mesh     $RTL/fdtd_pkg.vhd $RTL/physical_pkg.vhd $RTL/physical_mallet.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd
+report top_resonator $RTL/fdtd_pkg.vhd $RTL/physical_pkg.vhd $RTL/physical_mallet.vhd $RTL/node_element.vhd $RTL/grid_mesh.vhd \
                      $RTL/grid_mesh_tdm.vhd $RTL/mesh.vhd \
                      $RTL/cdc_word.vhd $RTL/i2s_transceiver.vhd \
                      $RTL/mesh_resonator.vhd $RTL/preset_bank.vhd \
                      $RTL/top_resonator.vhd
+report fx_master_bus $RTL/fdtd_pkg.vhd $RTL/fx_pkg.vhd $RTL/fx_master_bus.vhd
+report fx_chain      $RTL/fdtd_pkg.vhd $RTL/fx_pkg.vhd $RTL/fx_drive.vhd \
+                     $RTL/fx_tone.vhd $RTL/fx_chorus.vhd $RTL/fx_delay.vhd \
+                     $RTL/fx_fdn_reverb.vhd $RTL/fx_master_bus.vhd $RTL/fx_chain.vhd
 
 # The playable synth (issue #77): flatten so the aggregate DSP/LUT/FF are summed
 # (a hierarchical top otherwise reports only the wrapper's cells). Sweep configs

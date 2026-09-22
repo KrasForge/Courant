@@ -1,4 +1,4 @@
-# Courant
+# RADIAN
 
 A 2D finite-difference physical-modeling synthesis engine in structural VHDL,
 with an amplitude-dependent non-linear "chaos injection" term, playable
@@ -16,7 +16,7 @@ shaped by recallable instrument presets and a live front panel.
 > **Status: simulation-first, feature-complete in simulation, pre-hardware.**
 > The engine, a Q1.23 reference model that is *bit-exact* to the RTL, and a full
 > playable top (MIDI/CV $\rightarrow$ polyphony $\rightarrow$ I2S audio) are
-> developed and verified in GHDL across 23 testbenches. Board bring-up on a
+> developed and verified under the current RTL regression across 31 testbenches. Board bring-up on a
 > Digilent Arty A7 + Pmod I2S2 is the next step; nothing is claimed to work on
 > hardware until it does.
 
@@ -231,30 +231,22 @@ The engine is wrapped into a complete, flashable instrument
 
 - **MIDI** ([`midi_frontend.vhd`](src/rtl/midi_frontend.vhd) over
   [`midi_uart_rx.vhd`](src/rtl/midi_uart_rx.vhd)): parses the 31250-baud serial
-  stream and maps note number $\rightarrow$ $\gamma^2$ (pitch), velocity
-  $\rightarrow$ $\alpha$ (timbre) and strike amplitude, emitting note-on/off
-  events plus a one-frame excitation. See [`docs/midi.md`](docs/midi.md).
-- **Control voltage** ([`cv_frontend.vhd`](src/rtl/cv_frontend.vhd)): the same
-  note-mapping interface, driven from 1V/oct pitch, a gate, and a mod CV. A
-  runtime `cv_sel` mux picks MIDI or CV, so one design plays from either; CV
-  inputs default off. See [`docs/cv.md`](docs/cv.md).
+  stream, maps note number through a discrete-mesh calibrated pitch table, and
+  maps velocity to strike amplitude only. CHAOS is an independent panel/CV
+  control. See [`docs/midi.md`](docs/midi.md).
+- **Control voltage** ([`cv_frontend.vhd`](src/rtl/cv_frontend.vhd)): the same note-mapping interface, driven from 1V/oct pitch, a gate, and a mod CV. MIDI/CV arbitration is normally automatic: the newest MIDI note-on or CV gate edge claims the source. Presets/registers can force MIDI or CV, while the legacy `cv_sel` port remains only as a force-CV/debug override. See [`docs/cv.md`](docs/cv.md).
 - **Polyphony** ([`poly_voices.vhd`](src/rtl/poly_voices.vhd) +
   [`voice_allocator.vhd`](src/rtl/voice_allocator.vhd)): allocates each note to
   a free voice, runs `NVOICES` independent meshes, and averages their stereo
   pickups. With `TIME_MUX` the voices fold onto shared PEs so polyphony fits a
   small part. See [`docs/polyphony.md`](docs/polyphony.md).
-- **Presets** ([`preset_bank.vhd`](src/rtl/preset_bank.vhd)): supplies the
-  instrument "body", the decay coefficients $a_0$ / $\mathrm{sigk1}$ and the CFL
-  clamp $\gamma^2_{\max}$, recalled and saved via the panel. A preset picks the
-  instrument; notes play it. See [`docs/presets.md`](docs/presets.md).
-- **Front panel** ([`panel_ctrl.vhd`](src/rtl/panel_ctrl.vhd)): maps three pots
-  to live coefficients (with a dead-band so only real movement writes), a rotary
-  encoder to the preset index, and a button to short-press recall / long-press
-  save. See [`docs/panel.md`](docs/panel.md).
+- **Presets** ([`preset_bank.vhd`](src/rtl/preset_bank.vhd)): supplies TENSION, DECAY, CHAOS, the CFL clamp, **STIFFNESS / plate dispersion**, **HARDNESS / stateful physical mallet**, pickup geometry, RIM compliance, STRIKE SIZE/X/Y, MATERIAL/ANISO/CHARACTER and source override. Voice-relevant settings are latched into each newly struck voice. See [`docs/presets.md`](docs/presets.md).
+- **Front panel** ([`panel_ctrl.vhd`](src/rtl/panel_ctrl.vhd)): the existing MODE switch is PLAY/EDIT. PLAY keeps TENSION/DECAY/CHAOS/DRIVE/DELAY/REVERB and encoder preset navigation; EDIT reuses the encoder to select soft-takeover parameter pages, with SURFACE currently mapping ANISO/RIM/STRIKE SIZE/STRIKE X/STRIKE Y/CHARACTER. The four LEDs show voices in PLAY and the selected page in EDIT. No new pot, ADC channel, connector or PCB signal is required. See [`docs/panel.md`](docs/panel.md).
 
 The end-to-end path (MIDI/CV $\rightarrow$ note mapping $\rightarrow$ preset
 merge $\rightarrow$ polyphonic meshes $\rightarrow$ CDC $\rightarrow$ I2S) is
 described in [`docs/synth_top.md`](docs/synth_top.md).
+The 2026-09-16 musical calibration/quality repair and acceptance results are in [`docs/sound_engine_repair.md`](docs/sound_engine_repair.md).
 
 ---
 
@@ -266,12 +258,7 @@ explore the physics and to *lock the RTL numerically*. The linear
 spatially-varying ([`VarMesh2D.m`](model/VarMesh2D.m)) and non-linear
 ([`NLMesh2D.m`](model/NLMesh2D.m)) meshes each have a study script (stability,
 chaos, exciters, oversampling, materials). Crucially,
-[`nl_reference.m`](model/nl_reference.m) regenerates a Q1.23 golden trace
-(`src/tb/nl_mesh_trace.txt`) using the *same* saturating fixed-point arithmetic
-as the fabric, and the corresponding testbench replays it step for step, so the
-hardware is verified to be **bit-exact** to the model, not merely "close."
-[`demo_render.m`](model/demo_render.m) renders musical, nonlinear, polyphonic
-demo audio.
+[`nl_reference.m`](model/nl_reference.m) regenerates the legacy nonlinear Q1.23 golden trace, while [`stiffness_reference.py`](model/stiffness_reference.py) and [`mallet_reference.py`](model/mallet_reference.py) independently regenerate the production fixed-point STIFFNESS and physical-mallet/HARDNESS traces. Their testbenches replay those traces step for step, so the corresponding hardware paths are verified **bit-exact** to independent models rather than merely "close." [`demo_render.m`](model/demo_render.m) renders musical, nonlinear, polyphonic demo audio.
 
 ---
 
@@ -283,7 +270,7 @@ src/
            I2S transceiver + master clock gen + sample strobe, cdc_word,
            MIDI + CV front-ends, voice allocator + polyphony, preset bank,
            panel controller, control bus, synth_top (the playable design)
-  tb/      23 GHDL testbenches: unit (node, fdtd_pkg, i2s, cdc, uart) ->
+  tb/      31 RTL testbenches: unit (node, fdtd_pkg, i2s, cdc, uart, mallet) ->
            bit-exact golden traces (nl_mesh, mesh_impulse, boundary, pickup) ->
            end-to-end audio (synth_top, poly, preset_top, latency)
 model/     MATLAB/Octave reference model (bit-exact to the RTL) + physics
@@ -303,7 +290,7 @@ docs/      derivations, fixed-point + CFL analysis, per-feature notes
 The reference flow uses **GHDL** (open-source, VHDL-2008):
 
 ```sh
-make -C sim                      # analyse + elaborate + run all 23 testbenches
+make -C sim                      # analyse + elaborate + run all 31 testbenches
 octave-cli --eval "demo_render"  # render nonlinear polyphonic demo audio (model/)
 cd syn/yosys && ./report_util.sh # DSP / LUT / FF resource estimate (yosys)
 ```
@@ -325,6 +312,19 @@ cheap and reproducible. The FPGA is the I2S master; the constraints live in
 [`syn/vivado/arty_synth.xdc`](syn/vivado/arty_synth.xdc). The Vivado non-project
 flow ([`build_synth.tcl`](syn/vivado/build_synth.tcl)) runs opt/place/route and
 fails the build on negative slack (a pass/fail timing gate).
+
+Beyond the dev board there is a **standalone instrument PCB** — a 160 x 100 mm
+six-layer board carrying the XC7A35T, its configuration flash, both oscillators,
+a PCM5102A stereo DAC, and the analog front end the Arty build leaves off (panel
+pots and CV over an MCP3208, an opto-isolated MIDI input, a gate comparator).
+It is written in [tscircuit](https://tscircuit.com) and lives in
+[`hardware/courant/`](hardware/courant/); every device pinout is checked against
+its manufacturer datasheet and the FPGA ball map against AMD's own package file.
+It is **routed but never fabricated**: 1800 segments and 4152 mm of copper on
+six layers, both ground planes uncut, with six BGA escapes still to finish by
+hand. tscircuit places the board and owns the netlist; KiCad writes the Specctra
+file and [Freerouting](https://freerouting.org) cuts the copper. See
+[`docs/board.md`](docs/board.md) for what is and is not verified.
 
 Using the time-multiplexed mesh (~18 DSP per voice, independent of grid size),
 resources scale roughly linearly with voice count:
@@ -352,8 +352,9 @@ Vivado would infer LUTRAM/BRAM). Full table and caveats in
   verified in simulation.
 - It is **not** zero-latency, zero-aliasing, or single-clock-cycle. Those are
   marketing, and this document avoids them deliberately.
-- It is **not** yet a hardware product: board bring-up and the analog front-end
-  (the pot / CV sampling ADC) remain.
+- It is **not** yet a hardware product. The standalone board is drawn and
+  checked but unrouted and unfabricated, and the RTL that would read its panel /
+  CV ADC over SPI is not written yet.
 
 ---
 

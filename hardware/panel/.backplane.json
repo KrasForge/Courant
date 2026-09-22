@@ -1,0 +1,7 @@
+{
+  "pcb": "design/radian_panel.kicad_pcb",
+  "schematic": "design/radian_panel.kicad_sch",
+  "gerbers": [
+    "fab"
+  ]
+}

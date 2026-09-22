@@ -1,0 +1,12 @@
+{
+  "panel": {
+    "electrical_geometry_unchanged": true,
+    "old_sha256": "b19bb9ef6257b5aca2b3591e9d3662307626c9dd99589860454146c08598e129",
+    "new_sha256": "854c1cb1e441cbef667908b3b6f4e6ffde03833e69c899be283ac6c84ab45f8a"
+  },
+  "main": {
+    "electrical_geometry_unchanged": true,
+    "old_sha256": "d7e2a898628225a0c21e27cb2387acf627036a41f7194c9551310b80ddac1b14",
+    "new_sha256": "9b3d05ca68fb3e96574531f8952851e31455e547bc576aa53286b26b4b7d50e5"
+  }
+}

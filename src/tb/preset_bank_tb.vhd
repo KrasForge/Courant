@@ -46,6 +46,9 @@ architecture sim of preset_bank_tb is
   signal coeffs : coeffs_t;
   signal pick_lx, pick_ly, pick_rx, pick_ry : unsigned(COORD_W-1 downto 0);
   signal free_boundary : std_logic;
+  signal phys : std_logic_vector(23 downto 0);
+  signal rim,size,sx,sy,stiffness,hardness : unsigned(7 downto 0);
+  signal fx0, fx1, fx2, fx3, fx4, fx5 : std_logic_vector(23 downto 0);
 
   signal done : boolean := false;
 
@@ -69,7 +72,11 @@ begin
               preset_index => preset_index, recall => recall, save => save,
               coeffs => coeffs, pick_lx => pick_lx, pick_ly => pick_ly,
               pick_rx => pick_rx, pick_ry => pick_ry,
-              free_boundary => free_boundary);
+              free_boundary => free_boundary, physical_ctrl=>phys,
+              rim_ctrl=>rim,strike_size=>size,strike_x_ctrl=>sx,strike_y_ctrl=>sy,
+              stiffness_ctrl=>stiffness,hardness_ctrl=>hardness,
+              fx_ctrl0=>fx0, fx_ctrl1=>fx1, fx_ctrl2=>fx2,
+              fx_ctrl3=>fx3, fx_ctrl4=>fx4, fx_ctrl5=>fx5);
 
   stim : process
     procedure step is begin wait until rising_edge(clk); end procedure;
@@ -107,7 +114,11 @@ begin
 
     -- reset default: linear operating point
     assert coeffs.gamma2 = to_q123(0.09) and coeffs.alpha = to_q123(0.0)
+       and stiffness=0 and hardness=0
       report "preset_bank_tb: reset default wrong" severity failure;
+    assert fx0=x"FC6200" and fx1=x"306040" and fx2=x"2EE040"
+       and fx3=x"6E50C0" and fx4=x"D26446" and fx5=x"B496FF"
+      report "preset_bank_tb: FX defaults wrong" severity failure;
 
     -- factory 0: drum
     do_recall(0);
@@ -140,6 +151,18 @@ begin
     do_write(0, saved_g2);
     assert coeffs.gamma2 = signed(saved_g2)
       report "preset_bank_tb: per-register edit did not take" severity failure;
+    do_write(10, x"FC6200");              -- enable stored FX profile
+    assert fx0 = x"FC6200"
+      report "preset_bank_tb: FX register edit did not take" severity failure;
+    do_write(9, x"15552A");               -- packed physical-model controls
+    assert phys = x"15552A"
+      report "preset_bank_tb: physical-control register edit did not take" severity failure;
+    do_write(5, x"A50002");               -- STIFFNESS=A5, RIM=00, pick_lx=2
+    assert stiffness=x"A5" and rim=0 and pick_lx=to_unsigned(2,COORD_W)
+      report "preset_bank_tb: stiffness field edit did not take" severity failure;
+    do_write(6, x"5A0004");               -- HARDNESS=5A, STRIKE SIZE=00, pick_ly=4
+    assert hardness=x"5A" and size=0 and pick_ly=to_unsigned(4,COORD_W)
+      report "preset_bank_tb: hardness field edit did not take" severity failure;
     do_save(3);                               -- user slot 0
 
     -- clobber the live registers with a different factory preset
@@ -151,6 +174,14 @@ begin
     do_recall(3);
     assert coeffs.gamma2 = signed(saved_g2)
       report "preset_bank_tb: user preset recall did not restore" severity failure;
+    assert fx0 = x"FC6200"
+      report "preset_bank_tb: user preset did not restore FX words" severity failure;
+    assert phys = x"15552A"
+      report "preset_bank_tb: user preset did not restore physical controls, got 0x" & to_hstring(phys) severity failure;
+    assert stiffness=x"A5"
+      report "preset_bank_tb: user preset did not restore STIFFNESS" severity failure;
+    assert hardness=x"5A"
+      report "preset_bank_tb: user preset did not restore HARDNESS" severity failure;
 
     --------------------------------------------------------------------------
     -- factory slots are read-only

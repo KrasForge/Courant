@@ -1,105 +1,74 @@
 # MIDI / CV input front-end
 
-Turning the engine from a physics demo into a playable instrument (milestone
-M8). A serial MIDI stream drives pitch, strike energy, and timbre. The front-end
-is [`src/rtl/midi_frontend.vhd`](../src/rtl/midi_frontend.vhd) (parser + mapping)
-on top of [`src/rtl/midi_uart_rx.vhd`](../src/rtl/midi_uart_rx.vhd) (the serial
-receiver). It emits a full `coeffs_t` plus the excitation, ready to drive
-`mesh_resonator` / `top_resonator` in place of the control-bus + I2S excitation.
+The playable RADIAN path maps MIDI/CV notes to the **actual discrete mesh** rather
+than treating `gamma2` as an arbitrary pitch knob. RTL lives in
+[`midi_frontend.vhd`](../src/rtl/midi_frontend.vhd),
+[`cv_frontend.vhd`](../src/rtl/cv_frontend.vhd), and
+[`musical_pkg.vhd`](../src/rtl/musical_pkg.vhd).
 
-## Signal chain
+## Pitch calibration
 
-```
-MIDI in --> midi_uart_rx --> parser --> note/velocity mapping --> coeffs + exc
- (31250     (8N1 byte)      (note-on/   (pitch / strike / timbre)  to the mesh
-  baud)                      note-off)
-```
-
-- **midi_uart_rx**: standard oversampling UART at 31250 baud, 8 data bits
-  LSB-first, no parity, one stop bit. The bit period is `CLK_HZ / BAUD` system
-  clocks (3200 at 100 MHz). Synchronise the raw MIDI pin with a two-flop
-  synchroniser before this block on hardware.
-- **parser**: recognises Note On (`0x9n`) and Note Off (`0x8n`), including
-  running status (a data byte with no preceding status reuses the last one) and
-  the Note On velocity-0 convention (treated as Note Off). Other channel and
-  system/real-time bytes are skipped without disturbing running status.
-
-## Mapping (all generics, so it is configurable)
-
-### Pitch: note number -> `gamma0^2` (`coeffs.gamma2`)
-
-A mesh mode's frequency scales with the wave speed `c`, and
-`gamma2 = (c*k/h)^2` scales with `c^2`. So doubling the frequency (one octave)
-needs `gamma2` to quadruple. The note-to-gamma2 map is therefore exponential
-with a slope of 6 semitones per gamma2 doubling:
+For a requested note frequency `f`, `note_gamma2` solves the discrete 2-D mesh
+dispersion relation at the configured `NX`, `NY`, oversampling factor `OS`,
+audio rate, and boundary mode:
 
 ```
-gamma2(note) = GAMMA2_REF * 2^((note - NOTE_REF) / 6)
+gamma2 = 4*sin(pi*f/(fs*OS))^2 / lambda_mode
 ```
 
-clamped to `[GAMMA2_MIN, GAMMA2_CLAMP]` with `GAMMA2_CLAMP < 0.5` to stay inside
-the CFL stability limit. The table is precomputed at elaboration into a 128-entry
-ROM (note -> Q1.23), so there is no runtime `pow`. Defaults: `NOTE_REF = 69`
-(A4), `GAMMA2_REF = 0.09`, `GAMMA2_CLAMP = 0.45`.
+`lambda_mode` is the lowest non-DC eigenvalue for the selected fixed or free
+boundary. The 128-entry fixed/free tables are evaluated at elaboration, so no
+real-valued arithmetic is synthesized. The old raw `GAMMA2_REF` mapping remains
+available with `CALIBRATED_PITCH=false` for explicit coefficient experiments.
 
-Because the grid is fixed, the playable pitch range is bounded: high notes
-saturate at `GAMMA2_CLAMP` (a fixed mesh has a finite pitch range; retuning the
-physical size/`h` would extend it). This is honest, documented behaviour.
+The acceptance sweep checks notes 45/57/69/81 (110/220/440/880 Hz), 8x8 and
+16x16 meshes, OS=1/2/4, 48/96 kHz, and fixed/free boundaries. Analytic error is
+required below 5 cents; native RTL spectral probes on the production 8x8/OS4
+configuration measured the four fixed/free notes within about 1 cent.
 
-| Note | Offset from A4 | `gamma2` | Notes |
-| --- | --- | --- | --- |
-| A3 (57) | -12 | 0.0225 | one octave down (÷4) |
-| A4 (69) | 0 | 0.090 | reference |
-| A5 (81) | +12 | 0.360 | one octave up (×4) |
-| high | large | 0.45 (clamped) | CFL ceiling |
+## Strike and CHAOS
 
-### Strike: Note On -> excitation impulse (the mallet)
-
-A Note On delivers one frame of excitation into the mesh (`exc_en` asserted for
-the next audio frame). The impulse amplitude scales with velocity:
+MIDI velocity now controls **strike energy only** by default:
 
 ```
-exc_in = STRIKE_GAIN * velocity / 128      (Q1.23)
+exc_in = STRIKE_GAIN * velocity / 128
 ```
 
-Default `STRIKE_GAIN = 0.9`, so velocity 127 is a near-full-scale strike and
-velocity 1 is a gentle tap. A Note Off (or Note On with velocity 0) does **not**
-strike: the mesh decays naturally through its damping (`sigk1`), exactly like a
-struck instrument releasing.
+`STRIKE_GAIN` defaults to `0.002`, chosen to keep musical acceptance probes away
+from Q1.23 cell clipping. `ALPHA_MAX` defaults to zero on the MIDI front end, so
+a harder key no longer silently increases CHAOS.
 
-### Timbre: velocity -> chaos coupling `alpha`
+CHAOS is an independent control. The panel/preset register and CV modulation
+feed it separately; `synth_top` scales the non-linear coefficient with the
+current tuned `gamma2` so its audible strength remains useful across pitch.
+The CFL ceiling remains 0.451.
 
-Harder hits also ring more non-linearly. Velocity maps to `coeffs.alpha`
-(README §2, amplitude-dependent stiffening) between `ALPHA_MIN` and `ALPHA_MAX`:
+## TENSION and body controls
 
-```
-alpha = ALPHA_MIN + (ALPHA_MAX - ALPHA_MIN) * velocity / 128
-```
+The note table establishes concert pitch. Preset register 0 is then a normalized
+**TENSION** multiplier: `0.25` is unity, the panel default range 0.0625..~1.0
+covers approximately -1 to +1 octave around the played note. DECAY (`a0` /
+`sigk1`), CHAOS, pickup positions, and boundary mode come from the live preset
+registers and are captured into a voice when it is struck.
 
-Defaults `ALPHA_MIN = 0.0`, `ALPHA_MAX = 0.3`. Set `ALPHA_MAX = 0` for a purely
-linear instrument (velocity then affects loudness only). The CFL clamp
-(`gamma2_max`, default 0.451) keeps the non-linear term stable at any velocity.
+## MIDI parser
 
-### Fixed coefficients
+The UART remains 31,250 baud, 8N1. The parser handles Note On/Off, running
+status, and Note-On velocity zero as Note Off. Other channel/system bytes are
+ignored without corrupting running status. A strike is delivered on the next
+audio frame; Note Off releases allocation and leaves the resonator tail to
+decay naturally.
 
-`a0`, `sigk1` (damping) and `gamma2_max` (CFL clamp) are held at generic
-defaults (`0.99996875`, `0.99996875`, `0.451`); only `gamma2` and `alpha` move
-with the note. Adjust the generics for a different decay time or stability
-margin.
+## CV path
 
-## CV alternative
-
-The same mapping applies to control voltage: replace `midi_uart_rx` with an ADC
-reading a pitch CV (-> note index) and a gate/velocity CV (-> strike), feeding
-the identical note/velocity mapping. The parser stage is MIDI-specific; the
-mapping stage is not.
+Pitch CV quantizes to the same calibrated note table. Gate produces a strike;
+mod CV controls CHAOS independently. The fixed/free table is selected from the
+current preset boundary mode, exactly as for MIDI.
 
 ## Verification
 
-[`src/tb/midi_frontend_tb.vhd`](../src/tb/midi_frontend_tb.vhd) sends a real
-MIDI byte stream (start / 8 data LSB-first / stop) into the front-end, feeds its
-coeffs + excitation into a live `mesh_resonator`, and checks: a Note On is parsed
-(note + velocity recovered); an octave up quadruples `gamma2`; a Note On delivers
-a strike; a harder hit raises both the strike amplitude and `alpha`; the mesh
-produces output in response; and a Note Off does not strike (natural decay). All
-pass under GHDL.
+`midi_frontend_tb`, `cv_frontend_tb`, `pitch_calibration_tb`,
+`musical_controls_tb`, `runtime_mesh_tb`, and `synth_top_tb` cover parsing,
+calibrated pitch, independent CHAOS, runtime pickup/boundary routing, the panel
+macros reaching audio, and the complete MIDI/CV -> polyphony -> I2S path.
+The final repair regression passes all 28 RTL testbenches under NVC.

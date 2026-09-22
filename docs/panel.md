@@ -1,58 +1,75 @@
 # Panel controller
 
-Wires the physical front panel to the engine (issue #78): macro knobs set the
-live coefficients and a rotary encoder + button select and recall presets, all
-through the `preset_bank` register / preset interface (#30, #69). RTL:
-[`src/rtl/panel_ctrl.vhd`](../src/rtl/panel_ctrl.vhd).
+Wires the physical front panel to the engine (issues #78 and #85): six macro
+pots edit live parameters, while the existing MODE switch and bottom-left push
+encoder provide a PLAY/EDIT page model through the `preset_bank` register /
+preset interface. RTL: [`src/rtl/panel_ctrl.vhd`](../src/rtl/panel_ctrl.vhd).
 
 ## Control map
 
-| Control | Target | Register | Range (default) |
-| --- | --- | --- | --- |
-| `pot_pitch` | `gamma2` (pitch / tension) | 0 | 0.02 .. 0.44 |
-| `pot_decay` | `sigk1` **and** `a0` (decay) | 2, 1 | 0.9950 .. 0.99999 |
-| `pot_timbre` | `alpha` (chaos / timbre) | 3 | 0.0 .. 0.40 |
-| encoder turn | `preset_index` | - | 0 .. N_PRESETS-1 |
-| encoder button, short press | `recall` | - | load selected preset |
-| encoder button, long press | `save` | - | store into a user slot |
+No pot, ADC channel, connector, or PCB signal was added. The existing two-state
+MODE switch is now semantic rather than a direct two-layer selector:
 
-The pot ranges, ADC width, dead-band, and long-press threshold are all generics.
+- **PLAY (`sw0=0`)**: the six knobs are the immediate performance controls and
+  the encoder selects presets.
+- **EDIT (`sw0=1`)**: the encoder selects an edit page and the same six knobs
+  edit that page. The four panel LEDs become a one-hot page indicator.
 
-## Behaviour
+EDIT page 0 is **SURFACE**, preserving the previous Membrane-layer mapping:
 
-- **Pots -> coefficients.** Each pot is scaled from its ADC range into the
-  register's Q1.23 range and written on **change only**: a scanner cycles the
-  four macro registers one per clock, and a register is rewritten only when its
-  pot moved past the `DEADBAND` (rejecting ADC LSB jitter), so the single-port
-  register bus is never flooded. The decay knob drives both `sigk1` and `a0`
-  with the same value (`a0 ~= sigk1` over the small `sigma*k` a knob spans - a
-  documented macro approximation).
-- **Encoder.** One `preset_index` step per rising edge of channel A, direction
-  from channel B, saturating at the ends. Turning only *selects*; it does not
-  auto-recall.
-- **Button.** A short press pulses `recall` (load the selected preset); holding
-  past the long-press threshold pulses `save` (store the live registers into the
-  selected user slot; `preset_bank` ignores saves aimed at factory slots).
-- **Recall vs. live knobs ("pickup").** After a recall the live registers hold
-  the recalled preset. The panel only writes a register when its pot *moves*
-  (the pot target then differs from the panel's last write), so the recalled
-  sound stays until you actually turn a knob, which then takes over that
-  parameter. Simple pickup behaviour, no knob-jump on recall.
+| Physical pot | PLAY | EDIT / SURFACE (page 0) |
+| --- | --- | --- |
+| TENSION | TENSION | ANISO (-8..+7, center = isotropic) |
+| DECAY | DECAY | RIM compliance (fixed -> compliant/free) |
+| CHAOS | CHAOS | STRIKE SIZE (point -> broad membrane contact) |
+| DRIVE | DRIVE | STRIKE X |
+| DELAY | DELAY | STRIKE Y |
+| REVERB | REVERB | CHARACTER (Auto / Point / Mallet / Pluck / Rim / Scrape) |
+
+`N_EDIT_PAGES` is a synthesis-time panel-controller generic in the range 1..4.
+Only page 0 is populated by issue #85. Higher pages are intentionally inert
+until their backing parameter sets land; selecting a reserved page cannot alias
+SURFACE registers. The production wrapper currently defaults to one edit page.
+
+## Encoder and LEDs
+
+In **PLAY**, encoder behavior is unchanged: turn selects `preset_index`, short
+press recalls, and long press saves. In **EDIT**, encoder A/B instead changes
+`edit_page` by one page per detent, wrapping at either end. The preset index is
+not touched. The selected page is remembered when returning to PLAY.
+
+Button gestures are disabled in EDIT. A press begun in EDIT stays blocked until
+the button is physically released after returning to PLAY, so it cannot become
+an accidental preset recall or save.
+
+The four LEDs show the active-voice mask in PLAY. In EDIT they show the page
+one-hot: page 0 = `0001`, page 1 = `0010`, page 2 = `0100`, page 3 =
+`1000`.
+
+## Soft takeover
+
+A unified scanner reads the currently stored register value before considering
+each pot. On reset, preset recall, PLAY/EDIT transition, or EDIT-page change,
+all six pots disarm. A pot produces no write until its mapped value crosses the
+stored parameter (or lands inside its dead-band), then tracks normally.
+
+That rule also applies when returning to a previously edited page: page
+selection alone cannot move any physical parameter. DECAY continues to write
+both `sigk1` and `a0`.
 
 ## Inputs
 
-The pot ADC samples are assumed synchronous to `clk`; the encoder (A/B) and the
-button are asynchronous and are brought in through two-flop synchronisers inside
-the block. Drop `panel_ctrl` alongside `synth_top` and connect its `cfg_*` /
-`preset_*` outputs to the `preset_bank` control ports (the same ports
-`synth_top` already exposes).
+Pot ADC samples are assumed synchronous to `clk`. Encoder A/B and its push
+button are asynchronous and pass through two-flop synchronisers in
+`panel_ctrl`. `arty_synth` connects the physical MODE switch to `edit_mode`;
+MIDI/CV source claiming remains automatic in `synth_top`.
 
 ## Verification
 
-[`src/tb/panel_ctrl_tb.vhd`](../src/tb/panel_ctrl_tb.vhd) wires `panel_ctrl` into
-a real `preset_bank` and checks the panel reaches the coefficients: moving the
-pitch/timbre/decay pots writes and updates `gamma2` / `alpha` / `sigk1`+`a0` on
-`preset_bank.coeffs`; stable pots produce no further writes (dead-band); the
-encoder steps `preset_index`; a short button press recalls the selected preset
-(coeffs load the gong factory values) and a long press emits save. Passes under
-GHDL.
+[`src/tb/panel_ctrl_tb.vhd`](../src/tb/panel_ctrl_tb.vhd) wires `panel_ctrl`
+into a real `preset_bank`. It instantiates three edit pages to verify the page
+infrastructure even though only SURFACE is populated: contextual encoder
+routing, forward/reverse page wrap, remembered page state, one-hot LED state,
+inert reserved pages, blocked EDIT button gestures, and soft takeover across
+PLAY/EDIT/page transitions. It also regression-checks all PLAY controls,
+SURFACE controls, and PLAY preset recall/save.

@@ -1,0 +1,79 @@
+{
+  "generated_utc": "2026-09-16T02:41:55.345723+00:00",
+  "status": "current engineering baseline; not manufacturing approval",
+  "boards": {
+    "mainboard": {
+      "path": "hardware/courant/deliverables/courant.kicad_pcb",
+      "bytes": 1702141,
+      "sha256": "f71cac1002972b833267c8e1ff4c1e75aa0f3a461a7c900057852134fa29995b"
+    },
+    "panel": {
+      "path": "hardware/panel/design/radian_panel.kicad_pcb",
+      "bytes": 652340,
+      "sha256": "5c37aa04e39cf2ce4aefce5373201c6c3f49c9220217e3084b0abb485bc1dad0"
+    }
+  },
+  "native_checks": {
+    "mainboard_drc": {
+      "violations": 0,
+      "unconnected": 0
+    },
+    "panel_erc": {
+      "violations": 0
+    },
+    "panel_drc": {
+      "violations": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    }
+  },
+  "artifacts": {
+    "mainboard_step": {
+      "path": "hardware/courant/deliverables/courant-assembly.step",
+      "bytes": 30311145,
+      "sha256": "257215db1fdc4f6ac7ef991b2bd8092f330e596e80c7c21d2f384eb991e62597"
+    },
+    "mainboard_fab_zip": {
+      "path": "hardware/courant/dist/courant-fab.zip",
+      "bytes": 328615,
+      "sha256": "42232aebeb7003384aed0010850a4d95c4f0a718513a1230951ef1a5c37e8ac2"
+    },
+    "panel_fab_zip": {
+      "path": "hardware/panel/radian_panel-fab.zip",
+      "bytes": 144178,
+      "sha256": "eef4c986144ecc631b42f93257fb01669953a757a5672cb9cc2d6a572d87189b"
+    },
+    "front_panel_step": {
+      "path": "hardware/panel/cad/panel.step",
+      "bytes": 4647116,
+      "sha256": "142d2129ee3258bca67924fc82094abea921d15bcf9d18fb419c98f1c280a93d"
+    },
+    "panel_reference_step": {
+      "path": "hardware/panel/cad/RADIAN_P1_populated_reference.step",
+      "bytes": 30417443,
+      "sha256": "aacb6586be0e9fd853bbcbb5c803cc4f36259ad6761831f988136bf7a95717ca"
+    },
+    "desktop_product_step": {
+      "path": "hardware/panel/cad/RADIAN_P1_desktop_fit_study.step",
+      "bytes": 95963211,
+      "sha256": "836ae149942d608420dbd1fcac250d0003f63a8b03143adf13a52d9e3234e33c"
+    },
+    "desktop_preview": {
+      "path": "hardware/panel/previews/desktop_fit_study.png",
+      "bytes": 179140,
+      "sha256": "904ea5aaa4f4c3ddf61dea38212ca019a5bad002840266d493f846c1c3fd4144"
+    }
+  },
+  "front_panel_macro_labels": [
+    "TENSION",
+    "DECAY",
+    "CHAOS"
+  ],
+  "generator_guard": "hardware/GUARDED_GENERATORS.json",
+  "refresh_workflow": "hardware/refresh_outputs.py",
+  "rollback_archive": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/backup_hardware_before_sync.tar.gz",
+  "retired_stale_files": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/retired_from_active_repo/",
+  "final_audit_directory": "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/final_audit",
+  "git_commit_created": false,
+  "git_push_performed": false
+}

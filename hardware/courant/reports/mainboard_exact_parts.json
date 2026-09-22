@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "board": "courant/deliverables/courant.kicad_pcb",
+  "board_sha256": "92e66042479df826fed7b9fa62116f5fa4a31a84fc075922198cf18b91b7c6c5",
+  "bom_rows_after_regeneration": 54,
+  "bom_placements": 180,
+  "manufacturer_mpn_coverage": "180/180",
+  "visible_3d_model_coverage": "180/180",
+  "active_generator_aliases": [],
+  "native_drc": {
+    "violations": 0,
+    "unconnected_items": 0
+  },
+  "routing_preservation": {
+    "tracks_vias_identical_to_pre_reconciliation": true,
+    "footprint_positions_orientations_sides_identical": true,
+    "pad_positions_sizes_nets_layers_identical": true,
+    "intentional_change": "J1-J4 Molex KK-254 finished-hole drills 1.00 -> 1.02 mm; connector courtyards and metadata/models corrected"
+  },
+  "key_parts": {
+    "U1": "AMD/Xilinx XC7A50T-1FTG256I",
+    "U5": "Texas Instruments REF3125AIDBZR",
+    "Y1": "Abracon ASE-100.000MHZ-LC-T",
+    "Y2": "Abracon ASE-12.288MHZ-LC-T",
+    "L1-L3": "Changjiang Electronics FNR4030S1R0MT",
+    "D10-D12": "Nexperia BAT54S,215",
+    "D20": "Diodes Incorporated 1N4148W-7-F",
+    "J1/J3/J4": "Molex 22-23-2021",
+    "J2": "Molex 22-23-2061",
+    "J17/J18": "Samtec IPT1-110-06-L-D"
+  },
+  "direct_stack": {
+    "status": "PASS",
+    "matched": 40,
+    "checked": 40
+  },
+  "case_cad": {
+    "panel_component_vs_mainboard_clashes": [],
+    "changed_enclosure_unintended_intersections": [],
+    "pcb_gap_mm": 19.99
+  },
+  "model_notes": {
+    "Molex_J1-J4": "drawing-derived reference solids; Molex vendor STEP download was not available during this pass",
+    "Samtec_J17-J18": "drawing-derived reference solids",
+    "other_BOM_parts": "project-local exact or package-accurate STEP models"
+  },
+  "release_gate": "Physical first article still required for solderability, connector fit/retention, thermal/power/fault and functional qualification.",
+  "model_corrections": {
+    "U8": "H11L1M model pin-center aligned: standard DIP model shifted -3.81,+2.54 mm in STEP coordinates; KiCad Y inversion yields exact six-pad match. Placed U8 STEP body center 48.000,-139.009 mm vs footprint 48.000,-139.000 mm."
+  }
+}

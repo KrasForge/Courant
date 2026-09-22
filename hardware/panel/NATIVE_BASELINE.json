@@ -1,0 +1,6 @@
+{
+  "authoritative_board": "design/radian_panel.kicad_pcb",
+  "sha256": "9ddd199c1c5e68db47bafff481415ce4db48de8bb185d7cad0d8c10a837b4292",
+  "policy": "Repaired native PCB is authoritative. Use hardware/refresh_outputs.py. Run legacy reconstruction only in a separate experimental copy without NATIVE_BASELINE.json.",
+  "review_only": true
+}

@@ -1,8 +1,10 @@
 function exciter_study(varargin)
-% EXCITER_STUDY  Physical exciter front-ends against the engine (issue #33).
+% EXCITER_STUDY  Physical exciter front-ends against the engine (#33/#87).
 %
-% Reference-model study for the "exciter models" stretch (milestone M9). Drives
-% a Mesh2D at the excitation node through the Exciter models, closing the
+% Floating-point/SI-scale study for the exciter models. Issue #87 has since
+% integrated the mallet into production fixed-point RTL; this study remains the
+% physical-character reference, while mallet_reference.py mirrors the exact RTL.
+% It drives a Mesh2D at the excitation node through the Exciter models, closing the
 % coupling loop (the exciter reads the node displacement and returns a force):
 %
 %   A. mallet hardness sweep - softer/harder springs give longer/shorter

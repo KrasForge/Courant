@@ -1,5 +1,11 @@
-STD     := --std=08
 GHDL    := ghdl
+WAVE    ?= 0
+
+ifeq ($(WAVE),1)
+RUN_WAVE := --wave=$$tb.ghw
+else
+RUN_WAVE :=
+endif
 
 RTL_DIR := ../src/rtl
 TB_DIR  := ../src/tb
@@ -28,12 +34,14 @@ all:
 			echo "Building: $$tb"; \
 			$(GHDL) -m $(STD) $$tb || exit 1; \
 			echo "Running: $$tb"; \
-			$(GHDL) -r $(STD) $$tb --wave=$$tb.ghw || exit 1; \
+			$(GHDL) -r $(STD) $$tb $(RUN_WAVE) || exit 1; \
 		done; \
 	else \
 		echo "No testbenches found - nothing to simulate."; \
 	fi
 
+# Waveforms are disabled by default because FX delay/reverb RAMs make full-memory
+# GHW dumps very large. Use `make WAVE=1` for waveform-debug runs.
 clean:
 	$(GHDL) --remove $(STD) >/dev/null 2>&1 || true
 	rm -f *.ghw work-obj*.cf

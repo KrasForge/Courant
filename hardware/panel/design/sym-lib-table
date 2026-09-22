@@ -1,0 +1,1 @@
+(sym_lib_table (version 7) (lib (name "RadianPanel") (type "KiCad") (uri "${KIPRJMOD}/../library/RadianPanel.kicad_sym") (options "") (descr "Embedded exact pin graph for RADIAN Panel P1")))

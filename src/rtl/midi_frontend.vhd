@@ -1,27 +1,13 @@
 -------------------------------------------------------------------------------
--- midi_frontend.vhd  -  MIDI note/velocity -> mesh pitch, strike, and timbre
+-- midi_frontend.vhd  -  calibrated MIDI note -> mesh pitch + strike
 --
--- Turns the engine from a physics demo into an instrument (milestone M8). A
--- serial MIDI stream drives:
---   * pitch      : note number  -> gamma0^2 (coeffs.gamma2), README §2. Higher
---                  note -> stiffer/faster mesh -> higher pitch. A mesh mode's
---                  frequency scales with the wave speed c, and gamma2 = (c*k/h)^2
---                  scales with c^2, so one octave (x2 frequency) needs gamma2 x4:
---                  gamma2(n) = GAMMA2_REF * 2^((n-NOTE_REF)/6), clamped CFL-safe.
---   * strike     : note-on      -> a one-frame excitation impulse (the mallet)
---                  whose amplitude scales with velocity.
---   * timbre     : velocity     -> chaos coupling alpha (harder hits ring more
---                  non-linearly), between ALPHA_MIN and ALPHA_MAX.
---   * note-off (or note-on velocity 0) -> no strike; the mesh decays naturally
---                  through its damping (sigk1), exactly like a struck instrument.
---
--- The pitch table, reference note, gains, damping and CFL clamp are all
--- generics, so the mapping is documented and configurable (see docs/midi.md).
--- The block emits a full coeffs_t plus the excitation, ready to drive
--- mesh_resonator / top_resonator in place of the control-bus + I2S excitation.
---
--- `frame` is the per-audio-frame tick: a pending note-on is delivered as one
--- frame of exc_en so the mesh injects exactly one mallet impulse per note.
+-- Serial MIDI Note On/Off drives a musical mesh voice. In calibrated mode the
+-- 128-entry pitch table is derived at elaboration from NX/NY, OS, FS_HZ and the
+-- selected fixed/free boundary. Velocity scales strike energy only by default;
+-- CHAOS is deliberately independent and comes from the live preset / mod path.
+-- CALIBRATED_PITCH=false retains the legacy raw gamma2 mapping for experiments.
+-- A pending Note On is delivered as exactly one frame of exc_en.
+-- See docs/midi.md and musical_pkg.vhd for the calibration relation.
 --
 -- Synthesisable VHDL-2008.
 -------------------------------------------------------------------------------
@@ -33,9 +19,13 @@ use ieee.math_real.all;
 
 library work;
 use work.fdtd_pkg.all;
+use work.musical_pkg.all;
 
 entity midi_frontend is
   generic (
+    NX : positive := 8; NY : positive := 8; OS : positive := 4;
+    FS_HZ : positive := 48_000;
+    CALIBRATED_PITCH : boolean := true; -- false retains explicit raw-coefficient API
     CLK_HZ      : positive := 100_000_000;
     BAUD        : positive := 31_250;
     -- pitch mapping (note -> gamma2)
@@ -48,13 +38,14 @@ entity midi_frontend is
     SIGK1       : real     := 0.99996875;
     GAMMA2_MAX  : real     := 0.451;
     -- velocity mapping
-    STRIKE_GAIN : real     := 0.9;       -- excitation amplitude at max velocity
+    STRIKE_GAIN : real     := 0.002;       -- excitation amplitude at max velocity
     ALPHA_MIN   : real     := 0.0;       -- chaos coupling at min velocity
-    ALPHA_MAX   : real     := 0.3        -- chaos coupling at max velocity
+    ALPHA_MAX   : real     := 0.0        -- chaos coupling at max velocity
   );
   port (
     clk      : in  std_logic;
     rst      : in  std_logic;
+    free_mode: in boolean := false;
     rx       : in  std_logic;            -- serial MIDI input
     frame    : in  std_logic;            -- per-audio-frame tick
     -- to the mesh
@@ -73,7 +64,7 @@ architecture rtl of midi_frontend is
 
   -- precomputed pitch table: note number -> gamma2 (Q1.23), CFL-clamped
   type g2_table_t is array (0 to 127) of q123_t;
-  function build_g2_table return g2_table_t is
+  function build_g2_table(free: boolean := false) return g2_table_t is
     variable t : g2_table_t;
     variable g : real;
   begin
@@ -81,11 +72,13 @@ architecture rtl of midi_frontend is
       g := GAMMA2_REF * 2.0 ** (real(n - NOTE_REF) / 6.0);
       if g > GAMMA2_CLAMP then g := GAMMA2_CLAMP; end if;
       if g < GAMMA2_MIN   then g := GAMMA2_MIN;   end if;
-      t(n) := to_q123(g);
+      if CALIBRATED_PITCH then t(n) := note_gamma2(n,NX,NY,OS,FS_HZ,free);
+      else t(n) := to_q123(g); end if;
     end loop;
     return t;
   end function;
-  constant G2_TABLE : g2_table_t := build_g2_table;
+  constant G2_TABLE : g2_table_t := build_g2_table(false);
+  constant G2_FREE : g2_table_t := build_g2_table(true);
 
   constant STRIKE_Q : q123_t := to_q123(STRIKE_GAIN);
   constant AMIN_Q   : q123_t := to_q123(ALPHA_MIN);
@@ -172,7 +165,8 @@ begin
                   note     <= std_logic_vector(d1);
                   velocity <= std_logic_vector(vel);
                   if is_on = '1' and vel /= 0 then         -- NOTE ON (strike)
-                    coeffs.gamma2 <= G2_TABLE(to_integer(d1));
+                    if free_mode then coeffs.gamma2 <= G2_FREE(to_integer(d1));
+                    else coeffs.gamma2 <= G2_TABLE(to_integer(d1)); end if;
                     coeffs.alpha  <= sat_add(AMIN_Q, vscale(ARANGE_Q, vel));
                     exc_in        <= vscale(STRIKE_Q, vel);
                     strike_pending <= '1';

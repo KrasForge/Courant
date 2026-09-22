@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/ik/ChatGPT/RADIAN_Backplane_review_3ldc8m0x/tools/runtime/backplane-kicad-linux-x86_64-10.0.6/bin/kicad-cli",
+    "sch",
+    "erc",
+    "--severity-all",
+    "--exit-code-violations",
+    "--format",
+    "json",
+    "--output",
+    "/home/ik/ChatGPT/RADIAN_Release_Sync_20260916T015425Z/reports/published_panel_erc.json",
+    "/home/ik/ChatGPT/Courant/hardware/panel/design/radian_panel.kicad_sch"
+  ],
+  "exit_code": 0
+}

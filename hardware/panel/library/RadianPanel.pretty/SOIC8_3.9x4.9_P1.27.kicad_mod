@@ -1,0 +1,122 @@
+(footprint "SOIC8_3.9x4.9_P1.27"
+  (layer "F.Cu")
+  (uuid "6f768ca8-0c52-59a0-ba80-acad7d8d5539")
+  (version 20260206)
+  (generator "radian_panel_generator")
+  (property "Reference" "REF**"
+    (at 0 -3.95 0)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (property "Value" "OPA2192ID"
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (property "Manufacturer" "Texas Instruments"
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (property "MPN" "OPA2192ID"
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (property "Description" "A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping."
+    (at 0 0 0)
+    (layer "F.Fab")
+    (hide yes)
+    (effects
+      (font
+        (size 1 1)
+        (thickness 0.15))))
+  (fp_rect
+    (start -1.95 -2.45)
+    (end 1.95 2.45)
+    (stroke
+      (width 0.1)
+      (type default))
+    (fill none)
+    (layer "F.Fab"))
+  (fp_rect
+    (start -3.725 -2.7)
+    (end 3.725 2.7)
+    (stroke
+      (width 0.05)
+      (type default))
+    (fill none)
+    (layer "F.CrtYd"))
+  (pad "1" smd roundrect
+    (at -2.7 -1.905 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "333632a0-b57f-5011-9a6d-4df43b026673"))
+  (pad "2" smd roundrect
+    (at -2.7 -0.635 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "7835a310-dea5-5e03-ac7e-6c1796b5f900"))
+  (pad "3" smd roundrect
+    (at -2.7 0.635 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "01e8bae5-0e19-5e9d-8c1d-7ac71e980461"))
+  (pad "4" smd roundrect
+    (at -2.7 1.905 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "8927fbc0-d5ca-5531-abc9-645da0621f64"))
+  (pad "5" smd roundrect
+    (at 2.7 1.905 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "c8fde40b-474a-510f-b0ef-c4c8b8fa4feb"))
+  (pad "6" smd roundrect
+    (at 2.7 0.635 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "d29f0697-c1b6-575f-a436-c97c41716532"))
+  (pad "7" smd roundrect
+    (at 2.7 -0.635 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "fe5c60ff-78c4-5caf-9444-f29c5be904e9"))
+  (pad "8" smd roundrect
+    (at 2.7 -1.905 0)
+    (size 1.55 0.6)
+    (layers "F.Cu" "F.Paste" "F.Mask")
+    (roundrect_rratio 0.20)
+    (clearance 0.2)
+    (uuid "30e43d81-2be8-5b49-953f-74ae1b9417ca"))
+  (model "${KIPRJMOD}/../cad/models/OPA2192_SOIC8_package.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
+)

@@ -1,0 +1,25 @@
+{
+  "name": "courant-pcb",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Artix-7 Courant instrument PCB",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "tsci dev courant.circuit.tsx",
+    "typecheck": "tsc --noEmit",
+    "build": "tsci build courant.circuit.tsx --disable-parts-engine --pcb-svgs",
+    "build:unrouted": "tsci build courant.circuit.tsx --disable-parts-engine --routing-disabled",
+    "check": "bun scripts/check.ts",
+    "verify": "npm run typecheck && npm run check && tsci check netlist courant.circuit.tsx && npm run build:unrouted",
+    "export": "bun scripts/export.ts",
+    "route": "python3 scripts/route.py",
+    "fab": "python3 scripts/fab.py"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "bun": "1.4.2",
+    "tscircuit": "0.0.2547",
+    "typescript": "5.9.3"
+  }
+}

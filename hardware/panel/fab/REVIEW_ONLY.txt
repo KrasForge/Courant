@@ -1,0 +1,2 @@
+Regenerated from the repaired native PCB. NOT a production release.
+ERC/DRC do not establish component correctness, power/thermal/fault behaviour, FPGA operation or physical fit.

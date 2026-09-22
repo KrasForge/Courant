@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "physical_pcb_faces": {
+    "panel_back_z_mm": -9.6,
+    "main_front_z_mm": -29.59,
+    "gap_mm": 19.99,
+    "target_mm": 19.99
+  },
+  "actual_components_vs_physical_enclosure_clashes": [],
+  "non_samtec_panel_vs_main_clashes": [],
+  "non_samtec_panel_vs_main_overlap_mm3": 0.0,
+  "notes": [
+    "Reference nuts, shims, standoffs, inks and PCB visualization layers are excluded from enclosure clash classification.",
+    "The intentionally mated Samtec J100/J101 to J17/J18 pair is excluded from panel-vs-main clash classification."
+  ]
+}

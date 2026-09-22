@@ -1,0 +1,3101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/ik/ChatGPT/Courant/hardware/panel/design/radian_panel.kicad_sch</source>
+    <date>2026-09-18T06:03:44</date>
+    <tool>Eeschema 10.0.6-1.fc44</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RADIAN | SINGLE PANEL / INTERFACE PCB</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>radian_panel.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/">
+      <title_block>
+        <title>01 | POWER INPUTS AND 5 V CONVERTER</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>power.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/">
+      <title_block>
+        <title>02 | FRONT-PANEL CONTROLS</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>controls.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/">
+      <title_block>
+        <title>03 | PATCH JACKS AND MIDI</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>io.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/">
+      <title_block>
+        <title>04 | OPTIONAL BIPOLAR MODULATION</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>mod.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/05 | INTERNAL SERVICE ACCESS/" tstamps="/dd60d741-95e3-5383-9836-1c68c07ca20b/">
+      <title_block>
+        <title>05 | INTERNAL SERVICE ACCESS</title>
+        <company/>
+        <rev>P1 DRAFT</rev>
+        <date>2026-09-15</date>
+        <source>service.kicad_sch</source>
+        <comment number="1" value="Native ERC, footprint verification and hardware testing REQUIRED"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>RadianPanel:C_1210</footprint>
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 10uF 50V X7R 1210</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C1" description="50V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 10uF 50V X7R 1210"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>e235e9e9-27d8-5bc5-9979-aa61676bbb5e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>RadianPanel:C_0603</footprint>
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 100nF 50V X7R 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C2" description="50V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 100nF 50V X7R 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>f0dfa655-1c0e-52c4-8e96-ff7485b903fa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>RadianPanel:C_0603</footprint>
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 100nF 16V X7R 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C3" description="16V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 100nF 16V X7R 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>9d21645e-6e9c-5499-9690-93108325ef0e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>22uF</value>
+      <footprint>RadianPanel:C_1210</footprint>
+      <description>25V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 22uF 25V X7R 1210</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C4" description="25V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 22uF 25V X7R 1210"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>6e2ec867-0c4b-5305-84d8-cdacb8e45221</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>22uF</value>
+      <footprint>RadianPanel:C_1210</footprint>
+      <description>25V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 22uF 25V X7R 1210</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C5" description="25V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 22uF 25V X7R 1210"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>fe6c420e-f8ee-519a-9963-1ced568e4ce0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>75pF</value>
+      <footprint>RadianPanel:C_0603</footprint>
+      <description>50V C0G; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 75pF 50V C0G 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V C0G; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C6" description="50V C0G; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 75pF 50V C0G 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>659e71f7-093e-5d1c-89c4-9d3cd026407d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>10uF</value>
+      <footprint>RadianPanel:C_1210</footprint>
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 10uF 50V X7R 1210</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C7" description="50V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 10uF 50V X7R 1210"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>4a089892-03db-5c15-98b2-fdc052063e20</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>SS54 / OR</value>
+      <footprint>RadianPanel:D_SMB</footprint>
+      <description>Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</description>
+      <fields>
+        <field name="MPN">SS54-E3/57T</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D1" description="Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature."/>
+      <property name="MPN" value="SS54-E3/57T"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>2491e415-d4d3-5f05-adc4-96f2585667c3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>SS54 / OR</value>
+      <footprint>RadianPanel:D_SMB</footprint>
+      <description>Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</description>
+      <fields>
+        <field name="MPN">SS54-E3/57T</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D2" description="Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature."/>
+      <property name="MPN" value="SS54-E3/57T"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>22451254-ce41-55ee-8e90-c20756e02fe9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>SMBJ15A</value>
+      <footprint>RadianPanel:D_SMB</footprint>
+      <description>Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test.</description>
+      <fields>
+        <field name="MPN">SMBJ15A-E3/52</field>
+        <field name="Manufacturer">Vishay</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D3" description="Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test."/>
+      <property name="MPN" value="SMBJ15A-E3/52"/>
+      <property name="Manufacturer" value="Vishay"/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>e3db311e-a848-59dd-b0da-759dab706442</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>2A FUSE / &gt;=32V</value>
+      <footprint>RadianPanel:Fuse_1206</footprint>
+      <description>Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</description>
+      <fields>
+        <field name="MPN">SELECT 2 A &gt;=32 V 1206 fuse</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Fuse_1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="F1" description="Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate."/>
+      <property name="MPN" value="SELECT 2 A &gt;=32 V 1206 fuse"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>cf3fecca-7a96-5152-8905-52011939431b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F2">
+      <value>2A FUSE / &gt;=32V</value>
+      <footprint>RadianPanel:Fuse_1206</footprint>
+      <description>Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</description>
+      <fields>
+        <field name="MPN">SELECT 2 A &gt;=32 V 1206 fuse</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Fuse_1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="F2" description="Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate."/>
+      <property name="MPN" value="SELECT 2 A &gt;=32 V 1206 fuse"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>2c15d3f7-621c-571d-bae0-d9bc20f3166d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J200">
+      <value>61201021621</value>
+      <footprint>RadianPanel:Wurth_61201021621_Exact_B</footprint>
+      <description>Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections.</description>
+      <fields>
+        <field name="MPN">61201021621</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Wurth_61201021621_Exact_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J200" description="Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections."/>
+      <property name="MPN" value="61201021621"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>22b1fffe-abd6-5915-b500-c63f9c0cc768</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J201">
+      <value>22-27-2021</value>
+      <footprint>RadianPanel:Molex_22-27-2021_J201_B</footprint>
+      <description>From panel-mounted centre-positive 12 V DC inlet in dock. NOT a 5 V inlet. Dock cutout waits for inlet selection.</description>
+      <fields>
+        <field name="MPN">22-27-2021</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Molex_22-27-2021_J201_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">From panel-mounted centre-positive 12 V DC inlet in dock. NOT a 5 V inlet. Dock cutout waits for inlet selection.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J201" description="From panel-mounted centre-positive 12 V DC inlet in dock. NOT a 5 V inlet. Dock cutout waits for inlet selection."/>
+      <property name="MPN" value="22-27-2021"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>a47c0ef6-62da-55f1-9de0-f66bd495a11a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L1">
+      <value>10uH 4A / Isat7.5A</value>
+      <footprint>RadianPanel:Bourns_SRP7050TA</footprint>
+      <description>4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing.</description>
+      <fields>
+        <field name="MPN">SRP7050TA-100M</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_SRP7050TA</field>
+        <field name="Datasheet"/>
+        <field name="Description">4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="L1" description="4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing."/>
+      <property name="MPN" value="SRP7050TA-100M"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>cf417c35-4329-5b7a-949c-57d34d609287</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>100k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="MPN">SELECT 100k 1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R1" description="Resistor 1%"/>
+      <property name="MPN" value="SELECT 100k 1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>e06fed5c-7bac-525d-a94d-7c4fb1b320ac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>13.3k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="MPN">SELECT 13.3k 1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R2" description="Resistor 1%"/>
+      <property name="MPN" value="SELECT 13.3k 1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>1ed808a6-f40e-5015-9e0e-5d2f703996c9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>511k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="MPN">SELECT 511k 1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R3" description="Resistor 1%"/>
+      <property name="MPN" value="SELECT 511k 1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>9c543196-dbb2-5183-8db6-93df2d3af013</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>105k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="MPN">SELECT 105k 1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R4" description="Resistor 1%"/>
+      <property name="MPN" value="SELECT 105k 1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>a7ef9d11-82b6-59ca-b368-2f515d0c5c24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>49.9</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="MPN">SELECT 49.9 1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R5" description="Resistor 1%"/>
+      <property name="MPN" value="SELECT 49.9 1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>cb3d6d3e-3504-5797-b2cb-7095c94b674c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>GND</value>
+      <footprint>RadianPanel:TestPoint_D2</footprint>
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="MPN">PCB test pad</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="TP1" description="Exposed soldermask aperture, no component."/>
+      <property name="MPN" value="PCB test pad"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>30e5f418-53cd-5bd6-83da-5313e82697f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>VIN5</value>
+      <footprint>RadianPanel:TestPoint_D2</footprint>
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="MPN">PCB test pad</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="TP2" description="Exposed soldermask aperture, no component."/>
+      <property name="MPN" value="PCB test pad"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>6efe25b9-68ef-56d7-aaa2-7cb82610ed50</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>VRAW</value>
+      <footprint>RadianPanel:TestPoint_D2</footprint>
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="MPN">PCB test pad</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="TP3" description="Exposed soldermask aperture, no component."/>
+      <property name="MPN" value="PCB test pad"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>bfc78a37-02e3-5618-a8bf-e2932365b2e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>TPS54302DDCR</value>
+      <footprint>RadianPanel:TI_DDC0006A_SOT23_6</footprint>
+      <description>3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit.</description>
+      <fields>
+        <field name="MPN">TPS54302DDCR</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">RadianPanel:TI_DDC0006A_SOT23_6</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="U1" description="3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit."/>
+      <property name="MPN" value="TPS54302DDCR"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="01 | POWER INPUTS AND 5 V CONVERTER"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/01 | POWER INPUTS AND 5 V CONVERTER/" tstamps="/fd872eb1-5f1f-55eb-8327-3584154f3e1b/"/>
+      <tstamps>d5d17bcd-d73f-574d-ad30-191a495b187f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D10">
+      <value>VOICE 1</value>
+      <footprint>RadianPanel:LED_D3.0_P2.54</footprint>
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="MPN">L-934GD</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D10" description="3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."/>
+      <property name="MPN" value="L-934GD"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>fe276ab0-ff85-5ab2-898b-ed8075966655</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D11">
+      <value>VOICE 2</value>
+      <footprint>RadianPanel:LED_D3.0_P2.54</footprint>
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="MPN">L-934GD</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D11" description="3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."/>
+      <property name="MPN" value="L-934GD"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>b36d9fe8-1d28-5e73-9188-b569959c7a35</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D12">
+      <value>VOICE 3</value>
+      <footprint>RadianPanel:LED_D3.0_P2.54</footprint>
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="MPN">L-934GD</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D12" description="3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."/>
+      <property name="MPN" value="L-934GD"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>8581a420-1ba2-5d16-a609-c9a592c237c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D13">
+      <value>VOICE 4</value>
+      <footprint>RadianPanel:LED_D3.0_P2.54</footprint>
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="MPN">L-934GD</field>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D13" description="3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height."/>
+      <property name="MPN" value="L-934GD"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>cb84da0a-7689-587d-8688-e97d2e4c3449</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="ENC1">
+      <value>24 PPR / PUSH</value>
+      <footprint>RadianPanel:Bourns_PEC11R4_RearFacing_Switch</footprint>
+      <description>20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack.</description>
+      <fields>
+        <field name="MPN">PEC11R-4220F-S0024</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PEC11R4_RearFacing_Switch</field>
+        <field name="Datasheet"/>
+        <field name="Description">20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="ENC1" description="20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack."/>
+      <property name="MPN" value="PEC11R-4220F-S0024"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>82881ed2-d2b6-51a6-9dad-cffbe9d62def</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A"/>
+            <pin num="C"/>
+            <pin num="B"/>
+            <pin num="S1"/>
+            <pin num="S2"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J100">
+      <value>IPS1-110-01-L-D</value>
+      <footprint>RadianPanel:Stack_2x10_P2.54</footprint>
+      <description>Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</description>
+      <fields>
+        <field name="MPN">IPS1-110-01-L-D</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Footprint">RadianPanel:Stack_2x10_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J100" description="Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."/>
+      <property name="MPN" value="IPS1-110-01-L-D"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>8d29a3b6-4dc8-5d80-8428-86e24030d339</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV1">
+      <value>10k linear / TENSION</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV1" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>7509de8e-e60c-5e1e-9ec3-c1c2df981adc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV2">
+      <value>10k linear / DECAY</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV2" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>feaf009e-cdb0-5dd4-a19f-e89862601cfb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV3">
+      <value>10k linear / CHAOS</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV3" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>6050cafe-321e-5010-9ad6-cdd72088f2d6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV4">
+      <value>10k linear / DRIVE</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV4" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>cb6c0109-b436-5916-be99-c5b95f57a16b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV5">
+      <value>10k linear / DELAY</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV5" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>a77ff7f6-ae92-50bd-b28b-442cd55be9b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="RV6">
+      <value>10k linear / REVERB</value>
+      <footprint>RadianPanel:Bourns_PTV09A4_RearFacing</footprint>
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="MPN">PTV09A-4020F-B103</field>
+        <field name="Manufacturer">Bourns</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="RV6" description="Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC."/>
+      <property name="MPN" value="PTV09A-4020F-B103"/>
+      <property name="Manufacturer" value="Bourns"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>0849b9e4-ac33-55b8-87e2-939f457734af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="MP1"/>
+            <pin num="MP2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>MODE / SPDT ON-ON</value>
+      <footprint>RadianPanel:E_Switch_100SP_M2</footprint>
+      <description>Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required.</description>
+      <fields>
+        <field name="MPN">100SP1T1B1M2REH</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Footprint">RadianPanel:E_Switch_100SP_M2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="SW1" description="Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required."/>
+      <property name="MPN" value="100SP1T1B1M2REH"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Sheetname" value="02 | FRONT-PANEL CONTROLS"/>
+      <property name="Sheetfile" value="controls.kicad_sch"/>
+      <sheetpath names="/02 | FRONT-PANEL CONTROLS/" tstamps="/fe425aa9-89e9-5e5b-9592-3f1bdae47718/"/>
+      <tstamps>f5afaab2-c860-5fc4-9b76-5a05e19eaa7a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J301">
+      <value>PITCH 0-5V</value>
+      <footprint>RadianPanel:WQP518MA_PJ398SM_Vertical</footprint>
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="MPN">WQP518MA (Thonkiconn/PJ398SM)</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J301" description="Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."/>
+      <property name="MPN" value="WQP518MA (Thonkiconn/PJ398SM)"/>
+      <property name="Manufacturer" value="QingPu / Thonk"/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>1d1426a6-6ee9-5869-8b4b-7ecb976e988e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J302">
+      <value>MOD</value>
+      <footprint>RadianPanel:WQP518MA_PJ398SM_Vertical</footprint>
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="MPN">WQP518MA (Thonkiconn/PJ398SM)</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J302" description="Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."/>
+      <property name="MPN" value="WQP518MA (Thonkiconn/PJ398SM)"/>
+      <property name="Manufacturer" value="QingPu / Thonk"/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>c1806fec-6f4c-552c-ac14-80ec675f5a36</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J303">
+      <value>GATE</value>
+      <footprint>RadianPanel:WQP518MA_PJ398SM_Vertical</footprint>
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="MPN">WQP518MA (Thonkiconn/PJ398SM)</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J303" description="Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."/>
+      <property name="MPN" value="WQP518MA (Thonkiconn/PJ398SM)"/>
+      <property name="Manufacturer" value="QingPu / Thonk"/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>be78fd5a-3121-50f1-a6c8-33469a59e66e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J304">
+      <value>LINE L</value>
+      <footprint>RadianPanel:WQP518MA_PJ398SM_Vertical</footprint>
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="MPN">WQP518MA (Thonkiconn/PJ398SM)</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J304" description="Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."/>
+      <property name="MPN" value="WQP518MA (Thonkiconn/PJ398SM)"/>
+      <property name="Manufacturer" value="QingPu / Thonk"/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>20a12c22-8872-522b-8afe-80cd0acffe87</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J305">
+      <value>LINE R</value>
+      <footprint>RadianPanel:WQP518MA_PJ398SM_Vertical</footprint>
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="MPN">WQP518MA (Thonkiconn/PJ398SM)</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J305" description="Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check."/>
+      <property name="MPN" value="WQP518MA (Thonkiconn/PJ398SM)"/>
+      <property name="Manufacturer" value="QingPu / Thonk"/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>39bd0795-f68c-5b3f-83ac-033c8b0bcb76</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J306">
+      <value>22-27-2021</value>
+      <footprint>RadianPanel:Molex_22-27-2021_J306_B</footprint>
+      <description>Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB.</description>
+      <fields>
+        <field name="MPN">22-27-2021</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Molex_22-27-2021_J306_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J306" description="Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB."/>
+      <property name="MPN" value="22-27-2021"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="03 | PATCH JACKS AND MIDI"/>
+      <property name="Sheetfile" value="io.kicad_sch"/>
+      <sheetpath names="/03 | PATCH JACKS AND MIDI/" tstamps="/1578ecd5-bea0-5ad2-8ccb-a84196c400b8/"/>
+      <tstamps>f536e084-c6a1-57ea-8653-b1afeea3b2ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C20">
+      <value>100nF</value>
+      <footprint>RadianPanel:C_0603</footprint>
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 100nF 16V X7R 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C20" description="16V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 100nF 16V X7R 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>60f3a6c1-6f01-5457-bd28-d2f52e211c96</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>1uF</value>
+      <footprint>RadianPanel:C_0805</footprint>
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="MPN">SELECT 1uF 16V X7R 0805</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+      </fields>
+      <libsource lib="RadianPanel" part="C21" description="16V X7R; verify effective capacitance at DC bias"/>
+      <property name="MPN" value="SELECT 1uF 16V X7R 0805"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>9b8308d0-0230-537b-ac42-dd90818e7824</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>BAT54S</value>
+      <footprint>RadianPanel:SOT23_BAT54S</footprint>
+      <description>Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior.</description>
+      <fields>
+        <field name="MPN">BAT54S,215</field>
+        <field name="Manufacturer">Nexperia</field>
+        <field name="Footprint">RadianPanel:SOT23_BAT54S</field>
+        <field name="Datasheet"/>
+        <field name="Description">Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="D4" description="Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior."/>
+      <property name="MPN" value="BAT54S,215"/>
+      <property name="Manufacturer" value="Nexperia"/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>0a9cb6cd-78cb-5760-9975-5324be4a7a45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP1">
+      <value>450301014042</value>
+      <footprint>RadianPanel:Wurth_450301014042_Exact_B</footprint>
+      <description>Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch.</description>
+      <fields>
+        <field name="MPN">450301014042</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Wurth_450301014042_Exact_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="JP1" description="Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch."/>
+      <property name="MPN" value="450301014042"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>7a1dc449-3659-51a2-b518-7001903ac8ef</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>200k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="MPN">SELECT 200k 0.1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R20" description="Resistor 0.1%"/>
+      <property name="MPN" value="SELECT 200k 0.1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>4f0fc251-9961-5f36-90aa-92cff98b7d48</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>100k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="MPN">SELECT 100k 0.1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R21" description="Resistor 0.1%"/>
+      <property name="MPN" value="SELECT 100k 0.1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>8186e4ec-ba27-5931-9775-980ea06efde9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>200k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="MPN">SELECT 200k 0.1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R22" description="Resistor 0.1%"/>
+      <property name="MPN" value="SELECT 200k 0.1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>86815e7d-c360-516d-afff-46eb3b0d64c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R23">
+      <value>10k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="MPN">SELECT 10k 0.1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R23" description="Resistor 0.1%"/>
+      <property name="MPN" value="SELECT 10k 0.1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>45109df0-d108-5e40-988e-420c2d961340</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R24">
+      <value>10k</value>
+      <footprint>RadianPanel:R_0603</footprint>
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="MPN">SELECT 10k 0.1% 0603</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+      </fields>
+      <libsource lib="RadianPanel" part="R24" description="Resistor 0.1%"/>
+      <property name="MPN" value="SELECT 10k 0.1% 0603"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>5a1e97fe-608e-588b-abb0-73dfd93ea8dd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>VREF25</value>
+      <footprint>RadianPanel:TestPoint_D2</footprint>
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="MPN">PCB test pad</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="TP4" description="Exposed soldermask aperture, no component."/>
+      <property name="MPN" value="PCB test pad"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>9a57579e-c67c-5118-aa2a-a9574281fbeb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>MOD_BIPOLAR</value>
+      <footprint>RadianPanel:TestPoint_D2</footprint>
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="MPN">PCB test pad</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="TP5" description="Exposed soldermask aperture, no component."/>
+      <property name="MPN" value="PCB test pad"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>2d0eae80-797a-549c-a27f-4473fbcee434</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>OPA2192ID</value>
+      <footprint>RadianPanel:SOIC8_3.9x4.9_P1.27</footprint>
+      <description>A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping.</description>
+      <fields>
+        <field name="MPN">OPA2192ID</field>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="Footprint">RadianPanel:SOIC8_3.9x4.9_P1.27</field>
+        <field name="Datasheet"/>
+        <field name="Description">A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="U2" description="A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping."/>
+      <property name="MPN" value="OPA2192ID"/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="Sheetname" value="04 | OPTIONAL BIPOLAR MODULATION"/>
+      <property name="Sheetfile" value="mod.kicad_sch"/>
+      <sheetpath names="/04 | OPTIONAL BIPOLAR MODULATION/" tstamps="/a353e908-e1f3-5887-a37d-be1463de1afa/"/>
+      <tstamps>76da6519-7887-5b94-ad4a-2323d80f01ec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J101">
+      <value>IPS1-110-01-L-D</value>
+      <footprint>RadianPanel:Stack_2x10_P2.54</footprint>
+      <description>Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</description>
+      <fields>
+        <field name="MPN">IPS1-110-01-L-D</field>
+        <field name="Manufacturer">Samtec</field>
+        <field name="Footprint">RadianPanel:Stack_2x10_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J101" description="Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity."/>
+      <property name="MPN" value="IPS1-110-01-L-D"/>
+      <property name="Manufacturer" value="Samtec"/>
+      <property name="Sheetname" value="05 | INTERNAL SERVICE ACCESS"/>
+      <property name="Sheetfile" value="service.kicad_sch"/>
+      <sheetpath names="/05 | INTERNAL SERVICE ACCESS/" tstamps="/dd60d741-95e3-5383-9836-1c68c07ca20b/"/>
+      <tstamps>37c3ba3a-67a8-53b0-9b31-8f009dd72af4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J202">
+      <value>22-27-2061</value>
+      <footprint>RadianPanel:Molex_22-27-2061_J202_B</footprint>
+      <description>Pin-for-pin to J102 -&gt; main J2, no level conversion. Short cable, validate JTAG frequency.</description>
+      <fields>
+        <field name="MPN">22-27-2061</field>
+        <field name="Manufacturer"/>
+        <field name="Footprint">RadianPanel:Molex_22-27-2061_J202_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin-for-pin to J102 -&gt; main J2, no level conversion. Short cable, validate JTAG frequency.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="J202" description="Pin-for-pin to J102 -&gt; main J2, no level conversion. Short cable, validate JTAG frequency."/>
+      <property name="MPN" value="22-27-2061"/>
+      <property name="Manufacturer" value=""/>
+      <property name="Sheetname" value="05 | INTERNAL SERVICE ACCESS"/>
+      <property name="Sheetfile" value="service.kicad_sch"/>
+      <sheetpath names="/05 | INTERNAL SERVICE ACCESS/" tstamps="/dd60d741-95e3-5383-9836-1c68c07ca20b/"/>
+      <tstamps>6e352fab-9100-5920-bc40-ba528cdf06e9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW3">
+      <value>PROGRAM / SERVICE</value>
+      <footprint>RadianPanel:SW_PUSH_6x6_P6.5x4.5</footprint>
+      <description>Internal service push button, accessible after module removal.</description>
+      <fields>
+        <field name="MPN">B3F-1000</field>
+        <field name="Manufacturer">Omron</field>
+        <field name="Footprint">RadianPanel:SW_PUSH_6x6_P6.5x4.5</field>
+        <field name="Datasheet"/>
+        <field name="Description">Internal service push button, accessible after module removal.</field>
+      </fields>
+      <libsource lib="RadianPanel" part="SW3" description="Internal service push button, accessible after module removal."/>
+      <property name="MPN" value="B3F-1000"/>
+      <property name="Manufacturer" value="Omron"/>
+      <property name="Sheetname" value="05 | INTERNAL SERVICE ACCESS"/>
+      <property name="Sheetfile" value="service.kicad_sch"/>
+      <sheetpath names="/05 | INTERNAL SERVICE ACCESS/" tstamps="/dd60d741-95e3-5383-9836-1c68c07ca20b/"/>
+      <tstamps>6ac8d041-74b6-51e1-b114-8a9f2fd7723c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW4">
+      <value>RESET / SERVICE</value>
+      <footprint>RadianPanel:SW_PUSH_6x6_P6.5x4.5</footprint>
+      <fields>
+        <field name="MPN">B3F-1000</field>
+        <field name="Manufacturer">Omron</field>
+        <field name="Footprint">RadianPanel:SW_PUSH_6x6_P6.5x4.5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RadianPanel" part="SW4" description=""/>
+      <property name="MPN" value="B3F-1000"/>
+      <property name="Manufacturer" value="Omron"/>
+      <property name="Sheetname" value="05 | INTERNAL SERVICE ACCESS"/>
+      <property name="Sheetfile" value="service.kicad_sch"/>
+      <sheetpath names="/05 | INTERNAL SERVICE ACCESS/" tstamps="/dd60d741-95e3-5383-9836-1c68c07ca20b/"/>
+      <tstamps>ac438e8b-9f2d-50a4-ab02-b0bd7ac6245f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="RadianPanel" part="C1">
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C2">
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C20">
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C21">
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">1uF</field>
+        <field name="Footprint">RadianPanel:C_0805</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C3">
+      <description>16V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100nF</field>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">16V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C4">
+      <description>25V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C5">
+      <description>25V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">22uF</field>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">25V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C6">
+      <description>50V C0G; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">75pF</field>
+        <field name="Footprint">RadianPanel:C_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V C0G; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="C7">
+      <description>50V X7R; verify effective capacitance at DC bias</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">RadianPanel:C_1210</field>
+        <field name="Datasheet"/>
+        <field name="Description">50V X7R; verify effective capacitance at DC bias</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D1">
+      <description>Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS54 / OR</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</field>
+        <field name="Manufacturer">Vishay</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D10">
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">VOICE 1</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+        <field name="Manufacturer">Kingbright</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D11">
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">VOICE 2</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+        <field name="Manufacturer">Kingbright</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D12">
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">VOICE 3</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+        <field name="Manufacturer">Kingbright</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D13">
+      <description>3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">VOICE 4</field>
+        <field name="Footprint">RadianPanel:LED_D3.0_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 mm LED, anode pad 2, cathode pad 1. Mainboard already has series resistor. Set flange height with assembly jig; envelope is not seated LED height.</field>
+        <field name="Manufacturer">Kingbright</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D2">
+      <description>Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS54 / OR</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pad 1 cathode VRAW, pad 2 anode fused source. Diode OR, no priority, shared ground. Measure worst-case diode temperature.</field>
+        <field name="Manufacturer">Vishay</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D3">
+      <description>Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SMBJ15A</field>
+        <field name="Footprint">RadianPanel:D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description">Unidirectional input TVS. Verify source fault energy and fuse coordination before any fault test.</field>
+        <field name="Manufacturer">Vishay</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="D4">
+      <description>Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior.</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">BAT54S</field>
+        <field name="Footprint">RadianPanel:SOT23_BAT54S</field>
+        <field name="Datasheet"/>
+        <field name="Description">Series diode pair clamp: 1=bottom anode, 2=top cathode, 3=junction. Verify powered and unpowered fault behavior.</field>
+        <field name="Manufacturer">Nexperia</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="ENC1">
+      <description>20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack.</description>
+      <fields>
+        <field name="Reference">ENC</field>
+        <field name="Value">24 PPR / PUSH</field>
+        <field name="Footprint">RadianPanel:Bourns_PEC11R4_RearFacing_Switch</field>
+        <field name="Datasheet"/>
+        <field name="Description">20 mm shaft / 7 mm bushing replaces proposed 15 mm shaft part to accommodate common PCB plane. Check encoder direction and nut stack.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="B" name="B" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+        <pin num="S1" name="S1" type="passive"/>
+        <pin num="S2" name="S2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="F1">
+      <description>Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</description>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">2A FUSE / &gt;=32V</field>
+        <field name="Footprint">RadianPanel:Fuse_1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="F2">
+      <description>Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</description>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">2A FUSE / &gt;=32V</field>
+        <field name="Footprint">RadianPanel:Fuse_1206</field>
+        <field name="Datasheet"/>
+        <field name="Description">Final fuse MPN, surge rating, derating and TVS coordination are an explicit release gate.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J100">
+      <description>Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">IPS1-110-01-L-D</field>
+        <field name="Footprint">RadianPanel:Stack_2x10_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">Direct mezzanine A; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</field>
+        <field name="Manufacturer">Samtec</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J101">
+      <description>Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">IPS1-110-01-L-D</field>
+        <field name="Footprint">RadianPanel:Stack_2x10_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description">Direct mezzanine B; Samtec IPS1 socket mates mainboard IPT1-110-06-L-D. Fully-mated PCB gap 19.99 mm; max 20.45 mm. Use ~20.0 mm standoffs and bench-verify seating before production quantity.</field>
+        <field name="Manufacturer">Samtec</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J200">
+      <description>Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">61201021621</field>
+        <field name="Footprint">RadianPanel:Wurth_61201021621_Exact_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Module-side 10-pin: 1/2=-12 NC, 3-8=GND, 9/10=+12. Use 16-to-10 cable to bus. Red stripe at pins 1/2; verify both cable ends. No bus +5/CV/gate connections.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J201">
+      <description>From panel-mounted centre-positive 12 V DC inlet in dock. NOT a 5 V inlet. Dock cutout waits for inlet selection.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">22-27-2021</field>
+        <field name="Footprint">RadianPanel:Molex_22-27-2021_J201_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">From panel-mounted centre-positive 12 V DC inlet in dock. NOT a 5 V inlet. Dock cutout waits for inlet selection.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J202">
+      <description>Pin-for-pin to J102 -&gt; main J2, no level conversion. Short cable, validate JTAG frequency.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">22-27-2061</field>
+        <field name="Footprint">RadianPanel:Molex_22-27-2061_J202_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin-for-pin to J102 -&gt; main J2, no level conversion. Short cable, validate JTAG frequency.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J301">
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">PITCH 0-5V</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SLEEVE" type="passive"/>
+        <pin num="2" name="NORMAL" type="passive"/>
+        <pin num="3" name="TIP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J302">
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">MOD</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SLEEVE" type="passive"/>
+        <pin num="2" name="NORMAL" type="passive"/>
+        <pin num="3" name="TIP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J303">
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">GATE</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SLEEVE" type="passive"/>
+        <pin num="2" name="NORMAL" type="passive"/>
+        <pin num="3" name="TIP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J304">
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">LINE L</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SLEEVE" type="passive"/>
+        <pin num="2" name="NORMAL" type="passive"/>
+        <pin num="3" name="TIP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J305">
+      <description>Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">LINE R</field>
+        <field name="Footprint">RadianPanel:WQP518MA_PJ398SM_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Vertical mono, grounded normal for inputs only. Sleeve=1, switched contact=2, tip=3. Imported supplier dimension drawing needs sample fit check.</field>
+        <field name="Manufacturer">QingPu / Thonk</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SLEEVE" type="passive"/>
+        <pin num="2" name="NORMAL" type="passive"/>
+        <pin num="3" name="TIP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="J306">
+      <description>Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB.</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">22-27-2021</field>
+        <field name="Footprint">RadianPanel:Molex_22-27-2021_J306_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Short 2-wire harness to retained SDS-50J pins 4 and 5. No DIN 2/shield-to-GND connection. DIN retention without old carrier still needs a tested clamp; no third custom PCB.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="JP1">
+      <description>Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch.</description>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">450301014042</field>
+        <field name="Footprint">RadianPanel:Wurth_450301014042_Exact_B</field>
+        <field name="Datasheet"/>
+        <field name="Description">Move only with power off. Bipolar mode requires matching firmware scaling and calibration. NOT the front MODE switch.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="L1">
+      <description>4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing.</description>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">10uH 4A / Isat7.5A</field>
+        <field name="Footprint">RadianPanel:Bourns_SRP7050TA</field>
+        <field name="Datasheet"/>
+        <field name="Description">4 A Irms / 7.5 A Isat at stated datasheet conditions; temperature rise needs testing.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R1">
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R2">
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">13.3k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R20">
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">200k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R21">
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">100k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R22">
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">200k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R23">
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R24">
+      <description>Resistor 0.1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">10k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 0.1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R3">
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">511k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R4">
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">105k</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="R5">
+      <description>Resistor 1%</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">49.9</field>
+        <field name="Footprint">RadianPanel:R_0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor 1%</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV1">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / TENSION</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV2">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / DECAY</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV3">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / CHAOS</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV4">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / DRIVE</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV5">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / DELAY</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="RV6">
+      <description>Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">10k linear / REVERB</field>
+        <field name="Footprint">RadianPanel:Bourns_PTV09A4_RearFacing</field>
+        <field name="Datasheet"/>
+        <field name="Description">Pin 1 CCW/GND, pin 3 CW/VREF25: verify direction on physical sample. No added wiper RC. Mount tabs soldered, electrically NC.</field>
+        <field name="Manufacturer">Bourns</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="MP1" name="MP1" type="passive"/>
+        <pin num="MP2" name="MP2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="SW1">
+      <description>Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required.</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">MODE / SPDT ON-ON</field>
+        <field name="Footprint">RadianPanel:E_Switch_100SP_M2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Gold contact option for low-level logic. ST110001 mechanical M2 pattern, 4.7 mm pitch. R contact selection from manufacturer configurator; purchase/stack validation required.</field>
+        <field name="Manufacturer">E-Switch</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="SW3">
+      <description>Internal service push button, accessible after module removal.</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">PROGRAM / SERVICE</field>
+        <field name="Footprint">RadianPanel:SW_PUSH_6x6_P6.5x4.5</field>
+        <field name="Datasheet"/>
+        <field name="Description">Internal service push button, accessible after module removal.</field>
+        <field name="Manufacturer">Omron</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="SW4">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">RESET / SERVICE</field>
+        <field name="Footprint">RadianPanel:SW_PUSH_6x6_P6.5x4.5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+        <field name="Manufacturer">Omron</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="TP1">
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">GND</field>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="TP2">
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VIN5</field>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="TP3">
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VRAW</field>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="TP4">
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">VREF25</field>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="TP5">
+      <description>Exposed soldermask aperture, no component.</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">MOD_BIPOLAR</field>
+        <field name="Footprint">RadianPanel:TestPoint_D2</field>
+        <field name="Datasheet"/>
+        <field name="Description">Exposed soldermask aperture, no component.</field>
+        <field name="Manufacturer"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="U1">
+      <description>3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit.</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS54302DDCR</field>
+        <field name="Footprint">RadianPanel:TI_DDC0006A_SOT23_6</field>
+        <field name="Datasheet"/>
+        <field name="Description">3 A IC rating is a design target, not validated system delivery. TI March 2026 datasheet 5 V reference circuit.</field>
+        <field name="Manufacturer">Texas Instruments</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="SW" type="output"/>
+        <pin num="3" name="VIN" type="power_in"/>
+        <pin num="4" name="FB" type="input"/>
+        <pin num="5" name="EN" type="input"/>
+        <pin num="6" name="BOOT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RadianPanel" part="U2">
+      <description>A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping.</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">OPA2192ID</field>
+        <field name="Footprint">RadianPanel:SOIC8_3.9x4.9_P1.27</field>
+        <field name="Datasheet"/>
+        <field name="Description">A buffers VREF25. B is non-inverting gain 2. 5 V single supply, output headroom limits rail endpoints; not rail-perfect mapping.</field>
+        <field name="Manufacturer">Texas Instruments</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUTA" type="output"/>
+        <pin num="2" name="INA-" type="input"/>
+        <pin num="3" name="INA+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="INB+" type="input"/>
+        <pin num="6" name="INB-" type="input"/>
+        <pin num="7" name="OUTB" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="RadianPanel">
+      <uri>${KIPRJMOD}/../library/RadianPanel.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="BOOT" class="Default">
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="BOOT_6" pintype="passive"/>
+    </net>
+    <net code="2" name="DESKTOP_12V" class="Power,Default">
+      <node ref="F2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J201" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="3" name="DESKTOP_FUSED" class="Power,Default">
+      <node ref="D2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="F2" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="4" name="EN" class="Default">
+      <node ref="R3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="EN_5" pintype="input"/>
+    </net>
+    <net code="5" name="ENC_A_RAW" class="Default">
+      <node ref="ENC1" pin="A" pinfunction="A_A" pintype="passive"/>
+      <node ref="J101" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="6" name="ENC_B_RAW" class="Default">
+      <node ref="ENC1" pin="B" pinfunction="B_B" pintype="passive"/>
+      <node ref="J101" pin="5" pinfunction="5_5" pintype="passive"/>
+    </net>
+    <net code="7" name="ENC_SW_RAW" class="Default">
+      <node ref="ENC1" pin="S1" pinfunction="S1_S1" pintype="passive"/>
+      <node ref="J101" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="8" name="FB" class="Default">
+      <node ref="C6" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="FB_4" pintype="input"/>
+    </net>
+    <net code="9" name="FF_TOP" class="Default">
+      <node ref="C6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R5" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="10" name="GATE_IN" class="Default">
+      <node ref="J100" pin="15" pinfunction="15_15" pintype="passive"/>
+      <node ref="J303" pin="3" pinfunction="TIP_3" pintype="passive"/>
+    </net>
+    <net code="11" name="GND" class="Default">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C5" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C7" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D10" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D11" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D12" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="ENC1" pin="C" pinfunction="C_C" pintype="passive"/>
+      <node ref="ENC1" pin="S2" pinfunction="S2_S2" pintype="passive"/>
+      <node ref="J100" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J100" pin="12" pinfunction="12_12" pintype="passive"/>
+      <node ref="J100" pin="16" pinfunction="16_16" pintype="passive"/>
+      <node ref="J100" pin="18" pinfunction="18_18" pintype="passive"/>
+      <node ref="J100" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="J100" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="J101" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J101" pin="12" pinfunction="12_12" pintype="passive"/>
+      <node ref="J101" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J200" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="J200" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="J200" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="J200" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="J200" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="J200" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="J201" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J202" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J301" pin="1" pinfunction="SLEEVE_1" pintype="passive"/>
+      <node ref="J301" pin="2" pinfunction="NORMAL_2" pintype="passive"/>
+      <node ref="J302" pin="1" pinfunction="SLEEVE_1" pintype="passive"/>
+      <node ref="J302" pin="2" pinfunction="NORMAL_2" pintype="passive"/>
+      <node ref="J303" pin="1" pinfunction="SLEEVE_1" pintype="passive"/>
+      <node ref="J303" pin="2" pinfunction="NORMAL_2" pintype="passive"/>
+      <node ref="J304" pin="1" pinfunction="SLEEVE_1" pintype="passive"/>
+      <node ref="J305" pin="1" pinfunction="SLEEVE_1" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R22" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R23" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="RV1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="RV2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="RV3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="RV4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="RV5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="RV6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="V-_4" pintype="power_in"/>
+    </net>
+    <net code="12" name="JTAG_TCK" class="Default">
+      <node ref="J101" pin="17" pinfunction="17_17" pintype="passive"/>
+      <node ref="J202" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="13" name="JTAG_TDI" class="Default">
+      <node ref="J101" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="J202" pin="5" pinfunction="5_5" pintype="passive"/>
+    </net>
+    <net code="14" name="JTAG_TDO" class="Default">
+      <node ref="J101" pin="18" pinfunction="18_18" pintype="passive"/>
+      <node ref="J202" pin="4" pinfunction="4_4" pintype="passive"/>
+    </net>
+    <net code="15" name="JTAG_TMS" class="Default">
+      <node ref="J101" pin="20" pinfunction="20_20" pintype="passive"/>
+      <node ref="J202" pin="6" pinfunction="6_6" pintype="passive"/>
+    </net>
+    <net code="16" name="LED0_A" class="Default">
+      <node ref="D10" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J101" pin="8" pinfunction="8_8" pintype="passive"/>
+    </net>
+    <net code="17" name="LED1_A" class="Default">
+      <node ref="D11" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J101" pin="9" pinfunction="9_9" pintype="passive"/>
+    </net>
+    <net code="18" name="LED2_A" class="Default">
+      <node ref="D12" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J101" pin="10" pinfunction="10_10" pintype="passive"/>
+    </net>
+    <net code="19" name="LED3_A" class="Default">
+      <node ref="D13" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J101" pin="11" pinfunction="11_11" pintype="passive"/>
+    </net>
+    <net code="20" name="LINE_L" class="Default">
+      <node ref="J100" pin="17" pinfunction="17_17" pintype="passive"/>
+      <node ref="J304" pin="3" pinfunction="TIP_3" pintype="passive"/>
+    </net>
+    <net code="21" name="LINE_R" class="Default">
+      <node ref="J100" pin="19" pinfunction="19_19" pintype="passive"/>
+      <node ref="J305" pin="3" pinfunction="TIP_3" pintype="passive"/>
+    </net>
+    <net code="22" name="MIDI4" class="Default">
+      <node ref="J101" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="J306" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="23" name="MIDI5" class="Default">
+      <node ref="J101" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="J306" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="24" name="MOD_BIPOLAR" class="Default">
+      <node ref="JP1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R24" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="OUTB_7" pintype="output"/>
+    </net>
+    <net code="25" name="MOD_FB" class="Default">
+      <node ref="R23" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R24" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="INB-_6" pintype="input"/>
+    </net>
+    <net code="26" name="MOD_IN" class="Default">
+      <node ref="J100" pin="14" pinfunction="14_14" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="27" name="MOD_RAW" class="Default">
+      <node ref="J302" pin="3" pinfunction="TIP_3" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R20" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="28" name="MOD_SUM" class="Default">
+      <node ref="D4" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="R20" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R21" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="R22" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="INB+_5" pintype="input"/>
+    </net>
+    <net code="29" name="PITCH_IN" class="Default">
+      <node ref="J100" pin="13" pinfunction="13_13" pintype="passive"/>
+      <node ref="J301" pin="3" pinfunction="TIP_3" pintype="passive"/>
+    </net>
+    <net code="30" name="POT_DECAY_RAW" class="Default">
+      <node ref="J100" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="RV2" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="31" name="POT_DELAY_RAW" class="Default">
+      <node ref="J100" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="RV5" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="32" name="POT_DRIVE_RAW" class="Default">
+      <node ref="J100" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="RV4" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="33" name="POT_PITCH_RAW" class="Default">
+      <node ref="J100" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="RV1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="34" name="POT_REVERB_RAW" class="Default">
+      <node ref="J100" pin="11" pinfunction="11_11" pintype="passive"/>
+      <node ref="RV6" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="35" name="POT_TIMBRE_RAW" class="Default">
+      <node ref="J100" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="RV3" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="36" name="PROGRAM_B" class="Default">
+      <node ref="J101" pin="15" pinfunction="15_15" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="37" name="RACK_12V" class="Power,Default">
+      <node ref="F1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="J200" pin="10" pinfunction="10_10" pintype="passive"/>
+      <node ref="J200" pin="9" pinfunction="9_9" pintype="passive"/>
+    </net>
+    <net code="38" name="RACK_FUSED" class="Power,Default">
+      <node ref="D1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="F1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="39" name="SW" class="Default">
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SW_2" pintype="output"/>
+    </net>
+    <net code="40" name="V3V3" class="Default">
+      <node ref="J101" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J202" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="3_3" pintype="passive"/>
+    </net>
+    <net code="41" name="VIN5" class="Power,Default">
+      <node ref="C20" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C21" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J100" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="J100" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="V+_8" pintype="power_in"/>
+    </net>
+    <net code="42" name="VRAW" class="Power,Default">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C7" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="VIN_3" pintype="power_in"/>
+    </net>
+    <net code="43" name="VREF25" class="Default">
+      <node ref="J100" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="RV1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="RV2" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="RV3" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="RV4" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="RV5" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="RV6" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="INA+_3" pintype="input"/>
+    </net>
+    <net code="44" name="VREF_BUF" class="Default">
+      <node ref="R21" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="OUTA_1" pintype="output"/>
+      <node ref="U2" pin="2" pinfunction="INA-_2" pintype="input"/>
+    </net>
+    <net code="45" name="cv_select" class="Default">
+      <node ref="J101" pin="7" pinfunction="7_7" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
+    </net>
+    <net code="46" name="reset_n" class="Default">
+      <node ref="J101" pin="16" pinfunction="16_16" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="47" name="unconnected-(ENC1-PadMP1)" class="Default">
+      <node ref="ENC1" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(ENC1-PadMP2)" class="Default">
+      <node ref="ENC1" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J200-Pad1)" class="Default">
+      <node ref="J200" pin="1" pinfunction="1_1" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(J200-Pad2)" class="Default">
+      <node ref="J200" pin="2" pinfunction="2_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(J304-NORMAL-Pad2)" class="Default">
+      <node ref="J304" pin="2" pinfunction="NORMAL_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(J305-NORMAL-Pad2)" class="Default">
+      <node ref="J305" pin="2" pinfunction="NORMAL_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(RV1-PadMP1)" class="Default">
+      <node ref="RV1" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(RV1-PadMP2)" class="Default">
+      <node ref="RV1" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(RV2-PadMP1)" class="Default">
+      <node ref="RV2" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(RV2-PadMP2)" class="Default">
+      <node ref="RV2" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(RV3-PadMP1)" class="Default">
+      <node ref="RV3" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(RV3-PadMP2)" class="Default">
+      <node ref="RV3" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(RV4-PadMP1)" class="Default">
+      <node ref="RV4" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(RV4-PadMP2)" class="Default">
+      <node ref="RV4" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(RV5-PadMP1)" class="Default">
+      <node ref="RV5" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(RV5-PadMP2)" class="Default">
+      <node ref="RV5" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(RV6-PadMP1)" class="Default">
+      <node ref="RV6" pin="MP1" pinfunction="MP1_MP1" pintype="passive+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(RV6-PadMP2)" class="Default">
+      <node ref="RV6" pin="MP2" pinfunction="MP2_MP2" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

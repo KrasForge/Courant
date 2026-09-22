@@ -1,0 +1,2525 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-18T05:13:14",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "radian_panel.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.0257 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "6e9a48a8-8974-4886-8e9c-d7c6159eab0b"
+                },
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Pad 2 [RACK_FUSED] of F1 on F.Cu",
+                    "pos": {
+                        "x": 54.5,
+                        "y": 63.5
+                    },
+                    "uuid": "0afea963-a647-55cd-9b73-d690b18ae2c6"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 4.1489 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 44.365
+                    },
+                    "uuid": "cb6f1a50-f995-43fb-a26d-1b83c778f2f6"
+                },
+                {
+                    "description": "Pad 5 [GND] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "b0c4c250-814c-41ee-af6d-03991a722828"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 5.0200 mm",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 60.0
+                    },
+                    "uuid": "dc788c42-5f6c-4d9b-99e0-aca8c43b73e1"
+                },
+                {
+                    "description": "PTH pad 13 [MIDI4] of J101",
+                    "pos": {
+                        "x": 46.81,
+                        "y": 57.52
+                    },
+                    "uuid": "f0c43fea-00ef-4fb2-9bc3-6065ada127c7"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8900 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 54.98
+                    },
+                    "uuid": "5d872f2e-0b1d-41a2-a62f-ffb052c7ec10"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.9800 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 50.0
+                    },
+                    "uuid": "69c49c9d-a550-4737-b0c3-24c5c896eb24"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.1318 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "0a0be06c-ada5-40d7-9c54-1592dbf31e7b"
+                },
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.5700 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 57.52
+                    },
+                    "uuid": "29a109c0-1e81-4c43-9843-b985e160f95f"
+                },
+                {
+                    "description": "PTH pad MP1 [unconnected-(RV4-PadMP1)] of RV4",
+                    "pos": {
+                        "x": 60.7,
+                        "y": 58.5
+                    },
+                    "uuid": "6af844c8-df51-5cc2-bf62-c75b1f62f086"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Rear solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 10.5200 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 47.0
+                    },
+                    "uuid": "b9846e95-dbd4-4fb3-b917-79689fef7da8"
+                },
+                {
+                    "description": "PTH pad MP1 [unconnected-(RV4-PadMP1)] of RV4",
+                    "pos": {
+                        "x": 60.7,
+                        "y": 58.5
+                    },
+                    "uuid": "6af844c8-df51-5cc2-bf62-c75b1f62f086"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [LED3_A] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 58.5,
+                        "y": 62.75
+                    },
+                    "uuid": "2f4176d4-d43a-5602-8651-a68a87b1157a"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 65.0
+                    },
+                    "uuid": "6e0a6630-31dc-4c85-b398-667ffba8728a"
+                },
+                {
+                    "description": "Track [LED3_A] on B.Cu, length 2.5000 mm",
+                    "pos": {
+                        "x": 46.75,
+                        "y": 62.5
+                    },
+                    "uuid": "c5050ea9-9373-55d2-8164-6e31f2d0c0f5"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [LED3_A] on B.Cu, length 3.1820 mm",
+                    "pos": {
+                        "x": 46.75,
+                        "y": 60.0
+                    },
+                    "uuid": "0a6965ca-b44d-57be-a15e-83181f6a3d3e"
+                },
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 5.0200 mm",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 60.0
+                    },
+                    "uuid": "dc788c42-5f6c-4d9b-99e0-aca8c43b73e1"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 7.7500 mm",
+                    "pos": {
+                        "x": 37.25,
+                        "y": 80.25
+                    },
+                    "uuid": "2c3806dd-e232-50b7-84f7-cae72748fbb9"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0125 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 76.0
+                    },
+                    "uuid": "d7edf48f-94f3-4770-b97e-b056480e0118"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [ENC_A_RAW] on B.Cu, length 7.7500 mm",
+                    "pos": {
+                        "x": 37.75,
+                        "y": 79.75
+                    },
+                    "uuid": "956ab941-0d4d-507c-b7ff-ccb193757c7b"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0125 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 76.0
+                    },
+                    "uuid": "d7edf48f-94f3-4770-b97e-b056480e0118"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [ENC_B_RAW] on B.Cu, length 13.5000 mm",
+                    "pos": {
+                        "x": 38.25,
+                        "y": 79.25
+                    },
+                    "uuid": "c2e67045-3d14-577c-858e-e5facc6ccdec"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0125 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 76.0
+                    },
+                    "uuid": "d7edf48f-94f3-4770-b97e-b056480e0118"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0125 mm",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 76.0
+                    },
+                    "uuid": "d7edf48f-94f3-4770-b97e-b056480e0118"
+                },
+                {
+                    "description": "Track [ENC_SW_RAW] on B.Cu, length 16.7500 mm",
+                    "pos": {
+                        "x": 39.5,
+                        "y": 78.5
+                    },
+                    "uuid": "f31a2c4f-7e12-5466-91fe-bb0eede5c975"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [VIN5] on F.Cu, length 42.4264 mm",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 96.75
+                    },
+                    "uuid": "44a38ae8-ee61-5d1f-bbeb-84230f4ba932"
+                },
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.2111 mm",
+                    "pos": {
+                        "x": 64.0,
+                        "y": 70.0
+                    },
+                    "uuid": "f7de55ff-b7b0-426e-b416-0534c39a2537"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets VIN5 and MIDI4)",
+            "items": [
+                {
+                    "description": "Track [VIN5] on F.Cu, length 2.1213 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 66.5
+                    },
+                    "uuid": "7722c6bf-0144-5ad3-bc02-d54ed0058938"
+                },
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.2111 mm",
+                    "pos": {
+                        "x": 64.0,
+                        "y": 70.0
+                    },
+                    "uuid": "f7de55ff-b7b0-426e-b416-0534c39a2537"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets VIN5 and MIDI4)",
+            "items": [
+                {
+                    "description": "Track [VIN5] on F.Cu, length 0.2500 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 66.75
+                    },
+                    "uuid": "7c35971a-6b20-5068-b120-e4b7586f703f"
+                },
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.2111 mm",
+                    "pos": {
+                        "x": 64.0,
+                        "y": 70.0
+                    },
+                    "uuid": "f7de55ff-b7b0-426e-b416-0534c39a2537"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets RACK_12V and MIDI4)",
+            "items": [
+                {
+                    "description": "Track [RACK_12V] on F.Cu, length 0.3536 mm",
+                    "pos": {
+                        "x": 53.25,
+                        "y": 61.75
+                    },
+                    "uuid": "08831a66-369a-5654-bb3e-433f45709cb8"
+                },
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets MIDI4 and RACK_12V)",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [RACK_12V] on F.Cu, length 0.2500 mm",
+                    "pos": {
+                        "x": 53.0,
+                        "y": 61.75
+                    },
+                    "uuid": "4b33061b-a6f4-5280-a142-d4cf525429ec"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets MIDI4 and RACK_12V)",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [RACK_12V] on F.Cu, length 1.2500 mm",
+                    "pos": {
+                        "x": 53.5,
+                        "y": 61.5
+                    },
+                    "uuid": "f2d33218-ec62-5ab6-947a-69ac1d0d638a"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [RACK_12V] on F.Cu, length 2.1213 mm",
+                    "pos": {
+                        "x": 51.5,
+                        "y": 63.25
+                    },
+                    "uuid": "892c60f0-670c-513b-b9bd-952a096954e8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets RACK_FUSED and MIDI4)",
+            "items": [
+                {
+                    "description": "Pad 2 [RACK_FUSED] of F1 on F.Cu",
+                    "pos": {
+                        "x": 54.5,
+                        "y": 63.5
+                    },
+                    "uuid": "0afea963-a647-55cd-9b73-d690b18ae2c6"
+                },
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 40.2500 mm",
+                    "pos": {
+                        "x": 60.5,
+                        "y": 104.0
+                    },
+                    "uuid": "0df71aa7-c20e-5701-a014-ad63042157c8"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 7.0711 mm",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 95.0
+                    },
+                    "uuid": "fb6f4e94-136a-45d4-9562-24df138c514b"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on B.Cu, length 16.0000 mm",
+                    "pos": {
+                        "x": 58.75,
+                        "y": 89.5
+                    },
+                    "uuid": "a628fdca-077b-5337-88db-1904f76356cc"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.7703 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "fafea4dc-8ea1-43d7-9f7c-a6f1e19f86a9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 65.0
+                    },
+                    "uuid": "6e0a6630-31dc-4c85-b398-667ffba8728a"
+                },
+                {
+                    "description": "Track [MIDI4] on B.Cu, length 4.0000 mm",
+                    "pos": {
+                        "x": 47.25,
+                        "y": 62.0
+                    },
+                    "uuid": "9da05c07-e05d-560c-a226-9ad4fde1794c"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [cv_select] on F.Cu, length 3.5355 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 62.25
+                    },
+                    "uuid": "e1803235-9575-58fc-a3f4-dbd338a4383f"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 15.0000 mm",
+                    "pos": {
+                        "x": 56.0,
+                        "y": 89.5
+                    },
+                    "uuid": "727c1d50-2bb3-57c3-a63a-8d1196619c87"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.7703 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "fafea4dc-8ea1-43d7-9f7c-a6f1e19f86a9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 11.1803 mm",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 105.0
+                    },
+                    "uuid": "32c58251-b6f0-419a-a79e-8a32a5ffe771"
+                },
+                {
+                    "description": "Track [V3V3] on B.Cu, length 49.5000 mm",
+                    "pos": {
+                        "x": 109.0,
+                        "y": 105.0
+                    },
+                    "uuid": "a2d49722-b427-5b48-8629-3f0cb7ece0a8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 5.0000 mm",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 110.0
+                    },
+                    "uuid": "78526efb-c1a9-4bdf-91a1-355a79f01178"
+                },
+                {
+                    "description": "Track [V3V3] on B.Cu, length 49.5000 mm",
+                    "pos": {
+                        "x": 109.0,
+                        "y": 105.0
+                    },
+                    "uuid": "a2d49722-b427-5b48-8629-3f0cb7ece0a8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [PROGRAM_B] on B.Cu, length 16.2500 mm",
+                    "pos": {
+                        "x": 57.5,
+                        "y": 90.75
+                    },
+                    "uuid": "6b59a3c8-8a36-5b66-826a-46edd184d9e9"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.7703 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "fafea4dc-8ea1-43d7-9f7c-a6f1e19f86a9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets DESKTOP_12V and ENC_SW_RAW)",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0000 mm",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 76.0
+                    },
+                    "uuid": "3f648c5a-a855-4116-8f9b-eacd7d6fff7a"
+                },
+                {
+                    "description": "Track [ENC_SW_RAW] on B.Cu, length 16.7500 mm",
+                    "pos": {
+                        "x": 39.5,
+                        "y": 78.5
+                    },
+                    "uuid": "f31a2c4f-7e12-5466-91fe-bb0eede5c975"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 11.1803 mm",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 105.0
+                    },
+                    "uuid": "32c58251-b6f0-419a-a79e-8a32a5ffe771"
+                },
+                {
+                    "description": "Track [PROGRAM_B] on B.Cu, length 57.7500 mm",
+                    "pos": {
+                        "x": 117.75,
+                        "y": 104.5
+                    },
+                    "uuid": "793b4ad9-f23c-5fcb-aa83-29aa92f8b0d9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 40.2500 mm",
+                    "pos": {
+                        "x": 60.5,
+                        "y": 104.0
+                    },
+                    "uuid": "0df71aa7-c20e-5701-a014-ad63042157c8"
+                },
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 10.0000 mm",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 78.0
+                    },
+                    "uuid": "d2201e02-2315-453c-99db-0da415c4be15"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets DESKTOP_12V and JTAG_TDI)",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.0000 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 90.0
+                    },
+                    "uuid": "0195a4c8-8741-41d3-a853-ea4d1057bcd3"
+                },
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 40.2500 mm",
+                    "pos": {
+                        "x": 60.5,
+                        "y": 104.0
+                    },
+                    "uuid": "0df71aa7-c20e-5701-a014-ad63042157c8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets DESKTOP_12V and PROGRAM_B)",
+            "items": [
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 5.0000 mm",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 110.0
+                    },
+                    "uuid": "78526efb-c1a9-4bdf-91a1-355a79f01178"
+                },
+                {
+                    "description": "Track [PROGRAM_B] on B.Cu, length 57.7500 mm",
+                    "pos": {
+                        "x": 117.75,
+                        "y": 104.5
+                    },
+                    "uuid": "793b4ad9-f23c-5fcb-aa83-29aa92f8b0d9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDI and DESKTOP_12V)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 40.2500 mm",
+                    "pos": {
+                        "x": 60.5,
+                        "y": 104.0
+                    },
+                    "uuid": "0df71aa7-c20e-5701-a014-ad63042157c8"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 10.7703 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 80.0
+                    },
+                    "uuid": "fafea4dc-8ea1-43d7-9f7c-a6f1e19f86a9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 10.6301 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 72.0
+                    },
+                    "uuid": "51d339be-5e89-4e48-a1c5-237ec43e9d05"
+                },
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 8.0000 mm",
+                    "pos": {
+                        "x": 57.5,
+                        "y": 71.25
+                    },
+                    "uuid": "7e08068c-7196-5cd8-ab43-b83fb34c4ea6"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 49.0000 mm",
+                    "pos": {
+                        "x": 109.5,
+                        "y": 104.0
+                    },
+                    "uuid": "1add13aa-4d69-5faf-a5ef-9ae6e64c1021"
+                },
+                {
+                    "description": "Track [DESKTOP_12V] on B.Cu, length 11.1803 mm",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 105.0
+                    },
+                    "uuid": "32c58251-b6f0-419a-a79e-8a32a5ffe771"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets MIDI5 and MIDI4)",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 5.0200 mm",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 60.0
+                    },
+                    "uuid": "dc788c42-5f6c-4d9b-99e0-aca8c43b73e1"
+                },
+                {
+                    "description": "PTH pad 13 [MIDI4] of J101",
+                    "pos": {
+                        "x": 46.81,
+                        "y": 57.52
+                    },
+                    "uuid": "f0c43fea-00ef-4fb2-9bc3-6065ada127c7"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.1650 mm)",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 5.0200 mm",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 60.0
+                    },
+                    "uuid": "dc788c42-5f6c-4d9b-99e0-aca8c43b73e1"
+                },
+                {
+                    "description": "PTH pad 13 [MIDI4] of J101",
+                    "pos": {
+                        "x": 46.81,
+                        "y": 57.52
+                    },
+                    "uuid": "f0c43fea-00ef-4fb2-9bc3-6065ada127c7"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets MIDI4 and RACK_FUSED)",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [RACK_FUSED] on F.Cu, length 2.1213 mm",
+                    "pos": {
+                        "x": 53.0,
+                        "y": 65.25
+                    },
+                    "uuid": "70f2d8ed-5f5e-5282-85fa-e116fd84d403"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets MIDI4 and RACK_FUSED)",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 7.8102 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 66.0
+                    },
+                    "uuid": "217112ca-ea10-4392-8b2c-84cc4123137c"
+                },
+                {
+                    "description": "Track [RACK_FUSED] on F.Cu, length 0.2500 mm",
+                    "pos": {
+                        "x": 54.5,
+                        "y": 63.75
+                    },
+                    "uuid": "bf43b246-4c3c-5874-861b-ea719358dec6"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDI and V3V3)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.1318 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "0a0be06c-ada5-40d7-9c54-1592dbf31e7b"
+                },
+                {
+                    "description": "Track [V3V3] on B.Cu, length 5.2083 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "728723f9-9d58-47ec-abfb-a3ad34a569ab"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.1231 mm",
+                    "pos": {
+                        "x": 50.0,
+                        "y": 46.0
+                    },
+                    "uuid": "90ee3e60-b1ae-4dea-8948-7aa58e347626"
+                },
+                {
+                    "description": "Track [LED2_A] on B.Cu, length 18.3848 mm",
+                    "pos": {
+                        "x": 54.75,
+                        "y": 42.0
+                    },
+                    "uuid": "bdb28283-09df-5b64-98b0-1c8166e5c646"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0484 mm)",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 5.2083 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "728723f9-9d58-47ec-abfb-a3ad34a569ab"
+                },
+                {
+                    "description": "Via [LED2_A] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 59.25,
+                        "y": 42.0
+                    },
+                    "uuid": "f8916891-5a0c-52c2-a2e9-f441e54cb8d5"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [LED2_A] on B.Cu, length 18.3848 mm",
+                    "pos": {
+                        "x": 54.75,
+                        "y": 42.0
+                    },
+                    "uuid": "bdb28283-09df-5b64-98b0-1c8166e5c646"
+                },
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.0726 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "e1ac89b2-308e-4e89-ac62-322a35bc1b6a"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2484 mm)",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 5.2083 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "728723f9-9d58-47ec-abfb-a3ad34a569ab"
+                },
+                {
+                    "description": "Via [LED2_A] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 59.25,
+                        "y": 42.0
+                    },
+                    "uuid": "f8916891-5a0c-52c2-a2e9-f441e54cb8d5"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 5.2083 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "728723f9-9d58-47ec-abfb-a3ad34a569ab"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 57.54,
+                        "y": 45.0
+                    },
+                    "uuid": "96f0090e-3004-4007-b9c5-661e0c84c078"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [LED2_A] on B.Cu, length 18.3848 mm",
+                    "pos": {
+                        "x": 54.75,
+                        "y": 42.0
+                    },
+                    "uuid": "bdb28283-09df-5b64-98b0-1c8166e5c646"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [V3V3] on B.Cu, length 6.0000 mm",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 42.0
+                    },
+                    "uuid": "07cf2b64-a267-4ffe-93b7-ce642d5529f9"
+                },
+                {
+                    "description": "Track [LED0_A] on B.Cu, length 11.7500 mm",
+                    "pos": {
+                        "x": 68.25,
+                        "y": 37.75
+                    },
+                    "uuid": "e35d06b8-7b20-5bd0-8e97-9d2f3ba85ed1"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.0257 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "6e9a48a8-8974-4886-8e9c-d7c6159eab0b"
+                },
+                {
+                    "description": "Track [V3V3] on B.Cu, length 5.2083 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "728723f9-9d58-47ec-abfb-a3ad34a569ab"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on F.Cu, length 6.2487 mm",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 61.0
+                    },
+                    "uuid": "0e22deec-d629-4d86-bae0-419587d18c90"
+                },
+                {
+                    "description": "Track [PROGRAM_B] on F.Cu, length 4.5962 mm",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 61.0
+                    },
+                    "uuid": "44334f6f-4389-5b6f-ae5f-693c43c960db"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [LED2_A] on B.Cu, length 18.3848 mm",
+                    "pos": {
+                        "x": 54.75,
+                        "y": 42.0
+                    },
+                    "uuid": "bdb28283-09df-5b64-98b0-1c8166e5c646"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 3.1522 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "e804f8a4-342a-43c6-86be-8b0a688e36df"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.0726 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "e1ac89b2-308e-4e89-ac62-322a35bc1b6a"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 3.1522 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "e804f8a4-342a-43c6-86be-8b0a688e36df"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [GND] on B.Cu, length 3.1522 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "e804f8a4-342a-43c6-86be-8b0a688e36df"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1783 mm)",
+            "items": [
+                {
+                    "description": "Pad 6 [JTAG_TDO] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "a556f190-42c8-4b1f-996b-0b281f0cac29"
+                },
+                {
+                    "description": "Track [GND] on B.Cu, length 3.1522 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "e804f8a4-342a-43c6-86be-8b0a688e36df"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [reset_n] on B.Cu, length 10.2530 mm",
+                    "pos": {
+                        "x": 56.75,
+                        "y": 47.75
+                    },
+                    "uuid": "57955652-3aa8-53d2-9b4a-4876e81b0a5c"
+                },
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8900 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 54.98
+                    },
+                    "uuid": "5d872f2e-0b1d-41a2-a62f-ffb052c7ec10"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8900 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 54.98
+                    },
+                    "uuid": "5d872f2e-0b1d-41a2-a62f-ffb052c7ec10"
+                },
+                {
+                    "description": "Track [reset_n] on B.Cu, length 0.1513 mm",
+                    "pos": {
+                        "x": 49.5,
+                        "y": 55.0
+                    },
+                    "uuid": "70d3ac75-aba3-5500-ae67-ecec2d2a9440"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [reset_n] on B.Cu, length 8.2500 mm",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 47.75
+                    },
+                    "uuid": "789dafa4-ff83-5df4-8e55-a1bfe82ff6f9"
+                },
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 10.5200 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 47.0
+                    },
+                    "uuid": "b9846e95-dbd4-4fb3-b917-79689fef7da8"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 9.5200 mm",
+                    "pos": {
+                        "x": 53.0,
+                        "y": 48.0
+                    },
+                    "uuid": "4b30a4f5-e29e-4078-993e-2a1c266cf2de"
+                },
+                {
+                    "description": "Track [reset_n] on B.Cu, length 10.2530 mm",
+                    "pos": {
+                        "x": 56.75,
+                        "y": 47.75
+                    },
+                    "uuid": "57955652-3aa8-53d2-9b4a-4876e81b0a5c"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2409 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 43.0
+                    },
+                    "uuid": "50755266-0368-40bb-9903-4861d26cc460"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.0257 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "6e9a48a8-8974-4886-8e9c-d7c6159eab0b"
+                },
+                {
+                    "description": "Track [reset_n] on B.Cu, length 8.2500 mm",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 47.75
+                    },
+                    "uuid": "789dafa4-ff83-5df4-8e55-a1bfe82ff6f9"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1000 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.9800 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 50.0
+                    },
+                    "uuid": "69c49c9d-a550-4737-b0c3-24c5c896eb24"
+                },
+                {
+                    "description": "Track [reset_n] on B.Cu, length 0.1513 mm",
+                    "pos": {
+                        "x": 49.5,
+                        "y": 55.0
+                    },
+                    "uuid": "70d3ac75-aba3-5500-ae67-ecec2d2a9440"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0553 mm)",
+            "items": [
+                {
+                    "description": "Track [LED0_A] on B.Cu, length 24.3952 mm",
+                    "pos": {
+                        "x": 56.5,
+                        "y": 37.75
+                    },
+                    "uuid": "0d0dcabc-3a12-547d-87c1-8930876aeef3"
+                },
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 43.0
+                    },
+                    "uuid": "50755266-0368-40bb-9903-4861d26cc460"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets reset_n and JTAG_TMS)",
+            "items": [
+                {
+                    "description": "Track [reset_n] on B.Cu, length 8.2500 mm",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 47.75
+                    },
+                    "uuid": "789dafa4-ff83-5df4-8e55-a1bfe82ff6f9"
+                },
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 5.0000 mm",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 48.0
+                    },
+                    "uuid": "a7f6395f-727f-4683-80cc-6c8515c3ff48"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2409 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 43.0
+                    },
+                    "uuid": "50755266-0368-40bb-9903-4861d26cc460"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2409 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 43.0
+                    },
+                    "uuid": "50755266-0368-40bb-9903-4861d26cc460"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.1318 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "0a0be06c-ada5-40d7-9c54-1592dbf31e7b"
+                },
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.0257 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "6e9a48a8-8974-4886-8e9c-d7c6159eab0b"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDI and unconnected-(RV4-PadMP1))",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.5700 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 57.52
+                    },
+                    "uuid": "29a109c0-1e81-4c43-9843-b985e160f95f"
+                },
+                {
+                    "description": "PTH pad MP1 [unconnected-(RV4-PadMP1)] of RV4",
+                    "pos": {
+                        "x": 60.7,
+                        "y": 58.5
+                    },
+                    "uuid": "6af844c8-df51-5cc2-bf62-c75b1f62f086"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2409 mm)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 43.0
+                    },
+                    "uuid": "50755266-0368-40bb-9903-4861d26cc460"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets unconnected-(RV4-PadMP1) and JTAG_TDI)",
+            "items": [
+                {
+                    "description": "PTH pad MP1 [unconnected-(RV4-PadMP1)] of RV4",
+                    "pos": {
+                        "x": 60.7,
+                        "y": 58.5
+                    },
+                    "uuid": "6af844c8-df51-5cc2-bf62-c75b1f62f086"
+                },
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 10.5200 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 47.0
+                    },
+                    "uuid": "b9846e95-dbd4-4fb3-b917-79689fef7da8"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDI and V3V3)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.1318 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "0a0be06c-ada5-40d7-9c54-1592dbf31e7b"
+                },
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.5700 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 57.52
+                    },
+                    "uuid": "29a109c0-1e81-4c43-9843-b985e160f95f"
+                },
+                {
+                    "description": "PTH pad MP1 [unconnected-(RV4-PadMP1)] of RV4",
+                    "pos": {
+                        "x": 60.7,
+                        "y": 58.5
+                    },
+                    "uuid": "6af844c8-df51-5cc2-bf62-c75b1f62f086"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 7.5700 mm",
+                    "pos": {
+                        "x": 62.0,
+                        "y": 57.52
+                    },
+                    "uuid": "29a109c0-1e81-4c43-9843-b985e160f95f"
+                },
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 7.4246 mm",
+                    "pos": {
+                        "x": 59.75,
+                        "y": 60.5
+                    },
+                    "uuid": "fca8df7e-a7af-5ff1-85ef-46844182f358"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDO and reset_n)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8900 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 54.98
+                    },
+                    "uuid": "5d872f2e-0b1d-41a2-a62f-ffb052c7ec10"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Items shorting two nets (nets JTAG_TDO and reset_n)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.9800 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 50.0
+                    },
+                    "uuid": "69c49c9d-a550-4737-b0c3-24c5c896eb24"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2385 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.0726 mm",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "e1ac89b2-308e-4e89-ac62-322a35bc1b6a"
+                },
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 4.9800 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 50.0
+                    },
+                    "uuid": "69c49c9d-a550-4737-b0c3-24c5c896eb24"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.0000 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on B.Cu, length 2.8900 mm",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 54.98
+                    },
+                    "uuid": "5d872f2e-0b1d-41a2-a62f-ffb052c7ec10"
+                },
+                {
+                    "description": "PTH pad 16 [reset_n] of J101",
+                    "pos": {
+                        "x": 49.35,
+                        "y": 54.98
+                    },
+                    "uuid": "6d3c33e5-f491-4b6d-8550-b4a64a4725e9"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0271 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 4.0257 mm",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "6e9a48a8-8974-4886-8e9c-d7c6159eab0b"
+                },
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (pad clearance 0.2000 mm; actual 0.0850 mm)",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 9.5200 mm",
+                    "pos": {
+                        "x": 53.0,
+                        "y": 48.0
+                    },
+                    "uuid": "4b30a4f5-e29e-4078-993e-2a1c266cf2de"
+                },
+                {
+                    "description": "PTH pad 18 [JTAG_TDO] of J101",
+                    "pos": {
+                        "x": 51.89,
+                        "y": 54.98
+                    },
+                    "uuid": "9fceef77-b285-40e2-b698-720639f36120"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0935 mm)",
+            "items": [
+                {
+                    "description": "Pad 3 [JTAG_TDI] of J202 on B.Cu",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "42647c46-4e79-4586-8505-e63051eeaf7a"
+                },
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 4.1489 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 44.365
+                    },
+                    "uuid": "cb6f1a50-f995-43fb-a26d-1b83c778f2f6"
+                }
+            ],
+            "severity": "error",
+            "type": "clearance"
+        },
+        {
+            "description": "Items shorting two nets (nets GND and JTAG_TCK)",
+            "items": [
+                {
+                    "description": "Pad 5 [GND] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "b0c4c250-814c-41ee-af6d-03991a722828"
+                },
+                {
+                    "description": "Track [JTAG_TCK] on B.Cu, length 4.1489 mm",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 44.365
+                    },
+                    "uuid": "cb6f1a50-f995-43fb-a26d-1b83c778f2f6"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Non-Mirrored text on back layer",
+            "items": [],
+            "severity": "warning",
+            "type": "nonmirrored_text_on_back_layer"
+        },
+        {
+            "description": "Non-Mirrored text on back layer",
+            "items": [],
+            "severity": "warning",
+            "type": "nonmirrored_text_on_back_layer"
+        },
+        {
+            "description": "Non-Mirrored text on back layer",
+            "items": [],
+            "severity": "warning",
+            "type": "nonmirrored_text_on_back_layer"
+        },
+        {
+            "description": "Non-Mirrored text on back layer",
+            "items": [],
+            "severity": "warning",
+            "type": "nonmirrored_text_on_back_layer"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of J201 on F.Silkscreen",
+                    "pos": {
+                        "x": 83.415,
+                        "y": 109.5
+                    },
+                    "uuid": "12866a60-70f9-42be-8897-70b0ff9c60a2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 1 [DESKTOP_12V] of J201",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 110.0
+                    },
+                    "uuid": "24e12cd1-6025-4ece-bbbe-ee661a817bbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 1 [DESKTOP_12V] of J201",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 110.0
+                    },
+                    "uuid": "24e12cd1-6025-4ece-bbbe-ee661a817bbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of J200 on B.Silkscreen",
+                    "pos": {
+                        "x": 169.465,
+                        "y": 54.21
+                    },
+                    "uuid": "f32c0fe6-c35a-42c7-82c3-0819244c2b9a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Rectangle of JP1 on B.Silkscreen",
+                    "pos": {
+                        "x": 160.25,
+                        "y": 39.0
+                    },
+                    "uuid": "6e552bc2-102c-48d5-bbb8-9268bad2c05c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 2 [unconnected-(J200-Pad2)] of J200",
+                    "pos": {
+                        "x": 172.73,
+                        "y": 59.42
+                    },
+                    "uuid": "4f4428f7-9810-4527-b89f-d336f82f1e5c"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 1 [unconnected-(J200-Pad1)] of J200",
+                    "pos": {
+                        "x": 175.27,
+                        "y": 59.42
+                    },
+                    "uuid": "971fe4cc-e89e-463a-af83-2f432470383d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 1 [MOD_IN] of JP1",
+                    "pos": {
+                        "x": 165.5,
+                        "y": 40.5
+                    },
+                    "uuid": "d8f457ea-ba9f-4581-9adb-4b3fefbc3d7d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 2 [MOD_BIPOLAR] of JP1",
+                    "pos": {
+                        "x": 162.96,
+                        "y": 40.5
+                    },
+                    "uuid": "c8c23181-c202-4807-bce7-4197816f9726"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PTH pad 3 [MOD_RAW] of JP1",
+                    "pos": {
+                        "x": 168.04,
+                        "y": 40.5
+                    },
+                    "uuid": "7955e95a-c911-4618-aa49-7600880f8cda"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'DRAFT - NOT FABRICATION RELEASE' on B.Silkscreen",
+                    "pos": {
+                        "x": 75.0,
+                        "y": 116.5
+                    },
+                    "uuid": "d20b2117-a16e-5c86-86a2-87b202be9ff4"
+                },
+                {
+                    "description": "PTH pad 2 [unconnected-(J201-Pad2)] of J201",
+                    "pos": {
+                        "x": 87.3,
+                        "y": 115.3
+                    },
+                    "uuid": "83889800-911d-42b6-ae55-7ce4a20a4af2"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text '12 V DESKTOP / RACK +12 ONLY' on B.Silkscreen",
+                    "pos": {
+                        "x": 82.0,
+                        "y": 111.0
+                    },
+                    "uuid": "69d97ec7-f7bb-5336-88a2-256ee2d1d115"
+                },
+                {
+                    "description": "PTH pad 1 [DESKTOP_12V] of J201",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 110.0
+                    },
+                    "uuid": "24e12cd1-6025-4ece-bbbe-ee661a817bbb"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 43.984
+                    },
+                    "uuid": "4cf20dfd-1619-433b-8aa8-7d48b0643ebf"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 52.46,
+                        "y": 46.016
+                    },
+                    "uuid": "06e129a6-10e2-4f58-8993-5089febe6ebd"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 6 [JTAG_TDO] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "a556f190-42c8-4b1f-996b-0b281f0cac29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 3 [JTAG_TDI] of J202 on B.Cu",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 45.635
+                    },
+                    "uuid": "42647c46-4e79-4586-8505-e63051eeaf7a"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 5 [GND] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "b0c4c250-814c-41ee-af6d-03991a722828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 6 [JTAG_TDO] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 44.365
+                    },
+                    "uuid": "a556f190-42c8-4b1f-996b-0b281f0cac29"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 4 [JTAG_TCK] of J202 on B.Cu",
+                    "pos": {
+                        "x": 55.0,
+                        "y": 44.365
+                    },
+                    "uuid": "c415f3a9-e4de-4c88-97e2-5db7a15d7629"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 5 [GND] of J202 on B.Cu",
+                    "pos": {
+                        "x": 53.73,
+                        "y": 45.635
+                    },
+                    "uuid": "b0c4c250-814c-41ee-af6d-03991a722828"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 2 [JTAG_TMS] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "7ee152a6-7b0b-450e-8b50-fc15b2fac40d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 1 [V3V3] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 45.635
+                    },
+                    "uuid": "89e8b9d6-ec91-40cf-883b-f08445d723df"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Pad 2 [JTAG_TMS] of J202 on B.Cu",
+                    "pos": {
+                        "x": 56.27,
+                        "y": 44.365
+                    },
+                    "uuid": "7ee152a6-7b0b-450e-8b50-fc15b2fac40d"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 57.54,
+                        "y": 45.0
+                    },
+                    "uuid": "96f0090e-3004-4007-b9c5-661e0c84c078"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "NPTH pad of J202",
+                    "pos": {
+                        "x": 57.54,
+                        "y": 45.0
+                    },
+                    "uuid": "96f0090e-3004-4007-b9c5-661e0c84c078"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MIDI4] on B.Cu, length 0.0200 mm",
+                    "pos": {
+                        "x": 58.77,
+                        "y": 89.5
+                    },
+                    "uuid": "631ba5c5-aa47-53d2-94d9-c297ddd416fe"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [MIDI5] on B.Cu, length 0.2300 mm",
+                    "pos": {
+                        "x": 56.23,
+                        "y": 89.5
+                    },
+                    "uuid": "da07d234-27bd-50c3-a481-1f317e70decd"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TCK] on F.Cu, length 0.0200 mm",
+                    "pos": {
+                        "x": 132.27,
+                        "y": 99.5
+                    },
+                    "uuid": "d4021ab9-6e51-5cfb-a905-4adfee253a31"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDO] on F.Cu, length 0.2300 mm",
+                    "pos": {
+                        "x": 129.73,
+                        "y": 99.5
+                    },
+                    "uuid": "0893bf52-e5dc-5b9e-84c0-6c90cd717aea"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TDI] on B.Cu, length 0.1900 mm",
+                    "pos": {
+                        "x": 127.19,
+                        "y": 99.5
+                    },
+                    "uuid": "d9b595d0-6394-5767-99c8-d59cc2756cf7"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        },
+        {
+            "description": "Track has unconnected end",
+            "items": [
+                {
+                    "description": "Track [JTAG_TMS] on B.Cu, length 0.1500 mm",
+                    "pos": {
+                        "x": 124.65,
+                        "y": 99.5
+                    },
+                    "uuid": "7846691b-1449-5e10-a1a8-9c5c73cf8c7e"
+                }
+            ],
+            "severity": "warning",
+            "type": "track_dangling"
+        }
+    ]
+}

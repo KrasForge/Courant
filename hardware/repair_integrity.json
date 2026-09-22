@@ -1,0 +1,93 @@
+{
+  "mainboard_pad_and_net_map_unchanged": true,
+  "footprint_positions_unchanged": true,
+  "design_rules_unchanged": true,
+  "mainboard_copies_identical": true,
+  "native_reports": {
+    "main": {
+      "violations": 0,
+      "unconnected": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Footprint component type doesn't match footprint pads",
+          "key": "footprint_type_mismatch"
+        }
+      ]
+    },
+    "panel": {
+      "violations": 0,
+      "unconnected": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Footprint component type doesn't match footprint pads",
+          "key": "footprint_type_mismatch"
+        }
+      ]
+    }
+  },
+  "panel_erc_findings": 0,
+  "export_archives_match_active_boards": true,
+  "fabrication_gate_regression_tests": [
+    {
+      "argv": [
+        "fab.py",
+        "--drc-only"
+      ],
+      "exit": 5,
+      "injected_drc_failure": true
+    },
+    {
+      "argv": [
+        "fab.py"
+      ],
+      "exit": 1,
+      "injected_drc_failure": true
+    }
+  ],
+  "mainboard_before": {
+    "footprints": 202,
+    "pads": 746,
+    "vias": 313,
+    "segments": 2192,
+    "track_length_mm": 4436.654204345376
+  },
+  "mainboard_after": {
+    "footprints": 202,
+    "pads": 746,
+    "vias": 299,
+    "segments": 2158,
+    "track_length_mm": 4386.162058609177
+  }
+}

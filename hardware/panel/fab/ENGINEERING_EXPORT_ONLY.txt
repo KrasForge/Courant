@@ -1,0 +1,2 @@
+Synchronized from the native-checked repaired board. NOT a fabrication release, component certification or electrical/thermal test.
+Source SHA-256: 5c37aa04e39cf2ce4aefce5373201c6c3f49c9220217e3084b0abb485bc1dad0

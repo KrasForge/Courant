@@ -1,0 +1,230 @@
+{
+  "review_only": true,
+  "results": {
+    "mainboard": {
+      "board_sha256": "92e66042479df826fed7b9fa62116f5fa4a31a84fc075922198cf18b91b7c6c5",
+      "counts": {
+        "footprints": 199,
+        "tracks": 2773,
+        "vias": 346,
+        "nets": 102
+      }
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "drc",
+        "--refill-zones",
+        "--all-track-errors",
+        "--severity-all",
+        "--exit-code-violations",
+        "--format",
+        "json",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/native_checks/drc.json",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to /home/ik/ChatGPT/Courant/hardware/courant/deliverables/native_checks/drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "drc",
+        "--refill-zones",
+        "--all-track-errors",
+        "--severity-all",
+        "--exit-code-violations",
+        "--format",
+        "json",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/native_checks/drc.json",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to /home/ik/ChatGPT/Courant/hardware/courant/dist/native_checks/drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "drc",
+        "--refill-zones",
+        "--all-track-errors",
+        "--severity-all",
+        "--exit-code-violations",
+        "--format",
+        "report",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.drc.rpt",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Found 0 violations\nFound 0 unconnected items\nSaved DRC Report to /home/ik/ChatGPT/Courant/hardware/courant/dist/courant.drc.rpt\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "gerbers",
+        "--check-zones",
+        "--subtract-soldermask",
+        "--layers",
+        "F.Cu,In1.Cu,In2.Cu,In3.Cu,In4.Cu,B.Cu,F.Mask,B.Mask,F.Paste,B.Paste,F.Silkscreen,B.Silkscreen,Edge.Cuts",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/",
+        "--no-protel-ext",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-F_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-In1_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-In2_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-In3_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-In4_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-B_Cu.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-F_Paste.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-B_Paste.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-F_Silkscreen.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-B_Silkscreen.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-F_Mask.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-B_Mask.gbr'.\nPlotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-Edge_Cuts.gbr'.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "drill",
+        "--format",
+        "excellon",
+        "--excellon-units",
+        "mm",
+        "--excellon-separate-th",
+        "--generate-map",
+        "--map-format",
+        "pdf",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Created file '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-PTH.drl'\nCreated file '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-NPTH.drl'\nCreated file '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-PTH-drl_map.pdf'.\nCreated file '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant.routed-NPTH-drl_map.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "pos",
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant-pos.csv",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant.routed.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Wrote position data to '/home/ik/ChatGPT/Courant/hardware/courant/dist/fab/courant-pos.csv'.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--exclude-drawing-sheet",
+        "--fit-page-to-board",
+        "--layers",
+        "F.Cu,F.Silkscreen,Edge.Cuts",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant-top.svg",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/courant-top.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--exclude-drawing-sheet",
+        "--fit-page-to-board",
+        "--layers",
+        "B.Cu,B.Silkscreen,Edge.Cuts",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/courant-bottom.svg",
+        "--mirror",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/courant-bottom.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--exclude-drawing-sheet",
+        "--fit-page-to-board",
+        "--layers",
+        "In1.Cu,In2.Cu,In3.Cu,In4.Cu,Edge.Cuts",
+        "-o",
+        "/home/ik/ChatGPT/Courant/hardware/courant/dist/route-inner.svg",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/dist/route-inner.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "dxf",
+        "--mode-single",
+        "--output-units",
+        "mm",
+        "--layers",
+        "Edge.Cuts",
+        "--output",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant-outline.dxf",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant-outline.dxf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/kicad-cli",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--black-and-white",
+        "--sketch-pads-on-fab-layers",
+        "--layers",
+        "Edge.Cuts,F.Fab,F.Silkscreen",
+        "--output",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant-mechanical.pdf",
+        "/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Plotted to '/home/ik/ChatGPT/Courant/hardware/courant/deliverables/courant-mechanical.pdf'.\nDone.\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -3,8 +3,11 @@ classdef StiffMesh2D < handle
     %
     % Extends the lossy wave equation of Mesh2D with a 4th-order bending term
     % (stiff plate / bar) and direction-dependent wave speed (anisotropy),
-    % exploring "advanced materials" for milestone M9. Reference-model only:
-    % this is the study vehicle for the go/no-go RTL recommendation, not RTL.
+    % exploring "advanced materials" for milestone M9. This remains the
+    % floating-point study/reference model; issue #86 has since integrated the
+    % biharmonic term into RTL. See radian_stiffness_ctrl.m for the production
+    % 8-bit STIFFNESS->mu2/CFL mapping and stiffness_reference.py for the
+    % bit-exact fixed-point production reference.
     %
     %   u_tt = cx^2 u_xx + cy^2 u_yy  -  kappa^2 (u_xxxx + 2 u_xxyy + u_yyyy)
     %          - 2 sigma u_t
