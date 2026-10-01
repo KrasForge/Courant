@@ -2,6 +2,16 @@
 
 **One panel/interface PCB for the RADIAN FPGA mainboard. Engineering prototype; native electrical/PCB checks are clean, but physical hardware validation is still required.**
 
+<p align="center">
+  <img src="../../docs/media/images/panel_3d.png" alt="Panel/interface board, 3D preview" width="720">
+</p>
+
+| Front (F.Cu) | Back (B.Cu, faces the mainboard) |
+| --- | --- |
+| ![Panel front](../../docs/media/images/panel_top.png) | ![Panel back](../../docs/media/images/panel_bottom.png) |
+
+<sub>Rendered from `design/radian_panel.kicad_pcb` by `docs/media/scripts/`. Component bodies in the 3D view are simplified stand-ins and the knobs are illustrative. See `docs/media/README.md`.</sub>
+
 Open `design/radian_panel.kicad_pro` with KiCad 10 and keep the project-local symbols/footprints with it. The authoritative panel PCB passes native ERC, DRC, filled-zone connectivity and schematic/PCB parity with zero findings. Current review fabrication outputs are in `fab/` and `radian_panel-fab.zip`.
 
 ## Current architecture

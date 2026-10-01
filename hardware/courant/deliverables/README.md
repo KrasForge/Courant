@@ -2,6 +2,16 @@
 
 # Current native mainboard — 2026-09-16
 
+<p align="center">
+  <img src="../../../docs/media/images/mainboard_3d.png" alt="Courant mainboard, 3D preview" width="720">
+</p>
+
+| Top (F.Cu, faces the panel) | Bottom (B.Cu) |
+| --- | --- |
+| ![Mainboard top](../../../docs/media/images/mainboard_top.png) | ![Mainboard bottom](../../../docs/media/images/mainboard_bottom.png) |
+
+<sub>Rendered from `courant.kicad_pcb` by `docs/media/scripts/`. Component bodies in the 3D view are simplified stand-ins. See `docs/media/README.md`.</sub>
+
 The PCB in this folder passes Backplane KiCad 10.0.6 DRC: **0 errors, 0 warnings, 0 unconnected**, with unchanged project rules. Current counts: **2,158 track segments and 299 vias**. See `MAINBOARD_REPAIR.md` and `native_checks/drc.json`.
 
 The assembly STEP, mechanical PDF/DXF, `dist/` PCB copies, 2D views, Gerbers, drills, placement data, BOM/netlist metadata and `dist/courant-fab.zip` have been regenerated from the current repaired native board. Use `hardware/refresh_outputs.py` for future review-export refreshes. Legacy route/reconstruction scripts are guarded from overwriting the authoritative native PCB.

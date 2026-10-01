@@ -1,0 +1,9 @@
+{
+  "name": "courant-media-scripts",
+  "private": true,
+  "description": "Headless three.js renders of docs/media/3d/*.glb (see render_3d.mjs)",
+  "type": "module",
+  "dependencies": {
+    "three": "0.169.0"
+  }
+}

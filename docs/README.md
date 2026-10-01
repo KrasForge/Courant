@@ -21,3 +21,5 @@ Planned contents:
 - `finishing_the_route.md` — the six connections left on the routed board, and
   how to close them in KiCad's interactive router
 - `sound_engine_repair.md` — 2026-09-16 pitch/strike/CHAOS repair and RTL listening acceptance
+- `media/` — README sound demos, spectrograms, board renders and 3D models, plus
+  the scripts that regenerate them (`media/scripts/make_media.sh`)

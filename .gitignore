@@ -28,3 +28,10 @@ sim/*.txt
 *.pyc
 **/__pycache__/
 /src/tb/*_trace.txt
+
+# README media: docs/media/scripts/make_media.sh
+!docs/media/images/*.png
+docs/media/audio/wav/
+docs/media/scripts/node_modules/
+docs/media/scripts/.textures/
+docs/media/scripts/.frames/
