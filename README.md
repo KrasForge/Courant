@@ -1,5 +1,17 @@
 # RADIAN
 
+<p align="center">
+  <img src="docs/media/images/stack_hero.png" alt="Courant board stack: the six-knob panel/interface board mated 20 mm above the Artix-7 mainboard" width="820">
+</p>
+
+<p align="center">
+  <a href="#listen"><b>Listen</b></a> ·
+  <a href="#see-the-mesh-move"><b>See the mesh move</b></a> ·
+  <a href="#the-hardware"><b>Hardware & 3D</b></a> ·
+  <a href="#1-mathematical-foundation"><b>The maths</b></a> ·
+  <a href="#4-architecture"><b>Architecture</b></a>
+</p>
+
 A 2D finite-difference physical-modeling synthesis engine in structural VHDL,
 with an amplitude-dependent non-linear "chaos injection" term, playable
 polyphonically over MIDI or CV.
@@ -19,6 +31,91 @@ shaped by recallable instrument presets and a live front panel.
 > developed and verified under the current RTL regression across 31 testbenches. Board bring-up on a
 > Digilent Arty A7 + Pmod I2S2 is the next step; nothing is claimed to work on
 > hardware until it does.
+
+---
+
+## Listen
+
+These clips are rendered offline by the float reference model
+([`model/NLMesh2D.m`](model/NLMesh2D.m), the same non-linear update as the RTL)
+on a 32 $\times$ 32 mesh at 48 kHz. They come from
+[`demo_render.m`](model/demo_render.m), with no post-processing beyond its DC
+high-pass and loudness normalisation. **They are not hardware recordings**:
+the FPGA build has not been brought up yet. Click a spectrogram to play its
+clip.
+
+**Chaos off vs. chaos on.** The same centre strike on the same gong mesh,
+first linear ($\alpha = 0$), then with chaos injection ($\alpha = 0.42$).
+The linear mesh rings as a clean stack of fixed modes. With the
+amplitude-dependent term, energy smears across the band right after the hit
+and the partials bend as the mesh relaxes.
+
+[![A/B spectrogram: identical strike, linear vs chaos injection](docs/media/images/spectrogram_chaos_ab.png)](docs/media/audio/chaos_ab.mp3)
+
+| Voice | What you hear | Clip |
+| --- | --- | --- |
+| **Gong** | Free edges, strong chaos ($\alpha = 0.42$), long shimmer. A pentatonic phrase that ends on a chord, so the decays ring together across voices | [`demo_gong.mp3`](docs/media/audio/demo_gong.mp3) · 6.5 s |
+| **Plate** | Free edges, $\alpha = 0.30$, more damping. Bright, sustained, metallic | [`demo_plate.mp3`](docs/media/audio/demo_plate.mp3) · 5.5 s |
+| **Drum** | Fixed (Dirichlet) edges, heavy damping, $\alpha = 0.12$. A short, punchy groove | [`demo_drum.mp3`](docs/media/audio/demo_drum.mp3) · 3.6 s |
+
+[![Gong demo spectrogram](docs/media/images/spectrogram_demo_gong.png)](docs/media/audio/demo_gong.mp3)
+[![Plate demo spectrogram](docs/media/images/spectrogram_demo_plate.png)](docs/media/audio/demo_plate.mp3)
+[![Drum demo spectrogram](docs/media/images/spectrogram_demo_drum.png)](docs/media/audio/demo_drum.mp3)
+
+The flat ceiling near 5 kHz is not a filter. It is the highest mode a 2D
+mesh can carry, $f_{\max} = \tfrac{f_s}{\pi}\arcsin(\gamma\sqrt{2}) \approx 4.9$ kHz
+for this gong's $\gamma^2 = 0.05$. A finer mesh for the same pitch raises
+$\gamma$ and lifts it.
+Each clip also has an `.mp4` (spectrogram with a moving playhead) in
+[`docs/media/audio/`](docs/media/audio/).
+
+### See the mesh move
+
+The same hard strike on both meshes, slowed down about 800 $\times$. On the
+left the wavefront spreads at one speed. On the right the loud centre
+stiffens, so it runs ahead and breaks into fine, high-frequency ripples:
+those ripples are the inharmonic partials you hear.
+
+<p align="center">
+  <img src="docs/media/images/mesh_strike.gif" alt="Animated 32x32 FDTD mesh after a strike: linear vs chaos injection" width="720">
+</p>
+
+---
+
+## The hardware
+
+The engine targets a two-board desktop/Eurorack instrument. A 160 $\times$ 100 mm,
+six-layer **Artix-7 mainboard** (FPGA, flash, clocks, PCM5102A DAC, CV/pot ADC,
+opto-isolated MIDI) carries a **panel/interface board** 19.99 mm above it on
+two 20-pin Samtec mezzanines. The panel has six knobs (TENSION · DECAY ·
+CHAOS large, DRIVE · DELAY · REVERB small), a push encoder, the MODE switch,
+four LEDs and five patch jacks. Neither board has been fabricated yet. See
+[`hardware/CURRENT_DESIGN.md`](hardware/CURRENT_DESIGN.md) for what is and is
+not validated.
+
+| Mainboard (top) | Panel / interface board (front) |
+| --- | --- |
+| ![Mainboard top view rendered from the native KiCad board](docs/media/images/mainboard_top.png) | ![Panel board front view rendered from the native KiCad board](docs/media/images/panel_top.png) |
+| ![Mainboard 3D view](docs/media/images/mainboard_3d.png) | ![Panel board 3D view](docs/media/images/panel_3d.png) |
+
+<p align="center">
+  <img src="docs/media/images/stack_side.png" alt="Side view: Samtec terminal strips on the mainboard reaching into the panel sockets" width="640"><br>
+  <sub>Side view of the stack. The mainboard's Samtec IPT1 posts reach into the panel's IPS1 sockets; the FPGA shows through the panel window.</sub>
+</p>
+
+**Open the 3D model:** [`courant_stack.stl`](docs/media/3d/courant_stack.stl)
+opens in GitHub's built-in 3D viewer, so you can orbit it in the browser. The
+coloured glTF files ([stack](docs/media/3d/courant_stack.glb),
+[mainboard](docs/media/3d/courant_mainboard.glb),
+[panel](docs/media/3d/courant_panel.glb)) open in any glTF viewer, Blender, or
+https://gltf-viewer.donmccurdy.com.
+
+<sub>Every outline, drill, pad, track and component position is read straight
+from the native KiCad 10 boards. Component bodies are simplified parametric
+stand-ins sized from package datasheets, and the knobs are illustrative. The
+full actual-part STEP assembly lives outside the repo, so treat these as
+layout previews, not mechanical CAD. Regenerate everything with
+[`docs/media/scripts/make_media.sh`](docs/media/scripts/make_media.sh).</sub>
 
 ---
 
@@ -281,6 +378,10 @@ syn/       yosys (open-source resource estimate) and Vivado (sign-off) flows,
 docs/      derivations, fixed-point + CFL analysis, per-feature notes
            (midi, cv, polyphony, presets, panel, cdc, oversampling, timing),
            the resource budget, and a deviations log
+  media/   README sound demos, spectrograms, board renders, 3D models (.glb/.stl)
+           and the scripts that regenerate them from model/ and hardware/
+hardware/  native KiCad 10 mainboard (courant/) and panel/interface board
+           (panel/), the shared direct-stack contract (stack/)
 ```
 
 ---
@@ -292,6 +393,7 @@ The reference flow uses **GHDL** (open-source, VHDL-2008):
 ```sh
 make -C sim                      # analyse + elaborate + run all 31 testbenches
 octave-cli --eval "demo_render"  # render nonlinear polyphonic demo audio (model/)
+docs/media/scripts/make_media.sh # regenerate README audio, spectrograms, PCB renders, 3D models
 cd syn/yosys && ./report_util.sh # DSP / LUT / FF resource estimate (yosys)
 ```
 

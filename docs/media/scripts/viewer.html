@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Courant 3D render</title>
+<style>html,body{margin:0;background:transparent;overflow:hidden}canvas{display:block}</style>
+<script type="importmap">
+{ "imports": {
+  "three": "./node_modules/three/build/three.module.js",
+  "three/addons/": "./node_modules/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<script type="module">
+// Offline renderer used by render_3d.mjs. Query string:
+//   model=<glb path>  az=<deg>  el=<deg>  zoom=<factor>  w=<px>  h=<px>
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const q = new URLSearchParams(location.search);
+const W = +q.get('w') || 1600, H = +q.get('h') || 1000;
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.setSize(W, H);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.9;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+const key = new THREE.DirectionalLight(0xffffff, 1.6);
+key.castShadow = true;
+key.shadow.mapSize.set(4096, 4096);
+key.shadow.bias = -0.0004;
+scene.add(key);
+
+new GLTFLoader().load(q.get('model'), (gltf) => {
+  const root = gltf.scene;
+  root.traverse((o) => {
+    if (o.isMesh) {
+      o.castShadow = o.receiveShadow = true;
+      const m = o.material;
+      if (m && !m.map) { m.roughness = 0.55; m.metalness = 0.0; }
+    }
+  });
+  scene.add(root);
+  const box = new THREE.Box3().setFromObject(root);
+  const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+  const r = size.length() / 2;
+  const az = THREE.MathUtils.degToRad(+(q.get('az') ?? -30));
+  const el = THREE.MathUtils.degToRad(+(q.get('el') ?? 35));
+  const cam = new THREE.PerspectiveCamera(28, W / H, r / 50, r * 20);
+  const dist = r / Math.sin(THREE.MathUtils.degToRad(14)) / (+q.get('zoom') || 1);
+  // glTF is Y-up: the board normal (product +Z, toward the front panel) is +Y
+  cam.position.set(c.x + dist * Math.cos(el) * Math.sin(az), c.y + dist * Math.sin(el), c.z + dist * Math.cos(el) * Math.cos(az));
+  cam.lookAt(c);
+  key.position.set(c.x - r * 1.2, c.y + r * 2.5, c.z + r * 1.6);
+  key.target.position.copy(c);
+  scene.add(key.target);
+  const sc = key.shadow.camera;
+  sc.left = sc.bottom = -r * 1.5; sc.right = sc.top = r * 1.5; sc.near = r * 0.1; sc.far = r * 8;
+  sc.updateProjectionMatrix();
+  renderer.render(scene, cam);
+  document.title = 'ready';
+});
+</script>
+</body>
+</html>

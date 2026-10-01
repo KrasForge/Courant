@@ -52,4 +52,6 @@ octave-cli --eval "stability_study"
 ```
 
 Generated `.wav` / `.gif` / `.png` artefacts land in `outputs/` and are
-git-ignored.
+git-ignored. The published demo clips, spectrograms and the linear-vs-chaos mesh
+animation in the top-level README are produced from this model by
+`docs/media/scripts/make_media.sh` (see `docs/media/README.md`).
