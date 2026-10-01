@@ -1,3 +1,4 @@
+STD     := --std=08
 GHDL    := ghdl
 WAVE    ?= 0
 
