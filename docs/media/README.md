@@ -19,6 +19,7 @@ docs/media/scripts/make_media.sh
 | `images/mesh_strike.gif` | 32×32 mesh after a strike, linear vs chaos | `scripts/mesh_media.py` |
 | `images/{mainboard,panel}_{top,bottom}.png` | Solder-mask style board views | `scripts/render_pcb.py` |
 | `images/{stack_hero,stack_side,mainboard_3d,panel_3d}.png` | 3D renders | `scripts/render_3d.mjs` |
+| `images/case_hero.png`, `images/case_xray.png` | Desktop case renders (opaque, see-through) | Cropped from `hardware/panel/previews/desktop_fit_study.png` and `previews/hq/05_full_assembly_iso_4k.png`, rendered from the actual-part STEP assembly |
 | `3d/courant_stack.stl` | Mated stack, one mesh, for GitHub's STL viewer | `scripts/build_3d.py` |
 | `3d/courant_{stack,mainboard,panel}.glb` | Coloured glTF models | `scripts/build_3d.py` |
 

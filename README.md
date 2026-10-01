@@ -1,7 +1,7 @@
 # RADIAN
 
 <p align="center">
-  <img src="docs/media/images/stack_hero.png" alt="RADIAN board stack: the six-knob panel/interface board mated 20 mm above the Artix-7 mainboard" width="820">
+  <img src="docs/media/images/case_hero.png" alt="RADIAN desktop instrument: six knobs, push encoder, MIDI DIN and five patch jacks on a red front panel in a black case" width="820">
 </p>
 
 <p align="center">
@@ -110,6 +110,18 @@ CHAOS large, DRIVE · DELAY · REVERB small), a push encoder, the MODE switch,
 four LEDs and five patch jacks. Neither board has been fabricated yet. See
 [`hardware/CURRENT_DESIGN.md`](hardware/CURRENT_DESIGN.md) for what is and is
 not validated.
+
+<p align="center">
+  <img src="docs/media/images/stack_hero.png" alt="RADIAN board stack: the six-knob panel/interface board mated 20 mm above the Artix-7 mainboard" width="760"><br>
+  <sub>The two boards out of the case: the panel/interface board mated 19.99 mm above the Artix-7 mainboard.</sub>
+</p>
+
+<p align="center">
+  <img src="docs/media/images/case_xray.png" alt="See-through render of the RADIAN case showing both boards, knobs and jacks inside" width="760"><br>
+  <sub>See-through view of the desktop case with both boards and the actual-part 3D models inside, rendered from
+  the STEP assembly described in <a href="hardware/CURRENT_DESIGN.md"><code>hardware/CURRENT_DESIGN.md</code></a>
+  (the STEP files themselves are not committed). The case has not been built yet.</sub>
+</p>
 
 | Mainboard (top) | Panel / interface board (front) |
 | --- | --- |
