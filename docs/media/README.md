@@ -11,9 +11,9 @@ docs/media/scripts/make_media.sh
 
 | Path | Contents | Generated from |
 | --- | --- | --- |
-| `audio/rtl_{berlin_voltage,oxide_dub,kreuz_rhythm}.mp3` | 10 s phrases captured from the RTL's I2S output | `scripts/rtl/build_renderer.sh` + `scores/*.txt` → `scripts/rtl_media.py` |
+| `audio/rtl_*.mp3` | 10–13 s pieces captured from the RTL's I2S output (gong_chorale, chaos_swell, plate_arpeggio, mallet_groove, berlin_voltage, oxide_dub, kreuz_rhythm) | `scripts/rtl/build_renderer.sh` + `scores/*.txt` → `scripts/rtl_media.py` |
 | `audio/chaos_ab.mp3` | One strike, $\alpha = 0$ then $\alpha = 0.42$ | `scripts/mesh_media.py` |
-| `scores/*.{txt,json}` | Bit-level serial-MIDI stimulus and a summary of each RTL score | written during the 2026-09-16 sound repair |
+| `scores/*.{txt,json}` | Bit-level serial-MIDI stimulus and a summary of each RTL score | 01–03 from the 2026-09-16 sound repair; 04–07 from `scripts/rtl/make_scores.py` |
 | `audio/*.mp4` | Spectrogram + moving playhead + audio. Drag one into a GitHub comment or the web editor to get an inline player | `scripts/mesh_media.py` |
 | `images/spectrogram_*.png` | Spectrogram per clip | `scripts/mesh_media.py` |
 | `images/mesh_strike.gif` | 32×32 mesh after a strike, linear vs chaos | `scripts/mesh_media.py` |

@@ -39,7 +39,7 @@ some file paths still use that name.</sub>
 
 ## Listen
 
-These three clips come **out of the RTL**. A cycle-accurate Verilator build of
+These clips come **out of the RTL**. A cycle-accurate Verilator build of
 `synth_top` (4 voices, 8 $\times$ 8 mesh, 4$\times$ oversampling,
 time-multiplexed) receives the score as bit-level serial MIDI at 31250 baud.
 The note mapping, voice allocation, polyphonic meshes, mixer, DC blocker,
@@ -51,19 +51,26 @@ link and the clip plays in your browser.
 
 | Clip | What you hear | Listen |
 | --- | --- | --- |
+| **Gong Chorale** | A-minor chord progression on the gong preset. 3–4 voices ring into each other | [▶ `rtl_gong_chorale.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_gong_chorale.mp3) · 13 s |
+| **Chaos Swell** | One held gong chord while CHAOS is turned up live over the control bus and back down | [▶ `rtl_chaos_swell.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_chaos_swell.mp3) · 12 s |
+| **Plate Arpeggio** | Rolling pentatonic arpeggios on the plate preset with overlapping held notes, 112 BPM | [▶ `rtl_plate_arpeggio.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_plate_arpeggio.mp3) · 11 s |
+| **Mallet Groove** | Marimba-like line on the damped drum preset over a held bass, 120 BPM | [▶ `rtl_mallet_groove.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_mallet_groove.mp3) · 10 s |
 | **Berlin Voltage** | Dry EBM / industrial pulse, 132 BPM | [▶ `rtl_berlin_voltage.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_berlin_voltage.mp3) · 10 s |
 | **Oxide Dub** | Free-boundary metallic dub with long tails, 96 BPM | [▶ `rtl_oxide_dub.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_oxide_dub.mp3) · 10 s |
 | **Kreuz Rhythm** | Metallic polyrhythm with a tense finish, 150 BPM | [▶ `rtl_kreuz_rhythm.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_kreuz_rhythm.mp3) · 10 s |
 
-[![Berlin Voltage spectrogram](docs/media/images/spectrogram_rtl_berlin_voltage.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_berlin_voltage.mp3)
-[![Oxide Dub spectrogram](docs/media/images/spectrogram_rtl_oxide_dub.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_oxide_dub.mp3)
-[![Kreuz Rhythm spectrogram](docs/media/images/spectrogram_rtl_kreuz_rhythm.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_kreuz_rhythm.mp3)
+[![Gong Chorale spectrogram](docs/media/images/spectrogram_rtl_gong_chorale.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_gong_chorale.mp3)
+[![Chaos Swell spectrogram: the band smears while CHAOS is up, then turns clean again](docs/media/images/spectrogram_rtl_chaos_swell.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_chaos_swell.mp3)
+[![Plate Arpeggio spectrogram](docs/media/images/spectrogram_rtl_plate_arpeggio.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_plate_arpeggio.mp3)
+[![Mallet Groove spectrogram](docs/media/images/spectrogram_rtl_mallet_groove.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@a1daff8e3a3599e712c28fc31fcfe1d983a12df5/docs/media/audio/rtl_mallet_groove.mp3)
 
 <sub>Rendered from the repaired RTL of 2026-09-16, the build behind
 [`docs/sound_engine_repair.md`](docs/sound_engine_repair.md). It predates the
 FX chain (drive, delay, chorus, reverb), the physical mallet and plate
 stiffness, so these clips are the dry resonator. The scores are in
-[`docs/media/scores/`](docs/media/scores/). Rebuild the renderer from the
+[`docs/media/scores/`](docs/media/scores/), and
+[`make_scores.py`](docs/media/scripts/rtl/make_scores.py) writes the first
+four. Rebuild the renderer from the
 current RTL with
 [`docs/media/scripts/rtl/build_renderer.sh`](docs/media/scripts/rtl/build_renderer.sh);
 the whole 100 MHz system clock is simulated, so expect several minutes of CPU
