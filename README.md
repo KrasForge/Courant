@@ -39,38 +39,53 @@ some file paths still use that name.</sub>
 
 ## Listen
 
-These clips are rendered offline by the float reference model
-([`model/NLMesh2D.m`](model/NLMesh2D.m), the same non-linear update as the RTL)
-on a 32 $\times$ 32 mesh at 48 kHz. They come from
-[`demo_render.m`](model/demo_render.m), with no post-processing beyond its DC
-high-pass and loudness normalisation. **They are not hardware recordings**:
-the FPGA build has not been brought up yet. Click a spectrogram or a ▶ link
-and the clip plays in your browser.
+These three clips come **out of the RTL**. A cycle-accurate Verilator build of
+`synth_top` (4 voices, 8 $\times$ 8 mesh, 4$\times$ oversampling,
+time-multiplexed) receives the score as bit-level serial MIDI at 31250 baud.
+The note mapping, voice allocation, polyphonic meshes, mixer, DC blocker,
+clock-domain crossing and I2S serialiser all run in it, and its 24-bit I2S
+output is captured. Each clip gets one constant gain to peak at −1 dBFS. There
+is no EQ, compression, reverb or editing. **They are not hardware
+recordings**: the FPGA has not been brought up yet. Click a spectrogram or a ▶
+link and the clip plays in your browser.
 
-**Chaos off vs. chaos on.** The same centre strike on the same gong mesh,
-first linear ($\alpha = 0$), then with chaos injection ($\alpha = 0.42$).
-The linear mesh rings as a clean stack of fixed modes. With the
-amplitude-dependent term, energy smears across the band right after the hit
-and the partials bend as the mesh relaxes.
+| Clip | What you hear | Listen |
+| --- | --- | --- |
+| **Berlin Voltage** | Dry EBM / industrial pulse, 132 BPM | [▶ `rtl_berlin_voltage.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_berlin_voltage.mp3) · 10 s |
+| **Oxide Dub** | Free-boundary metallic dub with long tails, 96 BPM | [▶ `rtl_oxide_dub.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_oxide_dub.mp3) · 10 s |
+| **Kreuz Rhythm** | Metallic polyrhythm with a tense finish, 150 BPM | [▶ `rtl_kreuz_rhythm.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_kreuz_rhythm.mp3) · 10 s |
+
+[![Berlin Voltage spectrogram](docs/media/images/spectrogram_rtl_berlin_voltage.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_berlin_voltage.mp3)
+[![Oxide Dub spectrogram](docs/media/images/spectrogram_rtl_oxide_dub.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_oxide_dub.mp3)
+[![Kreuz Rhythm spectrogram](docs/media/images/spectrogram_rtl_kreuz_rhythm.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@f79031551d7316b354aa7c6243a771c9426d3952/docs/media/audio/rtl_kreuz_rhythm.mp3)
+
+<sub>Rendered from the repaired RTL of 2026-09-16, the build behind
+[`docs/sound_engine_repair.md`](docs/sound_engine_repair.md). It predates the
+FX chain (drive, delay, chorus, reverb), the physical mallet and plate
+stiffness, so these clips are the dry resonator. The scores are in
+[`docs/media/scores/`](docs/media/scores/). Rebuild the renderer from the
+current RTL with
+[`docs/media/scripts/rtl/build_renderer.sh`](docs/media/scripts/rtl/build_renderer.sh);
+the whole 100 MHz system clock is simulated, so expect several minutes of CPU
+per second of audio. Each clip also has an `.mp4` (spectrogram with a moving
+playhead) in [`docs/media/audio/`](docs/media/audio/).</sub>
+
+### Chaos off vs. chaos on
+
+This one illustrates the non-linearity in the float reference model
+([`model/NLMesh2D.m`](model/NLMesh2D.m), the same update as the RTL) on a
+32 $\times$ 32 mesh. The same centre strike on the same gong mesh, first linear
+($\alpha = 0$), then with chaos injection ($\alpha = 0.42$). The linear mesh
+rings as a clean stack of fixed modes. With the amplitude-dependent term,
+energy smears across the band right after the hit and the partials bend as the
+mesh relaxes.
 
 [![A/B spectrogram: identical strike, linear vs chaos injection](docs/media/images/spectrogram_chaos_ab.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/chaos_ab.mp3)
-
-| Voice | What you hear | Clip |
-| --- | --- | --- |
-| **Gong** | Free edges, strong chaos ($\alpha = 0.42$), long shimmer. A pentatonic phrase that ends on a chord, so the decays ring together across voices | [▶ `demo_gong.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_gong.mp3) · 6.5 s |
-| **Plate** | Free edges, $\alpha = 0.30$, more damping. Bright, sustained, metallic | [▶ `demo_plate.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_plate.mp3) · 5.5 s |
-| **Drum** | Fixed (Dirichlet) edges, heavy damping, $\alpha = 0.12$. A short, punchy groove | [▶ `demo_drum.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_drum.mp3) · 3.6 s |
-
-[![Gong demo spectrogram](docs/media/images/spectrogram_demo_gong.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_gong.mp3)
-[![Plate demo spectrogram](docs/media/images/spectrogram_demo_plate.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_plate.mp3)
-[![Drum demo spectrogram](docs/media/images/spectrogram_demo_drum.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_drum.mp3)
 
 The flat ceiling near 5 kHz is not a filter. It is the highest mode a 2D
 mesh can carry, $f_{\max} = \tfrac{f_s}{\pi}\arcsin(\gamma\sqrt{2}) \approx 4.9$ kHz
 for this gong's $\gamma^2 = 0.05$. A finer mesh for the same pitch raises
 $\gamma$ and lifts it.
-Each clip also has an `.mp4` (spectrogram with a moving playhead) in
-[`docs/media/audio/`](docs/media/audio/).
 
 ### See the mesh move
 
@@ -396,6 +411,7 @@ The reference flow uses **GHDL** (open-source, VHDL-2008):
 ```sh
 make -C sim                      # analyse + elaborate + run all 31 testbenches
 octave-cli --eval "demo_render"  # render nonlinear polyphonic demo audio (model/)
+docs/media/scripts/rtl/build_renderer.sh build  # cycle-accurate RTL audio renderer (Verilator)
 docs/media/scripts/make_media.sh # regenerate README audio, spectrograms, PCB renders, 3D models
 cd syn/yosys && ./report_util.sh # DSP / LUT / FF resource estimate (yosys)
 ```
