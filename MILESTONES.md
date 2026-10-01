@@ -3,6 +3,7 @@
 ## M0: Numerical reference model & stability study
 - [x] MATLAB/Octave reference model (`model/fdtd_ref.m`)
 - [x] CFL/stability sweep with plots (`model/stability_study.m`)
+- [x] Q1.23 fixed-point quantization study (`docs/fixed_point_analysis.md`)
 - [x] Repository scaffolding: `src/`, `sim/`, `docs/` tree and GHDL CI
       (`.github/workflows/ghdl-ci.yml` installs GHDL and runs `make -C sim`,
       which wildcards every testbench)
