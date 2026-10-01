@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sound-demo media for the README: A/B audio, spectrograms, mesh animation.
 
-    docs/media/scripts/make_media.sh      # runs demo_render.m first, then this
+    docs/media/scripts/make_media.sh
 
 Everything here comes from the float reference model (model/NLMesh2D.m, via
 the NumPy port in nlmesh.py, which is checked against Octave first). It is
@@ -103,12 +103,12 @@ def spectro_ax(ax, x, title, fmax=8000):
     ax.set_ylabel('kHz', color=MUTED, fontsize=8)
 
 
-def spectrogram_png(name, title, out, marks=None):
+def spectrogram_png(name, title, out, marks=None, fmax=8000):
     sr, x = wavfile.read(os.path.join(WAV, name))
     x = x.astype(float).mean(axis=1) if x.ndim == 2 else x.astype(float)
     fig, ax = plt.subplots(figsize=(10, 2.6), dpi=150)
     fig.patch.set_facecolor(BG)
-    spectro_ax(ax, x, title)
+    spectro_ax(ax, x, title, fmax)
     ax.set_xlabel('seconds', color=MUTED, fontsize=8)
     for tx, label in (marks or []):
         ax.text(tx, 7.4, label, color=FG, fontsize=9, weight='bold',
@@ -162,11 +162,19 @@ def mesh_animation(out_gif, frames=110, every=3):
     shutil.rmtree(tmp)
 
 
-def encode(name, png, title):
+def h264_args():
+    """libx264 when ffmpeg has it; Fedora's stock build only ships libopenh264."""
+    enc = subprocess.run(['ffmpeg', '-hide_banner', '-encoders'], capture_output=True, text=True).stdout
+    if 'libx264' in enc:
+        return ['-c:v', 'libx264', '-tune', 'stillimage', '-crf', '28']
+    return ['-c:v', 'libopenh264', '-b:v', '400k']
+
+
+def encode(name, png, title, artist='Courant reference model'):
     """MP3 for linking, MP4 (spectrogram + moving playhead) for drag-in players."""
     src = os.path.join(WAV, name + '.wav')
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', src, '-codec:a', 'libmp3lame', '-q:a', '2',
-                    '-metadata', f'title={title}', '-metadata', 'artist=Courant reference model',
+                    '-metadata', f'title={title}', '-metadata', f'artist={artist}',
                     os.path.join(AUD, name + '.mp3')], check=True)
     sr, x = wavfile.read(src)
     dur = len(x) / sr
@@ -178,7 +186,7 @@ def encode(name, png, title):
           f"[bg][ph]overlay=x='{x0:.1f}+({x1 - x0:.1f})*t/{dur:.3f}':y={int(h * 0.13)}:shortest=1,format=yuv420p,"
           f"pad=ceil(iw/2)*2:ceil(ih/2)*2")
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-loop', '1', '-framerate', '30', '-i', png, '-i', src,
-                    '-filter_complex', vf, '-c:v', 'libx264', '-tune', 'stillimage', '-crf', '28',
+                    '-filter_complex', vf, *h264_args(),
                     '-c:a', 'aac', '-b:a', '160k', '-t', f'{dur:.3f}', '-movflags', '+faststart',
                     os.path.join(AUD, name + '.mp4')], check=True)
 
@@ -192,14 +200,11 @@ def main():
 
     note, gap = ab_audio()
     demos = [
-        ('demo_gong', 'Gong: free edges, strong chaos (α = 0.42), pentatonic phrase + chord'),
-        ('demo_plate', 'Plate: bright, sustained, metallic (α = 0.30)'),
-        ('demo_drum', 'Drum groove: fixed edges, short and punchy (α = 0.12)'),
         ('chaos_ab', 'A/B: identical strike, chaos off (left) vs on (right)'),
     ]
     for name, title in demos:
         if not os.path.exists(os.path.join(WAV, name + '.wav')):
-            sys.exit(f'missing {name}.wav: run demo_render first (see module docstring)')
+            sys.exit(f'missing {name}.wav')
         png = os.path.join(IMG, f'spectrogram_{name}.png')
         marks = [(0.1, 'α = 0  (linear)'), (note + gap + 0.1, 'α = 0.42  (chaos on)')] if name == 'chaos_ab' else None
         spectrogram_png(name + '.wav', title, png, marks)

@@ -11,8 +11,9 @@ docs/media/scripts/make_media.sh
 
 | Path | Contents | Generated from |
 | --- | --- | --- |
-| `audio/demo_{gong,plate,drum}.mp3` | Polyphonic demo phrases | `model/demo_render.m` (Octave) |
+| `audio/rtl_{berlin_voltage,oxide_dub,kreuz_rhythm}.mp3` | 10 s phrases captured from the RTL's I2S output | `scripts/rtl/build_renderer.sh` + `scores/*.txt` → `scripts/rtl_media.py` |
 | `audio/chaos_ab.mp3` | One strike, $\alpha = 0$ then $\alpha = 0.42$ | `scripts/mesh_media.py` |
+| `scores/*.{txt,json}` | Bit-level serial-MIDI stimulus and a summary of each RTL score | written during the 2026-09-16 sound repair |
 | `audio/*.mp4` | Spectrogram + moving playhead + audio. Drag one into a GitHub comment or the web editor to get an inline player | `scripts/mesh_media.py` |
 | `images/spectrogram_*.png` | Spectrogram per clip | `scripts/mesh_media.py` |
 | `images/mesh_strike.gif` | 32×32 mesh after a strike, linear vs chaos | `scripts/mesh_media.py` |
@@ -23,8 +24,11 @@ docs/media/scripts/make_media.sh
 
 ## What these are, and are not
 
-- **Audio is model output, not hardware.** It is rendered by the float
-  reference model `model/NLMesh2D.m`. `scripts/nlmesh.py` is a NumPy port that
+- **No audio here is a hardware recording.** The `rtl_*` clips are the RTL's
+  own I2S output, simulated cycle by cycle with Verilator from the repaired
+  2026-09-16 build (before the FX chain, physical mallet and stiffness), with
+  one constant gain each. `chaos_ab` is rendered by the float reference model
+  `model/NLMesh2D.m`. `scripts/nlmesh.py` is a NumPy port that
   `mesh_media.py` checks against Octave on every run (max |Δu| ≈ 2e-15)
   before it renders anything. The RTL's bit-exact check is a separate test:
   `model/nl_reference.m` against the GHDL testbenches.
@@ -44,7 +48,8 @@ docs/media/scripts/make_media.sh
 ## Requirements
 
 - `octave-cli` (GNU Octave 8+)
+- For the RTL clips: docker with an image that has GHDL (with `synth`) and Verilator 5
 - Python 3 with `numpy scipy matplotlib shapely trimesh mapbox_earcut pillow`
-- `ffmpeg` with libmp3lame and libx264
+- `ffmpeg` with libmp3lame and libx264 (or libopenh264)
 - Node 18+ with Playwright and a Chromium build (`npm install` in `scripts/`
   fetches three.js; it renders through SwiftShader, so no GPU is needed)

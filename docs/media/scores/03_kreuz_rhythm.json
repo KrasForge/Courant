@@ -1,0 +1,10 @@
+{
+  "title": "Kreuz Rhythm",
+  "bpm": 150,
+  "character": "metallic polyrhythmic / tense finish",
+  "voices": "<=2 expected",
+  "duration_s": 10.0,
+  "score_events": 4434,
+  "last_uart_s": 9.573168,
+  "signal_path": "serial MIDI -> repaired RTL -> poly voices -> mixer/DC blocker -> CDC -> I2S"
+}

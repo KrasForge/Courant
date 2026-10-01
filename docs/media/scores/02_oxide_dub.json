@@ -1,0 +1,10 @@
+{
+  "title": "Oxide Dub",
+  "bpm": 96,
+  "character": "free-boundary metallic dub / long tails",
+  "voices": "<=2 expected",
+  "duration_s": 10.0,
+  "score_events": 742,
+  "last_uart_s": 9.421056,
+  "signal_path": "serial MIDI -> repaired RTL -> poly voices -> mixer/DC blocker -> CDC -> I2S"
+}

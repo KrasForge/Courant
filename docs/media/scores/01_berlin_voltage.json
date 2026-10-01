@@ -1,0 +1,10 @@
+{
+  "title": "Berlin Voltage",
+  "bpm": 132,
+  "character": "dry EBM / industrial pulse",
+  "voices": "<=2 expected",
+  "duration_s": 10.0,
+  "score_events": 2852,
+  "last_uart_s": 9.821056,
+  "signal_path": "serial MIDI -> repaired RTL -> poly voices -> mixer/DC blocker -> CDC -> I2S"
+}
