@@ -1,6 +1,6 @@
 # docs/
 
-Design documentation for the Courant FDTD engine.
+Design documentation for the RADIAN FDTD engine.
 
 Contents:
 - `derivation.md` — discretisation derivation: continuous PDE → explicit
@@ -25,7 +25,7 @@ Contents:
 - `cv.md` — control-voltage front-end: 1V/oct pitch, gate strike, mod→timbre (issue #70)
 - `codec_bringup.md` — Pmod I2S2 (CS5343/CS4344) clocking, wiring, and bring-up
 - `board.md` — standalone Rev A instrument PCB: blocks, footprints, routing status
-- `finishing_the_route.md` — the six connections left on the routed board, and
+- `finishing_the_route.md` — (historical) the last six connections on the board, and
   how to close them in KiCad's interactive router
 - `sound_engine_repair.md` — 2026-09-16 pitch/strike/CHAOS repair and RTL listening acceptance
 - `media/` — README sound demos, spectrograms, board renders and 3D models, plus

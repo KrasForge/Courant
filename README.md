@@ -1,7 +1,7 @@
 # RADIAN
 
 <p align="center">
-  <img src="docs/media/images/stack_hero.png" alt="Courant board stack: the six-knob panel/interface board mated 20 mm above the Artix-7 mainboard" width="820">
+  <img src="docs/media/images/stack_hero.png" alt="RADIAN board stack: the six-knob panel/interface board mated 20 mm above the Artix-7 mainboard" width="820">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@ A 2D finite-difference physical-modeling synthesis engine in structural VHDL,
 with an amplitude-dependent non-linear "chaos injection" term, playable
 polyphonically over MIDI or CV.
 
-Instead of recording or sampling an instrument, Courant solves the 2D acoustic
+Instead of recording or sampling an instrument, RADIAN solves the 2D acoustic
 wave equation in real time on an FPGA mesh of arithmetic cells and streams the
 result out as stereo audio: a vibrating drum head, a plate, a sheet of metal,
 *computed* rather than recorded. A non-linear tension term makes the mesh
@@ -24,6 +24,9 @@ stiffen under load, so hard hits bend pitch upward and bloom into inharmonic,
 metallic partials before settling into a natural decay. Notes arrive over MIDI
 or control voltage, are allocated across independent polyphonic voices, and are
 shaped by recallable instrument presets and a live front panel.
+
+<sub>RADIAN was developed as **Courant**, which is why the repository and
+some file paths still use that name.</sub>
 
 > **Status: simulation-first, feature-complete in simulation, pre-hardware.**
 > The engine, a Q1.23 reference model that is *bit-exact* to the RTL, and a full
@@ -184,7 +187,7 @@ section.
 ## 2. The non-linear twist: chaos injection
 
 A linear mesh with a constant $\gamma$ is predictable and, frankly, a bit
-sterile. Courant makes the local Courant term **amplitude-dependent**, so the
+sterile. RADIAN makes the local Courant term **amplitude-dependent**, so the
 mesh stiffens where it is moving hardest:
 
 $$\gamma_{i,j}^2 = \gamma_0^2 + \alpha\,(u_{i,j}^{n})^2$$
@@ -416,16 +419,17 @@ flow ([`build_synth.tcl`](syn/vivado/build_synth.tcl)) runs opt/place/route and
 fails the build on negative slack (a pass/fail timing gate).
 
 Beyond the dev board there is a **standalone instrument PCB** — a 160 x 100 mm
-six-layer board carrying the XC7A35T, its configuration flash, both oscillators,
+six-layer board carrying an XC7A50T, its configuration flash, both oscillators,
 a PCM5102A stereo DAC, and the analog front end the Arty build leaves off (panel
 pots and CV over an MCP3208, an opto-isolated MIDI input, a gate comparator).
-It is written in [tscircuit](https://tscircuit.com) and lives in
-[`hardware/courant/`](hardware/courant/); every device pinout is checked against
-its manufacturer datasheet and the FPGA ball map against AMD's own package file.
-It is **routed but never fabricated**: 1800 segments and 4152 mm of copper on
-six layers, both ground planes uncut, with six BGA escapes still to finish by
-hand. tscircuit places the board and owns the netlist; KiCad writes the Specctra
-file and [Freerouting](https://freerouting.org) cuts the copper. See
+It started in [tscircuit](https://tscircuit.com) and is now maintained as native
+KiCad 10 boards in [`hardware/courant/`](hardware/courant/) (mainboard) and
+[`hardware/panel/`](hardware/panel/) (panel/interface board); every device
+pinout is checked against its manufacturer datasheet and the FPGA ball map
+against AMD's own package file. Both boards are **fully routed but never
+fabricated**: the mainboard has 2158 track segments, 4386 mm of copper and 299
+vias, and KiCad DRC reports 0 violations / 0 unconnected on both boards. See
+[`hardware/CURRENT_DESIGN.md`](hardware/CURRENT_DESIGN.md) and
 [`docs/board.md`](docs/board.md) for what is and is not verified.
 
 Using the time-multiplexed mesh (~18 DSP per voice, independent of grid size),
@@ -454,9 +458,10 @@ Vivado would infer LUTRAM/BRAM). Full table and caveats in
   verified in simulation.
 - It is **not** zero-latency, zero-aliasing, or single-clock-cycle. Those are
   marketing, and this document avoids them deliberately.
-- It is **not** yet a hardware product. The standalone board is drawn and
-  checked but unrouted and unfabricated, and the RTL that would read its panel /
-  CV ADC over SPI is not written yet.
+- It is **not** yet a hardware product. The standalone boards are routed and
+  pass DRC, and the MCP3208 SPI reader for the panel / CV ADC
+  ([`adc_mcp3208.vhd`](src/rtl/adc_mcp3208.vhd)) passes its testbench, but
+  nothing has been fabricated or brought up yet.
 
 ---
 
