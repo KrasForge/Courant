@@ -41,8 +41,8 @@ These clips are rendered offline by the float reference model
 on a 32 $\times$ 32 mesh at 48 kHz. They come from
 [`demo_render.m`](model/demo_render.m), with no post-processing beyond its DC
 high-pass and loudness normalisation. **They are not hardware recordings**:
-the FPGA build has not been brought up yet. Click a spectrogram to play its
-clip.
+the FPGA build has not been brought up yet. Click a spectrogram or a ▶ link
+and the clip plays in your browser.
 
 **Chaos off vs. chaos on.** The same centre strike on the same gong mesh,
 first linear ($\alpha = 0$), then with chaos injection ($\alpha = 0.42$).
@@ -50,17 +50,17 @@ The linear mesh rings as a clean stack of fixed modes. With the
 amplitude-dependent term, energy smears across the band right after the hit
 and the partials bend as the mesh relaxes.
 
-[![A/B spectrogram: identical strike, linear vs chaos injection](docs/media/images/spectrogram_chaos_ab.png)](docs/media/audio/chaos_ab.mp3)
+[![A/B spectrogram: identical strike, linear vs chaos injection](docs/media/images/spectrogram_chaos_ab.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/chaos_ab.mp3)
 
 | Voice | What you hear | Clip |
 | --- | --- | --- |
-| **Gong** | Free edges, strong chaos ($\alpha = 0.42$), long shimmer. A pentatonic phrase that ends on a chord, so the decays ring together across voices | [`demo_gong.mp3`](docs/media/audio/demo_gong.mp3) · 6.5 s |
-| **Plate** | Free edges, $\alpha = 0.30$, more damping. Bright, sustained, metallic | [`demo_plate.mp3`](docs/media/audio/demo_plate.mp3) · 5.5 s |
-| **Drum** | Fixed (Dirichlet) edges, heavy damping, $\alpha = 0.12$. A short, punchy groove | [`demo_drum.mp3`](docs/media/audio/demo_drum.mp3) · 3.6 s |
+| **Gong** | Free edges, strong chaos ($\alpha = 0.42$), long shimmer. A pentatonic phrase that ends on a chord, so the decays ring together across voices | [▶ `demo_gong.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_gong.mp3) · 6.5 s |
+| **Plate** | Free edges, $\alpha = 0.30$, more damping. Bright, sustained, metallic | [▶ `demo_plate.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_plate.mp3) · 5.5 s |
+| **Drum** | Fixed (Dirichlet) edges, heavy damping, $\alpha = 0.12$. A short, punchy groove | [▶ `demo_drum.mp3`](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_drum.mp3) · 3.6 s |
 
-[![Gong demo spectrogram](docs/media/images/spectrogram_demo_gong.png)](docs/media/audio/demo_gong.mp3)
-[![Plate demo spectrogram](docs/media/images/spectrogram_demo_plate.png)](docs/media/audio/demo_plate.mp3)
-[![Drum demo spectrogram](docs/media/images/spectrogram_demo_drum.png)](docs/media/audio/demo_drum.mp3)
+[![Gong demo spectrogram](docs/media/images/spectrogram_demo_gong.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_gong.mp3)
+[![Plate demo spectrogram](docs/media/images/spectrogram_demo_plate.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_plate.mp3)
+[![Drum demo spectrogram](docs/media/images/spectrogram_demo_drum.png)](https://cdn.jsdelivr.net/gh/KrasForge/Courant@main/docs/media/audio/demo_drum.mp3)
 
 The flat ceiling near 5 kHz is not a filter. It is the highest mode a 2D
 mesh can carry, $f_{\max} = \tfrac{f_s}{\pi}\arcsin(\gamma\sqrt{2}) \approx 4.9$ kHz
